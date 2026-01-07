@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oud Maestro Ultimate | Custom Tuning & Luthier</title>
+    <style>
+        :root {
+            --bg-dark: #121214;
+            --panel-bg: #1e1e24;
+            --accent: #d4af37; /* Or */
+            --accent-hover: #f1c40f;
+            --text-main: #e1e1e6;
+            --border: #323238;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--panel-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            z-index: 100;
+            flex-wrap: wrap; /* Pour petits écrans */
+            gap: 10px;
+        }
+
+        h1 { margin: 0; font-size: 1.1rem; color: var(--accent); display:flex; align-items:center; gap:8px; white-space: nowrap;}
+        
+        .controls-area {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        label { font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: bold;}
+
+        input[type="text"], input[type="number"], select {
+            background: #2a2a30;
+            border: 1px solid #444;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            outline: none;
+        }
+        input:focus, select:focus { border-color: var(--accent); }
+
+        /* Checkbox stylisée */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #2a2a30;
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            cursor: pointer;
+            height: 20px; /* Aligner avec les inputs */
+        }
+        .checkbox-wrapper:hover { background: #333; }
+        .checkbox-wrapper input { cursor: pointer; }
+        .checkbox-label { font-size: 0.75rem; font-weight: bold; color: #ccc;}
+
+        /* Bouton Stop */
+        .btn-stop {
+            background: #c0392b;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: bold;
+            height: 30px;
+        }
+        .btn-stop:hover { background: #e74c3c; }
+
+        /* Toggles */
+        .toggle-btn {
+            background: transparent;
+            border: 1px solid #555;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: all 0.2s;
+            height: 28px;
+        }
+        .toggle-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #121214;
+            font-weight: bold;
+        }
+
+        .separator { width: 1px; height: 30px; background:#333; margin: 0 2px; }
+
+        /* --- Canvas --- */
+        main {
+            flex: 1;
+            position: relative;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        canvas {
+            box-shadow: 0 0 50px rgba(0,0,0,0.6);
+            cursor: crosshair;
+        }
+
+        #feedback {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: var(--accent);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 1rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.1s;
+            border: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><span>🎵</span> Ultimate</h1>
+
+        <div class="controls-area">
+            
+            <div class="input-group">
+                <label>Instrument</label>
+                <select id="soundType">
+                    <option value="oud">Oud (Bois)</option>
+                    <option value="guitar">Guitare (Nylon)</option>
+                    <option value="electric">Électrique</option>
+                    <option value="violin">Violon</option>
+                    <option value="synth">Synthé</option>
+                </select>
+            </div>
+
+            <label class="checkbox-wrapper" title="Le son continue indéfiniment (Mode Drone/Archet)">
+                <input type="checkbox" id="sustainMode">
+                <span class="checkbox-label">Sustain ∞</span>
+            </label>
+
+            <button class="btn-stop" onclick="app.silence()">STOP</button>
+
+            <div class="separator"></div>
+
+            <div class="input-group">
+                <label>Presets</label>
+            <select id="presetSelect" onchange="app.loadPreset()">
+                <option value="oud_arabe">Oud Arabe (Standard C-C)</option>
+                <option value="oud_turc">Oud Turc (Standard D-D)</option>
+                <option value="oud_ancien">Oud Ancien (Fa-Fa)</option>
+                <option value="oud_irakien">Oud Irakien (Bashir)</option>
+                <option value="oud_grec">Oud Grec (Outi)</option>
+                <option value="oud_maghreb">Oud Maghrébin (5 cordes)</option>
+                <option value="oud_moderne">Oud Moderne (Solo)</option>
+                <option value="guitare">Guitare</option>
+                <option value="basse">Basse</option>
+                <option value="custom">-- Perso --</option>
+            </select>
+            </div>
+
+            <div class="input-group">
+                <label>Accordage</label>
+                <input type="text" id="tuning" value="C2, F2, A2, D3, G3, C4" style="width: 160px;" onchange="app.updateParams()">
+            </div>
+
+            <div class="input-group">
+                <label>Long. (cm)</label>
+                <input type="number" id="scaleLength" value="60" style="width: 45px;" step="0.5" onchange="app.updateParams()">
+            </div>
+
+            <button class="toggle-btn active" id="btnNotes" onclick="app.toggleNotes()">Notes</button>
+            <button class="toggle-btn " id="btnMeasure" onclick="app.toggleMeasurements()">Mesures</button>
+        </div>
+    </header>
+
+    <main>
+        <canvas id="mainCanvas"></canvas>
+        <div id="feedback"></div>
+    </main>
+
+<script>
+
+/* --- 1. SOUND LIBRARY --- */
+const INSTRUMENTS = {
+    'oud': {
+        type: 'triangle',
+        attack: 0.01, decay: 0.35, sustain: 0, release: 0.4,
+        filterStart: 3000, filterEnd: 150, q: 1
+    },
+    'guitar': {
+        type: 'sawtooth',
+        attack: 0.015, decay: 0.8, sustain: 0.1, release: 1.2,
+        filterStart: 3500, filterEnd: 400, q: 0
+    },
+    'electric': {
+        type: 'square',
+        attack: 0.005, decay: 0.3, sustain: 0.7, release: 1.5,
+        filterStart: 4500, filterEnd: 1500, q: 4
+    },
+    'violin': {
+        type: 'sawtooth',
+        attack: 0.3, decay: 0.1, sustain: 1.0, release: 0.6,
+        filterStart: 2200, filterEnd: 2200, q: 2
+    },
+    'synth': {
+        type: 'sine',
+        attack: 0.05, decay: 0.2, sustain: 0.6, release: 1.0,
+        filterStart: 8000, filterEnd: 100, q: 8
+    }
+};
+
+/* --- 2. AUDIO ENGINE --- */
+class AudioEngine {
+    constructor() {
+        this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        this.masterGain = this.ctx.createGain();
+        this.masterGain.gain.value = 0.3; 
+        this.masterGain.connect(this.ctx.destination);
+        this.activeNodes = [];
+    }
+
+    resume() { 
+        if (this.ctx.state === 'suspended') this.ctx.resume(); 
+    }
+
+    stopAll() {
+        const t = this.ctx.currentTime;
+        this.activeNodes.forEach(node => {
+            try {
+                node.gain.gain.cancelScheduledValues(t);
+                node.gain.gain.setValueAtTime(node.gain.gain.value, t);
+                node.gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+                node.osc.stop(t + 0.11);
+            } catch(e) {}
+        });
+        this.activeNodes = [];
+    }
+
+    play(freq, instrumentKey, isSustainMode) {
+        this.resume();
+        const t = this.ctx.currentTime;
+        if (isSustainMode) this.stopAll();
+
+        const preset = INSTRUMENTS[instrumentKey];
+        
+        const osc = this.ctx.createOscillator();
+        osc.type = preset.type;
+        osc.frequency.setValueAtTime(freq, t);
+
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.Q.value = preset.q;
+        filter.frequency.setValueAtTime(preset.filterStart, t);
+        filter.frequency.exponentialRampToValueAtTime(preset.filterEnd, t + preset.decay + preset.release);
+
+        const gain = this.ctx.createGain();
+        gain.gain.setValueAtTime(0, t);
+        gain.gain.linearRampToValueAtTime(1, t + preset.attack);
+        
+        if (isSustainMode) {
+            gain.gain.exponentialRampToValueAtTime(preset.sustain || 0.8, t + preset.attack + preset.decay);
+        } else {
+            gain.gain.exponentialRampToValueAtTime(0.001, t + preset.attack + preset.release + 2.0);
+        }
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.masterGain);
+
+        osc.start(t);
+
+        if (!isSustainMode) {
+            osc.stop(t + preset.attack + preset.release + 3.0);
+        } else {
+            this.activeNodes.push({ osc: osc, gain: gain });
+        }
+    }
+}
+
+/* --- 3. APP LOGIC --- */
+class App {
+    constructor() {
+        this.canvas = document.getElementById('mainCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.audio = new AudioEngine();
+        
+        this.config = {
+            scaleLength: 60,
+            showNotes: true,
+            showMeasurements: false, 
+            tuning: [],
+            margin: 60,
+            stringSpacing: 60,
+            pxPerCm: 10
+        };
+
+        this.visuals = {
+            width: 0, height: 0,
+            strings: [],
+            // AJOUTS POUR LE GLISSANDO
+            isDragging: false,
+            lastFreq: 0,
+            lastString: -1
+        };
+
+        this.CHROMATIC = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+        
+        this.NOTE_LABELS = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+
+                this.presets = {
+                    'oud_arabe': { scale: 60, tuning: "C4, G3, D3, A2, F2, C2" },
+                    'oud_turc': { scale: 58.5, tuning: "G4, D4, A3, E3, A2, D2" },
+                    'oud_ancien': { scale: 61.5, tuning: "F4, C4, G3, D3, A2, F2" },
+                    'oud_irakien': { scale: 60, tuning: "G#4, D#4, A#3, F3, C3, F2" },
+                    'oud_grec': { scale: 58.5, tuning: "G4, D4, A3, E3, A2, D2" },
+                    'oud_maghreb': { scale: 60, tuning: "C4, G3, D3, A2, G2" },
+                    'oud_moderne': { scale: 60, tuning: "C#4, G#3, D#3, A#2, F2, C2" },
+                    'guitare': { scale: 64.8, tuning: "E4, B3, G3, D3, A2, E2" },
+                    'basse': { scale: 86.4, tuning: "G2, D2, A1, E1" }
+                };
+
+        this.init();
+    }
+
+    init() {
+        window.addEventListener('resize', () => this.resize());
+        
+        // MODIFICATION POUR LE CLICK & DRAG
+        this.canvas.addEventListener('mousedown', (e) => {
+            this.visuals.isDragging = true;
+            this.handleInput(e, true); // On indique que c'est un clic initial
+        });
+
+        this.canvas.addEventListener('mousemove', (e) => {
+            if(this.visuals.isDragging) {
+                this.handleInput(e, true); // Mode Glissando
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            this.visuals.isDragging = false;
+            this.visuals.lastString = -1;
+            this.visuals.lastFreq = 0;
+            // On cache le feedback quand on lache
+             document.getElementById('feedback').style.opacity = 0;
+        });
+        
+        if(document.getElementById('tuning').value === "") {
+             this.loadPreset(); 
+        } else {
+             this.updateParams();
+        }
+        
+        this.loop();
+    }
+
+    loadPreset() {
+        const val = document.getElementById('presetSelect').value;
+        if(val === 'custom') return;
+
+        const p = this.presets[val];
+        document.getElementById('scaleLength').value = p.scale;
+        document.getElementById('tuning').value = p.tuning; 
+        this.updateParams();
+    }
+
+    updateParams() {
+        const rawTuning = document.getElementById('tuning').value;
+        this.config.scaleLength = parseFloat(document.getElementById('scaleLength').value);
+        
+        const notes = rawTuning.split(',');
+        this.config.tuning = notes.map(s => {
+            s = s.trim();
+            const match = s.match(/([A-G]#?)(\d)/i);
+            let freq = 110; let baseIndex = 0; let octave = 2;
+
+            if (match) {
+                const noteName = match[1].toUpperCase();
+                octave = parseInt(match[2]);
+                baseIndex = this.CHROMATIC.indexOf(noteName);
+                const midi = (octave + 1) * 12 + baseIndex;
+                freq = 440 * Math.pow(2, (midi - 69) / 12);
+            }
+            return { name: s, freq: freq, baseIndex: baseIndex, octave: octave };
+        });
+
+        this.visuals.strings = this.config.tuning.map(() => ({ amp: 0, phase: 0, active: false }));
+        this.resize();
+    }
+
+    resize() {
+        const parent = this.canvas.parentElement;
+        this.canvas.width = parent.clientWidth;
+        this.canvas.height = parent.clientHeight;
+        this.visuals.width = this.canvas.width;
+        this.visuals.height = this.canvas.height;
+
+        const cmVisible = this.config.scaleLength * 0.75;
+        this.config.pxPerCm = (this.visuals.width - 100) / cmVisible;
+        
+        this.draw();
+    }
+
+    toggleNotes() {
+        this.config.showNotes = !this.config.showNotes;
+        document.getElementById('btnNotes').classList.toggle('active');
+        this.draw();
+    }
+
+    toggleMeasurements() {
+        this.config.showMeasurements = !this.config.showMeasurements;
+        document.getElementById('btnMeasure').classList.toggle('active');
+        this.draw();
+    }
+
+    silence() {
+        this.audio.stopAll();
+    }
+
+    // MODIFICATION DE LA FONCTION POUR ACCEPTER LE DRAG
+    handleInput(e, isDrag = false) {
+        const rect = this.canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const numStr = this.config.tuning.length;
+        const totalH = numStr * this.config.stringSpacing;
+        const startY = (this.visuals.height - totalH) / 2;
+
+        let bestStr = -1;
+        let minDist = 30;
+        
+        for(let i=0; i<numStr; i++) {
+            const sy = startY + (i * this.config.stringSpacing) + 20;
+            const dist = Math.abs(y - sy);
+            if(dist < minDist) {
+                minDist = dist;
+                bestStr = i;
+            }
+        }
+
+        if(bestStr !== -1) {
+            let distPx = x - this.config.margin;
+            let distCm = distPx / this.config.pxPerCm;
+            if(distCm < 0) distCm = 0; 
+
+            const openFreq = this.config.tuning[bestStr].freq;
+            const L_vibrante = this.config.scaleLength - distCm;
+            let finalF = openFreq * 4;
+            if (L_vibrante > 0.5) {
+                finalF = openFreq * (this.config.scaleLength / L_vibrante);
+            }
+
+            // LOGIQUE POUR EVITER DE REJOUER LA MEME NOTE TROP VITE EN GLISSANT
+            const freqDiff = Math.abs(finalF - this.visuals.lastFreq);
+            const strDiff = bestStr !== this.visuals.lastString;
+            
+            // On joue si c'est un clic, ou si on glisse et que la note a changé (plus de 2Hz de diff)
+            if (!isDrag || strDiff || freqDiff > 2) {
+                
+                const soundType = document.getElementById('soundType').value;
+                const isSustain = document.getElementById('sustainMode').checked;
+
+                this.audio.play(finalF, soundType, isSustain);
+
+                this.visuals.strings[bestStr].active = true;
+                this.visuals.strings[bestStr].amp = 5;
+                
+                // Mémorisation
+                this.visuals.lastFreq = finalF;
+                this.visuals.lastString = bestStr;
+
+                // Feedback Visuel
+                const fb = document.getElementById('feedback');
+                fb.innerText = `${Math.round(finalF)} Hz (${distCm.toFixed(1)} cm)`;
+                fb.style.opacity = 1;
+                
+                // Si on glisse, on met le texte à coté de la souris
+                if(isDrag) {
+                    fb.style.top = (y - 40) + "px";
+                    fb.style.left = x + "px";
+                } else {
+                    fb.style.top = "20px";
+                    fb.style.left = "50%";
+                }
+
+                // Timer pour cacher le texte seulement si on ne glisse plus
+                clearTimeout(this.fbTimeout);
+                this.fbTimeout = setTimeout(() => {
+                    if(!this.visuals.isDragging) fb.style.opacity = 0;
+                }, 1500);
+            }
+        }
+    }
+
+    loop() {
+        requestAnimationFrame(() => this.loop());
+        
+        let dirty = false;
+        this.visuals.strings.forEach(s => {
+            if(s.active) {
+                s.phase += 0.5;
+                s.amp *= 0.94; 
+                if(s.amp < 0.1) s.active = false;
+                dirty = true;
+            }
+        });
+        
+        if(dirty) this.draw();
+    }
+
+    draw() {
+        const { ctx, config, visuals } = this;
+        const w = visuals.width; const h = visuals.height;
+
+        ctx.fillStyle = '#111';
+        ctx.fillRect(0,0,w,h);
+
+        const numStr = config.tuning.length;
+        const totalH = numStr * config.stringSpacing;
+        const startY = (h - totalH) / 2;
+        const boardH = totalH + 40;
+
+        // Manche
+        const grad = ctx.createLinearGradient(0, startY, 0, startY+boardH);
+        grad.addColorStop(0, '#3e2723'); grad.addColorStop(1, '#221510');
+        ctx.fillStyle = grad;
+        ctx.fillRect(config.margin, startY, w, boardH);
+
+        // Sillet
+        ctx.fillStyle = '#ddd';
+        ctx.fillRect(config.margin-6, startY, 6, boardH);
+
+        // Frettes & Notes
+        for(let i=1; i<=24; i++) {
+            const cm = config.scaleLength - (config.scaleLength / Math.pow(2, i/12));
+            const px = config.margin + (cm * config.pxPerCm);
+            if(px > w) break;
+
+            ctx.beginPath(); ctx.moveTo(px, startY); ctx.lineTo(px, startY+boardH);
+            ctx.strokeStyle = 'rgba(255,255,255,0.1)'; ctx.stroke();
+
+            // AFFICHAGE DES MESURES (DISTANCES)
+            if(config.showMeasurements) {
+                ctx.fillStyle = '#d4af37';
+                ctx.font = '9px monospace';
+                ctx.textAlign = 'center';
+                // On l'affiche au-dessus du manche
+                ctx.fillText(cm.toFixed(2) + 'cm', px, startY - 10);
+            }
+
+            // AFFICHAGE DES NOTES
+            if(config.showNotes) {
+                config.tuning.forEach((str, idx) => {
+                    const sy = startY + (idx*config.stringSpacing) + 20;
+                    const noteIndex = (str.baseIndex + i) % 12;
+                    const name = this.NOTE_LABELS[noteIndex];
+
+                    ctx.fillStyle = '#aaa';
+                    ctx.font = '10px Arial';
+                    ctx.textAlign = 'center';
+                    if([3,5,7,9,12,15,17].includes(i)) ctx.fillStyle = '#d4af37'; 
+                    ctx.fillText(name, px, sy - 8); 
+                });
+            }
+        }
+
+        // Cordes
+        config.tuning.forEach((str, i) => {
+            const y = startY + (i*config.stringSpacing) + 20;
+            const st = visuals.strings[i];
+
+            ctx.beginPath(); ctx.moveTo(config.margin-6, y);
+            
+            if(st.active) {
+                for(let k=config.margin; k<w; k+=10) {
+                    ctx.lineTo(k, y + Math.sin(k*0.2 + st.phase)*st.amp);
+                }
+            } else {
+                ctx.lineTo(w, y);
+            }
+
+            ctx.strokeStyle = i<2 ? '#aaa' : '#d4af37';
+            ctx.lineWidth = 1.5 + (i*0.3);
+            ctx.stroke();
+
+            // Nom corde
+            ctx.fillStyle = '#fff'; ctx.textAlign='right'; ctx.font='bold 12px Arial';
+            ctx.fillText(str.name, config.margin-12, y+4);
+        });
+    }
+}
+
+const app = new App();
+</script>
+</body>
+</html>
