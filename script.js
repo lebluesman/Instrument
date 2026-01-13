@@ -50,7 +50,6 @@ const SCALES = {
         'djarka': { name: "Djarka (Majeur)", intervals: [0, 2, 4, 5, 7, 9, 11] }
     }
 };
-};
 
 const DICTIONARY = {
     'fr': {
@@ -672,3 +671,4 @@ class App {
 
 
 const app = new App();
+
