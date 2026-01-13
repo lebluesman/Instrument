@@ -257,7 +257,12 @@ class App {
 
         this.loop();
     }
+    toggleMenu() {
+        const header = document.getElementById('mainHeader');
+        header.classList.toggle('hidden');
+        setTimeout(() => this.resize(), 50);
 
+    }
     setLanguage(lang) {
         const oldLang = this.config.language;
         this.config.language = lang;
@@ -671,5 +676,4 @@ class App {
 
 
 const app = new App();
-
 
