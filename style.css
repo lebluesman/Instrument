@@ -1,0 +1,193 @@
+:root {
+    --bg-dark: #121214;
+    --panel-bg: #1e1e24;
+    --accent: #d4af37;
+    /* Or pour l'interface générale */
+    --accent-hover: #f1c40f;
+    --text-main: #e1e1e6;
+    --border: #323238;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.controls-area {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Accords en Bleu/Rouge (Standard) */
+.highlight-group label {
+    color: #3498db;
+    opacity: 0.9;
+}
+
+/* Gammes en Vert (Nouveau) */
+.highlight-group-green label {
+    color: #2ecc71;
+    opacity: 0.9;
+}
+
+label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    background: #2a2a30;
+    border: 1px solid #444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #2a2a30;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    cursor: pointer;
+    height: 20px;
+}
+
+.checkbox-wrapper:hover {
+    background: #333;
+}
+
+.checkbox-wrapper input {
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.btn-stop {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 30px;
+}
+
+.btn-stop:hover {
+    background: #e74c3c;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: 1px solid #555;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: all 0.2s;
+    height: 28px;
+}
+
+.toggle-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #121214;
+    font-weight: bold;
+}
+
+.separator {
+    width: 1px;
+    height: 30px;
+    background: #333;
+    margin: 0 2px;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+canvas {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    cursor: crosshair;
+}
+
+#feedback {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--accent);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    border: 1px solid #444;
+}
