@@ -1,4 +1,4 @@
-Oud Maestro Ultimate  (https://mahdidahmani.github.io/Instrument/)
+Ultimate Fretboard v0.1 (https://mahdidahmani.github.io/Instrument/)
 
 A web-based interactive fretboard visualizer and luthier tool. I built this to help visualize notes, scales, and chords on fretless instruments like the Oud, as well as Guitar and Bass.
 
