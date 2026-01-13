@@ -37,7 +37,19 @@ const SCALES = {
         'ajam': { name: "Maqam Ajam", intervals: [0, 2, 4, 5, 7, 9, 11] }, // Comme Majeur
         'nahawand': { name: "Maqam Nahawand", intervals: [0, 2, 3, 5, 7, 8, 10] }, // Comme Mineur
         'sikah': { name: "Maqam Sikah", intervals: [0, 1.5, 3.5, 5, 7, 8.5, 10.5] } // Approximatif pour visualizer
+    },
+    'andalous': {
+        'mezmoum': { name: "Mezmoum (Majeur)", intervals: [0, 2, 4, 5, 7, 9, 11] },
+        'raml_maya': { name: "Raml Maya (Éolien)", intervals: [0, 2, 3, 5, 7, 8, 10] },
+        'zidane': { name: "Zidane (Hijaz)", intervals: [0, 1, 4, 5, 7, 8, 10] },
+        'sika': { name: "Sika (Phrygien)", intervals: [0, 1, 3, 5, 7, 8, 10] },
+        'moual': { name: "Moual (Lydien)", intervals: [0, 2, 4, 6, 7, 9, 11] },
+        'arak': { name: "Arak (Mixolydien)", intervals: [0, 2, 4, 5, 7, 9, 10] },
+        'sihli': { name: "Sihli (Min. Harmonique)", intervals: [0, 2, 3, 5, 7, 8, 11] },
+        'ghrib': { name: "Grhib (Dorien)", intervals: [0, 2, 3, 5, 7, 9, 10] },
+        'djarka': { name: "Djarka (Majeur)", intervals: [0, 2, 4, 5, 7, 9, 11] }
     }
+};
 };
 
 const DICTIONARY = {
@@ -48,6 +60,7 @@ const DICTIONARY = {
         scale_label: "Gammes / Maqams",
         genre_western: "Occidental",
         genre_oriental: "Oriental / Arabe",
+        genre_andalous: "Andalous (Alg)",
         major: "Majeur",
         minor: "Mineur",
         diminished: "Diminué",
@@ -79,6 +92,7 @@ const DICTIONARY = {
         scale_label: "Scales / Maqams",
         genre_western: "Western",
         genre_oriental: "Oriental / Arabic",
+        genre_andalous: "Andalous (Alg)",
         major: "Major",
         minor: "Minor",
         diminished: "Diminished",
@@ -655,5 +669,6 @@ class App {
         });
     }
 }
+
 
 const app = new App();
