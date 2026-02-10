@@ -10,12 +10,6 @@ const INSTRUMENTS = {
 const NOTES_EN = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 const NOTES_FR = ['Do', 'Do#', 'Ré', 'Ré#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si'];
 
-/* BASE DE DONNEES DES GAMMES
-   Les valeurs sont des intervalles cumulés en tons (1 = 1/2 ton standard).
-   Exemple: 0, 2, 4 = Do, Ré, Mi.
-   Pour les Maqams, on utilise 0.5 pour les quarts de ton.
-   Ex: 3.5 = Mi demi-bémol (entre Mib et Mi)
-*/
 const SCALES = {
     'western': {
         'major': { name: "Major (Ionian)", intervals: [0, 2, 4, 5, 7, 9, 11] },
@@ -29,14 +23,14 @@ const SCALES = {
         'phrygian': { name: "Phrygian", intervals: [0, 1, 3, 5, 7, 8, 10] }
     },
     'oriental': {
-        'rast': { name: "Maqam Rast", intervals: [0, 2, 3.5, 5, 7, 9, 10.5] }, // E demi-bémol, B demi-bémol
-        'bayati': { name: "Maqam Bayati", intervals: [0, 1.5, 3, 5, 7, 8, 10] }, // E demi-bémol
+        'rast': { name: "Maqam Rast", intervals: [0, 2, 3.5, 5, 7, 9, 10.5] },
+        'bayati': { name: "Maqam Bayati", intervals: [0, 1.5, 3, 5, 7, 8, 10] },
         'hijaz': { name: "Maqam Hijaz", intervals: [0, 1, 4, 5, 7, 8, 10] },
-        'saba': { name: "Maqam Saba", intervals: [0, 1.5, 3, 4, 7, 8, 10] }, // E demi-bémol, Gb (diminished 4th?) - simplifié
+        'saba': { name: "Maqam Saba", intervals: [0, 1.5, 3, 4, 7, 8, 10] },
         'kurd': { name: "Maqam Kurd", intervals: [0, 1, 3, 5, 7, 8, 10] },
-        'ajam': { name: "Maqam Ajam", intervals: [0, 2, 4, 5, 7, 9, 11] }, // Comme Majeur
-        'nahawand': { name: "Maqam Nahawand", intervals: [0, 2, 3, 5, 7, 8, 10] }, // Comme Mineur
-        'sikah': { name: "Maqam Sikah", intervals: [0, 1.5, 3.5, 5, 7, 8.5, 10.5] } // Approximatif pour visualizer
+        'ajam': { name: "Maqam Ajam", intervals: [0, 2, 4, 5, 7, 9, 11] },
+        'nahawand': { name: "Maqam Nahawand", intervals: [0, 2, 3, 5, 7, 8, 10] },
+        'sikah': { name: "Maqam Sikah", intervals: [0, 1.5, 3.5, 5, 7, 8.5, 10.5] }
     },
     'andalous': {
         'mezmoum': { name: "Mezmoum (Majeur)", intervals: [0, 2, 4, 5, 7, 9, 11] },
@@ -53,68 +47,24 @@ const SCALES = {
 
 const DICTIONARY = {
     'fr': {
-        instrument: "Instrument",
-        sustain: "Sustain ∞",
-        chord_label: "Accords",
-        scale_label: "Gammes / Maqams",
-        genre_western: "Occidental",
-        genre_oriental: "Oriental / Arabe",
-        genre_andalous: "Andalous (Alg)",
-        major: "Majeur",
-        minor: "Mineur",
-        diminished: "Diminué",
-        augmented: "Augmenté",
-        tuning: "Accordage",
-        scale: "Long. (cm)",
-        btn_notes: "Notes",
-        btn_measures: "Mesures",
-        opt_oud: "Oud (Bois)",
-        opt_guitar: "Guitare (Nylon)",
-        opt_electric: "Électrique",
-        opt_violin: "Violon",
-        opt_synth: "Synthé",
-        p_oud_arabe: "Oud Arabe (Standard Do-Do)",
-        p_oud_turc: "Oud Turc (Standard Ré-Ré)",
-        p_oud_old: "Oud Ancien (Fa-Fa)",
-        p_oud_iraq: "Oud Irakien (Bashir)",
-        p_oud_greek: "Oud Grec (Outi)",
-        p_oud_maghreb: "Oud Maghrébin (5 cordes)",
-        p_oud_modern: "Oud Moderne (Solo)",
-        p_guitar: "Guitare",
-        p_bass: "Basse",
-        p_custom: "-- Perso --"
+        instrument: "Instrument", sustain: "Sustain ∞", chord_label: "Accords", scale_label: "Gammes / Maqams",
+        genre_western: "Occidental", genre_oriental: "Oriental / Arabe", genre_andalous: "Andalous (Alg)",
+        major: "Majeur", minor: "Mineur", diminished: "Diminué", augmented: "Augmenté",
+        tuning: "Accordage", scale: "Long. (cm)", btn_notes: "Notes", btn_measures: "Mesures",
+        opt_oud: "Oud (Bois)", opt_guitar: "Guitare (Nylon)", opt_electric: "Électrique", opt_violin: "Violon", opt_synth: "Synthé",
+        p_oud_arabe: "Oud Arabe (Standard Do-Do)", p_oud_turc: "Oud Turc (Standard Ré-Ré)", p_oud_old: "Oud Ancien (Fa-Fa)",
+        p_oud_iraq: "Oud Irakien (Bashir)", p_oud_greek: "Oud Grec (Outi)", p_oud_maghreb: "Oud Maghrébin (5 cordes)",
+        p_oud_modern: "Oud Moderne (Solo)", p_guitar: "Guitare", p_bass: "Basse", p_custom: "-- Perso --"
     },
     'en': {
-        instrument: "Instrument",
-        sustain: "Sustain ∞",
-        chord_label: "Chords",
-        scale_label: "Scales / Maqams",
-        genre_western: "Western",
-        genre_oriental: "Oriental / Arabic",
-        genre_andalous: "Andalous (Alg)",
-        major: "Major",
-        minor: "Minor",
-        diminished: "Diminished",
-        augmented: "Augmented",
-        tuning: "Tuning",
-        scale: "Scale (cm)",
-        btn_notes: "Notes",
-        btn_measures: "Measures",
-        opt_oud: "Oud (Wood)",
-        opt_guitar: "Guitar (Nylon)",
-        opt_electric: "Electric",
-        opt_violin: "Violin",
-        opt_synth: "Synth",
-        p_oud_arabe: "Arabic Oud (Standard C-C)",
-        p_oud_turc: "Turkish Oud (Standard D-D)",
-        p_oud_old: "Old Oud (F-F)",
-        p_oud_iraq: "Iraqi Oud (Bashir)",
-        p_oud_greek: "Greek Oud (Outi)",
-        p_oud_maghreb: "Maghreb Oud (5 strings)",
-        p_oud_modern: "Modern Oud (Solo)",
-        p_guitar: "Guitar",
-        p_bass: "Bass",
-        p_custom: "-- Custom --"
+        instrument: "Instrument", sustain: "Sustain ∞", chord_label: "Chords", scale_label: "Scales / Maqams",
+        genre_western: "Western", genre_oriental: "Oriental / Arabic", genre_andalous: "Andalous (Alg)",
+        major: "Major", minor: "Minor", diminished: "Diminished", augmented: "Augmented",
+        tuning: "Tuning", scale: "Scale (cm)", btn_notes: "Notes", btn_measures: "Measures",
+        opt_oud: "Oud (Wood)", opt_guitar: "Guitar (Nylon)", opt_electric: "Electric", opt_violin: "Violin", opt_synth: "Synth",
+        p_oud_arabe: "Arabic Oud (Standard C-C)", p_oud_turc: "Turkish Oud (Standard D-D)", p_oud_old: "Old Oud (F-F)",
+        p_oud_iraq: "Iraqi Oud (Bashir)", p_oud_greek: "Greek Oud (Outi)", p_oud_maghreb: "Maghreb Oud (5 strings)",
+        p_oud_modern: "Modern Oud (Solo)", p_guitar: "Guitar", p_bass: "Bass", p_custom: "-- Custom --"
     }
 };
 
@@ -188,6 +138,8 @@ class App {
         this.canvas = document.getElementById('mainCanvas');
         this.ctx = this.canvas.getContext('2d');
         this.audio = new AudioEngine();
+        this.detectorMode = false;
+        this.detectedNotes = new Set(); // Stocke les valeurs 0-11.5
 
         this.config = {
             scaleLength: 64.8,
@@ -197,18 +149,15 @@ class App {
             margin: 60,
             stringSpacing: 60,
             pxPerCm: 10,
-
             // État Accords
             chordRoot: 0,
             chordType: 'off',
-            chordNotes: [], // Stocke des entiers 0-11
-
+            chordNotes: [],
             // État Gammes
             scaleRoot: 0,
             scaleGenre: 'off',
             scaleName: '',
-            scaleIntervals: [], // Stocke des floats (ex: 0, 1.5, 3...)
-
+            scaleIntervals: [],
             language: 'fr'
         };
 
@@ -254,30 +203,125 @@ class App {
 
         this.setLanguage('fr');
         this.loadPreset();
-
         this.loop();
     }
+
+    // --- NOUVELLES FONCTIONS DETECTEUR ---
+
+    toggleDetector() {
+        this.detectorMode = !this.detectorMode;
+        document.getElementById('btnDetector').classList.toggle('active');
+        document.getElementById('detectorPanel').style.display = this.detectorMode ? 'block' : 'none';
+
+        if (this.detectorMode) {
+            document.getElementById('chordType').value = 'off';
+            this.config.chordType = 'off';
+            document.getElementById('scaleGenre').value = 'off';
+            this.config.scaleGenre = 'off';
+            this.config.scaleIntervals = [];
+            this.config.chordNotes = [];
+            this.updateGenre();
+        } else {
+            this.clearDetector();
+        }
+        this.draw();
+    }
+
+    clearDetector() {
+        this.detectedNotes.clear();
+        document.getElementById('detectorResults').innerHTML = '';
+        document.getElementById('detectorTitle').innerText = 'Notes: -';
+        this.draw();
+    }
+
+    runDetection() {
+        if (this.detectedNotes.size === 0) {
+            document.getElementById('detectorResults').innerHTML = '<div style="color:#777; font-style:italic;">Sélectionnez des notes sur le manche...</div>';
+            return;
+        }
+
+        const userNotes = Array.from(this.detectedNotes).sort((a, b) => a - b);
+        const noteNames = userNotes.map(n => {
+            const idx = Math.floor(n);
+            let name = this.CURRENT_LABELS[idx];
+            if (!Number.isInteger(n)) name += "½";
+            return name;
+        });
+        document.getElementById('detectorTitle').innerText = "Notes: " + noteNames.join(', ');
+
+        const results = [];
+        for (let root = 0; root < 12; root++) {
+            for (const [genre, scalesObj] of Object.entries(SCALES)) {
+                for (const [scaleKey, scaleData] of Object.entries(scalesObj)) {
+                    let matchCount = 0;
+                    let isPerfectMatch = true;
+
+                    for (let note of userNotes) {
+                        let interval = (note - root) % 12;
+                        if (interval < 0) interval += 12;
+                        const exists = scaleData.intervals.some(i => Math.abs(i - interval) < 0.1);
+                        if (exists) matchCount++;
+                        else isPerfectMatch = false;
+                    }
+
+                    if (isPerfectMatch) {
+                        results.push({
+                            rootIdx: root,
+                            scaleName: scaleData.name,
+                            genre: genre,
+                            totalNotesInScale: scaleData.intervals.length
+                        });
+                    }
+                }
+            }
+        }
+
+        results.sort((a, b) => a.totalNotesInScale - b.totalNotesInScale);
+        const container = document.getElementById('detectorResults');
+        container.innerHTML = '';
+
+        if (results.length === 0) {
+            container.innerHTML = '<div style="padding:10px; color:#aaa">Aucune gamme connue ne contient exactement toutes ces notes.</div>';
+            return;
+        }
+
+        results.forEach(res => {
+            const div = document.createElement('div');
+            div.className = 'result-item';
+            const rootName = this.CURRENT_LABELS[res.rootIdx];
+            div.innerHTML = `<span class="result-root">${rootName}</span> <span class="result-name">${res.scaleName}</span>`;
+            div.onclick = () => {
+                this.toggleDetector(); // Off
+                document.getElementById('scaleGenre').value = res.genre;
+                this.updateGenre();
+                const scalesObj = SCALES[res.genre];
+                const key = Object.keys(scalesObj).find(k => scalesObj[k].name === res.scaleName);
+                if (key) {
+                    document.getElementById('scaleName').value = key;
+                    document.getElementById('scaleRoot').value = res.rootIdx;
+                    this.updateScale();
+                }
+            };
+            container.appendChild(div);
+        });
+    }
+
     toggleMenu() {
         const header = document.getElementById('mainHeader');
         header.classList.toggle('hidden');
         setTimeout(() => this.resize(), 50);
-
     }
+
     setLanguage(lang) {
         const oldLang = this.config.language;
         this.config.language = lang;
-
-        const oldLabels = (oldLang === 'fr') ? NOTES_FR : NOTES_EN;
         const newLabels = (lang === 'fr') ? NOTES_FR : NOTES_EN;
         this.CURRENT_LABELS = newLabels;
-
         const dict = DICTIONARY[lang];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) el.innerText = dict[key];
         });
-
-        // 1. Remplir les Selecteurs de Notes (Accords et Gammes)
         const populateSelect = (id) => {
             const el = document.getElementById(id);
             const current = el.value || 0;
@@ -290,11 +334,8 @@ class App {
             });
             el.value = current;
         };
-
         populateSelect('chordRoot');
         populateSelect('scaleRoot');
-
-        // 2. Conversion Accordage (C2 -> Do2)
         const tuningInput = document.getElementById('tuning');
         const currentTuning = tuningInput.value;
         if (currentTuning) {
@@ -319,16 +360,13 @@ class App {
             }).join(', ');
             tuningInput.value = newTuning;
         }
-
         this.draw();
     }
 
-    // --- LOGIQUE GAMMES (NOUVEAU) ---
     updateGenre() {
         this.config.scaleGenre = document.getElementById('scaleGenre').value;
         const scaleNameSelect = document.getElementById('scaleName');
         scaleNameSelect.innerHTML = '';
-
         if (this.config.scaleGenre === 'off') {
             scaleNameSelect.style.display = 'none';
         } else {
@@ -348,15 +386,11 @@ class App {
         this.config.scaleRoot = parseInt(document.getElementById('scaleRoot').value);
         this.config.scaleGenre = document.getElementById('scaleGenre').value;
         const scaleKey = document.getElementById('scaleName').value;
-
-        // Désactive les accords si on active une gamme pour éviter la confusion visuelle
         if (this.config.scaleGenre !== 'off') {
             document.getElementById('chordType').value = 'off';
             this.config.chordType = 'off';
         }
-
         this.config.scaleIntervals = [];
-
         if (this.config.scaleGenre !== 'off' && scaleKey) {
             const scaleData = SCALES[this.config.scaleGenre][scaleKey];
             if (scaleData) {
@@ -366,19 +400,15 @@ class App {
         this.draw();
     }
 
-    // --- LOGIQUE ACCORDS ---
     updateChord() {
         this.config.chordRoot = parseInt(document.getElementById('chordRoot').value);
         this.config.chordType = document.getElementById('chordType').value;
-
-        // Désactive les gammes si on active un accord
         if (this.config.chordType !== 'off') {
             document.getElementById('scaleGenre').value = 'off';
             this.config.scaleGenre = 'off';
             document.getElementById('scaleName').style.display = 'none';
             this.config.scaleIntervals = [];
         }
-
         this.config.chordNotes = [];
         if (this.config.chordType !== 'off') {
             const intervals = this.CHORD_INTERVALS[this.config.chordType];
@@ -393,33 +423,29 @@ class App {
         const p = this.presets[val];
         document.getElementById('scaleLength').value = p.scale;
         document.getElementById('tuning').value = p.tuning;
-        this.setLanguage(this.config.language); // Force traduction
+        this.setLanguage(this.config.language);
         this.updateParams();
     }
 
     updateParams() {
         const rawTuning = document.getElementById('tuning').value;
         this.config.scaleLength = parseFloat(document.getElementById('scaleLength').value);
-
         const notes = rawTuning.split(',');
         this.config.tuning = notes.map(s => {
             s = s.trim();
             const match = s.match(/^(Do#?|Ré#?|Re#?|Mi|Fa#?|Sol#?|La#?|Si|C#?|D#?|E|F#?|G#?|A#?|B)(\d)$/i);
             let freq = 110; let baseIndex = 0; let octave = 2;
-
             if (match) {
                 const noteName = match[1].toUpperCase().replace('É', 'E');
                 octave = parseInt(match[2]);
                 let idx = NOTES_EN.indexOf(noteName);
                 if (idx === -1) idx = NOTES_FR.findIndex(n => n.toUpperCase().replace('É', 'E') === noteName);
                 if (idx !== -1) baseIndex = idx;
-
                 const midi = (octave + 1) * 12 + baseIndex;
                 freq = 440 * Math.pow(2, (midi - 69) / 12);
             }
             return { name: s, freq: freq, baseIndex: baseIndex, octave: octave };
         });
-
         this.visuals.strings = this.config.tuning.map(() => ({ amp: 0, phase: 0, active: false }));
         this.resize();
     }
@@ -450,6 +476,8 @@ class App {
     silence() { this.audio.stopAll(); }
 
     handleInput(e, isDrag = false) {
+        if (this.detectorMode && e.type === 'mousemove') return;
+
         const rect = this.canvas.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -474,6 +502,25 @@ class App {
             let finalF = openFreq * 4;
             if (L_vibrante > 0.5) finalF = openFreq * (this.config.scaleLength / L_vibrante);
 
+            const semitonesFromA4 = 12 * Math.log2(finalF / 440);
+            const midiNum = 69 + semitonesFromA4;
+            const snappedMidi = Math.round(midiNum * 2) / 2;
+            let rawNoteVal = snappedMidi % 12;
+            if (rawNoteVal < 0) rawNoteVal += 12;
+
+            if (this.detectorMode) {
+                if (this.detectedNotes.has(rawNoteVal)) {
+                    this.detectedNotes.delete(rawNoteVal);
+                } else {
+                    this.detectedNotes.add(rawNoteVal);
+                    this.audio.play(finalF, 'guitar', false);
+                    setTimeout(() => this.audio.stopAll(), 150);
+                }
+                this.runDetection();
+                this.draw();
+                return;
+            }
+
             const freqDiff = Math.abs(finalF - this.visuals.lastFreq);
             const strDiff = bestStr !== this.visuals.lastString;
 
@@ -487,18 +534,13 @@ class App {
                 this.visuals.lastFreq = finalF;
                 this.visuals.lastString = bestStr;
 
-                const semitonesFromA4 = 12 * Math.log2(finalF / 440);
-                const midiNum = Math.round(69 + semitonesFromA4);
-                const noteIndex = midiNum % 12;
+                const noteIndex = Math.floor(rawNoteVal);
                 const noteName = this.CURRENT_LABELS[noteIndex];
-
                 const fb = document.getElementById('feedback');
                 fb.innerText = `${noteName} (${Math.round(finalF)} Hz)`;
                 fb.style.opacity = 1;
-
                 if (isDrag) { fb.style.top = (y - 40) + "px"; fb.style.left = x + "px"; }
                 else { fb.style.top = "20px"; fb.style.left = "50%"; }
-
                 clearTimeout(this.fbTimeout);
                 this.fbTimeout = setTimeout(() => { if (!this.visuals.isDragging) fb.style.opacity = 0; }, 1500);
             }
@@ -534,96 +576,86 @@ class App {
 
         ctx.fillStyle = '#ddd'; ctx.fillRect(config.margin - 6, startY, 6, boardH);
 
-        // --- DESSIN DES FRETTES ET NOTES ---
-        // On boucle par pas de 0.5 pour capturer les quarts de ton
         for (let i = 0.5; i <= 24; i += 0.5) {
-
-            // Calcul position (Formule standard)
-            // Pour les quarts de ton (ex: 1.5), la formule mathématique reste valide
             const cm = config.scaleLength - (config.scaleLength / Math.pow(2, i / 12));
             const px = config.margin + (cm * config.pxPerCm);
             if (px > w) break;
 
-            // On ne dessine les barres de frettes que pour les nombres entiers (1, 2, 3...)
             if (Number.isInteger(i)) {
                 ctx.beginPath(); ctx.moveTo(px, startY); ctx.lineTo(px, startY + boardH);
                 ctx.strokeStyle = 'rgba(255,255,255,0.1)'; ctx.stroke();
-
                 if (config.showMeasurements) {
                     ctx.fillStyle = '#d4af37'; ctx.font = '9px monospace'; ctx.textAlign = 'center';
                     ctx.fillText(cm.toFixed(2) + 'cm', px, startY - 10);
                 }
             }
 
-            // --- LOGIQUE D'AFFICHAGE DES NOTES (Accords OU Gammes) ---
             const isScaleMode = config.scaleGenre !== 'off';
             const isChordMode = config.chordType !== 'off';
 
-            if (config.showNotes || isScaleMode || isChordMode) {
+            if (config.showNotes || isScaleMode || isChordMode || this.detectorMode) {
                 config.tuning.forEach((str, idx) => {
                     const sy = startY + (idx * config.stringSpacing) + 20;
-
-                    // Calcul de la note à cette position précise (i)
-                    // Note: baseIndex est un entier. i peut être un float (ex: 1.5).
                     const rawIndex = str.baseIndex + i;
-                    const noteIndex = Math.floor(rawIndex) % 12; // Index de base (ex: Do)
-                    const isMicro = !Number.isInteger(i); // Est-ce un quart de ton ?
+                    const noteIndex = Math.floor(rawIndex) % 12;
+                    const isMicro = !Number.isInteger(i);
 
                     let shouldDraw = false;
                     let color = '#aaa';
                     let label = "";
+                    let isSelectedInDetector = false;
 
-                    // 1. Mode Normal (Tout afficher)
-                    if (config.showNotes && !isScaleMode && !isChordMode && !isMicro) {
+                    if (this.detectorMode) {
+                        const valAtFret = (str.baseIndex + i) % 12;
+                        for (let savedNote of this.detectedNotes) {
+                            if (Math.abs(savedNote - valAtFret) < 0.1) {
+                                isSelectedInDetector = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (isSelectedInDetector) {
+                        shouldDraw = true;
+                        color = '#e74c3c';
+                        label = this.CURRENT_LABELS[noteIndex];
+                        if (isMicro) label += "½";
+                    } else if (isChordMode && !isMicro) {
+                        const isChordNote = config.chordNotes.includes(noteIndex);
+                        if (isChordNote) {
+                            shouldDraw = true;
+                            label = this.CURRENT_LABELS[noteIndex];
+                            color = (noteIndex === config.chordRoot) ? '#e74c3c' : '#3498db';
+                        }
+                    } else if (isScaleMode) {
+                        let interval = (rawIndex - config.scaleRoot) % 12;
+                        if (interval < 0) interval += 12;
+                        const inScale = config.scaleIntervals.some(int => Math.abs(int - interval) < 0.1);
+                        if (inScale) {
+                            shouldDraw = true;
+                            color = (Math.abs(interval) < 0.1) ? '#e74c3c' : '#2ecc71';
+                            if (isMicro) label = this.CURRENT_LABELS[noteIndex] + "½";
+                            else label = this.CURRENT_LABELS[noteIndex];
+                        }
+                    } else if (config.showNotes && !isMicro) {
                         shouldDraw = true;
                         label = this.CURRENT_LABELS[noteIndex];
                         if ([3, 5, 7, 9, 12, 15, 17].includes(i)) color = '#d4af37';
                     }
 
-                    // 2. Mode Accords (Entiers seulement)
-                    if (isChordMode && !isMicro) {
-                        const isChordNote = config.chordNotes.includes(noteIndex);
-                        if (isChordNote) {
-                            shouldDraw = true;
-                            label = this.CURRENT_LABELS[noteIndex];
-                            color = (noteIndex === config.chordRoot) ? '#e74c3c' : '#3498db'; // Rouge/Bleu
-                        }
-                    }
-
-                    // 3. Mode Gammes (Support Microtonal)
-                    if (isScaleMode) {
-                        // On doit vérifier si l'intervalle actuel par rapport à la racine correspond à la gamme
-                        // Intervalle sur la corde = (Note Corde + Frette) - Racine Gamme
-                        // On travaille en modulo 12 avec décimales
-                        let interval = (rawIndex - config.scaleRoot) % 12;
-                        if (interval < 0) interval += 12;
-
-                        // Vérification (avec petite tolérance pour les floats)
-                        const inScale = config.scaleIntervals.some(int => Math.abs(int - interval) < 0.1);
-
-                        if (inScale) {
-                            shouldDraw = true;
-                            // Couleur Verte pour les gammes
-                            color = (Math.abs(interval) < 0.1) ? '#e74c3c' : '#2ecc71'; // Rouge racine / Vert autres
-
-                            if (isMicro) {
-                                // Label spécial pour quart de ton
-                                const baseLabel = this.CURRENT_LABELS[noteIndex];
-                                label = baseLabel + "½"; // Symbole demi
-                            } else {
-                                label = this.CURRENT_LABELS[noteIndex];
-                            }
-                        }
-                    }
-
                     if (shouldDraw) {
                         ctx.beginPath();
-                        ctx.arc(px, sy - 5, 9, 0, Math.PI * 2);
+                        const radius = isSelectedInDetector ? 11 : 9;
+                        ctx.arc(px, sy - 5, radius, 0, Math.PI * 2);
                         ctx.fillStyle = color;
                         ctx.fill();
-
+                        if (isSelectedInDetector) {
+                            ctx.lineWidth = 2;
+                            ctx.strokeStyle = '#fff';
+                            ctx.stroke();
+                        }
                         ctx.fillStyle = '#fff';
-                        ctx.font = (isScaleMode || isChordMode) ? 'bold 11px Arial' : '10px Arial';
+                        ctx.font = (isScaleMode || isChordMode || isSelectedInDetector) ? 'bold 11px Arial' : '10px Arial';
                         ctx.textAlign = 'center';
                         ctx.fillText(label, px, sy - 2);
                     }
@@ -631,7 +663,6 @@ class App {
             }
         }
 
-        // --- CORDES A VIDE ---
         config.tuning.forEach((str, i) => {
             const y = startY + (i * config.stringSpacing) + 20;
             const st = visuals.strings[i];
@@ -639,20 +670,16 @@ class App {
             if (st.active) {
                 for (let k = config.margin; k < w; k += 10) ctx.lineTo(k, y + Math.sin(k * 0.2 + st.phase) * st.amp);
             } else { ctx.lineTo(w, y); }
-
             ctx.strokeStyle = i < 2 ? '#aaa' : '#d4af37'; ctx.lineWidth = 1.5 + (i * 0.3); ctx.stroke();
 
-            // Notes à vide (Accords ou Gammes)
             const noteIndex = str.baseIndex % 12;
             let highlight = false;
             let hColor = '#3498db';
 
-            // Check Accord
             if (config.chordType !== 'off' && config.chordNotes.includes(noteIndex)) {
                 highlight = true;
                 hColor = (noteIndex === config.chordRoot) ? '#e74c3c' : '#3498db';
             }
-            // Check Gamme (Note à vide ne peut pas être microtonale sauf accordage spécifique, on suppose standard)
             if (config.scaleGenre !== 'off') {
                 let interval = (str.baseIndex - config.scaleRoot) % 12;
                 if (interval < 0) interval += 12;
@@ -666,7 +693,6 @@ class App {
                 ctx.beginPath(); ctx.arc(config.margin - 16, y, 10, 0, Math.PI * 2);
                 ctx.fillStyle = hColor; ctx.fill();
             }
-
             ctx.fillStyle = '#fff'; ctx.textAlign = 'right';
             ctx.font = highlight ? 'bold 12px Arial' : '12px Arial';
             ctx.fillText(str.name, config.margin - 12, y + 4);
@@ -674,6 +700,4 @@ class App {
     }
 }
 
-
 const app = new App();
-

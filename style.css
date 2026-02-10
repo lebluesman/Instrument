@@ -217,3 +217,139 @@ canvas {
 header.hidden {
     display: none;
 }
+
+/* --- CSS POUR LE DETECTEUR --- */
+#btnDetector.active {
+    background: #e74c3c;
+    /* Rouge/Orange pour bien montrer le mode spécial */
+    color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+}
+
+#detectorPanel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: rgba(30, 30, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    color: #eee;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.result-item {
+    padding: 6px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.result-item:hover {
+    background: #333;
+}
+
+.result-match {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Pourcentage ou icone */
+.result-root {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.result-name {
+    color: #ccc;
+}
+
+/* --- CSS POUR LE DETECTEUR --- */
+#btnDetector.active {
+    background: #e74c3c;
+    /* Rouge/Orange pour bien montrer le mode spécial */
+    color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+}
+
+#detectorPanel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: rgba(30, 30, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    color: #eee;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.result-item {
+    padding: 6px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.result-item:hover {
+    background: #333;
+}
+
+.result-match {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Pourcentage ou icone */
+.result-root {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.result-name {
+    color: #ccc;
+}
+
+#detectorPanel {
+    /* ... tes autres styles ... */
+    z-index: 1000;
+    /* Assure que c'est au dessus du canvas */
+    background: rgba(20, 20, 25, 0.95);
+    /* Fond plus sombre */
+}

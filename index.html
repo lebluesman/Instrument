@@ -3,16 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="QaMtWfrIylQJh8ERirnRZFKHIFhhKN80SA4jJi4KyfU" />
-    <meta name="description" content="Oud & Guitar Fretboard Visualizer. Interactive tool for Western scales, Chords, and Oriental Maqams with quarter tones (Microtonal). Accordage et gammes pour Oud, Guitare et Basse.">
-    <meta name="keywords" content="Oud, Guitar, Fretboard, Maqam, Scale Visualizer, Quarter tone, Microtonal, Accordage Oud, Gammes Arabes, Music Theory Tool, Luthier Tool">
-    <meta name="author" content="Ton Nom ou Pseudo">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Fretboard Ultimate - Oud & Guitar Visualizer">
-    <meta property="og:description" content="Explore scales, chords, and microtonal Maqams on a virtual fretboard.">
-    <meta property="og:image" content="Lien_vers_une_image_preview.png"> <meta property="og:url" content="https://github.com/lebluesman/Instrument/">
-<meta property="og:type" content="website">
-    
     <title>Ultimate Fretboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -120,6 +110,15 @@
 
             <button class="toggle-btn active" id="btnNotes" onclick="app.toggleNotes()" data-i18n="btn_notes">Notes</button>
             <button class="toggle-btn active" id="btnMeasure" onclick="app.toggleMeasurements()" data-i18n="btn_measures">Mesures</button>
+            <div class="separator"></div>
+            <button class="toggle-btn" id="btnDetector" onclick="app.toggleDetector()">Détecteur</button>
+            <div id="detectorPanel" style="display:none;">
+                <div class="panel-header">
+                    <span id="detectorTitle">Notes: </span>
+                    <button onclick="app.clearDetector()" style="font-size:0.7rem; padding:2px 8px;">Clear</button>
+                </div>
+                <div id="detectorResults"></div>
+            </div>
         </div>
     </header>
 
@@ -127,24 +126,10 @@
         <canvas id="mainCanvas"></canvas>
         <div id="feedback"></div>
     </main>
-    
-    <footer style="text-align: center; color: #555; font-size: 0.8rem; padding: 20px;">
-    <p>
-        Fretboard Ultimate is a free online tool for musicians. Visualize notes, chords, and scales on 
-        <strong>Oud</strong>, <strong>Guitar</strong>, <strong>Bass</strong>, and <strong>Violin</strong>.
-        Supports custom tunings and <strong>Oriental Maqams</strong> (quarter tones/microtonal) like Rast, Bayati, and Hijaz.
-        <br>
-        Outil gratuit pour visualiser les accords et les gammes (Maqams algériens et orientaux) sur le manche.
-    </p>
-    </footer>     
+
     <script src="script.js"></script>
 </body>
 
-
 </html>
-
-
-
-
 
 
