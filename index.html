@@ -2,135 +2,197 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111218">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Fretboard">
     <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I" />
+    <meta name="description" content="Manche interactif pour oud, guitare, basse et violon : accords, gammes, maqams en quarts de ton, détecteur de gammes et synthèse sonore.">
     <title>Ultimate Fretboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e4b55a'/%3E%3Cpath d='M6 11h20M6 16h20M6 21h20' stroke='%231b1406' stroke-width='1.6'/%3E%3Cpath d='M12 8v16M19 8v16' stroke='%231b1406' stroke-opacity='.45' stroke-width='2'/%3E%3C/svg%3E">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css?v=2.2">
 </head>
-<body>
-    <button id="toggleMenuBtn" onclick="app.toggleMenu()">☰</button>
-    <header id="mainHeader">
-        <h1><span>🎵</span> Ultimate Fretboard</h1>
+<body data-mode="free">
+<div id="app">
+    <header class="bar" id="bar">
+        <button class="brand" id="btnMenu" data-i18n-title="hide_menu">
+            <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="8" fill="#e4b55a"/>
+                <path d="M6 11h20M6 16h20M6 21h20" stroke="#1b1406" stroke-width="1.6"/>
+                <path d="M12 8v16M19 8v16" stroke="#1b1406" stroke-opacity=".45" stroke-width="2"/>
+            </svg>
+            <span class="brand-name">Ultimate <b>Fretboard</b></span>
+        </button>
 
-        <div class="input-group">
-            <select id="langSelect" onchange="app.setLanguage(this.value)" style="width: 70px; font-weight:bold; color:var(--accent);">
-                
-                <option value="fr">FR</option>
-                <option value="en">EN</option>
-            </select>
+        <div class="segmented modes" id="modes" role="tablist">
+            <button role="tab" data-mode="free"><span data-i18n="mode_free">Libre</span></button>
+            <button role="tab" data-mode="chord"><span data-i18n="mode_chord">Accords</span></button>
+            <button role="tab" data-mode="scale"><span data-i18n="mode_scale">Gammes</span></button>
+            <button role="tab" data-mode="detect"><span data-i18n="mode_detect">Détecteur</span></button>
         </div>
 
-        <div class="separator"></div>
-
-        <div class="controls-area">
-            
-            <div class="input-group">
-                <label data-i18n="instrument">Instrument</label>
-                <select id="soundType">
-                    <option value="oud" data-i18n="opt_oud">Oud (Bois)</option>
-                    <option value="guitar" selected data-i18n="opt_guitar">Guitare (Nylon)</option>
-                    <option value="electric" data-i18n="opt_electric">Électrique</option>
-                    <option value="violin" data-i18n="opt_violin">Violon</option>
-                    <option value="synth" data-i18n="opt_synth">Synthé</option>
-                </select>
+        <div class="ctx" id="ctx">
+            <div class="ctx-pane" data-pane="free">
+                <button class="chip toggle" data-toggle="showNotes"><span data-i18n="notes">Notes</span></button>
+                <button class="chip toggle" data-toggle="showMeasures"><span data-i18n="measures">Mesures</span></button>
+                <span class="hint" data-i18n="hint_free"></span>
             </div>
-
-            <label class="checkbox-wrapper" title="Sustain Mode">
-                <input type="checkbox" id="sustainMode">
-                <span class="checkbox-label" data-i18n="sustain">Sustain ∞</span>
-            </label>
-
-            <button class="btn-stop" onclick="app.silence()">STOP</button>
-
-            <div class="separator"></div>
-
-            <div class="input-group highlight-group">
-                <label data-i18n="chord_label">Accords</label>
-                <div style="display: flex; gap: 2px;">
-                    <select id="chordRoot" onchange="app.updateChord()" style="width: 50px;"></select>
-                    <select id="chordType" onchange="app.updateChord()" style="width: 90px;">
-                        <option value="off">-- Off --</option>
-                        <option value="maj" data-i18n="major">Majeur</option>
-                        <option value="min" data-i18n="minor">Mineur</option>
-                        <option value="7">Dom 7</option>
-                        <option value="maj7">Maj 7</option>
-                        <option value="min7">Min 7</option>
-                        <option value="dim" data-i18n="diminished">Diminué</option>
-                        <option value="aug" data-i18n="augmented">Augmenté</option>
-                        
-                    </select>
-                </div>
+            <div class="ctx-pane" data-pane="chord">
+                <select id="chordRoot" class="sel sel-root" data-i18n-title="root"></select>
+                <select id="chordType" class="sel sel-grow" data-i18n-title="chord_type"></select>
             </div>
-
-            <div class="separator"></div>
-
-            <div class="input-group highlight-group-green">
-                <label data-i18n="scale_label">Gammes / Maqams</label>
-                <div style="display: flex; gap: 2px;">
-                    <select id="scaleRoot" onchange="app.updateScale()" style="width: 50px;"></select>
-                    
-                    <select id="scaleGenre" onchange="app.updateGenre()" style="width: 90px;">
-                        <option value="off">-- Off --</option>
-                        <option value="western" data-i18n="genre_western">Occidental</option>
-                        <option value="oriental" data-i18n="genre_oriental">Oriental</option>
-                        <option value="andalous" data-i18n="genre_andalous">Andalous (Alg)</option>
-                    </select>
-
-                    <select id="scaleName" onchange="app.updateScale()" style="width: 90px; display:none;">
-                        </select>
-                </div>
+            <div class="ctx-pane" data-pane="scale">
+                <select id="scaleRoot" class="sel sel-root" data-i18n-title="root"></select>
+                <select id="scaleGenre" class="sel sel-genre" data-i18n-title="genre"></select>
+                <select id="scaleKey" class="sel sel-grow" data-i18n-title="scale"></select>
+                <button class="chip warn" id="microFix" hidden><span data-i18n="micro_fix"></span></button>
             </div>
-
-            <div class="separator"></div>
-
-            <div class="input-group">
-                <label>Presets</label>
-                <select id="presetSelect" onchange="app.loadPreset()">
-                    <option value="guitare" selected data-i18n="p_guitar">Guitare</option>
-                    <option value="oud_arabe" data-i18n="p_oud_arabe">Oud Arabe (C-C)</option>
-                    <option value="oud_turc" data-i18n="p_oud_turc">Oud Turc (D-D)</option>
-                    <option value="oud_ancien" data-i18n="p_oud_old">Oud Ancien (F-F)</option>
-                    <option value="oud_irakien" data-i18n="p_oud_iraq">Oud Irakien</option>
-                    <option value="oud_grec" data-i18n="p_oud_greek">Oud Grec</option>
-                    <option value="oud_maghreb" data-i18n="p_oud_maghreb">Oud Maghrébin</option>
-                    <option value="oud_moderne" data-i18n="p_oud_modern">Oud Moderne</option>
-                    <option value="basse" data-i18n="p_bass">Basse</option>
-                    <option value="custom" data-i18n="p_custom">-- Perso --</option>
-                </select>
+            <div class="ctx-pane" data-pane="detect">
+                <div class="det-chips" id="detChips"></div>
+                <button class="chip" id="detClear"><span data-i18n="clear">Effacer</span></button>
             </div>
+        </div>
 
-            <div class="input-group">
-                <label data-i18n="tuning">Accordage</label>
-                <input type="text" id="tuning" value="" style="width: 140px;" onchange="app.updateParams()">
-            </div>
-
-            <div class="input-group">
-                <label data-i18n="scale">Long. (cm)</label>
-                <input type="number" id="scaleLength" value="64.8" style="width: 45px;" step="0.5" onchange="app.updateParams()">
-            </div>
-
-            <button class="toggle-btn active" id="btnNotes" onclick="app.toggleNotes()" data-i18n="btn_notes">Notes</button>
-            <button class="toggle-btn active" id="btnMeasure" onclick="app.toggleMeasurements()" data-i18n="btn_measures">Mesures</button>
-            <div class="separator"></div>
-            <button class="toggle-btn" id="btnDetector" onclick="app.toggleDetector()">Détecteur</button>
-            <div id="detectorPanel" style="display:none;">
-                <div class="panel-header">
-                    <span id="detectorTitle">Notes: </span>
-                    <button onclick="app.clearDetector()" style="font-size:0.7rem; padding:2px 8px;">Clear</button>
-                </div>
-                <div id="detectorResults"></div>
-            </div>
+        <div class="tools">
+            <select id="sound" class="sel sel-sound" data-i18n-title="sound"></select>
+            <button class="icon-btn toggle" id="btnSustain" data-i18n-title="sustain">
+                <svg viewBox="0 0 24 24"><path d="M12 12c-2-2.6-3.9-4-6-4a4 4 0 0 0 0 8c2.1 0 4-1.4 6-4zm0 0c2 2.6 3.9 4 6 4a4 4 0 0 0 0-8c-2.1 0-4 1.4-6 4z"/></svg>
+            </button>
+            <button class="icon-btn stop" id="btnStop" data-i18n-title="stop">
+                <svg viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2" fill="currentColor" stroke="none"/></svg>
+            </button>
+            <button class="icon-btn" id="btnFocus" data-i18n-title="focus">
+                <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+            </button>
+            <button class="icon-btn" id="btnSettings" data-i18n-title="settings">
+                <svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h11M19 17h1"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            </button>
         </div>
     </header>
 
-    <main>
-        <canvas id="mainCanvas"></canvas>
-        <div id="feedback"></div>
+    <div class="results" id="results" hidden></div>
+
+    <main class="stage" id="stage">
+        <canvas id="board"></canvas>
+        <div class="bubble" id="bubble"></div>
+        <button class="float-logo" id="fMenu" data-i18n-title="show_menu">
+            <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="8" fill="#e4b55a"/>
+                <path d="M6 11h20M6 16h20M6 21h20" stroke="#1b1406" stroke-width="1.6"/>
+                <path d="M12 8v16M19 8v16" stroke="#1b1406" stroke-opacity=".45" stroke-width="2"/>
+            </svg>
+        </button>
+        <div class="float-tools">
+            <button class="icon-btn stop" id="fStop" data-i18n-title="stop">
+                <svg viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2" fill="currentColor" stroke="none"/></svg>
+            </button>
+            <button class="icon-btn" id="fExit" data-i18n-title="exit_focus">
+                <svg viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+            </button>
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="status">
+        <button class="preset-chip" id="presetChip">
+            <b id="presetName"></b><span id="tuningMini"></span>
+        </button>
+        <div class="legend" id="legend"></div>
+    </footer>
+</div>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="sheet" id="sheet" aria-hidden="true">
+    <div class="sheet-head">
+        <div class="grip"></div>
+        <h2 data-i18n="settings">Réglages</h2>
+        <button class="icon-btn" id="sheetClose" data-i18n-title="close">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <div class="sheet-body">
+        <section>
+            <h3 data-i18n="sec_instrument">Instrument</h3>
+            <label class="field">
+                <span data-i18n="preset">Préréglage</span>
+                <select id="preset" class="sel"></select>
+            </label>
+            <label class="field">
+                <span data-i18n="tuning">Accordage</span>
+                <input id="tuning" class="input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+                <small class="help" id="tuningHelp"></small>
+            </label>
+            <div class="field">
+                <span data-i18n="length">Longueur de corde (cm)</span>
+                <div class="stepper">
+                    <button data-step="-0.5" aria-label="-0.5">−</button>
+                    <input id="scaleLength" class="input" type="number" step="0.1" min="20" max="130" inputmode="decimal">
+                    <button data-step="0.5" aria-label="+0.5">+</button>
+                </div>
+            </div>
+            <div class="field">
+                <span data-i18n="neck">Manche</span>
+                <div class="segmented full" data-seg="fretMode">
+                    <button data-value="fretted"><span data-i18n="fretted">Fretté</span></button>
+                    <button data-value="fretless"><span data-i18n="fretless">Fretless</span></button>
+                </div>
+                <small class="help" data-i18n="neck_help"></small>
+            </div>
+        </section>
+
+        <section>
+            <h3 data-i18n="sec_display">Affichage</h3>
+            <div class="field">
+                <span data-i18n="frets">Frettes visibles</span>
+                <div class="segmented full" data-seg="frets">
+                    <button data-value="auto"><span data-i18n="auto">Auto</span></button>
+                    <button data-value="12">12</button>
+                    <button data-value="15">15</button>
+                    <button data-value="19">19</button>
+                    <button data-value="24">24</button>
+                </div>
+            </div>
+            <div class="field">
+                <span data-i18n="orientation">Orientation</span>
+                <div class="segmented full" data-seg="orientation">
+                    <button data-value="auto"><span data-i18n="auto">Auto</span></button>
+                    <button data-value="h"><span data-i18n="horizontal">Horizontale</span></button>
+                    <button data-value="v"><span data-i18n="vertical">Verticale</span></button>
+                </div>
+            </div>
+            <button class="switch-row" data-toggle="showNotes"><span data-i18n="show_notes">Noms des notes</span><i class="switch"></i></button>
+            <button class="switch-row" data-toggle="showMeasures"><span data-i18n="show_measures">Mesures</span><i class="switch"></i></button>
+        </section>
+
+        <section>
+            <h3 data-i18n="sec_sound">Son</h3>
+            <label class="field">
+                <span data-i18n="volume">Volume</span>
+                <input id="volume" type="range" min="0" max="1" step="0.01">
+            </label>
+            <button class="switch-row" data-toggle="reverb"><span data-i18n="reverb">Réverbération</span><i class="switch"></i></button>
+            <small class="help" data-i18n="ios_note"></small>
+        </section>
+
+        <section>
+            <h3 data-i18n="sec_lang">Langue</h3>
+            <div class="segmented full" data-seg="lang">
+                <button data-value="fr">Français</button>
+                <button data-value="en">English</button>
+            </div>
+        </section>
+
+        <button class="install-btn" id="btnInstall" hidden>
+            <svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+            <span data-i18n="install">Installer l'application</span>
+        </button>
+        <p class="about">Ultimate Fretboard v2 · <a href="old/" data-i18n="old_version">ancienne version</a></p>
+    </div>
+</aside>
+
+<script src="app.js?v=2.2"></script>
 </body>
-
 </html>
-
-

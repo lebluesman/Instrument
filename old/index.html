@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I" />
+    <title>Ultimate Fretboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="toggleMenuBtn" onclick="app.toggleMenu()">☰</button>
+    <header id="mainHeader">
+        <h1><span>🎵</span> Ultimate Fretboard</h1>
+
+        <div class="input-group">
+            <select id="langSelect" onchange="app.setLanguage(this.value)" style="width: 70px; font-weight:bold; color:var(--accent);">
+                
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="controls-area">
+            
+            <div class="input-group">
+                <label data-i18n="instrument">Instrument</label>
+                <select id="soundType">
+                    <option value="oud" data-i18n="opt_oud">Oud (Bois)</option>
+                    <option value="guitar" selected data-i18n="opt_guitar">Guitare (Nylon)</option>
+                    <option value="electric" data-i18n="opt_electric">Électrique</option>
+                    <option value="violin" data-i18n="opt_violin">Violon</option>
+                    <option value="synth" data-i18n="opt_synth">Synthé</option>
+                </select>
+            </div>
+
+            <label class="checkbox-wrapper" title="Sustain Mode">
+                <input type="checkbox" id="sustainMode">
+                <span class="checkbox-label" data-i18n="sustain">Sustain ∞</span>
+            </label>
+
+            <button class="btn-stop" onclick="app.silence()">STOP</button>
+
+            <div class="separator"></div>
+
+            <div class="input-group highlight-group">
+                <label data-i18n="chord_label">Accords</label>
+                <div style="display: flex; gap: 2px;">
+                    <select id="chordRoot" onchange="app.updateChord()" style="width: 50px;"></select>
+                    <select id="chordType" onchange="app.updateChord()" style="width: 90px;">
+                        <option value="off">-- Off --</option>
+                        <option value="maj" data-i18n="major">Majeur</option>
+                        <option value="min" data-i18n="minor">Mineur</option>
+                        <option value="7">Dom 7</option>
+                        <option value="maj7">Maj 7</option>
+                        <option value="min7">Min 7</option>
+                        <option value="dim" data-i18n="diminished">Diminué</option>
+                        <option value="aug" data-i18n="augmented">Augmenté</option>
+                        
+                    </select>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="input-group highlight-group-green">
+                <label data-i18n="scale_label">Gammes / Maqams</label>
+                <div style="display: flex; gap: 2px;">
+                    <select id="scaleRoot" onchange="app.updateScale()" style="width: 50px;"></select>
+                    
+                    <select id="scaleGenre" onchange="app.updateGenre()" style="width: 90px;">
+                        <option value="off">-- Off --</option>
+                        <option value="western" data-i18n="genre_western">Occidental</option>
+                        <option value="oriental" data-i18n="genre_oriental">Oriental</option>
+                        <option value="andalous" data-i18n="genre_andalous">Andalous (Alg)</option>
+                    </select>
+
+                    <select id="scaleName" onchange="app.updateScale()" style="width: 90px; display:none;">
+                        </select>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="input-group">
+                <label>Presets</label>
+                <select id="presetSelect" onchange="app.loadPreset()">
+                    <option value="guitare" selected data-i18n="p_guitar">Guitare</option>
+                    <option value="oud_arabe" data-i18n="p_oud_arabe">Oud Arabe (C-C)</option>
+                    <option value="oud_turc" data-i18n="p_oud_turc">Oud Turc (D-D)</option>
+                    <option value="oud_ancien" data-i18n="p_oud_old">Oud Ancien (F-F)</option>
+                    <option value="oud_irakien" data-i18n="p_oud_iraq">Oud Irakien</option>
+                    <option value="oud_grec" data-i18n="p_oud_greek">Oud Grec</option>
+                    <option value="oud_maghreb" data-i18n="p_oud_maghreb">Oud Maghrébin</option>
+                    <option value="oud_moderne" data-i18n="p_oud_modern">Oud Moderne</option>
+                    <option value="basse" data-i18n="p_bass">Basse</option>
+                    <option value="custom" data-i18n="p_custom">-- Perso --</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label data-i18n="tuning">Accordage</label>
+                <input type="text" id="tuning" value="" style="width: 140px;" onchange="app.updateParams()">
+            </div>
+
+            <div class="input-group">
+                <label data-i18n="scale">Long. (cm)</label>
+                <input type="number" id="scaleLength" value="64.8" style="width: 45px;" step="0.5" onchange="app.updateParams()">
+            </div>
+
+            <button class="toggle-btn active" id="btnNotes" onclick="app.toggleNotes()" data-i18n="btn_notes">Notes</button>
+            <button class="toggle-btn active" id="btnMeasure" onclick="app.toggleMeasurements()" data-i18n="btn_measures">Mesures</button>
+            <div class="separator"></div>
+            <button class="toggle-btn" id="btnDetector" onclick="app.toggleDetector()">Détecteur</button>
+            <div id="detectorPanel" style="display:none;">
+                <div class="panel-header">
+                    <span id="detectorTitle">Notes: </span>
+                    <button onclick="app.clearDetector()" style="font-size:0.7rem; padding:2px 8px;">Clear</button>
+                </div>
+                <div id="detectorResults"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <canvas id="mainCanvas"></canvas>
+        <div id="feedback"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+

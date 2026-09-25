@@ -1,0 +1,355 @@
+:root {
+    --bg-dark: #121214;
+    --panel-bg: #1e1e24;
+    --accent: #d4af37;
+    /* Or pour l'interface générale */
+    --accent-hover: #f1c40f;
+    --text-main: #e1e1e6;
+    --border: #323238;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.controls-area {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Accords en Bleu/Rouge (Standard) */
+.highlight-group label {
+    color: #3498db;
+    opacity: 0.9;
+}
+
+/* Gammes en Vert (Nouveau) */
+.highlight-group-green label {
+    color: #2ecc71;
+    opacity: 0.9;
+}
+
+label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    background: #2a2a30;
+    border: 1px solid #444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #2a2a30;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    cursor: pointer;
+    height: 20px;
+}
+
+.checkbox-wrapper:hover {
+    background: #333;
+}
+
+.checkbox-wrapper input {
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.btn-stop {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 30px;
+}
+
+.btn-stop:hover {
+    background: #e74c3c;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: 1px solid #555;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: all 0.2s;
+    height: 28px;
+}
+
+.toggle-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #121214;
+    font-weight: bold;
+}
+
+.separator {
+    width: 1px;
+    height: 30px;
+    background: #333;
+    margin: 0 2px;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+canvas {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    cursor: crosshair;
+}
+
+#feedback {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--accent);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    border: 1px solid #444;
+}
+
+#toggleMenuBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
+    /* Au-dessus de tout */
+    background: rgba(30, 30, 36, 0.8);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+#toggleMenuBtn:hover {
+    background: var(--accent);
+    color: #121214;
+}
+
+/* Classe pour cacher le header */
+header.hidden {
+    display: none;
+}
+
+/* --- CSS POUR LE DETECTEUR --- */
+#btnDetector.active {
+    background: #e74c3c;
+    /* Rouge/Orange pour bien montrer le mode spécial */
+    color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+}
+
+#detectorPanel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: rgba(30, 30, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    color: #eee;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.result-item {
+    padding: 6px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.result-item:hover {
+    background: #333;
+}
+
+.result-match {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Pourcentage ou icone */
+.result-root {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.result-name {
+    color: #ccc;
+}
+
+/* --- CSS POUR LE DETECTEUR --- */
+#btnDetector.active {
+    background: #e74c3c;
+    /* Rouge/Orange pour bien montrer le mode spécial */
+    color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+}
+
+#detectorPanel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: rgba(30, 30, 36, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    color: #eee;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.result-item {
+    padding: 6px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.result-item:hover {
+    background: #333;
+}
+
+.result-match {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Pourcentage ou icone */
+.result-root {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.result-name {
+    color: #ccc;
+}
+
+#detectorPanel {
+    /* ... tes autres styles ... */
+    z-index: 1000;
+    /* Assure que c'est au dessus du canvas */
+    background: rgba(20, 20, 25, 0.95);
+    /* Fond plus sombre */
+}
