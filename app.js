@@ -18,19 +18,45 @@ const IS_NATURAL = [1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1];
 
 // osc : [forme d'onde, niveau, désaccord en cents] — utilisé pour le sustain et les sons non pincés
 // ks  : corde pincée (Karplus-Strong) — tau = durée de résonance, bright = brillance de l'attaque,
-//       pos = position du pincement, body = résonances de caisse [fréquence, gain dB, Q]
+//       pos = position du pincement, body = égaliseur [fréquence, gain dB, Q],
+//       bend = légère surtension à l'attaque, course = chœur de 2 cordes [désaccord ¢, décalage s, niveau]
+// bodyModes : résonances de la caisse [fréquence, amplitude, durée s] (convolution partagée)
 const INSTRUMENTS = {
+    // Oud : même base que la guitare nylon (cordes nylon), mais attaque à la risha, chœurs de 2 cordes,
+    // extinction plus rapide et grande caisse bombée
     oud: {
-        osc: [['triangle', 1, 0], ['sawtooth', .22, 4]], attack: .004, ring: 1.9, hold: .55, release: .35, fStart: 3400, fEnd: 300, q: 1.5,
-        ks: { tau: .55, bright: .75, pos: .11, stretch: .42, dur: 2.8, body: [[190, 6, 1.1], [420, -3, 1.2], [3000, 3, 1.4]] }
+        osc: [['triangle', 1, 0], ['sine', .35, 0]], attack: .005, ring: 2.2, hold: .5, release: .4, fStart: 2200, fEnd: 320, q: .8,
+        ks: {
+            tau: .8, bright: .45, pos: .15, stretch: .5, dur: 3.6, bend: .002, gain: 1.15,
+            course: { detune: 1, delay: .008, mix: .65 },
+            body: [[4000, -10, .6], [2300, -3, 1]]
+        },
+        // Caisse bombée : résonance d'air (~110 Hz) et de table dans les graves / bas-médiums
+        bodyModes: [[110, 1, .34], [196, .95, .26], [285, .6, .17], [405, .5, .12], [560, .38, .09],
+            [770, .26, .07], [1100, .18, .05], [1650, .12, .035], [2500, .08, .025]],
+        bodyGain: 1.9
     },
+    // Guitare classique espagnole : doigt (attaque douce) au-dessus de la rosace, cordes nylon, caisse chaude
+    nylon: {
+        osc: [['triangle', 1, 0], ['sine', .35, 0]], attack: .008, ring: 2.8, hold: .5, release: .5, fStart: 1900, fEnd: 360, q: .7,
+        ks: {
+            tau: 1.15, bright: .3, pos: .22, stretch: .5, dur: 4.2, bend: .0015, gain: 1.15,
+            body: [[4200, -9, .6], [2300, -3, 1]]
+        },
+        bodyModes: [[98, 1, .3], [205, .9, .21], [390, .45, .12], [540, .35, .09], [800, .22, .06],
+            [1200, .15, .045], [2000, .08, .03]],
+        bodyGain: 1.6
+    },
+    // Guitare folk (cordes acier) : plus brillante et percussive
     guitar: {
         osc: [['triangle', 1, 0], ['sawtooth', .16, -5]], attack: .006, ring: 2.6, hold: .5, release: .5, fStart: 2700, fEnd: 480, q: .8,
         ks: { tau: .95, bright: .42, pos: .17, stretch: .5, dur: 3.8, body: [[105, 5, 1.3], [230, 3, 1.5], [2500, -3, 1]] }
     },
+    // Guitare électrique : cordes acier au médiator, micro chevalet, puis ampli (saturation + baffle) partagé
     electric: {
-        osc: [['square', .5, 0], ['sawtooth', .45, 7]], attack: .003, ring: 3.2, hold: .7, release: .6, fStart: 4800, fEnd: 1300, q: 4,
-        ks: { tau: 1.6, bright: .92, pos: .08, stretch: .55, dur: 4.6, body: [[800, 3, .7]], drive: 3 }
+        osc: [['sawtooth', .6, 0], ['sawtooth', .45, 7]], attack: .003, ring: 3.2, hold: .7, release: .6, fStart: 3800, fEnd: 1400, q: 1.5,
+        ks: { tau: 2.2, bright: .6, pos: .13, stretch: .45, dur: 5.5, pickup: .16, pickupMix: .45, body: [], gain: 1 },
+        amp: true
     },
     violin: { osc: [['sawtooth', .8, 0], ['sawtooth', .4, -8]], attack: .2, ring: 1.7, hold: .9, release: .45, fStart: 2400, fEnd: 2000, q: 2, vibrato: [5.5, 9], bowed: true },
     synth:  { osc: [['sine', 1, 0], ['square', .12, 12]], attack: .03, ring: 2.2, hold: .6, release: .8, fStart: 7000, fEnd: 240, q: 7 }
@@ -124,6 +150,7 @@ const CHORDS = {
 
 const PRESETS = {
     guitare:     { fr: 'Guitare', en: 'Guitar', len: 64.8, tuning: 'E4, B3, G3, D3, A2, E2', fret: 'fretted', sound: 'guitar' },
+    guitare_classique: { fr: 'Guitare classique (nylon)', en: 'Classical guitar (nylon)', len: 65, tuning: 'E4, B3, G3, D3, A2, E2', fret: 'fretted', sound: 'nylon' },
     oud_arabe:   { fr: 'Oud arabe (Do–Do)', en: 'Arabic oud (C–C)', len: 60, tuning: 'C4, G3, D3, A2, F2, C2', fret: 'fretless', sound: 'oud' },
     oud_turc:    { fr: 'Oud turc (Ré–Ré)', en: 'Turkish oud (D–D)', len: 58.5, tuning: 'G4, D4, A3, E3, A2, D2', fret: 'fretless', sound: 'oud' },
     oud_ancien:  { fr: 'Oud ancien (Fa–Fa)', en: 'Old oud (F–F)', len: 61.5, tuning: 'F4, C4, G3, D3, A2, F2', fret: 'fretless', sound: 'oud' },
@@ -133,6 +160,14 @@ const PRESETS = {
     oud_moderne: { fr: 'Oud moderne (solo)', en: 'Modern oud (solo)', len: 60, tuning: 'C#4, G#3, D#3, A#2, F2, C2', fret: 'fretless', sound: 'oud' },
     basse:       { fr: 'Basse', en: 'Bass', len: 86.4, tuning: 'G2, D2, A1, E1', fret: 'fretted', sound: 'guitar' },
     violon:      { fr: 'Violon', en: 'Violin', len: 32.5, tuning: 'E5, A4, D4, G3', fret: 'fretless', sound: 'violin' }
+};
+
+// Ampli de la guitare électrique : drive = saturation, out = volume compensé, tight = coupe-bas avant saturation (Hz),
+// cab = coupure haute du baffle (Hz) — plus la saturation est forte, plus on coupe le grésillement
+const AMP_MODES = {
+    clean:  { drive: 1.3, out: .6,  tight: 70,  cab: 3800 },
+    crunch: { drive: 7,   out: .22, tight: 90,  cab: 4000 },
+    lead:   { drive: 24,  out: .15, tight: 110, cab: 3300 }
 };
 
 // Rythmes : D = dum, T = tek, k = tek léger, A = clic accentué, c = clic, . = silence ; div = pas par temps
@@ -165,7 +200,7 @@ const I18N = {
         lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas',
         micro_fix: 'Micro-intervalles : passer en fretless',
         genre_western: 'Occidental', genre_oriental: 'Maqams arabes', genre_turkish: 'Makams turcs (commas)', genre_andalous: 'Andalou (Algérie)',
-        snd_oud: 'Oud', snd_guitar: 'Guitare nylon', snd_electric: 'Électrique', snd_violin: 'Violon', snd_synth: 'Synthé',
+        snd_oud: 'Oud', snd_nylon: 'Guitare nylon (espagnole)', snd_guitar: 'Guitare folk (acier)', snd_electric: 'Électrique', snd_violin: 'Violon', snd_synth: 'Synthé',
         sec_instrument: 'Instrument', preset: 'Préréglage', custom: 'Personnalisé',
         preset_save: 'Enregistrer comme préréglage', preset_delete: 'Supprimer', preset_name: 'Nom du préréglage :',
         preset_saved: 'Préréglage enregistré', preset_confirm_del: 'Supprimer ce préréglage ?',
@@ -180,6 +215,7 @@ const I18N = {
         show_notes: 'Noms des notes', show_measures: 'Mesures (cm depuis le sillet)',
         lefty: 'Gaucher (manche inversé)', fullscreen: 'Plein écran',
         sec_sound: 'Son', volume: 'Volume', reverb: 'Réverbération',
+        amp: 'Ampli (guitare électrique)', amp_clean: 'Clair', amp_crunch: 'Crunch', amp_lead: 'Saturé',
         ios_note: 'Sur iPhone / iPad, désactivez le mode silencieux pour entendre le son.',
         sec_share: 'Partager', share_btn: 'Partager cette configuration',
         share_help: 'Crée un lien qui ouvre l’appli avec le même accordage, le même maqam et les mêmes réglages.',
@@ -212,7 +248,7 @@ const I18N = {
         lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas',
         micro_fix: 'Microtones: switch to fretless',
         genre_western: 'Western', genre_oriental: 'Arabic maqams', genre_turkish: 'Turkish makams (commas)', genre_andalous: 'Andalusian (Algeria)',
-        snd_oud: 'Oud', snd_guitar: 'Nylon guitar', snd_electric: 'Electric', snd_violin: 'Violin', snd_synth: 'Synth',
+        snd_oud: 'Oud', snd_nylon: 'Nylon guitar (Spanish)', snd_guitar: 'Folk guitar (steel)', snd_electric: 'Electric', snd_violin: 'Violin', snd_synth: 'Synth',
         sec_instrument: 'Instrument', preset: 'Preset', custom: 'Custom',
         preset_save: 'Save as preset', preset_delete: 'Delete', preset_name: 'Preset name:',
         preset_saved: 'Preset saved', preset_confirm_del: 'Delete this preset?',
@@ -227,6 +263,7 @@ const I18N = {
         show_notes: 'Note names', show_measures: 'Measurements (cm from nut)',
         lefty: 'Left-handed (mirrored neck)', fullscreen: 'Full screen',
         sec_sound: 'Sound', volume: 'Volume', reverb: 'Reverb',
+        amp: 'Amp (electric guitar)', amp_clean: 'Clean', amp_crunch: 'Crunch', amp_lead: 'Lead',
         ios_note: 'On iPhone / iPad, turn off silent mode to hear sound.',
         sec_share: 'Share', share_btn: 'Share this setup',
         share_help: 'Creates a link that opens the app with the same tuning, maqam and settings.',
@@ -385,6 +422,11 @@ function renderPluck(sr, freq, k) {
         const y1 = n >= P ? out[n - P] : 0, y2 = n > P ? out[n - P - 1] : 0;
         out[n] = x + rho * (a * y1 + b * y2);
     }
+    // Micro magnétique : il capte la corde à un point précis (filtre en peigne) — timbre nasal du micro chevalet
+    if (k.pickup) {
+        const D = Math.max(1, Math.round(k.pickup * P)), m = k.pickupMix ?? 1;
+        for (let n = len - 1; n >= D; n--) out[n] -= m * out[n - D];
+    }
     // Suppression de la composante continue + fondu de fin
     let px = 0, py = 0;
     const fade = Math.floor(sr * .05);
@@ -433,7 +475,7 @@ class Voice {
         }
 
         this.filter.connect(this.out);
-        this.out.connect(engine.bus);
+        this.out.connect(engine.dest(key));
 
         // Les graves paraissent plus faibles : légère compensation
         const peak = .32 * clamp(Math.pow(196 / freq, .3), .65, 1.5);
@@ -489,18 +531,11 @@ class Voice {
 // Voix « corde pincée » (Karplus-Strong) : oud, guitare, électrique
 class PluckVoice {
     constructor(engine, freq, key) {
-        const ctx = engine.ctx, p = INSTRUMENTS[key], k = p.ks, t = ctx.currentTime;
+        const ctx = engine.ctx, p = INSTRUMENTS[key], k = p.ks, t = ctx.currentTime, sr = ctx.sampleRate;
         this.engine = engine; this.ctx = ctx; this.p = p; this.released = false;
 
-        const r = renderPluck(ctx.sampleRate, freq, k);
-        const buf = ctx.createBuffer(1, r.data.length, ctx.sampleRate);
-        buf.getChannelData(0).set(r.data);
-        this.period = r.period;
-        this.src = ctx.createBufferSource();
-        this.src.buffer = buf;
-        this.src.playbackRate.value = freq * this.period / ctx.sampleRate;
-
-        let node = this.src;
+        const mix = ctx.createGain();
+        let node = mix;
         for (const [f, gain, q] of k.body) {
             const bq = ctx.createBiquadFilter();
             bq.type = 'peaking';
@@ -513,13 +548,35 @@ class PluckVoice {
             node.connect(ws); node = ws;
         }
         this.out = ctx.createGain();
-        this.out.gain.value = .42 * clamp(Math.pow(196 / freq, .2), .75, 1.35);
+        this.out.gain.value = .42 * clamp(Math.pow(196 / freq, .2), .75, 1.35) * (k.gain || 1);
         node.connect(this.out);
-        this.out.connect(engine.bus);
+        this.out.connect(engine.dest(key));
 
-        this.end = t + r.data.length / ctx.sampleRate / this.src.playbackRate.value;
-        this.src.onended = () => this.dispose();
-        this.src.start(t);
+        // Un chœur (course) = deux cordes à l'unisson, un peu désaccordées, que la risha frappe l'une après l'autre
+        const strings = k.course
+            ? [[-k.course.detune, 0, 1], [k.course.detune, k.course.delay, k.course.mix]]
+            : [[0, 0, 1]];
+        this.srcs = strings.map(([cents, delay, level]) => {
+            const r = renderPluck(sr, freq, k);   // chaque corde a sa propre excitation
+            const buf = ctx.createBuffer(1, r.data.length, sr);
+            buf.getChannelData(0).set(r.data);
+            const src = ctx.createBufferSource();
+            src.buffer = buf;
+            const ratio = r.period / sr * Math.pow(2, cents / 1200), rate = freq * ratio, at = t + delay;
+            // Attaque : la corde frappée part un peu trop haut puis se stabilise
+            const start = rate * (1 + (k.bend || 0));
+            src.playbackRate.value = start;
+            src.playbackRate.setValueAtTime(start, at);
+            src.playbackRate.setTargetAtTime(rate, at, .045);
+            const g = ctx.createGain();
+            g.gain.value = level;
+            src.connect(g); g.connect(mix);
+            src.start(at);
+            return { src, ratio, end: at + r.data.length / sr / rate };
+        });
+        this.end = Math.max(...this.srcs.map(s => s.end));
+        let left = this.srcs.length;
+        this.srcs.forEach(s => { s.src.onended = () => { if (--left === 0) this.dispose(); }; });
         engine.voices.add(this);
     }
 
@@ -527,8 +584,10 @@ class PluckVoice {
 
     setFreq(f) {
         const t = this.ctx.currentTime;
-        this.src.playbackRate.cancelScheduledValues(t);
-        this.src.playbackRate.setTargetAtTime(f * this.period / this.ctx.sampleRate, t, .012);
+        this.srcs.forEach(s => {
+            s.src.playbackRate.cancelScheduledValues(t);
+            s.src.playbackRate.setTargetAtTime(f * s.ratio, t, .012);
+        });
     }
 
     release(dur = .12) {
@@ -538,7 +597,7 @@ class PluckVoice {
         g.cancelScheduledValues(t);
         g.setValueAtTime(g.value, t);
         g.setTargetAtTime(0, t, Math.max(dur / 4, .008));
-        try { this.src.stop(t + dur + .05); } catch (e) { /* déjà arrêté */ }
+        this.srcs.forEach(s => { try { s.src.stop(t + dur + .05); } catch (e) { /* déjà arrêté */ } });
     }
 
     dispose() {
@@ -555,6 +614,9 @@ class AudioEngine {
         this.reverb = reverb;
         this.drone = null;
         this.curves = {};
+        this.bodies = {};
+        this.amp = null;
+        this.ampMode = 'crunch';
     }
 
     // Crée / réveille le contexte audio (doit être appelé pendant un geste utilisateur, surtout sur iOS)
@@ -562,39 +624,138 @@ class AudioEngine {
         if (!this.ctx) {
             const AC = window.AudioContext || window.webkitAudioContext;
             if (!AC) return null;
-            const ctx = this.ctx = new AC({ latencyHint: 'interactive' });
-            this.bus = ctx.createGain();
-            this.comp = ctx.createDynamicsCompressor();
-            this.comp.threshold.value = -16;
-            this.comp.knee.value = 12;
-            this.comp.ratio.value = 4;
-            this.comp.attack.value = .003;
-            this.comp.release.value = .2;
-            this.conv = ctx.createConvolver();
-            this.conv.buffer = this.impulse(2.4, 2.8);
-            this.wet = ctx.createGain();
-            this.wet.gain.value = this.reverb ? .28 : 0;
-            this.master = ctx.createGain();
-            this.master.gain.value = this.volume;
-
-            this.bus.connect(this.comp);
-            this.bus.connect(this.conv);
-            this.conv.connect(this.wet);
-            this.wet.connect(this.comp);
-            this.comp.connect(this.master);
-            this.master.connect(ctx.destination);
-
-            this.noise = ctx.createBuffer(1, Math.floor(ctx.sampleRate * .2), ctx.sampleRate);
-            const nd = this.noise.getChannelData(0);
-            for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
-
-            const silent = ctx.createBufferSource();
-            silent.buffer = ctx.createBuffer(1, 1, 22050);
-            silent.connect(ctx.destination);
+            this.build(new AC({ latencyHint: 'interactive' }));
+            const silent = this.ctx.createBufferSource();
+            silent.buffer = this.ctx.createBuffer(1, 1, 22050);
+            silent.connect(this.ctx.destination);
             silent.start(0);
         }
-        if (this.ctx.state !== 'running') this.ctx.resume().catch(() => {});
+        if (this.ctx.state !== 'running' && this.ctx.resume) this.ctx.resume().catch(() => {});
         return this.ctx;
+    }
+
+    // Construit la chaîne de sortie sur un contexte (temps réel, ou hors ligne pour les tests)
+    build(ctx) {
+        this.ctx = ctx;
+        this.bodies = {};
+        this.amp = null;
+        this.bus = ctx.createGain();
+        this.comp = ctx.createDynamicsCompressor();
+        this.comp.threshold.value = -16;
+        this.comp.knee.value = 12;
+        this.comp.ratio.value = 4;
+        this.comp.attack.value = .003;
+        this.comp.release.value = .2;
+        this.conv = ctx.createConvolver();
+        this.conv.buffer = this.impulse(2.4, 2.8);
+        this.wet = ctx.createGain();
+        this.wet.gain.value = this.reverb ? .28 : 0;
+        this.master = ctx.createGain();
+        this.master.gain.value = this.volume;
+
+        this.bus.connect(this.comp);
+        this.bus.connect(this.conv);
+        this.conv.connect(this.wet);
+        this.wet.connect(this.comp);
+        this.comp.connect(this.master);
+        this.master.connect(ctx.destination);
+
+        this.noise = ctx.createBuffer(1, Math.floor(ctx.sampleRate * .2), ctx.sampleRate);
+        const nd = this.noise.getChannelData(0);
+        for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+        return ctx;
+    }
+
+    // Entrée d'un instrument : l'ampli (électrique), sa caisse de résonance, ou le bus principal
+    dest(key) {
+        const p = INSTRUMENTS[key];
+        if (p && p.amp) return this.ampInput();
+        if (!p || !p.bodyModes) return this.bus;
+        if (!this.bodies[key]) {
+            const conv = this.ctx.createConvolver();
+            conv.normalize = false;
+            conv.buffer = this.bodyIR(p);
+            conv.connect(this.bus);
+            this.bodies[key] = conv;
+        }
+        return this.bodies[key];
+    }
+
+    // Ampli partagé par toutes les cordes : un accord saturé s'épaissit comme dans un vrai ampli.
+    // Coupe-bas -> saturation à lampe (asymétrique, suréchantillonnée) -> tonalité -> simulation de baffle
+    ampInput() {
+        if (this.amp) return this.amp.input;
+        const ctx = this.ctx;
+        const node = (type, f, q, gain) => {
+            const b = ctx.createBiquadFilter();
+            b.type = type; b.frequency.value = f;
+            if (q !== undefined) b.Q.value = q;
+            if (gain !== undefined) b.gain.value = gain;
+            return b;
+        };
+        const input = ctx.createGain();
+        const tight = node('highpass', 100, .7);
+        const cab = node('lowpass', 4000, 1);
+        const shaper = ctx.createWaveShaper();
+        shaper.oversample = '4x';
+        const chain = [
+            tight, shaper,
+            node('highpass', 25, .7),               // retire la composante continue due à l'asymétrie
+            node('lowshelf', 130, undefined, 3),    // graves
+            node('peaking', 550, .9, -4),           // médiums creusés
+            node('peaking', 2200, 1, 2.5),          // présence
+            node('peaking', 110, 1.2, 3),           // résonance du baffle
+            cab,                                    // le haut-parleur coupe le grésillement
+            node('lowpass', 5500, .6)
+        ];
+        const out = ctx.createGain();
+        let prev = input;
+        for (const n of chain) { prev.connect(n); prev = n; }
+        prev.connect(out);
+        out.connect(this.bus);
+        this.amp = { input, tight, shaper, cab, out };
+        this.setAmp(this.ampMode || 'crunch');
+        return input;
+    }
+
+    ampCurve(drive) {
+        const key = 'amp' + drive;
+        if (!this.curves[key]) {
+            const c = new Float32Array(2048), bias = .18;
+            let max = 0;
+            for (let i = 0; i < c.length; i++) {
+                const x = i / (c.length - 1) * 2 - 1;
+                c[i] = Math.tanh(drive * x + bias) - Math.tanh(bias);
+                max = Math.max(max, Math.abs(c[i]));
+            }
+            for (let i = 0; i < c.length; i++) c[i] /= max;
+            this.curves[key] = c;
+        }
+        return this.curves[key];
+    }
+
+    setAmp(mode) {
+        this.ampMode = AMP_MODES[mode] ? mode : 'crunch';
+        if (!this.amp) return;
+        const m = AMP_MODES[this.ampMode];
+        this.amp.shaper.curve = this.ampCurve(m.drive);
+        this.amp.out.gain.value = m.out;
+        this.amp.tight.frequency.value = m.tight;
+        this.amp.cab.frequency.value = m.cab;
+    }
+
+    // Réponse de la caisse : son direct + somme de résonances amorties.
+    // Amplitude choisie pour qu'une résonance donne un gain ≈ amplitude × bodyGain à sa fréquence.
+    bodyIR(p) {
+        const sr = this.ctx.sampleRate, len = Math.floor(sr * .9);
+        const buf = this.ctx.createBuffer(1, len, sr), d = buf.getChannelData(0);
+        d[0] = 1;
+        for (const [f, a, tau] of p.bodyModes) {
+            const w = 2 * Math.PI * f / sr, dec = Math.exp(-1 / (tau * sr));
+            let env = a * p.bodyGain * 2 / (tau * sr);
+            for (let n = 1; n < len; n++) { env *= dec; d[n] += env * Math.sin(w * n); }
+        }
+        return buf;
     }
 
     impulse(seconds, decay) {
@@ -802,7 +963,7 @@ const DEFAULTS = {
     preset: 'guitare', tuning: 'E4, B3, G3, D3, A2, E2', length: 64.8, fretMode: 'fretted',
     frets: 'auto', orientation: 'auto', position: 0, lefty: false,
     showNotes: true, showMeasures: true, showAjnas: true,
-    volume: .8, reverb: true, menuHidden: false,
+    volume: .8, reverb: true, amp: 'crunch', menuHidden: false,
     chordRoot: 0, chordType: 'maj',
     scaleRoot: 0, scaleGenre: 'western', scaleKey: 'major',
     detected: [], userPresets: [],
@@ -830,6 +991,7 @@ function loadState() {
     if (!['auto', 'h', 'v'].includes(s.orientation)) s.orientation = 'auto';
     if (!['2', '3'].includes(s.droneOct)) s.droneOct = '2';
     if (!RHYTHMS[s.rhythm]) s.rhythm = 'maqsum';
+    if (!AMP_MODES[s.amp]) s.amp = 'crunch';
     if (!Array.isArray(s.detected)) s.detected = [];
     s.userPresets = Array.isArray(s.userPresets)
         ? s.userPresets.filter(p => p && typeof p.id === 'string' && typeof p.name === 'string' && typeof p.tuning === 'string')
@@ -851,6 +1013,7 @@ class App {
         const fromLink = this.applyHash();
         this.detected = new Set(this.s.detected.filter(v => typeof v === 'number'));
         this.audio = new AudioEngine(this.s.volume, this.s.reverb);
+        this.audio.ampMode = this.s.amp;
         this.metro = new Metronome(this.audio, i => this.onBeat(i));
         this.metro.bpm = this.s.bpm;
         this.metro.rhythm = this.s.rhythm;
@@ -1133,6 +1296,7 @@ class App {
             if (!b) return;
             if (seg.dataset.seg === 'lang') { this.setLang(b.dataset.value); return; }
             this.s[seg.dataset.seg] = b.dataset.value;
+            if (seg.dataset.seg === 'amp') this.audio.setAmp(this.s.amp);
             this.refresh();
         }));
 
