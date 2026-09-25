@@ -4,6 +4,11 @@
    Manche interactif : Canvas 2D (rendu en couches) + Web Audio, sans dépendance.
    ========================================================================= */
 
+// Version lue dans l'URL du script (app.js?v=…), la même que celle du service worker
+const APP_VERSION = (() => {
+    try { return new URL(document.currentScript.src).searchParams.get('v') || ''; } catch (e) { return ''; }
+})();
+
 /* ---------- 1. DONNÉES ---------- */
 const NOTES = {
     en: ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'],
@@ -89,6 +94,7 @@ const I18N = {
         sustain: 'Sustain infini', stop: 'Stop (Échap)', focus: 'Plein écran', exit_focus: 'Quitter le plein écran',
         settings: 'Réglages', close: 'Fermer', clear: 'Effacer',
         hide_menu: 'Masquer le menu', show_menu: 'Afficher le menu', install: 'Installer l’application',
+        update_ready: 'Nouvelle version disponible', update_now: 'Mettre à jour',
         detect_hint: 'Touchez des notes sur le manche…',
         detect_empty: 'Les gammes et maqams contenant vos notes apparaîtront ici.',
         detect_none: 'Aucune gamme connue ne contient toutes ces notes.',
@@ -102,7 +108,7 @@ const I18N = {
         tuning_help: 'Ex. : Do4, Sol3, Ré3 ou C4, G3, D3 — dièses (#) et bémols (b) acceptés.',
         tuning_bad: 'Note non reconnue : ',
         length: 'Longueur de corde vibrante (cm)', neck: 'Manche', fretted: 'Fretté', fretless: 'Fretless',
-        neck_help: 'Fretless : hauteur continue et quarts de ton (oud, violon). Fretté : les notes se calent sur les frettes.',
+        neck_help: 'Fretless : manche lisse, on joue n’importe où, quarts de ton compris (oud, violon). Fretté : chaque note se cale sur la frette, les quarts de ton ne sont pas jouables.',
         sec_display: 'Affichage', frets: 'Cases visibles', auto: 'Auto', orientation: 'Orientation',
         horizontal: 'Horizontale', vertical: 'Verticale',
         show_notes: 'Noms des notes', show_measures: 'Mesures (cm depuis le sillet)',
@@ -117,6 +123,7 @@ const I18N = {
         sustain: 'Infinite sustain', stop: 'Stop (Esc)', focus: 'Full screen', exit_focus: 'Exit full screen',
         settings: 'Settings', close: 'Close', clear: 'Clear',
         hide_menu: 'Hide menu', show_menu: 'Show menu', install: 'Install the app',
+        update_ready: 'New version available', update_now: 'Update',
         detect_hint: 'Tap notes on the neck…',
         detect_empty: 'Scales and maqams containing your notes will show up here.',
         detect_none: 'No known scale contains all of these notes.',
@@ -130,7 +137,7 @@ const I18N = {
         tuning_help: 'E.g. C4, G3, D3 or Do4, Sol3, Ré3 — sharps (#) and flats (b) accepted.',
         tuning_bad: 'Unknown note: ',
         length: 'Scale length (cm)', neck: 'Neck', fretted: 'Fretted', fretless: 'Fretless',
-        neck_help: 'Fretless: continuous pitch and quarter tones (oud, violin). Fretted: notes snap to frets.',
+        neck_help: 'Fretless: smooth neck, play anywhere including quarter tones (oud, violin). Fretted: each note snaps to the fret, quarter tones cannot be played.',
         sec_display: 'Display', frets: 'Visible frets', auto: 'Auto', orientation: 'Orientation',
         horizontal: 'Horizontal', vertical: 'Vertical',
         show_notes: 'Note names', show_measures: 'Measurements (cm from nut)',
@@ -907,23 +914,17 @@ class App {
         ctx.fillRect(...this.rectUC(0, uEnd, c1 - 2, c1));
         ctx.restore();
 
-        // Frettes / repères
+        // Frettes (manche fretté uniquement : un manche fretless est lisse, comme un oud)
         const zoneMid = n => (this.uOf(n - 1) + this.uOf(n)) / 2;
-        for (let n = 1; n <= g.F + 1; n++) {
+        for (let n = 1; n <= g.F + 1 && !fretless; n++) {
             const u = this.uOf(n);
             if (u > uEnd - 2) break;
-            if (fretless) {
-                const strong = n % 12 === 0 ? .2 : [3, 5, 7, 9].includes(n % 12) ? .11 : .06;
-                ctx.fillStyle = `rgba(255,240,220,${strong})`;
-                ctx.fillRect(...this.rectUC(u - .5, u + .5, c0, c1));
-            } else {
-                ctx.fillStyle = 'rgba(0,0,0,.4)';
-                ctx.fillRect(...this.rectUC(u + 1.2, u + 3.2, c0, c1));
-                ctx.fillStyle = '#8f9298';
-                ctx.fillRect(...this.rectUC(u - 1.6, u + 1.6, c0, c1));
-                ctx.fillStyle = '#eef0f3';
-                ctx.fillRect(...this.rectUC(u - .7, u + .3, c0, c1));
-            }
+            ctx.fillStyle = 'rgba(0,0,0,.4)';
+            ctx.fillRect(...this.rectUC(u + 1.2, u + 3.2, c0, c1));
+            ctx.fillStyle = '#8f9298';
+            ctx.fillRect(...this.rectUC(u - 1.6, u + 1.6, c0, c1));
+            ctx.fillStyle = '#eef0f3';
+            ctx.fillRect(...this.rectUC(u - .7, u + .3, c0, c1));
         }
         for (const n of INLAYS) {
             if (n > g.F || this.uOf(n) > uEnd) continue;
@@ -1437,10 +1438,25 @@ class App {
 window.app = new App();
 
 /* ---------- 6. APPLICATION INSTALLABLE (PWA) ---------- */
+$('#appVersion').textContent = APP_VERSION ? 'v' + APP_VERSION : '';
+
 // Le service worker n'est disponible qu'en HTTPS (ou sur localhost)
 if ('serviceWorker' in navigator && window.isSecureContext) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    // Un nouveau service worker qui prend la main = une nouvelle version est prête
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (hadController) $('#updateToast').hidden = false;
+    });
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(reg => {
+            // Une appli installée reste souvent ouverte en arrière-plan : on vérifie à chaque retour
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') reg.update().catch(() => {});
+            });
+        }).catch(() => {});
+    });
 }
+$('#btnUpdate').addEventListener('click', () => location.reload());
 let installPrompt = null;
 window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();

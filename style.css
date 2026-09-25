@@ -488,6 +488,35 @@ input[type="range"] { width: 100%; accent-color: var(--accent); height: 28px; }
 }
 .install-btn:hover { filter: brightness(1.08); }
 
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: calc(100vw - 24px);
+    padding: 8px 8px 8px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--line2);
+    background: var(--panel2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .55);
+    white-space: nowrap;
+    z-index: 60;
+    animation: toast-in .3s cubic-bezier(.2, .8, .2, 1);
+}
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, 12px); } }
+.toast button {
+    height: 34px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--accent);
+    color: var(--ink);
+    font-weight: 700;
+}
+
 .about { color: var(--muted); font-size: 12px; margin: 16px 0 0; text-align: center; }
 .about a { color: var(--accent); }
 

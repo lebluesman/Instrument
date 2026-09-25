@@ -1,6 +1,6 @@
 /* Service worker : rend l'application installable et utilisable hors connexion.
    À chaque nouvelle version, changer VERSION ici ET les ?v= dans index.html. */
-const VERSION = '2.2';
+const VERSION = '2.4';
 const CACHE = 'fretboard-' + VERSION;
 const CORE = [
     './',
@@ -29,10 +29,10 @@ self.addEventListener('fetch', event => {
     const req = event.request;
     if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
 
-    // Pages : réseau d'abord (pour recevoir les mises à jour), cache si hors ligne
+    // Pages : réseau d'abord, sans le cache HTTP (pour recevoir les mises à jour tout de suite), cache si hors ligne
     if (req.mode === 'navigate') {
         event.respondWith(
-            fetch(req)
+            fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' })
                 .then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); return res; })
                 .catch(() => caches.match(req).then(r => r || caches.match('./')))
         );
