@@ -1554,19 +1554,25 @@ class App {
         this.audio.unlock();
         const g = this.g, root = this.s.scaleRoot;
         const low = Math.min(...this.strings.map(s => s.midi)) + g.S;
-        let start = low + mod12(root - low);
+        const base = low + mod12(root - low);
         const ivs = [...this.scale().iv].sort((a, b) => a - b);
-        const notes = [...ivs, 12].map(v => start + v);
-        const run = notes.concat(notes.slice(0, -1).reverse());
         const step = Math.max(110, 30000 / this.s.bpm);
-        const steps = [];
-        let prev = -1;
-        run.forEach((midi, k) => {
-            const pos = this.positionFor(midi, prev);
-            if (!pos) return;
-            prev = pos.i;
-            steps.push({ ...pos, at: k * step });
-        });
+        // strict : toutes les notes doivent être jouables dans la zone visible, sinon null
+        const build = (start, strict) => {
+            const notes = [...ivs, 12].map(v => start + v);
+            const run = notes.concat(notes.slice(0, -1).reverse());
+            const steps = [];
+            let prev = -1;
+            for (const [k, midi] of run.entries()) {
+                const pos = this.positionFor(midi, prev);
+                if (!pos) { if (strict) return null; continue; }
+                prev = pos.i;
+                steps.push({ ...pos, at: k * step });
+            }
+            return steps;
+        };
+        // Une octave au-dessus de la plus grave (registre plus agréable), sinon l'octave grave
+        const steps = build(base + 12, true) || build(base, true) || build(base, false);
         this.runSequence(steps, $('#playScale'));
     }
 
