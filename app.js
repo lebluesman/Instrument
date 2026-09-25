@@ -215,6 +215,7 @@ const I18N = {
         show_notes: 'Noms des notes', show_measures: 'Mesures (cm depuis le sillet)',
         lefty: 'Gaucher (manche inversé)', fullscreen: 'Plein écran',
         sec_sound: 'Son', volume: 'Volume', reverb: 'Réverbération',
+        volume_inst: 'Volume de l’instrument', volume_inst_help: 'Le bourdon et le métronome ont leur propre volume dans le panneau Pratique.',
         amp: 'Ampli (guitare électrique)', amp_clean: 'Clair', amp_crunch: 'Crunch', amp_lead: 'Saturé',
         ios_note: 'Sur iPhone / iPad, désactivez le mode silencieux pour entendre le son.',
         sec_share: 'Partager', share_btn: 'Partager cette configuration',
@@ -263,6 +264,7 @@ const I18N = {
         show_notes: 'Note names', show_measures: 'Measurements (cm from nut)',
         lefty: 'Left-handed (mirrored neck)', fullscreen: 'Full screen',
         sec_sound: 'Sound', volume: 'Volume', reverb: 'Reverb',
+        volume_inst: 'Instrument volume', volume_inst_help: 'The drone and the metronome have their own volume in the Practice panel.',
         amp: 'Amp (electric guitar)', amp_clean: 'Clean', amp_crunch: 'Crunch', amp_lead: 'Lead',
         ios_note: 'On iPhone / iPad, turn off silent mode to hear sound.',
         sec_share: 'Share', share_btn: 'Share this setup',
@@ -617,6 +619,7 @@ class AudioEngine {
         this.bodies = {};
         this.amp = null;
         this.ampMode = 'crunch';
+        this.metroVolume = .8;
     }
 
     // Crée / réveille le contexte audio (doit être appelé pendant un geste utilisateur, surtout sur iOS)
@@ -639,7 +642,15 @@ class AudioEngine {
         this.ctx = ctx;
         this.bodies = {};
         this.amp = null;
+        // 3 voies de volume indépendantes :
+        //   instruments : bus -> instVol -> (réverb) -> compresseur -> master
+        //   bourdon     : son propre volume -> compresseur (+ réverb)
+        //   métronome   : metroVol -> master (hors compresseur, frappes nettes)
         this.bus = ctx.createGain();
+        this.instVol = ctx.createGain();
+        this.instVol.gain.value = this.volume;
+        this.metroVol = ctx.createGain();
+        this.metroVol.gain.value = this.metroVolume * 1.6;
         this.comp = ctx.createDynamicsCompressor();
         this.comp.threshold.value = -16;
         this.comp.knee.value = 12;
@@ -651,13 +662,14 @@ class AudioEngine {
         this.wet = ctx.createGain();
         this.wet.gain.value = this.reverb ? .28 : 0;
         this.master = ctx.createGain();
-        this.master.gain.value = this.volume;
 
-        this.bus.connect(this.comp);
-        this.bus.connect(this.conv);
+        this.bus.connect(this.instVol);
+        this.instVol.connect(this.comp);
+        this.instVol.connect(this.conv);
         this.conv.connect(this.wet);
         this.wet.connect(this.comp);
         this.comp.connect(this.master);
+        this.metroVol.connect(this.master);
         this.master.connect(ctx.destination);
 
         this.noise = ctx.createBuffer(1, Math.floor(ctx.sampleRate * .2), ctx.sampleRate);
@@ -786,9 +798,15 @@ class AudioEngine {
 
     stopAll(dur = .08) { this.voices.forEach(v => v.release(dur)); }
 
+    // Volume des instruments seulement (le bourdon et le métronome ont le leur)
     setVolume(v) {
         this.volume = v;
-        if (this.master) this.master.gain.setTargetAtTime(v, this.ctx.currentTime, .03);
+        if (this.instVol) this.instVol.gain.setTargetAtTime(v, this.ctx.currentTime, .03);
+    }
+
+    setMetroVolume(v) {
+        this.metroVolume = v;
+        if (this.metroVol) this.metroVol.gain.setTargetAtTime(v * 1.6, this.ctx.currentTime, .03);
     }
 
     setReverb(on) {
@@ -818,7 +836,8 @@ class AudioEngine {
                 return { o, ratio };
             });
         lp.connect(out);
-        out.connect(this.bus);
+        out.connect(this.comp);          // indépendant du volume des instruments
+        out.connect(this.conv);
         this.drone = { oscs, out, lfo };
     }
 
@@ -842,19 +861,33 @@ class AudioEngine {
         [...d.oscs.map(x => x.o), d.lfo].forEach(o => { try { o.stop(t + .55); } catch (e) { /* ignore */ } });
     }
 
-    /* Percussions du métronome (hors réverbération) */
+    /* Percussions du métronome (hors réverbération, volume propre) */
     hit(ch, t) {
         if (ch === '.') return;
         const ctx = this.ctx, g = ctx.createGain();
-        g.connect(this.comp);
+        g.connect(this.metroVol);
         if (ch === 'D') {
-            const o = ctx.createOscillator();
-            o.frequency.setValueAtTime(140, t);
-            o.frequency.exponentialRampToValueAtTime(55, t + .16);
-            g.gain.setValueAtTime(.0001, t);
-            g.gain.exponentialRampToValueAtTime(1, t + .005);
-            g.gain.exponentialRampToValueAtTime(.0001, t + .38);
-            o.connect(g); o.start(t); o.stop(t + .4);
+            // Dum de darbouka : fondamentale grave + harmoniques de la peau (200–400 Hz, audibles
+            // même sur un haut-parleur de téléphone) + petit claquement d'attaque
+            const env = (gain, peak, dur) => {
+                gain.gain.setValueAtTime(.0001, t);
+                gain.gain.exponentialRampToValueAtTime(peak, t + .004);
+                gain.gain.exponentialRampToValueAtTime(.0001, t + dur);
+            };
+            [[110, 68, 'sine', .9, .42], [230, 150, 'triangle', .55, .3], [345, 240, 'sine', .3, .2]].forEach(([f0, f1, type, peak, dur]) => {
+                const o = ctx.createOscillator(), og = ctx.createGain();
+                o.type = type;
+                o.frequency.setValueAtTime(f0, t);
+                o.frequency.exponentialRampToValueAtTime(f1, t + .12);
+                env(og, peak, dur);
+                o.connect(og); og.connect(g); o.start(t); o.stop(t + dur + .02);
+            });
+            const n = ctx.createBufferSource(), lp = ctx.createBiquadFilter(), ng = ctx.createGain();
+            n.buffer = this.noise;
+            lp.type = 'lowpass'; lp.frequency.value = 900;
+            env(ng, .35, .03);
+            n.connect(lp); lp.connect(ng); ng.connect(g); n.start(t); n.stop(t + .05);
+            g.gain.value = 1;
         } else if (ch === 'T' || ch === 'k') {
             const n = ctx.createBufferSource(), bp = ctx.createBiquadFilter();
             n.buffer = this.noise;
@@ -968,7 +1001,7 @@ const DEFAULTS = {
     scaleRoot: 0, scaleGenre: 'western', scaleKey: 'major',
     detected: [], userPresets: [],
     droneRoot: 'auto', droneOct: '2', droneVol: .5,
-    bpm: 90, rhythm: 'maqsum', quizNaturals: true
+    bpm: 90, rhythm: 'maqsum', metroVol: .8, quizNaturals: true
 };
 
 function loadState() {
@@ -1000,6 +1033,7 @@ function loadState() {
     s.length = clamp(+s.length || 64.8, 20, 130);
     s.volume = clamp(+s.volume, 0, 1);
     s.droneVol = clamp(+s.droneVol, 0, 1);
+    s.metroVol = clamp(+s.metroVol, 0, 1);
     s.bpm = clamp(Math.round(+s.bpm) || 90, 40, 240);
     s.position = clamp(Math.round(+s.position) || 0, 0, MAX_POS);
     s.scaleRoot = clamp(snapQ(+s.scaleRoot || 0), 0, 11.5);
@@ -1014,6 +1048,7 @@ class App {
         this.detected = new Set(this.s.detected.filter(v => typeof v === 'number'));
         this.audio = new AudioEngine(this.s.volume, this.s.reverb);
         this.audio.ampMode = this.s.amp;
+        this.audio.metroVolume = this.s.metroVol;
         this.metro = new Metronome(this.audio, i => this.onBeat(i));
         this.metro.bpm = this.s.bpm;
         this.metro.rhythm = this.s.rhythm;
@@ -1379,6 +1414,11 @@ class App {
             this.renderPractice();
         });
         $('#bpm').addEventListener('input', e => this.setBpm(+e.target.value));
+        $('#metroVol').addEventListener('input', e => {
+            this.s.metroVol = +e.target.value;
+            this.audio.setMetroVolume(this.s.metroVol);
+            this.save();
+        });
         $$('[data-bpm]').forEach(b => b.addEventListener('click', () => this.setBpm(this.s.bpm + parseInt(b.dataset.bpm, 10))));
         // Pratique : accordeur
         $('#btnTuner').addEventListener('click', async () => {
@@ -1637,6 +1677,7 @@ class App {
         $('#btnMetro').textContent = this.t(this.metro.running ? 'stop_word' : 'start');
         $('#btnMetro').setAttribute('aria-pressed', String(this.metro.running));
         $('#bpm').value = s.bpm;
+        $('#metroVol').value = s.metroVol;
         $('#bpmLabel').textContent = s.bpm;
 
         $('#btnTuner').textContent = this.t(this.tuner.running ? 'tuner_stop' : 'tuner_start');
