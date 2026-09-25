@@ -170,19 +170,48 @@ const AMP_MODES = {
     lead:   { drive: 24,  out: .15, tight: 110, cab: 3300 }
 };
 
-// Rythmes : D = dum, T = tek, k = tek léger, A = clic accentué, c = clic, . = silence ; div = pas par temps
+// Rythmes : un pas par mot (séparés par des espaces), plusieurs sons possibles dans un même pas.
+//   Clic      : A = clic accentué, c = clic
+//   Darbouka  : D = dum (centre), T = tek (bord), k = ka (tek léger de l'autre main)
+//   Batterie  : K = grosse caisse, S = caisse claire, h = charleston fermé, o = charleston ouvert,
+//               r = rimshot, X = cymbale crash
+//   . = silence ; div = pas par temps
 const RHYTHMS = {
-    click4:   { fr: 'Clic 4/4', en: 'Click 4/4', div: 1, steps: 'Accc' },
-    click3:   { fr: 'Clic 3/4', en: 'Click 3/4', div: 1, steps: 'Acc' },
-    maqsum:   { fr: 'Maqsum (4/4)', en: 'Maqsum (4/4)', div: 2, steps: 'DT.TD.T.' },
-    baladi:   { fr: 'Baladi (4/4)', en: 'Baladi (4/4)', div: 2, steps: 'DD.TD.T.' },
-    saidi:    { fr: 'Saïdi (4/4)', en: 'Saidi (4/4)', div: 2, steps: 'DT.DD.T.' },
-    wahda:    { fr: 'Wahda (4/4)', en: 'Wahda (4/4)', div: 2, steps: 'D...T.k.' },
-    ayyub:    { fr: 'Ayyub (2/4)', en: 'Ayyub (2/4)', div: 2, steps: 'D.DT' },
-    malfuf:   { fr: 'Malfuf (2/4)', en: 'Malfuf (2/4)', div: 4, steps: 'D..T..T.' },
-    masmoudi: { fr: 'Masmoudi kabir (8/4)', en: 'Masmoudi kabir (8/4)', div: 2, steps: 'DD..T.D.D...T...' },
-    samai:    { fr: 'Samaï thaqil (10/8)', en: 'Samai thaqil (10/8)', div: 2, steps: 'D...T.DDT.' }
+    click4:   { group: 'click', fr: 'Clic 4/4', en: 'Click 4/4', div: 1, steps: 'A c c c' },
+    click3:   { group: 'click', fr: 'Clic 3/4', en: 'Click 3/4', div: 1, steps: 'A c c' },
+
+    maqsum:   { group: 'arabic', fr: 'Maqsum (4/4)', en: 'Maqsum (4/4)', div: 2, steps: 'D T k T D k T k' },
+    baladi:   { group: 'arabic', fr: 'Baladi (4/4)', en: 'Baladi (4/4)', div: 2, steps: 'D D k T D k T k' },
+    saidi:    { group: 'arabic', fr: 'Saïdi (4/4)', en: 'Saidi (4/4)', div: 2, steps: 'D T k D D k T k' },
+    wahda:    { group: 'arabic', fr: 'Wahda (4/4)', en: 'Wahda (4/4)', div: 2, steps: 'D . k . T . k .' },
+    ayyub:    { group: 'arabic', fr: 'Ayyub (2/4)', en: 'Ayyub (2/4)', div: 2, steps: 'D k D T' },
+    malfuf:   { group: 'arabic', fr: 'Malfuf (2/4)', en: 'Malfuf (2/4)', div: 4, steps: 'D k k T k k T k' },
+    masmoudi: { group: 'arabic', fr: 'Masmoudi kabir (8/4)', en: 'Masmoudi kabir (8/4)', div: 2, steps: 'D D . k T k D k D . k k T k k k' },
+    samai:    { group: 'arabic', fr: 'Samaï thaqil (10/8)', en: 'Samai thaqil (10/8)', div: 2, steps: 'D . k . T k D D T k' },
+
+    // Blues : balancement ternaire (triolets, 12/8) — div 3 = 3 pas par temps
+    blues_slow: { group: 'blues', fr: 'Blues lent (12/8)', en: 'Slow blues (12/8)', div: 3, steps: 'Kh h h Sh h h Kh h Kh Sh h h' },
+    shuffle:    { group: 'blues', fr: 'Shuffle (12/8)', en: 'Shuffle (12/8)', div: 3, steps: 'Kh . h Sh . h Kh . h Sh . h' },
+    chicago:    { group: 'blues', fr: 'Shuffle Chicago (double shuffle)', en: 'Chicago shuffle (double)', div: 3, steps: 'Kh . Sh Sh . Sh Kh . Sh Sh . Sh' },
+    boogie:     { group: 'blues', fr: 'Boogie / blues rock (12/8)', en: 'Boogie / blues rock (12/8)', div: 3, steps: 'Kh . Kh Sh . h Kh . Kh Sh . h' },
+
+    rock:     { group: 'drums', fr: 'Rock (4/4)', en: 'Rock (4/4)', div: 2, steps: 'Kh h Sh h Kh Kh Sh h' },
+    pop:      { group: 'drums', fr: 'Pop / ballade (4/4)', en: 'Pop / ballad (4/4)', div: 2, steps: 'Kh h Sh h h Kh Sh h' },
+    disco:    { group: 'drums', fr: 'Disco (4/4)', en: 'Disco (4/4)', div: 2, steps: 'Kh o KSh o Kh o KSh o' },
+    funk:     { group: 'drums', fr: 'Funk (4/4, doubles croches)', en: 'Funk (4/4, sixteenths)', div: 4, steps: 'Kh h h Kh Sh h h Kh h Kh h h Sh h Kh o' },
+    reggae:   { group: 'drums', fr: 'Reggae one drop (4/4)', en: 'Reggae one drop (4/4)', div: 2, steps: 'h h h h Krh h h h' },
+    waltz:    { group: 'drums', fr: 'Valse (3/4)', en: 'Waltz (3/4)', div: 1, steps: 'Kh Sh Sh' },
+    bossa:    { group: 'drums', fr: 'Bossa nova (4/4)', en: 'Bossa nova (4/4)', div: 2, steps: 'Kh h rh Kh Kh rh h Kh' }
 };
+const RHYTHM_GROUPS = ['click', 'arabic', 'blues', 'drums'];
+
+// Étiquette d'un pas pour l'affichage des temps (le son le plus important du pas)
+function beatLabel(step) {
+    for (const [ch, label] of [['X', '✕'], ['K', 'K'], ['S', 'S'], ['D', 'D'], ['T', 'T'], ['r', 'r'], ['A', '●'], ['k', 'k'], ['o', 'o'], ['h', '·'], ['c', '·']]) {
+        if (step.includes(ch)) return { cls: ch, label };
+    }
+    return { cls: 'rest', label: '' };
+}
 
 const I18N = {
     fr: {
@@ -226,7 +255,8 @@ const I18N = {
         drone_help: 'Tonique + quinte tenues en continu, pour travailler la justesse des quarts de ton.',
         start: 'Démarrer', stop_word: 'Arrêter',
         sec_metro: 'Métronome et rythmes', tempo: 'Tempo', rhythm: 'Rythme',
-        metro_help: 'Dum = grave, Tek = aigu. Le tempo règle aussi la vitesse du bouton ▶.',
+        metro_help: 'Darbouka : D = dum, T = tek, k = ka. Batterie : K = grosse caisse, S = caisse claire, · = charleston. Le tempo règle aussi la vitesse du bouton ▶.',
+        rg_click: 'Clic', rg_arabic: 'Rythmes arabes (darbouka)', rg_blues: 'Blues', rg_drums: 'Batterie',
         sec_tuner: 'Accordeur', tuner_start: 'Démarrer l’accordeur (micro)', tuner_stop: 'Arrêter l’accordeur',
         tuner_listen: 'Jouez une note…', tuner_nomic: 'Micro indisponible (autorisation refusée ou page non sécurisée).',
         tuner_string: 'Corde',
@@ -275,7 +305,8 @@ const I18N = {
         drone_help: 'Root + fifth held continuously, to practise quarter-tone intonation.',
         start: 'Start', stop_word: 'Stop',
         sec_metro: 'Metronome & rhythms', tempo: 'Tempo', rhythm: 'Rhythm',
-        metro_help: 'Dum = low, Tek = high. The tempo also sets the speed of the ▶ button.',
+        metro_help: 'Darbuka: D = dum, T = tek, k = ka. Drums: K = kick, S = snare, · = hi-hat. The tempo also sets the speed of the ▶ button.',
+        rg_click: 'Click', rg_arabic: 'Arabic rhythms (darbuka)', rg_blues: 'Blues', rg_drums: 'Drum kit',
         sec_tuner: 'Tuner', tuner_start: 'Start tuner (microphone)', tuner_stop: 'Stop tuner',
         tuner_listen: 'Play a note…', tuner_nomic: 'Microphone unavailable (permission denied or insecure page).',
         tuner_string: 'String',
@@ -439,6 +470,109 @@ function renderPluck(sr, freq, k) {
         out[n] = n > len - fade ? py * (len - n) / fade : py;
     }
     return { data: out, period: P + k.stretch };
+}
+
+/* ---------- Darbouka : synthèse modale d'une peau circulaire ----------
+   Une peau tendue vibre selon des modes (m, n) dont les fréquences suivent les zéros des fonctions
+   de Bessel J_m. Frapper au centre n'excite que les modes « ronds » (m = 0) → son grave (dum) ;
+   frapper au bord excite les modes asymétriques → son clair (tek). La durée du contact de la main
+   filtre les aigus (paume = sourd, bout du doigt = brillant). La caisse en calice ajoute une
+   résonance d'air grave, et le fût en aluminium un léger tintement. */
+
+// [m, zéro j_mn de J_m]
+const MEMBRANE_MODES = [
+    [0, 2.4048], [1, 3.8317], [2, 5.1356], [0, 5.5201], [3, 6.3802], [1, 7.0156], [4, 7.5883],
+    [2, 8.4172], [0, 8.6537], [5, 8.7715], [3, 9.7610], [6, 9.9361], [1, 10.1735], [4, 11.0647],
+    [7, 11.0864], [2, 11.6198], [0, 11.7915]
+];
+
+function besselJ(m, x) {
+    let term = Math.pow(x / 2, m);
+    for (let i = 2; i <= m; i++) term /= i;
+    let sum = 0;
+    for (let k = 0; k < 60; k++) {
+        sum += term;
+        term *= -(x * x / 4) / ((k + 1) * (k + m + 1));
+        if (Math.abs(term) < 1e-12) break;
+    }
+    return sum;
+}
+
+// f0 = mode fondamental de la peau (Hz) ; r0 = point de frappe (0 centre → 1 bord) ; contact = durée (s)
+// tau = résonance du fondamental (s), tauExp = les aigus s'éteignent plus vite ; glide = chute de hauteur
+// boom = résonance d'air de la caisse ; ring = tintement du fût [Hz, amplitude, durée] ; crack = claquement
+// tilt = renforce les modes aigus (le doigt qui claque au bord)
+const DARBUKA = {
+    D: { f0: 285, r0: .1, contact: .003, tau: .3, tauExp: .7, tilt: 0, glide: .05, glideT: .05,
+         boom: { f: 95, a: 1.1, tau: .26, glide: .18 }, ring: [], crack: .15, dur: 1.4 },
+    T: { f0: 285, r0: .9, contact: .0005, tau: .09, tauExp: .3, tilt: 1.3, glide: .02, glideT: .02,
+         boom: { f: 95, a: .08, tau: .1, glide: .05 },
+         ring: [[2350, .08, .12], [3150, .12, .24], [4650, .09, .19], [6300, .05, .14]], crack: 1.4, dur: .55 },
+    k: { f0: 285, r0: .82, contact: .0008, tau: .06, tauExp: .3, tilt: 1, glide: .015, glideT: .02,
+         boom: { f: 95, a: .05, tau: .08, glide: .04 },
+         ring: [[3150, .07, .18], [4650, .05, .14]], crack: .9, dur: .4 }
+};
+
+function renderDarbuka(sr, p) {
+    const len = Math.floor(sr * p.dur), raw = new Float32Array(len);
+    const jitter = a => 1 + (Math.random() - .5) * a;
+    const f01 = p.f0 * jitter(.03), r0 = clamp(p.r0 + (Math.random() - .5) * .06, 0, .97);
+
+    // Une composante amortie avec légère chute de hauteur (tension de la peau qui se relâche)
+    const addMode = (f, amp, tau, glide, glideT) => {
+        if (f > sr * .45 || !amp) return;
+        const w = 2 * Math.PI * f / sr, dec = Math.exp(-1 / (tau * sr)), gk = Math.exp(-1 / (glideT * sr));
+        let env = amp, g = glide, ph = 0;
+        for (let n = 0; n < len && env > 1e-6 * Math.abs(amp); n++) {
+            ph += w * (1 + g);
+            raw[n] += env * Math.sin(ph);
+            env *= dec; g *= gk;
+        }
+    };
+
+    // Modes de la peau : amplitude = forme du mode au point de frappe / norme du mode
+    for (const [m, j] of MEMBRANE_MODES) {
+        const ratio = j / 2.4048, f = f01 * ratio;
+        const norm = besselJ(m + 1, j);
+        let a = besselJ(m, j * r0) / (norm * norm * ratio);
+        if (m > 0) a *= .6;                      // les modes asymétriques rayonnent moins
+        a *= Math.pow(ratio, p.tilt || 0);
+        const tau = p.tau * Math.pow(1 / ratio, p.tauExp);
+        addMode(f, a, tau, p.glide, p.glideT);
+    }
+    // Résonance d'air de la caisse en calice (le « doum »)
+    if (p.boom) addMode(p.boom.f * jitter(.03), p.boom.a, p.boom.tau, p.boom.glide, .06);
+    // Tintement du fût en aluminium
+    for (const [f, a, tau] of p.ring) addMode(f * jitter(.01), a * 25, tau, 0, .01);
+
+    // Contact de la main : impulsion en cosinus surélevé (plus elle dure, plus le son est sourd)
+    const L = Math.max(1, Math.round(p.contact * sr)), kern = new Float32Array(L);
+    let ks = 0;
+    for (let i = 0; i < L; i++) { kern[i] = .5 - .5 * Math.cos(2 * Math.PI * (i + .5) / L); ks += kern[i]; }
+    const out = new Float32Array(len);
+    for (let n = 0; n < len; n++) {
+        let s = 0;
+        for (let i = 0; i < L && i <= n; i++) s += kern[i] * raw[n - i];
+        out[n] = s / ks;
+    }
+    let peak = 0;
+    for (let n = 0; n < len; n++) peak = Math.max(peak, Math.abs(out[n]));
+    // Claquement du doigt sur le bord (bruit très bref, filtré passe-haut), relatif au son de la peau
+    if (p.crack) {
+        let prev = 0, hp = 0, env = p.crack * peak;
+        const cd = Math.exp(-1 / (.0025 * sr));
+        for (let n = 0; n < len && env > 1e-6; n++) {
+            const x = Math.random() * 2 - 1;
+            hp = .9 * (hp + x - prev); prev = x;
+            out[n] += env * hp;
+            env *= cd;
+        }
+        for (let n = 0; n < len; n++) peak = Math.max(peak, Math.abs(out[n]));
+    }
+    // Normalisation + fondu de fin (20 % de la durée : aucune coupure audible)
+    const fade = Math.floor(len * .2);
+    for (let n = 0; n < len; n++) out[n] = out[n] / (peak || 1) * .9 * (n > len - fade ? (len - n) / fade : 1);
+    return out;
 }
 
 /* ---------- 3. MOTEUR AUDIO ---------- */
@@ -642,6 +776,7 @@ class AudioEngine {
         this.ctx = ctx;
         this.bodies = {};
         this.amp = null;
+        this.dbk = null;
         // 3 voies de volume indépendantes :
         //   instruments : bus -> instVol -> (réverb) -> compresseur -> master
         //   bourdon     : son propre volume -> compresseur (+ réverb)
@@ -650,7 +785,7 @@ class AudioEngine {
         this.instVol = ctx.createGain();
         this.instVol.gain.value = this.volume;
         this.metroVol = ctx.createGain();
-        this.metroVol.gain.value = this.metroVolume * 1.6;
+        this.metroVol.gain.value = this.metroVolume * 1.3;
         this.comp = ctx.createDynamicsCompressor();
         this.comp.threshold.value = -16;
         this.comp.knee.value = 12;
@@ -669,7 +804,24 @@ class AudioEngine {
         this.conv.connect(this.wet);
         this.wet.connect(this.comp);
         this.comp.connect(this.master);
-        this.metroVol.connect(this.master);
+        // Limiteur des percussions : plusieurs sons dans un même pas ne saturent pas
+        this.metroLim = ctx.createDynamicsCompressor();
+        this.metroLim.threshold.value = -12;
+        this.metroLim.knee.value = 3;
+        this.metroLim.ratio.value = 20;
+        this.metroLim.attack.value = .001;
+        this.metroLim.release.value = .12;
+        // Écrêteur doux de sécurité : transparent sous 0,8, arrondit les attaques que le limiteur laisse passer
+        this.metroClip = ctx.createWaveShaper();
+        const clip = new Float32Array(1025);
+        for (let i = 0; i < clip.length; i++) {
+            const x = i / (clip.length - 1) * 2 - 1, a = Math.abs(x);
+            clip[i] = a < .8 ? x : Math.sign(x) * (.8 + .18 * Math.tanh((a - .8) / .18));
+        }
+        this.metroClip.curve = clip;
+        this.metroVol.connect(this.metroLim);
+        this.metroLim.connect(this.metroClip);
+        this.metroClip.connect(this.master);
         this.master.connect(ctx.destination);
 
         this.noise = ctx.createBuffer(1, Math.floor(ctx.sampleRate * .2), ctx.sampleRate);
@@ -806,7 +958,7 @@ class AudioEngine {
 
     setMetroVolume(v) {
         this.metroVolume = v;
-        if (this.metroVol) this.metroVol.gain.setTargetAtTime(v * 1.6, this.ctx.currentTime, .03);
+        if (this.metroVol) this.metroVol.gain.setTargetAtTime(v * 1.3, this.ctx.currentTime, .03);
     }
 
     setReverb(on) {
@@ -861,49 +1013,129 @@ class AudioEngine {
         [...d.oscs.map(x => x.o), d.lfo].forEach(o => { try { o.stop(t + .55); } catch (e) { /* ignore */ } });
     }
 
-    /* Percussions du métronome (hors réverbération, volume propre) */
-    hit(ch, t) {
-        if (ch === '.') return;
-        const ctx = this.ctx, g = ctx.createGain();
-        g.connect(this.metroVol);
-        if (ch === 'D') {
-            // Dum de darbouka : fondamentale grave + harmoniques de la peau (200–400 Hz, audibles
-            // même sur un haut-parleur de téléphone) + petit claquement d'attaque
-            const env = (gain, peak, dur) => {
-                gain.gain.setValueAtTime(.0001, t);
-                gain.gain.exponentialRampToValueAtTime(peak, t + .004);
-                gain.gain.exponentialRampToValueAtTime(.0001, t + dur);
-            };
-            [[110, 68, 'sine', .9, .42], [230, 150, 'triangle', .55, .3], [345, 240, 'sine', .3, .2]].forEach(([f0, f1, type, peak, dur]) => {
-                const o = ctx.createOscillator(), og = ctx.createGain();
-                o.type = type;
-                o.frequency.setValueAtTime(f0, t);
-                o.frequency.exponentialRampToValueAtTime(f1, t + .12);
-                env(og, peak, dur);
-                o.connect(og); og.connect(g); o.start(t); o.stop(t + dur + .02);
-            });
-            const n = ctx.createBufferSource(), lp = ctx.createBiquadFilter(), ng = ctx.createGain();
-            n.buffer = this.noise;
-            lp.type = 'lowpass'; lp.frequency.value = 900;
-            env(ng, .35, .03);
-            n.connect(lp); lp.connect(ng); ng.connect(g); n.start(t); n.stop(t + .05);
-            g.gain.value = 1;
-        } else if (ch === 'T' || ch === 'k') {
-            const n = ctx.createBufferSource(), bp = ctx.createBiquadFilter();
-            n.buffer = this.noise;
-            bp.type = 'bandpass'; bp.frequency.value = ch === 'T' ? 3200 : 4300; bp.Q.value = 1.1;
-            g.gain.setValueAtTime(ch === 'T' ? 1 : .45, t);
-            g.gain.exponentialRampToValueAtTime(.0001, t + .07);
-            n.connect(bp); bp.connect(g); n.start(t); n.stop(t + .09);
-        } else {
-            const o = ctx.createOscillator();
-            o.frequency.value = ch === 'A' ? 1760 : 1175;
-            g.gain.setValueAtTime(ch === 'A' ? .6 : .35, t);
-            g.gain.exponentialRampToValueAtTime(.0001, t + .05);
-            o.connect(g); o.start(t); o.stop(t + .06);
+    /* ---------- Percussions (métronome / rythmes) : volume propre, hors réverbération ---------- */
+
+    // Un pas peut contenir plusieurs sons joués ensemble (ex. « KSh » = grosse caisse + caisse claire + charleston)
+    hit(step, t) {
+        for (const ch of step) {
+            const fn = this.drums[ch];
+            if (fn) fn.call(this, t);
         }
     }
+
+    // Enveloppe percussive : montée très rapide puis décroissance exponentielle
+    perc(node, t, peak, decay, attack = .002) {
+        const g = node.gain;
+        g.setValueAtTime(.0001, t);
+        g.exponentialRampToValueAtTime(peak, t + attack);
+        g.exponentialRampToValueAtTime(.0001, t + attack + decay);
+    }
+
+    // Mode de résonance amorti (oscillateur + enveloppe) branché sur « out »
+    mode(out, t, f, peak, decay, type = 'sine', drop = 0) {
+        const ctx = this.ctx, o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = type;
+        o.frequency.setValueAtTime(f * (1 + drop), t);
+        if (drop) o.frequency.exponentialRampToValueAtTime(f, t + .03);
+        this.perc(g, t, peak, decay);
+        o.connect(g); g.connect(out);
+        o.start(t); o.stop(t + decay + .05);
+    }
+
+    // Bruit filtré (claquement, timbre de caisse claire, cymbales…)
+    noiseHit(out, t, type, f, q, peak, decay) {
+        const ctx = this.ctx, n = ctx.createBufferSource(), flt = ctx.createBiquadFilter(), g = ctx.createGain();
+        n.buffer = this.noise;
+        n.loop = true;
+        flt.type = type; flt.frequency.value = f; flt.Q.value = q;
+        this.perc(g, t, peak, decay, .001);
+        n.connect(flt); flt.connect(g); g.connect(out);
+        n.start(t, Math.random() * .1); n.stop(t + decay + .05);
+    }
+
+    // Métal (charleston, crash) : 6 ondes carrées inharmoniques, comme les boîtes à rythmes classiques
+    metal(out, t, peak, decay, hp = 7000) {
+        const ctx = this.ctx, bp = ctx.createBiquadFilter(), hpf = ctx.createBiquadFilter(), g = ctx.createGain();
+        bp.type = 'bandpass'; bp.frequency.value = 10000; bp.Q.value = .8;
+        hpf.type = 'highpass'; hpf.frequency.value = hp;
+        this.perc(g, t, peak, decay, .001);
+        bp.connect(hpf); hpf.connect(g); g.connect(out);
+        for (const f of [205.3, 304.4, 369.6, 522.7, 540, 800]) {
+            const o = ctx.createOscillator();
+            o.type = 'square'; o.frequency.value = f * 1.7;
+            o.connect(bp); o.start(t); o.stop(t + decay + .05);
+        }
+    }
+
+    // Banque de sons de darbouka : 4 variantes par frappe (hauteur, point de frappe, force) calculées une fois
+    darbukaBank() {
+        const sr = this.ctx.sampleRate;
+        if (!this.dbk || this.dbk.sr !== sr) {
+            this.dbk = { sr };
+            for (const [ch, p] of Object.entries(DARBUKA)) {
+                this.dbk[ch] = Array.from({ length: 4 }, () => {
+                    const data = renderDarbuka(sr, p), buf = this.ctx.createBuffer(1, data.length, sr);
+                    buf.getChannelData(0).set(data);
+                    return buf;
+                });
+            }
+        }
+        return this.dbk;
+    }
+
+    darbukaHit(ch, t, level) {
+        const ctx = this.ctx, src = ctx.createBufferSource(), g = ctx.createGain();
+        src.buffer = pick(this.darbukaBank()[ch]);
+        g.gain.value = level * (.88 + Math.random() * .24);     // jeu humain : force légèrement variable
+        src.connect(g); g.connect(this.metroVol);
+        src.start(t);
+    }
 }
+
+// Instruments de percussion, appelés avec « this » = moteur audio
+AudioEngine.prototype.drums = {
+    // --- Clic ---
+    A(t) { this.mode(this.metroVol, t, 1760, .6, .05, 'sine'); },
+    c(t) { this.mode(this.metroVol, t, 1175, .35, .045, 'sine'); },
+
+    // --- Darbouka : modèle physique pré-calculé (voir renderDarbuka) ---
+    D(t) { this.darbukaHit('D', t, 1); },       // dum : centre de la peau
+    T(t) { this.darbukaHit('T', t, .8); },      // tek : bord, main forte
+    k(t) { this.darbukaHit('k', t, .45); },     // ka  : bord, autre main, plus léger
+
+    // --- Batterie ---
+    K(t) {   // grosse caisse : chute de hauteur rapide + harmonique audible sur téléphone + clic du batteur
+        const ctx = this.ctx, o = ctx.createOscillator(), g = ctx.createGain();
+        o.frequency.setValueAtTime(160, t);
+        o.frequency.exponentialRampToValueAtTime(48, t + .08);
+        this.perc(g, t, 1.1, .45);
+        o.connect(g); g.connect(this.metroVol); o.start(t); o.stop(t + .5);
+        const o2 = ctx.createOscillator(), g2 = ctx.createGain();
+        o2.type = 'triangle';
+        o2.frequency.setValueAtTime(340, t);
+        o2.frequency.exponentialRampToValueAtTime(120, t + .07);
+        this.perc(g2, t, .95, .18);
+        o2.connect(g2); g2.connect(this.metroVol); o2.start(t); o2.stop(t + .25);
+        this.noiseHit(this.metroVol, t, 'lowpass', 3500, .7, .45, .008);
+    },
+    S(t) {   // caisse claire : corps de la peau + timbre (fils) en bruit
+        this.mode(this.metroVol, t, 185, .75, .12, 'triangle', .05);
+        this.mode(this.metroVol, t, 330, .45, .08, 'sine', .05);
+        this.noiseHit(this.metroVol, t, 'highpass', 1000, .7, .6, .18);
+        this.noiseHit(this.metroVol, t, 'bandpass', 3500, .7, .2, .1);
+    },
+    h(t) { this.metal(this.metroVol, t, .5, .045); },                           // charleston fermé
+    o(t) { this.metal(this.metroVol, t, .4, .32); },                            // charleston ouvert
+    X(t) {   // cymbale crash
+        this.metal(this.metroVol, t, .3, 1.4, 5000);
+        this.noiseHit(this.metroVol, t, 'highpass', 5500, .5, .35, 1.2);
+    },
+    r(t) {   // rimshot / cross-stick
+        this.mode(this.metroVol, t, 1700, .45, .03, 'sine');
+        this.mode(this.metroVol, t, 820, .3, .04, 'triangle');
+        this.noiseHit(this.metroVol, t, 'bandpass', 3000, 1, .4, .012);
+    }
+};
 
 /* Métronome : ordonnancement précis sur l'horloge audio (lookahead) */
 class Metronome {
@@ -921,6 +1153,7 @@ class Metronome {
     start() {
         const ctx = this.engine.unlock();
         if (!ctx) return;
+        this.engine.darbukaBank();              // pré-calcul des sons avant la première frappe
         this.stepIdx = 0;
         this.next = ctx.currentTime + .1;
         this.uiTimers = [];
@@ -939,10 +1172,10 @@ class Metronome {
     setRhythm(r) { this.rhythm = r; this.stepIdx = 0; }
 
     tick() {
-        const ctx = this.engine.ctx, r = RHYTHMS[this.rhythm];
+        const ctx = this.engine.ctx, r = RHYTHMS[this.rhythm], steps = r.steps.split(' ');
         while (this.next < ctx.currentTime + .12) {
-            const i = this.stepIdx % r.steps.length;
-            this.engine.hit(r.steps[i], this.next);
+            const i = this.stepIdx % steps.length;
+            this.engine.hit(steps[i], this.next);
             this.uiTimers.push(setTimeout(() => this.onStep(i), Math.max(0, (this.next - ctx.currentTime) * 1000)));
             this.next += 60 / this.bpm / r.div;
             this.stepIdx++;
@@ -1662,14 +1895,27 @@ class App {
         $('#btnDrone').setAttribute('aria-pressed', String(droneOn));
         $('#droneVol').value = s.droneVol;
 
-        this.fillSelect($('#rhythm'), Object.entries(RHYTHMS).map(([k, r]) => [k, r[lang]]), s.rhythm);
+        // Liste des rythmes classée : Clic / Rythmes arabes / Batterie
+        const rsel = $('#rhythm');
+        if (rsel.dataset.sig !== lang) {
+            rsel.innerHTML = '';
+            for (const grp of RHYTHM_GROUPS) {
+                const og = document.createElement('optgroup');
+                og.label = this.t('rg_' + grp);
+                for (const [k, r] of Object.entries(RHYTHMS)) if (r.group === grp) og.appendChild(new Option(r[lang], k));
+                rsel.appendChild(og);
+            }
+            rsel.dataset.sig = lang;
+        }
+        rsel.value = s.rhythm;
         const beats = $('#beats');
         if (beats.dataset.sig !== s.rhythm) {
             beats.innerHTML = '';
-            for (const ch of RHYTHMS[s.rhythm].steps) {
+            for (const step of RHYTHMS[s.rhythm].steps.split(' ')) {
+                const { cls, label } = beatLabel(step);
                 const el = document.createElement('span');
-                el.className = ch === '.' ? 'rest' : ch;
-                el.textContent = ch === 'D' ? 'D' : ch === 'T' ? 'T' : ch === 'k' ? 't' : ch === 'A' ? '●' : ch === 'c' ? '·' : '';
+                el.className = cls;
+                el.textContent = label;
                 beats.appendChild(el);
             }
             beats.dataset.sig = s.rhythm;

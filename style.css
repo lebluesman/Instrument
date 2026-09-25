@@ -628,6 +628,8 @@ output.input { display: grid; place-items: center; }
 .beats span.D { color: #ffd08a; }
 .beats span.T, .beats span.k { color: #9ad7bf; }
 .beats span.A { color: #ffd08a; }
+.beats span.K, .beats span.S { color: #ffb4a8; }
+.beats span.r, .beats span.o, .beats span.X, .beats span.h { color: #c9c4f5; }
 .beats span.on { transform: scale(1.18); background: var(--accent); color: var(--ink); border-color: var(--accent); }
 
 .tuner { display: grid; gap: 8px; justify-items: center; margin-bottom: 10px; }
