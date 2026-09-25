@@ -1,29 +1,51 @@
-Ultimate Fretboard v0.1 ( https://lebluesman.github.io/Instrument/)
+Ultimate Fretboard v3 ( https://lebluesman.github.io/Instrument/ )
 
-A web-based interactive fretboard visualizer and luthier tool. I built this to help visualize notes, scales, and chords on fretless instruments like the Oud, as well as Guitar and Bass.
+A web-based interactive fretboard, practice tool and luthier helper for the Oud, Guitar, Bass and Violin — with full support for Arabic maqams, ajnas and Turkish makams (quarter tones and commas).
 
-Unlike standard tools, this supports microtonal scales (Maqams) with quarter-tones, making it useful for oriental music theory.
+It works on desktop, phone and tablet, and can be installed as an app (Android: "Install app", iPhone: Share → "Add to Home Screen"). It also works offline once installed.
+
+Previous versions are still available: v2 at https://lebluesman.github.io/Instrument/v2/ and v1 at https://lebluesman.github.io/Instrument/old/
 
 Key Features:
 
-Multi-Instrument: Presets for Oud (Arabic, Turkish, Iraqi, etc.), Guitar, Bass, and Violin.
+Playable neck: tap, slide (glissando) and strum with several fingers. Fretless necks (oud, violin) play any pitch, quarter tones included; fretted necks snap to the frets.
 
-Scale & Chord Library: Visualize Western scales (Major, Minor, Blues...) and Oriental Maqams (Rast, Bayati, Hijaz...) directly on the neck.
+Automatic layout: vertical neck on a phone held upright, horizontal on desktop or in landscape. Choose the visible frets and the starting position, left-handed mode, full screen, or hide the menu with the logo.
 
-Microtonal Support: Accurately renders quarter-tones (half-flats) for Maqams.
+Scales & Maqams: Western scales, 17 Arabic maqams (Rast, Bayati, Hijaz, Saba, Sikah, Huzam, Iraq, Nakriz, Nawa Athar, Suznak…), Turkish makams in 53-TET commas, and Algerian Andalusian modes.
 
-Audio Engine: Real-time sound synthesis using the Web Audio API (no external samples). Click or drag across strings to play.
+Ajnas view: each maqam shows its lower and upper jins in different colors, with the ghammaz (pivot note) highlighted.
 
-Customizable: Change tuning, scale length (cm), and toggle measurements.
+Play button: hear the scale up and down, or the chord as an arpeggio then a strum, with the notes lighting up on the neck.
 
-Bilingual: Fully localized in English and French.
+Scale detector: tap notes and get every scale / maqam containing them (identical scales are grouped).
+
+Chords: major, minor, 7, maj7, m7, m7♭5, dim, aug, sus2, sus4.
+
+Practice panel:
+- Drone: root + fifth held continuously to practise intonation.
+- Metronome with oriental rhythms: Maqsum, Baladi, Saidi, Wahda, Ayyub, Malfuf, Masmoudi, Samai thaqil.
+- Tuner using the microphone, showing the note, the cents and the nearest string of the current tuning.
+- Quiz: find a note on the neck, or name a highlighted note.
+
+Sound: plucked-string synthesis (Karplus-Strong) for oud, guitar and electric guitar, plus violin and synth voices, reverb and infinite sustain. No audio samples.
+
+Luthier tools: any tuning, scale length in cm and fret positions measured from the nut.
+
+Presets: 10 built-in instruments (Arabic, Turkish, Iraqi, Greek, Maghreb… ouds, guitar, bass, violin) and your own saved presets.
+
+Share: create a link that opens the app with the same tuning, maqam and settings.
+
+Bilingual: English and French.
 
 Tech Stack:
 
 Vanilla JavaScript (ES6+)
 
-HTML5 Canvas (for the rendering engine)
+HTML5 Canvas (layered rendering engine)
 
-Web Audio API (for sound generation)
+Web Audio API (Karplus-Strong synthesis, drone, metronome, microphone pitch detection)
+
+Progressive Web App (manifest + service worker)
 
 No external frameworks or libraries.

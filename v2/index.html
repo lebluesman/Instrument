@@ -9,12 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Fretboard">
     <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I" />
-    <meta name="description" content="Manche interactif pour oud, guitare, basse et violon : accords, gammes, maqams et ajnas en quarts de ton, makams turcs, accordeur, métronome, bourdon et quiz.">
+    <meta name="description" content="Manche interactif pour oud, guitare, basse et violon : accords, gammes, maqams en quarts de ton, détecteur de gammes et synthèse sonore.">
     <title>Ultimate Fretboard</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e4b55a'/%3E%3Cpath d='M6 11h20M6 16h20M6 21h20' stroke='%231b1406' stroke-width='1.6'/%3E%3Cpath d='M12 8v16M19 8v16' stroke='%231b1406' stroke-opacity='.45' stroke-width='2'/%3E%3C/svg%3E">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=3.0">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css?v=2.4">
 </head>
 <body data-mode="free">
 <div id="app">
@@ -42,33 +42,18 @@
                 <span class="hint" data-i18n="hint_free"></span>
             </div>
             <div class="ctx-pane" data-pane="chord">
-                <button class="icon-btn play" id="playChord" data-i18n-title="play">
-                    <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/></svg>
-                </button>
                 <select id="chordRoot" class="sel sel-root" data-i18n-title="root"></select>
                 <select id="chordType" class="sel sel-grow" data-i18n-title="chord_type"></select>
             </div>
             <div class="ctx-pane" data-pane="scale">
-                <button class="icon-btn play" id="playScale" data-i18n-title="play">
-                    <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/></svg>
-                </button>
                 <select id="scaleRoot" class="sel sel-root" data-i18n-title="root"></select>
                 <select id="scaleGenre" class="sel sel-genre" data-i18n-title="genre"></select>
                 <select id="scaleKey" class="sel sel-grow" data-i18n-title="scale"></select>
-                <button class="chip toggle" id="ajnasChip" data-toggle="showAjnas"><span data-i18n="ajnas">Ajnas</span></button>
-                <span class="hint ajnas-info" id="ajnasInfo"></span>
                 <button class="chip warn" id="microFix" hidden><span data-i18n="micro_fix"></span></button>
             </div>
             <div class="ctx-pane" data-pane="detect">
                 <div class="det-chips" id="detChips"></div>
                 <button class="chip" id="detClear"><span data-i18n="clear">Effacer</span></button>
-            </div>
-            <div class="ctx-pane" data-pane="quiz">
-                <span class="quiz-q" id="quizQ"></span>
-                <div class="quiz-choices" id="quizChoices"></div>
-                <span class="quiz-score" id="quizScore"></span>
-                <button class="chip" id="quizSkip"><span data-i18n="quiz_skip">Passer</span></button>
-                <button class="chip" id="quizEnd"><span data-i18n="quiz_end">Terminer</span></button>
             </div>
         </div>
 
@@ -82,9 +67,6 @@
             </button>
             <button class="icon-btn" id="btnFocus" data-i18n-title="focus">
                 <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-            </button>
-            <button class="icon-btn" id="btnPractice" data-i18n-title="practice">
-                <svg viewBox="0 0 24 24"><path d="M9.5 3h5l4 18h-13z"/><path d="M8 15h8M12 15l5-8"/></svg>
             </button>
             <button class="icon-btn" id="btnSettings" data-i18n-title="settings">
                 <svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h11M19 17h1"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17" r="2"/></svg>
@@ -118,11 +100,6 @@
         <button class="preset-chip" id="presetChip">
             <b id="presetName"></b><span id="tuningMini"></span>
         </button>
-        <div class="pos" data-i18n-title="position">
-            <button id="posPrev" aria-label="-1">‹</button>
-            <span id="posLabel"></span>
-            <button id="posNext" aria-label="+1">›</button>
-        </div>
         <div class="legend" id="legend"></div>
     </footer>
 </div>
@@ -131,30 +108,23 @@
     <span data-i18n="update_ready">Nouvelle version disponible</span>
     <button id="btnUpdate" data-i18n="update_now">Mettre à jour</button>
 </div>
-<div class="toast msg" id="msgToast" role="status" hidden></div>
 
 <div class="backdrop" id="backdrop" hidden></div>
-
-<!-- Réglages -->
 <aside class="sheet" id="sheet" aria-hidden="true">
     <div class="sheet-head">
         <div class="grip"></div>
         <h2 data-i18n="settings">Réglages</h2>
-        <button class="icon-btn" data-close data-i18n-title="close">
+        <button class="icon-btn" id="sheetClose" data-i18n-title="close">
             <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
     </div>
     <div class="sheet-body">
         <section>
             <h3 data-i18n="sec_instrument">Instrument</h3>
-            <div class="field">
+            <label class="field">
                 <span data-i18n="preset">Préréglage</span>
                 <select id="preset" class="sel"></select>
-                <div class="btn-row">
-                    <button class="chip" id="presetSave"><span data-i18n="preset_save">Enregistrer</span></button>
-                    <button class="chip" id="presetDel" hidden><span data-i18n="preset_delete">Supprimer</span></button>
-                </div>
-            </div>
+            </label>
             <label class="field">
                 <span data-i18n="tuning">Accordage</span>
                 <input id="tuning" class="input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
@@ -181,7 +151,7 @@
         <section>
             <h3 data-i18n="sec_display">Affichage</h3>
             <div class="field">
-                <span data-i18n="frets">Cases visibles</span>
+                <span data-i18n="frets">Frettes visibles</span>
                 <div class="segmented full" data-seg="frets">
                     <button data-value="auto"><span data-i18n="auto">Auto</span></button>
                     <button data-value="12">12</button>
@@ -189,15 +159,6 @@
                     <button data-value="19">19</button>
                     <button data-value="24">24</button>
                 </div>
-            </div>
-            <div class="field">
-                <span data-i18n="position">Position</span>
-                <div class="stepper">
-                    <button data-pos="-1" aria-label="-1">−</button>
-                    <output id="posValue" class="input"></output>
-                    <button data-pos="1" aria-label="+1">+</button>
-                </div>
-                <small class="help" data-i18n="position_help"></small>
             </div>
             <div class="field">
                 <span data-i18n="orientation">Orientation</span>
@@ -209,8 +170,6 @@
             </div>
             <button class="switch-row" data-toggle="showNotes"><span data-i18n="show_notes">Noms des notes</span><i class="switch"></i></button>
             <button class="switch-row" data-toggle="showMeasures"><span data-i18n="show_measures">Mesures</span><i class="switch"></i></button>
-            <button class="switch-row" data-toggle="lefty"><span data-i18n="lefty">Gaucher</span><i class="switch"></i></button>
-            <button class="switch-row" id="fsRow"><span data-i18n="fullscreen">Plein écran</span><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
         </section>
 
         <section>
@@ -221,15 +180,6 @@
             </label>
             <button class="switch-row" data-toggle="reverb"><span data-i18n="reverb">Réverbération</span><i class="switch"></i></button>
             <small class="help" data-i18n="ios_note"></small>
-        </section>
-
-        <section>
-            <h3 data-i18n="sec_share">Partager</h3>
-            <button class="wide-btn" id="btnShare">
-                <svg viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 13v7h14v-7"/></svg>
-                <span data-i18n="share_btn">Partager cette configuration</span>
-            </button>
-            <small class="help" data-i18n="share_help"></small>
         </section>
 
         <section>
@@ -244,74 +194,10 @@
             <svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
             <span data-i18n="install">Installer l'application</span>
         </button>
-        <p class="about">Ultimate Fretboard <span id="appVersion"></span> · <span data-i18n="old_version">Versions précédentes :</span> <a href="v2/">v2</a> · <a href="old/">v1</a></p>
+        <p class="about">Ultimate Fretboard <span id="appVersion"></span> · <a href="../">v3</a> · <a href="../old/">v1</a></p>
     </div>
 </aside>
 
-<!-- Pratique -->
-<aside class="sheet" id="practice" aria-hidden="true">
-    <div class="sheet-head">
-        <div class="grip"></div>
-        <h2 data-i18n="practice">Pratique</h2>
-        <button class="icon-btn" data-close data-i18n-title="close">
-            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-    </div>
-    <div class="sheet-body">
-        <section>
-            <h3 data-i18n="sec_drone">Bourdon</h3>
-            <div class="row">
-                <select id="droneRoot" class="sel grow" data-i18n-title="root"></select>
-                <div class="segmented" data-seg="droneOct">
-                    <button data-value="2">2</button>
-                    <button data-value="3">3</button>
-                </div>
-                <button class="run-btn" id="btnDrone"></button>
-            </div>
-            <label class="field">
-                <span data-i18n="volume">Volume</span>
-                <input id="droneVol" type="range" min="0" max="1" step="0.01">
-            </label>
-            <small class="help" data-i18n="drone_help"></small>
-        </section>
-
-        <section>
-            <h3 data-i18n="sec_metro">Métronome et rythmes</h3>
-            <div class="row">
-                <select id="rhythm" class="sel grow" data-i18n-title="rhythm"></select>
-                <button class="run-btn" id="btnMetro"></button>
-            </div>
-            <div class="beats" id="beats"></div>
-            <div class="field">
-                <span><span data-i18n="tempo">Tempo</span> · <b id="bpmLabel"></b> BPM</span>
-                <div class="row">
-                    <button class="step-btn" data-bpm="-5">−</button>
-                    <input id="bpm" type="range" min="40" max="240" step="1" class="grow">
-                    <button class="step-btn" data-bpm="5">+</button>
-                </div>
-            </div>
-            <small class="help" data-i18n="metro_help"></small>
-        </section>
-
-        <section>
-            <h3 data-i18n="sec_tuner">Accordeur</h3>
-            <div class="tuner">
-                <div class="tuner-note" id="tunerNote">–</div>
-                <div class="tuner-meter"><span class="tuner-zero"></span><i id="tunerNeedle"></i></div>
-                <div class="tuner-info" id="tunerInfo"></div>
-            </div>
-            <button class="wide-btn" id="btnTuner"></button>
-        </section>
-
-        <section>
-            <h3 data-i18n="sec_quiz">Quiz</h3>
-            <button class="wide-btn" id="quizFind"><span data-i18n="quiz_find_btn">Trouver la note sur le manche</span></button>
-            <button class="wide-btn" id="quizName"><span data-i18n="quiz_name_btn">Nommer la note affichée</span></button>
-            <button class="switch-row" data-toggle="quizNaturals"><span data-i18n="quiz_naturals">Notes naturelles seulement</span><i class="switch"></i></button>
-        </section>
-    </div>
-</aside>
-
-<script src="app.js?v=3.0"></script>
+<script src="app.js?v=2.4"></script>
 </body>
 </html>

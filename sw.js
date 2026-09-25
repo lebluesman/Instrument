@@ -1,6 +1,6 @@
 /* Service worker : rend l'application installable et utilisable hors connexion.
    À chaque nouvelle version, changer VERSION ici ET les ?v= dans index.html. */
-const VERSION = '2.4';
+const VERSION = '3.0';
 const CACHE = 'fretboard-' + VERSION;
 const CORE = [
     './',
