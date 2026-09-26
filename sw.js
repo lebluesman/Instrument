@@ -1,7 +1,10 @@
 /* Service worker : rend l'application installable et utilisable hors connexion.
    À chaque nouvelle version, changer VERSION ici ET les ?v= dans index.html. */
-const VERSION = '3.4';
+const VERSION = '4.0';
 const CACHE = 'fretboard-' + VERSION;
+// Bibliothèque externe de partitions (version figée dans l'URL) : cache séparé, gardé entre les versions
+const LIB_CACHE = 'lib-abcjs';
+const LIB_PREFIX = 'https://cdn.jsdelivr.net/npm/abcjs@';
 const CORE = [
     './',
     './style.css?v=' + VERSION,
@@ -27,7 +30,19 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
     const req = event.request;
-    if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+    if (req.method !== 'GET') return;
+
+    // abcjs (lecteur de partitions) : cache d'abord, pour fonctionner hors ligne après la première utilisation
+    if (req.url.startsWith(LIB_PREFIX)) {
+        event.respondWith(
+            caches.open(LIB_CACHE).then(c => c.match(req).then(cached => cached || fetch(req).then(res => {
+                if (res.ok || res.type === 'opaque') c.put(req, res.clone());
+                return res;
+            })))
+        );
+        return;
+    }
+    if (new URL(req.url).origin !== self.location.origin) return;
 
     // Pages : réseau d'abord, sans le cache HTTP (pour recevoir les mises à jour tout de suite), cache si hors ligne
     if (req.mode === 'navigate') {

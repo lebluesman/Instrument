@@ -205,67 +205,6 @@ const RHYTHMS = {
 };
 const RHYTHM_GROUPS = ['click', 'arabic', 'blues', 'drums'];
 
-/* ---------- Partitions (notation ABC) ----------
-   Quarts de ton en ABC : _/ = demi-bémol, ^/ = demi-dièse.
-   maqam : [famille, clé, tonique] → affiche la gamme sur le manche pendant la lecture. */
-const ABCJS_URL = 'https://cdn.jsdelivr.net/npm/abcjs@6.7.1/dist/abcjs-basic-min.js';
-
-// Bibliothèque de partitions (scores.json, chargée à l'ouverture du mode Partition) :
-// ~10 morceaux libres de droits par maqam — pièces ottomanes (SymbTr, CompMusic/UPF, CC BY-NC-SA 4.0,
-// ABC de S. Shlien) et airs traditionnels (abcnotation.com). Catégories : ar:<maqam>, tk:<makam>, w:<gamme>.
-let SCORES = {};
-const SCORE_GROUPS = [['ar', 'oriental', 'sg_maqam'], ['an', 'andalous', 'sg_andalous'], ['tk', 'turkish', 'sg_turkish'], ['w', 'western', 'sg_western']];
-const ABC_STEP = [0, 2, 4, 5, 7, 9, 11];
-const ABC_ACC = { sharp: 1, flat: -1, natural: 0, dblsharp: 2, dblflat: -2, quartersharp: .5, quarterflat: -.5 };
-
-// Convertit une partition analysée par abcjs en évènements { t, d (en rondes), midis[], el }
-// Gère l'armure, les altérations de mesure, les liaisons, les triolets, les accords et les reprises simples.
-function abcEvents(tune) {
-    const events = [];
-    let t = 0, keyAcc = {}, barAcc = {}, trip = 1, repStart = { i: 0, t: 0 };
-    const setKey = key => { keyAcc = {}; (key && key.accidentals || []).forEach(a => { keyAcc[a.note.toLowerCase()] = ABC_ACC[a.acc] || 0; }); };
-    tune.lines.forEach(line => {
-        const st = line.staff && line.staff[0];
-        if (!st) return;
-        if (st.key) setKey(st.key);
-        // Clé « sol 8 » (guitare, oud) : la musique sonne une octave plus bas que l'écrit
-        const clef = (st.clef && st.clef.type) || '';
-        const oct = /-8$/.test(clef) ? -12 : /\+8$/.test(clef) ? 12 : 0;
-        (st.voices[0] || []).forEach(el => {
-            if (el.el_type === 'key') { setKey(el); return; }
-            if (el.el_type === 'bar') {
-                barAcc = {};
-                if (/right_repeat|dbl_repeat/.test(el.type)) {       // reprise : on rejoue la section une fois
-                    const span = t - repStart.t, copy = events.slice(repStart.i).map(e => ({ ...e, t: e.t + span }));
-                    events.push(...copy);
-                    t += span;
-                }
-                if (/left_repeat|dbl_repeat/.test(el.type)) repStart = { i: events.length, t };
-                return;
-            }
-            if (el.el_type !== 'note') return;
-            if (el.startTriplet) trip = el.tripletMultiplier || 1;
-            const d = (el.duration || 0) * trip;
-            if (el.endTriplet) trip = 1;
-            if (el.rest || !el.pitches) { t += d; return; }
-            const midis = [];
-            el.pitches.forEach(p => {
-                const step = ((p.pitch % 7) + 7) % 7, letter = 'cdefgab'[step];
-                let off;
-                if (p.accidental) { off = ABC_ACC[p.accidental] || 0; barAcc[p.pitch] = off; }
-                else off = barAcc[p.pitch] ?? keyAcc[letter] ?? 0;
-                const midi = 60 + oct + 12 * Math.floor(p.pitch / 7) + ABC_STEP[step] + off;
-                if (p.endTie) {           // note liée : on prolonge la précédente
-                    for (let k = events.length - 1; k >= 0; k--) if (events[k].midis.includes(midi)) { events[k].d += d; break; }
-                } else midis.push(midi);
-            });
-            if (midis.length) events.push({ t, d, midis, el });
-            t += d;
-        });
-    });
-    return { events, total: t };
-}
-
 // Étiquette d'un pas pour l'affichage des temps (le son le plus important du pas)
 function beatLabel(step) {
     for (const [ch, label] of [['X', '✕'], ['K', 'K'], ['S', 'S'], ['D', 'D'], ['T', 'T'], ['r', 'r'], ['A', '●'], ['k', 'k'], ['o', 'o'], ['h', '·'], ['c', '·']]) {
@@ -276,18 +215,7 @@ function beatLabel(step) {
 
 const I18N = {
     fr: {
-        mode_free: 'Libre', mode_chord: 'Accords', mode_scale: 'Gammes', mode_detect: 'Détecteur', mode_score: 'Partition',
-        score_maqam: 'Maqam', score_song: 'Morceau', score_speed: 'Vitesse', score_loop: 'Boucle', score_accomp: 'Rythme', score_edit: 'Éditer',
-        score_loading: 'Chargement de la partition…',
-        score_offline: 'Impossible de charger le moteur de partition : une connexion Internet est nécessaire la première fois.',
-        score_error: 'Partition illisible : vérifiez la notation ABC (en-têtes X:, K: et des notes).',
-        score_name: 'Nom de la partition :', score_untitled: 'Sans titre', score_saved: 'Partition enregistrée',
-        score_confirm_del: 'Supprimer cette partition ?',
-        sg_maqam: 'Maqams arabes', sg_andalous: 'Andalou (Algérie)', sg_turkish: 'Makams turcs', sg_western: 'Gammes occidentales', sg_user: 'Mes partitions',
-        editor_title: 'Partition (notation ABC)', abc_apply: 'Appliquer', abc_save: 'Enregistrer dans mes partitions',
-        abc_reset: 'Revenir à l’original', abc_delete: 'Supprimer',
-        abc_help: 'C D E F G A B = notes, c d e = octave au-dessus, C, D, = en dessous. ^ dièse, _ bémol, = bécarre, ^/ et _/ = quarts de ton. Un chiffre après la note = durée (A2 = double, A/2 = moitié), z = silence, | = barre de mesure, [CEG] = accord. En-têtes : T: titre, M: mesure, L: durée de base, Q: tempo, K: tonalité.',
-        abc_more: 'Des milliers de morceaux gratuits en ABC :',
+        mode_free: 'Libre', mode_chord: 'Accords', mode_scale: 'Gammes', mode_detect: 'Détecteur',
         notes: 'Notes', measures: 'Mesures', hint_free: 'Touchez ou glissez sur les cordes — plusieurs doigts possibles',
         root: 'Fondamentale', chord_type: 'Type d’accord', genre: 'Famille', scale: 'Gamme', sound: 'Son',
         sustain: 'Sustain infini', stop: 'Tout arrêter (Échap)', focus: 'Plein écran', exit_focus: 'Quitter le plein écran',
@@ -298,7 +226,7 @@ const I18N = {
         detect_empty: 'Les gammes et maqams contenant vos notes apparaîtront ici.',
         detect_none: 'Aucune gamme connue ne contient toutes ces notes.',
         lg_root: 'Fondamentale', lg_chord: 'Accord', lg_scale: 'Gamme', lg_quarter: 'Micro-intervalle', lg_selected: 'Sélection',
-        lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas', lg_extra: 'Hors maqam (modulation)',
+        lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas',
         micro_fix: 'Micro-intervalles : passer en fretless',
         genre_western: 'Occidental', genre_oriental: 'Maqams arabes', genre_turkish: 'Makams turcs (commas)', genre_andalous: 'Andalou (Algérie)',
         snd_oud: 'Oud', snd_nylon: 'Guitare nylon (espagnole)', snd_guitar: 'Guitare folk (acier)', snd_electric: 'Électrique', snd_violin: 'Violon', snd_synth: 'Synthé',
@@ -337,18 +265,7 @@ const I18N = {
         quiz_skip: 'Passer', quiz_end: 'Terminer'
     },
     en: {
-        mode_free: 'Free', mode_chord: 'Chords', mode_scale: 'Scales', mode_detect: 'Detector', mode_score: 'Score',
-        score_maqam: 'Maqam', score_song: 'Tune', score_speed: 'Speed', score_loop: 'Loop', score_accomp: 'Rhythm', score_edit: 'Edit',
-        score_loading: 'Loading the score…',
-        score_offline: 'Cannot load the score engine: an Internet connection is needed the first time.',
-        score_error: 'Unreadable score: check the ABC notation (X:, K: headers and notes).',
-        score_name: 'Score name:', score_untitled: 'Untitled', score_saved: 'Score saved',
-        score_confirm_del: 'Delete this score?',
-        sg_maqam: 'Arabic maqams', sg_andalous: 'Andalusian (Algeria)', sg_turkish: 'Turkish makams', sg_western: 'Western scales', sg_user: 'My scores',
-        editor_title: 'Score (ABC notation)', abc_apply: 'Apply', abc_save: 'Save to my scores',
-        abc_reset: 'Revert to original', abc_delete: 'Delete',
-        abc_help: 'C D E F G A B = notes, c d e = octave above, C, D, = below. ^ sharp, _ flat, = natural, ^/ and _/ = quarter tones. A number after a note = length (A2 = double, A/2 = half), z = rest, | = bar line, [CEG] = chord. Headers: T: title, M: meter, L: default length, Q: tempo, K: key.',
-        abc_more: 'Thousands of free tunes in ABC:',
+        mode_free: 'Free', mode_chord: 'Chords', mode_scale: 'Scales', mode_detect: 'Detector',
         notes: 'Notes', measures: 'Measures', hint_free: 'Tap or slide on the strings — multi-touch supported',
         root: 'Root', chord_type: 'Chord type', genre: 'Family', scale: 'Scale', sound: 'Sound',
         sustain: 'Infinite sustain', stop: 'Stop everything (Esc)', focus: 'Full screen', exit_focus: 'Exit full screen',
@@ -359,7 +276,7 @@ const I18N = {
         detect_empty: 'Scales and maqams containing your notes will show up here.',
         detect_none: 'No known scale contains all of these notes.',
         lg_root: 'Root', lg_chord: 'Chord', lg_scale: 'Scale', lg_quarter: 'Microtone', lg_selected: 'Selected',
-        lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas', lg_extra: 'Outside the maqam (modulation)',
+        lg_ghammaz: 'Ghammaz', ajnas: 'Ajnas',
         micro_fix: 'Microtones: switch to fretless',
         genre_western: 'Western', genre_oriental: 'Arabic maqams', genre_turkish: 'Turkish makams (commas)', genre_andalous: 'Andalusian (Algeria)',
         snd_oud: 'Oud', snd_nylon: 'Nylon guitar (Spanish)', snd_guitar: 'Folk guitar (steel)', snd_electric: 'Electric', snd_violin: 'Violin', snd_synth: 'Synth',
@@ -408,7 +325,6 @@ const COLORS = {
     ghammaz: { fill: '#0ea5e9', text: '#fff', ring: '#fff' },
     detect:  { fill: '#f5a524', text: '#1b1406', ring: '#fff' },
     quiz:    { fill: '#e4b55a', text: '#1b1406', ring: '#fff' },
-    extra:   { fill: '#f97316', text: '#fff' },          // note de la partition hors du maqam (modulation)
     free:      { fill: 'rgba(245,240,230,.17)', text: '#f3efe6', plain: true },
     freeSharp: { fill: 'rgba(245,240,230,.07)', text: 'rgba(243,239,230,.62)', plain: true }
 };
@@ -417,7 +333,7 @@ const INLAYS = [3, 5, 7, 9, 12, 15, 17, 19, 21, 24];
 const MAX_POS = 15;
 const TAU = Math.PI * 2;
 const FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
-const STORE_KEY = 'ultimate-fretboard-v2';
+const STORE_KEY = 'ultimate-fretboard-v3-archive';   // copie archivée : ne touche pas aux réglages de la version principale
 
 /* ---------- 2. OUTILS ---------- */
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -1318,8 +1234,7 @@ const DEFAULTS = {
     scaleRoot: 0, scaleGenre: 'western', scaleKey: 'major',
     detected: [], userPresets: [],
     droneRoot: 'auto', droneOct: '2', droneVol: .5,
-    bpm: 90, rhythm: 'maqsum', metroVol: .8, quizNaturals: true,
-    scoreId: '', userScores: [], scoreSpeed: '1', scoreLoop: false, scoreAccomp: false
+    bpm: 90, rhythm: 'maqsum', metroVol: .8, quizNaturals: true
 };
 
 function loadState() {
@@ -1333,12 +1248,8 @@ function loadState() {
         }
     } catch (e) { /* stockage indisponible */ }
     if (!I18N[s.lang]) s.lang = 'fr';
-    if (!['free', 'chord', 'scale', 'detect', 'score'].includes(s.mode)) s.mode = 'free';
+    if (!['free', 'chord', 'scale', 'detect'].includes(s.mode)) s.mode = 'free';
     if (!INSTRUMENTS[s.sound]) s.sound = 'guitar';
-    s.userScores = Array.isArray(s.userScores)
-        ? s.userScores.filter(u => u && typeof u.id === 'string' && typeof u.name === 'string' && typeof u.abc === 'string')
-        : [];
-    if (!['0.5', '0.75', '1', '1.25'].includes(s.scoreSpeed)) s.scoreSpeed = '1';
     if (!CHORDS[s.chordType]) s.chordType = 'maj';
     if (!SCALES[s.scaleGenre] || !SCALES[s.scaleGenre][s.scaleKey]) { s.scaleGenre = 'western'; s.scaleKey = 'major'; }
     if (!['fretted', 'fretless'].includes(s.fretMode)) s.fretMode = 'fretted';
@@ -1396,11 +1307,6 @@ class App {
         this.quiz = null;
         this.tunerHist = [];
         this.tunerMiss = 0;
-        this.score = null;          // partition affichée { tune, events, total, secPerWhole, maqam }
-        this.scoreText = null;      // texte ABC modifié (non enregistré)
-        this.scorePlay = null;      // lecture en cours
-        this.scorePrev = -1;
-        this.hlEl = null;
 
         this.applyTuning();
         if (fromLink) this.s.preset = this.matchPreset();
@@ -1412,7 +1318,6 @@ class App {
         else window.addEventListener('resize', () => this.layout());
         this.layout();
         if (fromLink) setTimeout(() => this.notify(this.t('link_loaded')), 300);
-        if (this.s.mode === 'score') this.showScore();
     }
 
     t(key) { return I18N[this.s.lang][key] ?? key; }
@@ -1594,24 +1499,18 @@ class App {
         });
     }
 
-    // Mode d'affichage du manche : en mode Partition, on montre la gamme du maqam (ou les notes)
-    viewMode() {
-        if (this.s.mode !== 'score') return this.s.mode;
-        return this.score && this.score.maqam ? 'scale' : 'free';
-    }
-
     classify(pc) {
-        const s = this.s, isInt = isWhole(pc), mode = this.viewMode();
-        if (mode === 'quiz') return null;
-        if (mode === 'chord') {
+        const s = this.s, isInt = isWhole(pc);
+        if (s.mode === 'quiz') return null;
+        if (s.mode === 'chord') {
             if (isInt && this.chordPcs().some(v => near(v, pc))) return near(pc, s.chordRoot) ? COLORS.root : COLORS.chord;
             return null;
         }
-        if (mode === 'scale') {
+        if (s.mode === 'scale') {
             const d = this.scaleDegrees().find(x => near(mod12(pc - x.pc + 6) - 6, 0));
             return d ? d.info : null;
         }
-        if (mode === 'detect') {
+        if (s.mode === 'detect') {
             for (const v of this.detected) if (near(v, pc)) return COLORS.detect;
         }
         if (s.showNotes && isInt) return IS_NATURAL[Math.round(pc) % 12] ? COLORS.free : COLORS.freeSharp;
@@ -1649,39 +1548,9 @@ class App {
     bindUI() {
         $$('#modes [data-mode]').forEach(b => b.addEventListener('click', () => {
             this.quiz = null;
-            if (b.dataset.mode !== 'score') this.stopScore();
             this.s.mode = b.dataset.mode;
             this.refresh();
-            if (this.s.mode === 'score' && !this.score) this.showScore();
         }));
-
-        // Partition
-        $('#scoreMaqam').addEventListener('change', e => this.selectScoreCat(e.target.value));
-        $('#scoreSel').addEventListener('change', e => this.selectScore(e.target.value));
-        $('#scoreSpeed').addEventListener('change', e => {
-            this.s.scoreSpeed = e.target.value;
-            this.save();
-            if (this.scorePlay) this.playScore(0);
-        });
-        $('#scorePlay').addEventListener('click', () => { if (this.scorePlay) this.stopScore(); else this.playScore(0); });
-        $('#scoreEdit').addEventListener('click', () => {
-            const entry = this.currentEntry();
-            $('#abcText').value = this.scoreText ?? entry.abc;
-            this.openSheet('editor');
-        });
-        $('#abcApply').addEventListener('click', () => {
-            this.scoreText = $('#abcText').value;
-            this.openSheet(null);
-            this.showScore();
-        });
-        $('#abcReset').addEventListener('click', () => {
-            const entry = this.currentEntry();
-            $('#abcText').value = entry.abc;
-            this.scoreText = null;
-            this.showScore();
-        });
-        $('#abcSave').addEventListener('click', () => this.saveScore());
-        $('#abcDelete').addEventListener('click', () => this.deleteScore());
 
         $$('[data-toggle]').forEach(b => b.addEventListener('click', () => {
             const k = b.dataset.toggle;
@@ -1819,7 +1688,7 @@ class App {
 
     openSheet(id) {
         this.openId = id;
-        ['sheet', 'practice', 'editor'].forEach(x => {
+        ['sheet', 'practice'].forEach(x => {
             const el = $('#' + x), on = x === id;
             el.classList.toggle('open', on);
             el.setAttribute('aria-hidden', String(!on));
@@ -1898,7 +1767,7 @@ class App {
             info.textContent = `${JINS[lo].name} (${noteText(s.scaleRoot, lang)}) + ${JINS[up].name} (${noteText(s.scaleRoot + at, lang)})`;
             info.hidden = false;
         } else info.hidden = true;
-        $('#microFix').hidden = !(this.viewMode() === 'scale' && s.fretMode === 'fretted' && this.scaleHasMicro());
+        $('#microFix').hidden = !(s.mode === 'scale' && s.fretMode === 'fretted' && this.scaleHasMicro());
 
         // Barre d'état
         const preset = this.allPresets().find(p => p.key === s.preset);
@@ -1909,15 +1778,13 @@ class App {
         this.renderDetector();
         this.renderQuiz();
         this.renderPractice();
-        this.renderScoreUI();
     }
 
     renderLegend() {
         const s = this.s, items = [];
         const add = (color, label, ring) => items.push([color, label, ring]);
-        const mode = this.viewMode();
-        if (mode === 'chord') { add(COLORS.root.fill, this.t('lg_root')); add(COLORS.chord.fill, this.t('lg_chord')); }
-        else if (mode === 'scale') {
+        if (s.mode === 'chord') { add(COLORS.root.fill, this.t('lg_root')); add(COLORS.chord.fill, this.t('lg_chord')); }
+        else if (s.mode === 'scale') {
             const degs = this.scaleDegrees(), has = c => degs.some(d => d.info === c);
             add(COLORS.root.fill, this.t('lg_root'));
             if (this.ajnasOn()) {
@@ -1928,8 +1795,7 @@ class App {
             }
             if (has(COLORS.scale)) add(COLORS.scale.fill, this.t('lg_scale'));
             if (this.scaleHasMicro()) add('#e8e8e8', this.t('lg_quarter'), true);
-            if (s.mode === 'score' && this.scoreExtraPcs().length) add(COLORS.extra.fill, this.t('lg_extra'));
-        } else if (mode === 'detect') add(COLORS.detect.fill, this.t('lg_selected'));
+        } else if (s.mode === 'detect') add(COLORS.detect.fill, this.t('lg_selected'));
         const el = $('#legend');
         el.innerHTML = '';
         items.forEach(([color, label, ring]) => {
@@ -2119,11 +1985,10 @@ class App {
     }
 
     // Meilleure position (corde, case) pour une hauteur donnée dans la zone visible
-    positionFor(midi, prefer, used) {
+    positionFor(midi, prefer) {
         const g = this.g;
         let best = null, bestScore = Infinity;
         this.strings.forEach((str, i) => {
-            if (used && used.has(i)) return;       // accord : une corde par note
             const s = midi - str.midi;
             if (s < -1e-6) return;
             const ok = s < 1e-6 ? g.S === 0 : (s > g.S + 1e-6 && s <= g.S + g.F + 1e-6);
@@ -2133,298 +1998,6 @@ class App {
             if (score < bestScore) { bestScore = score; best = { i, s }; }
         });
         return best;
-    }
-
-    /* ----- Partition (ABC) ----- */
-    loadAbcjs() {
-        if (window.ABCJS) return Promise.resolve(window.ABCJS);
-        if (!this.abcjsPromise) {
-            this.abcjsPromise = new Promise((resolve, reject) => {
-                const sc = document.createElement('script');
-                sc.src = ABCJS_URL;
-                sc.async = true;
-                sc.onload = () => resolve(window.ABCJS);
-                sc.onerror = () => { this.abcjsPromise = null; reject(new Error('abcjs')); };
-                document.head.appendChild(sc);
-            });
-        }
-        return this.abcjsPromise;
-    }
-
-    // Bibliothèque de partitions : chargée une fois, à l'ouverture du mode Partition
-    loadScoreLibrary() {
-        if (!this.libPromise) {
-            this.libPromise = fetch('scores.json?v=' + APP_VERSION)
-                .then(r => { if (!r.ok) throw new Error('scores'); return r.json(); })
-                .then(data => {
-                    SCORES = data.scores || {};
-                    if (!this.scoreEntry(this.s.scoreId)) this.s.scoreId = this.defaultScoreId();
-                    this.renderScoreUI();
-                })
-                .catch(err => { this.libPromise = null; throw err; });
-        }
-        return this.libPromise;
-    }
-
-    defaultScoreId() {
-        const ids = Object.keys(SCORES);
-        return ids.find(id => SCORES[id].cat === 'ar:rast') || ids[0] || '';
-    }
-
-    scoreEntry(id) {
-        if (!id) return null;
-        if (id.startsWith('u:')) {
-            const u = this.s.userScores.find(x => 'u:' + x.id === id);
-            return u ? { cat: 'user', abc: u.abc, name: u.name, user: true } : null;
-        }
-        return SCORES[id] || null;
-    }
-
-    currentEntry() {
-        return this.scoreEntry(this.s.scoreId) || this.scoreEntry(this.defaultScoreId()) || { cat: '', abc: 'X:1\nK:C\n' };
-    }
-
-    scoreTitle(entry) {
-        if (entry.name) return entry.name;
-        if (entry.label) return entry.label;
-        const m = entry.abc.match(/^T:(.*)$/m);
-        return m ? m[1].trim() : '?';
-    }
-
-    selectScore(id) {
-        this.stopScore();
-        this.s.scoreId = id;
-        this.scoreText = null;
-        this.refresh();
-        this.showScore();
-    }
-
-    async showScore() {
-        const staff = $('#staff');
-        this.stopScore();
-        this.hlEl = null;
-        if (!Object.keys(SCORES).length) {
-            staff.innerHTML = `<div class="staff-msg">${this.t('score_loading')}</div>`;
-            try { await this.loadScoreLibrary(); }
-            catch (e) { staff.innerHTML = `<div class="staff-msg">${this.t('score_offline')}</div>`; return; }
-        }
-        const entry = this.currentEntry();
-        const abc = this.scoreText ?? entry.abc;
-        if (entry.maqam) {                       // le manche montre la gamme du maqam de la partition
-            const [genre, key, root] = entry.maqam;
-            Object.assign(this.s, { scaleGenre: genre, scaleKey: key, scaleRoot: root });
-            this.save();
-        }
-        if (!window.ABCJS) staff.innerHTML = `<div class="staff-msg">${this.t('score_loading')}</div>`;
-        let ABCJS;
-        try { ABCJS = await this.loadAbcjs(); }
-        catch (e) { staff.innerHTML = `<div class="staff-msg">${this.t('score_offline')}</div>`; this.score = null; return; }
-        staff.innerHTML = '';
-        // Largeur réelle de la zone : la partition passe à la ligne (2 mesures par ligne sur téléphone)
-        const w = Math.max(260, $('#scorePanel').clientWidth - 16), narrow = w < 560;
-        this.scoreWidth = w;
-        // Description du maqam (commentaire « % note: ») affichée au-dessus de la partition, en HTML compact
-        const noteLine = (abc.match(/^%\s*note:\s*(.*)$/m) || [])[1];
-        const cap = $('#scoreNote');
-        cap.textContent = noteLine || '';
-        cap.hidden = !noteLine;
-        // Sans clé précisée : clé de sol 8 (écrit une octave au-dessus du son réel, comme pour la guitare et l'oud)
-        // À l'affichage : seulement titre + compositeur (source, transcripteur, origine… restent dans l'éditeur)
-        const shown = abc
-            .split('\n').filter(l => !/^\s*[SZOFBNHRDGAI]:/.test(l)).join('\n')
-            .replace(/^(C:[^(\n]*?)\s*\([^\n]*\)\s*$/gm, '$1')          // « Traditionnel (…) » -> « Traditionnel »
-            .replace(/^K:[^\n%]*/m, line => /clef\s*=/.test(line) ? line : line.trimEnd() + ' clef=treble-8');
-        const tunes = ABCJS.renderAbc(staff, shown, {
-            add_classes: true, foregroundColor: '#eeece7',
-            staffwidth: w - 24,
-            wrap: { minSpacing: 1.6, maxSpacing: 2.6, preferredMeasuresPerLine: narrow ? 2 : 4 },
-            format: { titlefont: '"Georgia" 15', subtitlefont: '"Georgia" 12', tempofont: '"Georgia" 11', composerfont: '"Georgia" 11' },
-            paddingtop: 2, paddingbottom: 2, paddingleft: 4, paddingright: 4,
-            clickListener: el => this.scoreClick(el)
-        });
-        const tune = tunes && tunes[0];
-        const parsed = tune && tune.lines && tune.lines.length ? abcEvents(tune) : null;
-        if (!parsed || !parsed.events.length) {
-            staff.innerHTML = `<div class="staff-msg">${this.t('score_error')}</div>`;
-            this.score = null;
-            this.layout();
-            return;
-        }
-        const tempo = tune.metaText.tempo;
-        const beat = tempo && tempo.duration ? tempo.duration.reduce((a, b) => a + b, 0) : .25;
-        const bpm = tempo && tempo.bpm ? tempo.bpm : 100;
-        this.score = { tune, ...parsed, secPerWhole: 60 / bpm / beat, maqam: entry.maqam || null };
-        this.renderUI();
-        this.layout();
-    }
-
-    // Joue une note (ou un accord) de la partition sur le manche
-    // Makams turcs : la partition est écrite en quarts de ton (abcjs ne sait pas afficher les commas),
-    // on joue donc chaque note sur le degré le plus proche de la vraie gamme turque (en commas)
-    snapToMaqam(m) {
-        const sc = this.score;
-        if (!sc || !sc.maqam || sc.maqam[0] !== 'turkish') return m;
-        const [genre, key, root] = sc.maqam, rel = mod12(m - root);
-        let best = 0, bd = Infinity;
-        for (const v of SCALES[genre][key].iv.concat(12)) {
-            const d = v - rel;
-            if (Math.abs(d) < bd) { bd = Math.abs(d); best = d; }
-        }
-        return bd < .45 ? m + best : m;
-    }
-
-    // Hauteurs (classes) jouées par la partition qui ne sont pas des degrés du maqam affiché
-    scoreExtraPcs() {
-        const sc = this.score;
-        if (!sc || !sc.maqam || this.viewMode() !== 'scale') return [];
-        if (sc.extras) return sc.extras;
-        const degs = this.scaleDegrees().map(d => d.pc), out = [];
-        const same = (a, b) => Math.abs(mod12(a - b + 6) - 6) < .06;     // même hauteur, à l'octave près
-        sc.events.forEach(ev => ev.midis.forEach(m0 => {
-            const pc = mod12(this.snapToMaqam(m0));
-            if (!degs.some(x => same(x, pc)) && !out.some(x => same(x, pc))) out.push(pc);
-        }));
-        return (sc.extras = out);
-    }
-
-    scoreNote(ev) {
-        const used = new Set();
-        ev.midis.map(m => this.snapToMaqam(m)).forEach(m => {
-            let pos = this.positionFor(m, this.scorePrev, used);
-            for (const shift of [12, -12, 24, -24]) if (!pos) pos = this.positionFor(m + shift, this.scorePrev, used);
-            if (pos) { used.add(pos.i); this.scorePrev = pos.i; this.playAt(pos.i, pos.s); }
-            else this.audio.play(440 * Math.pow(2, (m - 69) / 12), this.s.sound, false);
-        });
-        this.scoreHighlight(ev.el);
-    }
-
-    scoreHighlight(el) {
-        try { if (this.hlEl && this.hlEl.abselem) this.hlEl.abselem.unhighlight(undefined, '#eeece7'); } catch (e) { /* ignore */ }
-        this.hlEl = el;
-        if (!el || !el.abselem) return;
-        try { el.abselem.highlight(undefined, '#e4b55a'); } catch (e) { /* ignore */ }
-        // Garde la note jouée visible dans la zone de partition
-        const node = el.abselem.elemset && el.abselem.elemset[0], box = $('#scorePanel');
-        if (node && box) {
-            const r = node.getBoundingClientRect(), b = box.getBoundingClientRect();
-            if (r.top < b.top + 8 || r.bottom > b.bottom - 8) box.scrollTop += r.top - b.top - b.height / 3;
-        }
-    }
-
-    playScore(from = 0) {
-        const sc = this.score;
-        if (!sc || !sc.events.length) return;
-        this.stopScore();
-        this.audio.unlock();
-        const spw = sc.secPerWhole / (parseFloat(this.s.scoreSpeed) || 1);   // secondes par ronde
-        const t0 = sc.events[from].t, lead = 150;
-        if (this.s.scoreAccomp) {
-            this.metro.bpm = Math.round(60 / (spw / 4));                     // noire = 1 temps
-            if (this.metro.running) this.metro.stop();
-            this.metro.setRhythm(this.s.rhythm);
-            this.metro.start();
-        }
-        this.scorePrev = -1;
-        const timers = sc.events.slice(from).map(ev => setTimeout(() => this.scoreNote(ev), lead + (ev.t - t0) * spw * 1000));
-        timers.push(setTimeout(() => {
-            this.scoreHighlight(null);
-            if (this.s.scoreLoop) this.playScore(0); else this.stopScore();
-        }, lead + (sc.total - t0) * spw * 1000 + 250));
-        this.scorePlay = { timers };
-        $('#scorePlay').setAttribute('aria-pressed', 'true');
-    }
-
-    stopScore() {
-        if (!this.scorePlay) return;
-        this.scorePlay.timers.forEach(clearTimeout);
-        this.scorePlay = null;
-        this.scoreHighlight(null);
-        $('#scorePlay').setAttribute('aria-pressed', 'false');
-        if (this.s.scoreAccomp && this.metro.running) {
-            this.metro.stop();
-            this.metro.bpm = this.s.bpm;
-            this.renderPractice();
-        }
-    }
-
-    // Toucher une note de la partition : on la joue, ou on reprend la lecture à partir d'elle
-    scoreClick(el) {
-        const sc = this.score;
-        if (!sc) return;
-        const idx = sc.events.findIndex(ev => ev.el === el);
-        if (idx < 0) return;
-        this.audio.unlock();
-        if (this.scorePlay) this.playScore(idx);
-        else this.scoreNote(sc.events[idx]);
-    }
-
-    saveScore() {
-        const text = $('#abcText').value;
-        const def = (text.match(/^T:(.*)$/m) || [])[1] || this.t('score_untitled');
-        const name = window.prompt(this.t('score_name'), def.trim());
-        if (!name || !name.trim()) return;
-        const id = Date.now().toString(36);
-        this.s.userScores.push({ id, name: name.trim().slice(0, 60), abc: text });
-        this.s.scoreId = 'u:' + id;
-        this.scoreText = null;
-        this.openSheet(null);
-        this.refresh();
-        this.showScore();
-        this.notify(this.t('score_saved'));
-    }
-
-    deleteScore() {
-        if (!this.s.scoreId.startsWith('u:') || !window.confirm(this.t('score_confirm_del'))) return;
-        this.s.userScores = this.s.userScores.filter(u => 'u:' + u.id !== this.s.scoreId);
-        this.openSheet(null);
-        this.selectScore(this.defaultScoreId());
-    }
-
-    // Choix d'un maqam : on ouvre son premier morceau
-    selectScoreCat(cat) {
-        const id = cat === 'user'
-            ? (this.s.userScores[0] ? 'u:' + this.s.userScores[0].id : '')
-            : Object.keys(SCORES).find(k => SCORES[k].cat === cat);
-        if (id) this.selectScore(id);
-    }
-
-    renderScoreUI() {
-        const s = this.s, lang = s.lang;
-        $('#scorePanel').hidden = s.mode !== 'score';
-        const catSel = $('#scoreMaqam'), sel = $('#scoreSel');
-        const lib = Object.keys(SCORES).length;
-        // 1er sélecteur : les maqams (avec le nombre de morceaux)
-        const counts = {};
-        Object.values(SCORES).forEach(e => { counts[e.cat] = (counts[e.cat] || 0) + 1; });
-        const sig = lang + '|' + lib + '|' + s.userScores.length;
-        if (catSel.dataset.sig !== sig) {
-            catSel.innerHTML = '';
-            for (const [prefix, genre, label] of SCORE_GROUPS) {
-                const og = document.createElement('optgroup');
-                og.label = this.t(label);
-                Object.keys(SCALES[genre]).forEach(key => {
-                    const cat = prefix + ':' + key;
-                    if (counts[cat]) og.appendChild(new Option(`${SCALES[genre][key][lang].replace(/^Maqam /, '')} (${counts[cat]})`, cat));
-                });
-                if (og.children.length) catSel.appendChild(og);
-            }
-            if (s.userScores.length) {
-                const og = document.createElement('optgroup');
-                og.label = this.t('sg_user');
-                og.appendChild(new Option(`${this.t('sg_user')} (${s.userScores.length})`, 'user'));
-                catSel.appendChild(og);
-            }
-            catSel.dataset.sig = sig;
-        }
-        const cat = s.scoreId.startsWith('u:') ? 'user' : (SCORES[s.scoreId] && SCORES[s.scoreId].cat) || '';
-        catSel.value = cat;
-        // 2e sélecteur : les morceaux du maqam choisi
-        const items = cat === 'user'
-            ? s.userScores.map(u => ['u:' + u.id, u.name])
-            : Object.entries(SCORES).filter(([, e]) => e.cat === cat).map(([k, e]) => [k, this.scoreTitle(e)]);
-        this.fillSelect(sel, items, s.scoreId);
-        this.fillSelect($('#scoreSpeed'), [['0.5', '50 %'], ['0.75', '75 %'], ['1', '100 %'], ['1.25', '125 %']], s.scoreSpeed);
-        $('#abcDelete').hidden = !s.scoreId.startsWith('u:');
     }
 
     playScale() {
@@ -2606,15 +2179,6 @@ class App {
         this.drawBase();
         this.drawOverlay();
         this.requestRender();
-
-        // Rotation de l'écran : la partition est redessinée à la nouvelle largeur (hors lecture)
-        if (s.mode === 'score' && this.score && !this.scorePlay) {
-            const pw = $('#scorePanel').clientWidth - 16;
-            if (pw > 0 && Math.abs(pw - this.scoreWidth) > 40) {
-                clearTimeout(this.scoreResizeT);
-                this.scoreResizeT = setTimeout(() => this.showScore(), 250);
-            }
-        }
     }
 
     // (u = distance au sillet le long du manche, c = position transversale) -> (x, y). Gaucher = miroir.
@@ -2812,20 +2376,17 @@ class App {
             this.drawDot(ctx, u, c, Math.max(r, 5.5), info, pc, !whole, !whole && !fretless);
         };
 
-        const mode = this.viewMode();
-        if (mode === 'scale') {
+        if (s.mode === 'scale') {
             // Chaque degré de la gamme, à sa hauteur exacte (quarts de ton, commas…)
             const degs = this.scaleDegrees();
-            // Partition : on ajoute les notes jouées qui sortent du maqam (modulations), en orange
-            const extras = s.mode === 'score' ? this.scoreExtraPcs().map(pc => ({ pc, info: COLORS.extra })) : [];
-            this.strings.forEach((str, i) => degs.concat(extras).forEach(d => {
+            this.strings.forEach((str, i) => degs.forEach(d => {
                 for (let k = mod12(d.pc - str.midi); k <= top; k += 12) if (k > S + 1e-6) dotAt(i, k, d.info, d.pc);
             }));
-        } else if (mode === 'quiz') {
+        } else if (s.mode === 'quiz') {
             const q = this.quiz;
             if (q && q.type === 'name' && q.pos && q.pos.s > 0) dotAt(q.pos.i, q.pos.s, COLORS.quiz, null);
         } else {
-            const micro = mode === 'detect' && [...this.detected].some(v => !Number.isInteger(v));
+            const micro = s.mode === 'detect' && [...this.detected].some(v => !Number.isInteger(v));
             this.strings.forEach((str, i) => {
                 for (let k = S + .5; k <= top; k += .5) {
                     if (!Number.isInteger(k) && !micro) continue;
@@ -3272,7 +2833,6 @@ class App {
     // Bouton STOP / Échap : notes, lecture auto, bourdon et métronome
     stopEverything() {
         this.stopSequence();
-        this.stopScore();
         this.stop();
         this.audio.stopDrone();
         if (this.metro.running) this.metro.stop();
@@ -3291,7 +2851,7 @@ if ('serviceWorker' in navigator && window.isSecureContext) {
         if (hadController) $('#updateToast').hidden = false;
     });
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').then(reg => {
+        navigator.serviceWorker.register('../sw.js').then(reg => {
             // Une appli installée reste souvent ouverte en arrière-plan : on vérifie à chaque retour
             document.addEventListener('visibilitychange', () => {
                 if (document.visibilityState === 'visible') reg.update().catch(() => {});

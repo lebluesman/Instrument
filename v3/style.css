@@ -46,8 +46,7 @@ button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; touch-action: manipulation; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* Icônes des boutons (la partition, dessinée en SVG, ne doit pas être touchée) */
-button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 #app {
     position: fixed;
@@ -301,43 +300,6 @@ body.menu-hidden .bar, body.menu-hidden .results, body.menu-hidden .status { dis
 .result b { color: var(--accent2); }
 .result small { color: var(--muted); }
 .results .empty { color: var(--muted); font-size: 13px; white-space: nowrap; }
-
-/* ---------- Partition ---------- */
-.score-panel {
-    max-height: 34vh;
-    overflow-y: auto;
-    background: var(--bg2);
-    border-bottom: 1px solid var(--line);
-    flex: none;
-}
-.staff { padding: 2px 6px; min-height: 60px; }
-.score-note { margin: 0; padding: 7px 12px 0; font-size: 12px; line-height: 1.35; color: #c9c4f5; }
-@media (max-width: 559px) and (orientation: portrait) { .score-panel { max-height: 25vh; } }
-.staff svg { display: block; cursor: pointer; }
-.staff-msg { color: var(--muted); font-size: 13px; padding: 16px; }
-@media (max-height: 520px) and (orientation: landscape) { .score-panel { max-height: 40vh; } }
-.sel-score { max-width: 300px; }
-.sel-maqam { width: 150px; flex: none; }
-@media (max-width: 559px) { .sel-maqam { width: 124px; } .sel-score { min-width: 120px; } }
-.sel-speed { width: 92px; flex: none; }
-.abc-text {
-    width: 100%;
-    min-height: 38vh;
-    padding: 10px 12px;
-    border-radius: 10px;
-    border: 1px solid var(--line2);
-    background: var(--panel2);
-    color: var(--text);
-    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    resize: vertical;
-    outline: none;
-}
-.abc-text:focus { border-color: var(--accent); }
-.editor-actions { margin: 10px 0 12px; }
-.editor-actions .run-btn { min-width: 0; }
-@media (pointer: coarse) { .abc-text { font-size: 16px; } }
-/* 5 onglets sur téléphone */
-@media (max-width: 759px) { .modes button { font-size: 12.5px; padding: 0 2px; } }
 
 /* ---------- Scène ---------- */
 .stage {

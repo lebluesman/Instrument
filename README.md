@@ -1,10 +1,10 @@
-Ultimate Fretboard v3 ( https://lebluesman.github.io/Instrument/ )
+Ultimate Fretboard v4 ( https://lebluesman.github.io/Instrument/ )
 
 A web-based interactive fretboard, practice tool and luthier helper for the Oud, Guitar, Bass and Violin — with full support for Arabic maqams, ajnas and Turkish makams (quarter tones and commas).
 
 It works on desktop, phone and tablet, and can be installed as an app (Android: "Install app", iPhone: Share → "Add to Home Screen"). It also works offline once installed.
 
-Previous versions are still available: v2 at https://lebluesman.github.io/Instrument/v2/ and v1 at https://lebluesman.github.io/Instrument/old/
+Previous versions are still available: v3 at https://lebluesman.github.io/Instrument/v3/, v2 at https://lebluesman.github.io/Instrument/v2/ and v1 at https://lebluesman.github.io/Instrument/old/
 
 Key Features:
 
@@ -17,6 +17,14 @@ Scales & Maqams: Western scales, 17 Arabic maqams (Rast, Bayati, Hijaz, Saba, Si
 Ajnas view: each maqam shows its lower and upper jins in different colors, with the ghammaz (pivot note) highlighted.
 
 Play button: hear the scale up and down, or the chord as an arpeggio then a strum, with the notes lighting up on the neck.
+
+Score mode (ABC notation): write or paste a tune in ABC (quarter tones supported with _/ and ^/), see the staff (rendered with abcjs), hear it with the app's instruments and watch each note light up on the neck. Two selectors (maqam or mode, then tune) give access to a public-domain library in four sections, each with its own music only:
+- Arabic maqams: songs by Sayed Darwish (Zuruni, Salma ya salama, El Helwa Di, Ya Shadi al-Alhan, Biladi, Aho da elli sar, Ya Bahjat el-Rouh…), traditional songs (Tala'a al-badru, Lamma bada, Ya mal el-Sham, Fog el-nakhal by Othman al-Mawsili, Sidi Mansour, Ya zarif el-tool…), muwashshahat (Qadduka al-mayyas, Ya ghusna naqa…) and Egyptian dulabs, with their quarter tones.
+- Algerian Andalusian music (sanâa of Algiers): kadriat, neklabat, zendani and touchiat in the modes Sika, Zidane, Raml Maya, Moual, Arak, Ghrib, Mezmoum and Djarka.
+- Turkish makams (in exact commas) and traditional tunes for the Western modes.
+Notes outside the maqam (modulations) are shown in orange on the neck. You can also paste and save your own ABC scores (kept on your device), with loop, speed and rhythm accompaniment.
+
+Score credits: Andalusian pieces are transcribed from the Répertoire de musique arabe et maure (E.-N. Yafil & J. Rouanet, Algiers, 1904, public domain). Arabic pieces are public-domain melodies (composers who died before 1956, traditional songs, muwashshahat, dulabs) transcribed for this app; one Iraq melody comes from J. Rouanet's chapter in Lavignac's Encyclopédie de la musique (1922). Ottoman pieces come from the SymbTr collection (CompMusic project, Universitat Pompeu Fabra — CC BY-NC-SA 4.0), ABC conversion by Seymour Shlien; excerpts converted for this app are shared under the same licence. Western tunes come from abcnotation.com.
 
 Scale detector: tap notes and get every scale / maqam containing them (identical scales are grouped).
 
