@@ -1,1 +1,1655 @@
-{"version":1,"scores":{"ar_nahawand_web0":{"cat":"ar:nahawand","label":"Lamma bada yatathanna — muwashshah trad.","maqam":["oriental","nahawand",7],"abc":"X:1\nT:Lamma bada yatathanna\nC:Muwashshah traditionnel (Andalousie / Levant)\nZ:Tous aux Balkans !\nF:http://www.tousauxbalkans.net/Lamma_bada_yatathanna\nQ:1/8=96\nM:10/8\nL:1/16\nS:Tous aux Balkans ! (tousauxbalkans.net) via abcnotation.com\n% note: Célèbre muwashshah en maqam Nahawand sur Sol, rythme samaï thaqil (10/8). Le Fa♯ lui donne la couleur du mineur harmonique.\nK:Gm\nD2 \\\n|: \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4D2 | \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4AB |\n\"Cm\"c4d2 \"Gm\"B3A \"D\"AGG^F \"Gm\"G4AG | \"D\"^F4GF \"Cm\"E3D EDEF \"D\"D4ED | \"Cm\"C4D2 \"Gm\"B,3A, \"D\"A,G,G,^F, G,4D2 :|\n\"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4D2 | \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4B2 |\n\"Bb\"B4B2 B4 B2Ac B4B2 | \"D\"d4c2 dcBA \"Gm\"BAGB \"F\"A4=F2 | \"Gm\"G4A2 \"Bb\"B4 B2Ac B4AB |\n\"Cm\"c4d2 \"Gm\"B3A \"D\"AGG^F \"Gm\"G4AG | \"D\"^F4GF \"Cm\"E3D EDEF \"D\"D4ED | \\\n\"Cm\"C4D2 \"Gm\"B,3A, \"D\"A,G,G,^F, G,6 |]"},"tk_rast_1856":{"cat":"tk:rast","label":"Sıra Sıra Siniler — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:Sıra Sıra Siniler\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nz2GA G2A2 | _/B2c2 d4 | e2fg e2d2 | dedc _/B4 |\nz2cd d2d2 | c2c_/B A4 | AA2G A_/Bcd | c_/B{c}BA G4 |\nz2cd d2d2 | c2c_/B A4 | AA2G A_/Bcd | c_/B{c}BA G4 |\nz2dd g4 | ^ff2e d4 | e2fg e2ed | dedc _/B4 |]"},"tk_rast_1599":{"cat":"tk:rast","label":"Rast Peşrev — Tatyos Efendi","maqam":["turkish","rast",7],"abc":"X:1\nT:Rast Peşrev\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=90\nK:C\nD2 G4 A2 _/B4 c4 | z2 d e d2 c2 _/B3 A G4 | z2 A4 _/B2 G4 A2 B2 | c2 d2 c2 _/B2 c3 e d4 |\nz2 c _/B A2 c2 B3 A G4 | D2 G4 _/B2 A B A G ^F G F E | D2 G2 ^F2 A2 A G G F G4 | z2 _/B2 ^A2 c2 c B B A B4 |]"},"tk_rast_1236":{"cat":"tk:rast","label":"Kavli de Kaddi Gibi — Ahmet Avni Konuk","maqam":["turkish","rast",7],"abc":"X:1\nT:Kavli de Kaddi Gibi\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Kupe, extrait.\nM:14/8\nL:1/16\nQ:1/4=102\nK:C\nG^FE2 F2G4A4A2 G2F2 E2FE D4 | E^FE2 F2G4A2 _/B2A2 G2F2 G6z2 | dc_/B2 c2d4d2 g2g2 f2e2 d/c/d/e/dc B^AB2 | _/BcB2 A2Bc BAe2 edd2 dccB B6z2 |\ne2d2 e2ed c_/BA4AB A2B2 c2{e}dc BAG2 | AG^F2 G2A4z4A_/B A2B2 c2Bc d4 | d4 g2g2 f2e2 d2de d2c2 c_/BBA G2z2 | A_BAB G^FAc _/BAAG GFG2 F2AG G4 z4 |]"},"tk_rast_39":{"cat":"tk:rast","label":"Adana’nın Yolları Taşlık — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:Adana’nın Yolları Taşlık\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=72\nK:C\nc2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 | c2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 |\nc2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 | z4 c2c2 c4 c4 | c2{d}c_/B c2d2 c2B2 B4 |\nc2{d}c_/B c2d2 c2B2 B2A2 | A2G2 A2_/B2 A2G2 G4 | c2{d}c_/B c2d2 c2B2 B2A2 | A2G2 A2_/B2 A2G2 G4 |]"},"tk_rast_82":{"cat":"tk:rast","label":"Aman Ayşem Kunduranı Tek Bas — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:Aman Ayşem Kunduranı Tek Bas\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=84\nK:C\nd2g2^f4 d4e3d e2f2f2e2 d2^c2d6z2 | d2g2 ^f4d4 e3de2f2 f2e2d2^c2 d6z2 | _/B4c4 e4d3B B2A2B2A2 G2^F2d6z2 | _/B4 c4e4 d3cB2A2 B2A2G2^F2 G6z2 |\n_/B4c4 e4d3B B2A2B2A2 G2^F2d6z2 | _/B4 c4e4 d3cB2A2 B2A2G2^F2 G6z2 | d2g2^f4 d4e3d e2f2f2e2 d2^c2d6z2 | d2g2 ^f4d4 e3de2f2 f2e2d2^c2 d6z2 |]"},"tk_rast_690":{"cat":"tk:rast","label":"Evreşe Yolları — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:Evreşe Yolları\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\nc4 c2_/B2 B2A2 A2AB {A}G2 | G6 z2c_/B cdB2 AGG2 | A2_/B2 c2d2 B2c2 A2AB {A}G2 | G16z2 |\nc4 c2_/B2 B2A2 A2AB {A}G2 | G6 z2c_/B cdB2 AGG2 | A2_/B2 c2d2 B2c2 A2AB {A}G2 | G16z2 |]"},"tk_rast_1135":{"cat":"tk:rast","label":"İbrişim Örmüyorlar — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:İbrişim Örmüyorlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=102\nK:C\nG2A2 G2A2 | G2A2 G2A2 | G2A2 G2A2 | _/B3A AG^FE |\nD2cc c_/BA2 | _/BABc BAG2 | A2A2 dc_/BA | GA_/Bc dcd2 |\nz2cc c_/BA2 | _/BABc BAG2 | A2A2 dc_/BA | G8 |\nz2GG G2A2 | _/B3c BAAG | _/B3A AG^FE | D2GG G2A2 |]"},"tk_rast_1264":{"cat":"tk:rast","label":"Kordon Zeybeği — trad.","maqam":["turkish","rast",7],"abc":"X:1\nT:Kordon Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Zeybek, extrait.\nM:9/4\nL:1/16\nQ:1/4=114\nK:C\nG4 _/B4 d4 c2B2 A2B2 c3e d2c2 B3A G4 | G4 _/B4 d4 c3B A2B2 c3e d2c2 B3A G4 | d2e2 f2e2 d2c2 _/B4 A2B2 c3e d2c2 B3A G4 | d2e2 f2e2 d2c2 _/B4 A2B2 c3e d2c2 B3A G4 |\nA2_/B2 c2B2 c4 c3B A2B2 c3e d2c2 B3A G4 | A2_/B2 c2B2 c4 c3B A2B2 c3e d2c2 B3A G4 | ^F2G2 A2G2 A4 A3G A2_/B2 A2G2 F2E2 D4 z4 | E3D ^C2D2 E2^F2 G3F G2_/B2 A3G A2c2 B3A G4 |]"},"tk_rast_370":{"cat":"tk:rast","label":"Bir Gönlüme Bir Hâl-i Perişanıma… — Tatyos Efendi","maqam":["turkish","rast",7],"abc":"X:1\nT:Bir Gönlüme Bir Hâl-i Perişanıma…\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Chanson, extrait.\nM:6/4\nL:1/16\nQ:1/4=66\nK:C\nG4 _/B4 d4 c3B A6z2 | e3d d3c _/B2c2 dcB^A B8 | D4 G4 _/B4 A3G ^F3E D4 | G3e d2c2 _/B3A A2{G}AG G8 |\nG4 _/B4 d4 c3B A6z2 | e3d d3c _/B2c2 dcB^A B8 | D4 G4 _/B4 A3G ^F3E D4 | G3e d2c2 _/B3A A2{G}AG G8 |]"},"tk_rast_559":{"cat":"tk:rast","label":"Dil Bir Güzele Meyletti Hele — Dede Efendi","maqam":["turkish","rast",7],"abc":"X:1\nT:Dil Bir Güzele Meyletti Hele\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Chanson, extrait.\nM:6/4\nL:1/16\nQ:1/4=66\nK:C\nG4 _/B4 d2e^f agfe d4 z4 | dcec c3_/B BA{c}BA AGAG G6z2 | G4 _/B4 d2e^f agfe d4 z4 | dcec c3_/B BA{c}BA AGAG G6z2 |\nG3A _/B2AG c2BA Bc/d/cB B6d2 | d4 d4 d4 ^cde{^f}e/d/ d6z2 | d3A d4 de^fg agfe d4 z4 | d3A d4 de^fg agfe d8 |]"},"tk_ussak_144":{"cat":"tk:ussak","label":"Ayva Çiçek Açmış — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Ayva Çiçek Açmış\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=96\nK:C\nGA2f ede2 | _/Bc2d cBA2 | GA2f ede2 | _/Bc2d cBA2 |\n^F2G2 A2_/B2 | c_/Bcd cBBA | A2{c}_/BA G2BA | A2{_/B}AG ^FED2 |\n^F2G2 A2_/B2 | c_/Bcd cBBA | A2{c}_/BA G2BA | A2ed cde2 |\nA3A e2e2 | e2e6 | f3f f2fe | fede d2c2 |]"},"tk_ussak_1197":{"cat":"tk:ussak","label":"Kalenin Burcu muyam — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Kalenin Burcu muyam\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=90\nK:C\nG2c_/B A2cB A2cB A3G | _/Bcd2 d2d2 c4 B4 | _/Bcd2 d2d2 c2c2 B4 | A2c_/B dB2A A8 |\nG2c_/B A2cB A2cB A3G | _/Bcd2 d2d2 c4 B4 | _/Bcd2 d2d2 c2c2 B4 | A2c_/B dB2A A8 |\nG2c_/B A2cB A2cB A4 | _/Bcd2 d2d2 c4 BAB2 | d2d2 d2d2 c2c2 _/BAB2 | A2c_/B dB2A A4 A4 |]"},"tk_ussak_1912":{"cat":"tk:ussak","label":"Uşşak Sazsemâîsi — Neyzen Aziz Dede","maqam":["turkish","ussak",9],"abc":"X:1\nT:Uşşak Sazsemâîsi\nC:Neyzen Aziz Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=112\nK:C\nG2A2 A2A_/B AGAG ^FGA4(3BAB | G4 c2_/B3/2A/ BcB3/2A/ GBA4z2 | G4 d2c3/2_/B/ cdB3/2A/ BcB3/2A/ G4 | A2_/B2 cd(3cBA BcB3/2A/ GBA4z2 |\nA4 f2e3cd2 e2f2 g2fe | d4 c_/BA3Gf3/2e/ ded4z2 | cdef gagf eddf eddc _/BAG2 | c3_/B A2B3/2A/ BcB3/2A/ GBA4z2 |]"},"tk_ussak_1670":{"cat":"tk:ussak","label":"Sanma Uşşâk’ın Hemân — Ahmet Avni Konuk","maqam":["turkish","ussak",9],"abc":"X:1\nT:Sanma Uşşâk’ın Hemân\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 G2G2 G4 A4 A8 _/B3A B2c2 | _/B3A G2e2 d4 c3B B3A AcBA A6z2 | z4 _/B2c2 B4 c4 d4 {e}d2e2 d2c2 B2A2 | G4 g2g2 g4 f2e2 e3d dfed d6z2 |\nz4 c2d2 c4 d4 e2fg e2d2 d2c4_/BA | _/B4 c2d2 c4 B4 dcde d2c2 B3A G4 | z4 A2_/B2 A4 B4 c4 B2A2 d4 d2e2 | d2c2 c4 c2_/B2 B2A2 A2c4BA A6z2 |]"},"tk_ussak_772":{"cat":"tk:ussak","label":"Fındıklı Bizim Yolumuz — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Fındıklı Bizim Yolumuz\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\nG4 A2_/B2 c2d2 c4 B2 | d2 d4 d2d2 d2c4_/B2 | c3c c2_/B2 B2A2 A4 z2 | G4A2 _/B2c2 d2c4B2 |\nd2d4d2 d2d2 c4 _/B2 | c3cc2 _/B2B2 A2A4z2 | G2G4c2 c2_/BA B4 z2 | G2 G4 c2c2 _/BAB4d2 |]"},"tk_ussak_1186":{"cat":"tk:ussak","label":"Kadifeden Kesesi — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Kadifeden Kesesi\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=87\nK:C\ne2fg f2e2 | e2{f}ef e2d2 | d2ef e2d2 | edcd c4 |\nd2ef e2d2 | eddc d4 | edcd c2d2 | dc_/BA B2cd |\nc_/BA2 c2d2 | dedc d4 | edcd c2d2 | dc_/BA B2cd |\nc_/BAG A4 | _/B4 c4 | d2{e}dc _/B2{c}BA | A8 |]"},"tk_ussak_1536":{"cat":"tk:ussak","label":"Oklavayım Pazıyım — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Oklavayım Pazıyım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:8/8\nL:1/16\nQ:1/4=120\nK:C\nA2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 |\nA2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A16 | A2d2 c2d2 z2c2 _/B2A2 |\nA2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 |]"},"tk_ussak_1632":{"cat":"tk:ussak","label":"Sabahtan Kalktım ki — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Sabahtan Kalktım ki\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nA3/2_/B/cB c3/2B/ce | d3/2e/cd _/BcA2 | Ac_/BA A3/2G/^FG | A6z2 |\nA3/2_/B/cB c3/2B/ce | d3/2e/cd _/BcA2 | Ac_/BA A3/2G/^FG | A6z2 |\nz6Ac | c2c2 c2c2 | c2c_/B c2e2 | d3/2e/cd _/BcA2 |\n_/Bc2B cBce | decd _/BcA2 | A_/B3/4c1/4BA G2^FG | A6z2 |]"},"tk_ussak_1671":{"cat":"tk:ussak","label":"Sarardım Ben Sarardım — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Sarardım Ben Sarardım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nz4 defe | fefg e3d | eddc d2ec | ed2_/B c2dB |\n_/BAA2 d2dc | ed2_/B c2BA | _/B2A2 AdcB | c2_/BA A4 |\nz4 defe | fefg e3d | eddc d2ec | ed2_/B c2dB |\n_/BAA2 d2dc | ed2_/B c2BA | _/B2A2 AdcB | c2_/BA A3d |]"},"tk_ussak_1674":{"cat":"tk:ussak","label":"Sarı Gülüm Var Benim — trad.","maqam":["turkish","ussak",9],"abc":"X:1\nT:Sarı Gülüm Var Benim\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\ne2f4e2 eddc d4 z2 | c2 ddd2 d2dc dec2 _/B2A2 | G2A4c2 _/B2A2 BAG2 G^F | G6 GA_B3/2A/ G^FG4z2 |\ne2f4e2 e2d2 c2_/B2 A2 | A2 _/BcBA G2A8z2 | G2A6 A4 g^fe4 | d4e4e{g}f edd4z2 |]"},"tk_huseyni_1106":{"cat":"tk:huseyni","label":"Hüseynî Sazsemâîsi — Tatyos Efendi","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Hüseynî Sazsemâîsi\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=132\nK:C\nA4 d2e4eg ^fge4c2 | d4 e2c2 dedc _/B2cB cdBc | A4 G2AG A_/Bc2 d2e2 ^f2d2 | e2^f2 agg3ffg fee4z2 |\ne4 a2g2 ^fge=f dec3ede | c3e dec2 dedc _/B2cB cdBc | A4 G2AG A_/Bcd e^/fag =fed2 | c4 _/BAed dccB BAAB cde2 |]"},"tk_huseyni_1103":{"cat":"tk:huseyni","label":"Hüseynî Peşrev — Lavtacı Andon","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Hüseynî Peşrev\nC:Lavtacı Andon\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=84\nK:C\nA6 g2 e8 | ^f3 e f2 g2 e3 d c2 d2 | c3 _/B c B B A A3 d c2 d2 | e6 e d e4 e2 d2 |\n^f6 g2 f e d2 e2 f2 | g8 g2 ^f4 g2 | ^f2 e4 d2 a2 g4 f2 | ^f2 e g f2 e2 e6 d2 |]"},"tk_huseyni_1581":{"cat":"tk:huseyni","label":"Pestten Eylerdi Niyâzı — Ahmet Avni Konuk","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Pestten Eylerdi Niyâzı\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 A2A2 A4 e4 e3d c2d2 e4 g2^/fe | e4 c2d2 c4 d2e2 d2c2 {d}c2_/B2 c3B A4 | z4 A2A2 A4 g4 g2^f2 e2f2 agfe edd^c | d4 e2^f2 g3f a2g^/f e2e2 e2{=f}ed edcd e4 |\nz4 e2e2 e4 ^f4 g3_b a2g2 g=ffe eddc | d4 c2d2 c4 d4 fefg e2d2 d2c4_/BA | _/B4 A2G2 .A4 B4 c3e d2c2 B3A G2d2 | c4 _/B2c2 B4 A4 A2c4BA A6z2 |]"},"tk_huseyni_4":{"cat":"tk:huseyni","label":"A Fadimem Hadi Senle Kaçalım — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:A Fadimem Hadi Senle Kaçalım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=198\nK:C\ng2^f2 g2f2 e4 e4 d2 | e2 d2e2 c2d4d4z2 | g2^f2 g2f2 e4 e4 d2 | e2 d2e2 c2d4d4z2 |\nd2c2 d2g2 f2e2 d2c2 _/B2 | c2 d2_/B2 G2A4A4z2 | d2c2 d2g2 f2e2 d2c2 _/B2 | c2 d2_/B2 G2A4A4z2 |]"},"tk_huseyni_47":{"cat":"tk:huseyni","label":"Akzâdeler Giyer Aman… — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Akzâdeler Giyer Aman…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=204\nK:C\ng4 a4 g2^f2 e4 d2 | d2 edc2 d2c2 _/B2A6 | g4 a4 g2^f2 e4 d2 | d2 edc2 d2c2 d2e6 |\ng3^f g2a2 g2f2 e4 d2 | g3fe2 d2c2 d2c4_/B2 | A2G2 A2_/B2 c2e2 d4 c2 | _/B4c2 A2B2 G2A6 |]"},"tk_huseyni_461":{"cat":"tk:huseyni","label":"Bursa’nın Ufak Tefek Taşları — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Bursa’nın Ufak Tefek Taşları\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\nd4 c2d2 e2a2 e4 d2 | d4c2 d2e2 a2e4d2 | d4 c2d2 e2a2 e4 d2 | d4c2 d2e2 a2e4d2 |\ne2d2 e2c2 d4 d6 | c2 d2d2 d2d2 e2c4_/B2 | c2d2 d2d2 d2e2 c4 _/B2 | c2 c2c2 _/B2c2 d2B4A2 |]"},"tk_huseyni_552":{"cat":"tk:huseyni","label":"Dere Geliyor Dere — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Dere Geliyor Dere\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=284\nK:C\nd2e2 e2e2 e4 d2c4 | e2 d2d4c3d_/B2 A4 | A2_/B2 c2d2 d4 B2c4 | _/B2 A2A4A8-A2 |\nd2e2 e2e2 e4 d2c4 | e2 d2d4c3d_/B2 A4 | A2_/B2 c2d2 d4 B2c4 | _/B2 A2A4A8-A2 |]"},"tk_huseyni_980":{"cat":"tk:huseyni","label":"Havada Bulut Yok — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Havada Bulut Yok\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=180\nK:C\nz4 e2e2 d2d4e2 ced2 | d3c d2d2 c2c2 _/B2d2 Bdc2 | c3_/B c2c2 B2B2 A2c4B2 | _/B2A2 c2B2 A2A4{A}B4A2 |\nA4 A6A4A6 | z4 e2e2 d2d4e2 ced2 | d3c d2d2 c2c2 _/B2d2 Bdc2 | c3_/B c2c2 B2B2 A2c4B2 |]"},"tk_huseyni_1633":{"cat":"tk:huseyni","label":"Sabahın Seher Vaktinde — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Sabahın Seher Vaktinde\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=54\nK:C\nz2gg g^ff2 fee2 edd2 | e^fgf gff2 fee2 edd2 | z2gg g^ff2 fee2 edd2 | e^fgf gff2 fee2 edd2 |\nz2^fg gff2 feee eddc | z2de ed2d dc2_/B cBBA | z2cd dc2_/B cB2A BAA2 | z2Ac c_/BB2 BA2A A2A2 |\nz2de ed2d dc2_/B cBBA | z2cd dc2_/B cB2A BAA2 | z2Ac c_/BB2 BA2A A2A2 |]"},"tk_huseyni_1976":{"cat":"tk:huseyni","label":"Yağmur Yağar Taş Üstüne — trad.","maqam":["turkish","huseyni",9],"abc":"X:1\nT:Yağmur Yağar Taş Üstüne\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:7/16\nL:1/16\nQ:1/4=216\nK:C\nc2 d2 e2 e2 e2 e4 | d4 g2 ^f2 g2 e4 | d4 e2 d2 e2 c4 | _/B2 c2 d2 c2 d2 B4 |\nA4 c2 _/B2 c2 B2 A2 | G4 c2 _/B2 d2 B2 A2 | A14 | A14 |\nc2 d2 e2 e2 e2 e4 | d4 g2 ^f2 g2 e4 | d4 e2 d2 e2 c4 | _/B2 c2 d2 c2 d2 B4 |\nA4 c2 _/B2 c2 B2 A2 | G4 c2 _/B2 d2 B2 A2 | A14 | A14 |]"},"tk_hicaz_1340":{"cat":"tk:hicaz","label":"Mayadağ’dan Kalkan Kazlar — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Mayadağ’dan Kalkan Kazlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:5/8\nL:1/16\nQ:1/4=204\nK:C\nG2A2 A2A4 | _B2 ^c2B4A2 | G2A2 A2A4 | A2 G2^F2 E2D2 |\nG2A2 A2A4 | _B2 ^c2B4A2 | G2A2 A2A4 | A8z2 |\nG2A2 A2A4 | ^c2 d2e4d2 | d4 ^c2_B2 A2 | G2 A2A2 A4 |]"},"tk_hicaz_1173":{"cat":"tk:hicaz","label":"İzmir Zeybeği — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:İzmir Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Zeybek, extrait.\nM:9/8\nL:1/16\nQ:1/4=108\nK:C\ne2de gfed ^cdc_B ABcd e2 | e2 degf ed^cd c_B.A2 .A2.A2 | e2de gfed ^cdc_B ABcd e2 | e2 degf ed^cd c_B.A2 .A2.A2 |\nG2A_B G2AB ^cdcB ABcd e2 | G2 A_BG2 AB^cd cB.A2 .A2.A2 | G2A_B G2AB ^cdcB ABcd e2 | G2 A_BG2 AB^cd cB.A2 .A2.A2 |]"},"tk_hicaz_968":{"cat":"tk:hicaz","label":"Harmandalı — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Harmandalı\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Zeybek, extrait.\nM:9/4\nL:1/16\nQ:1/4=57\nK:C\nd2e^f g2(3fef g2(3fef g2a2 e4 ee3 A8 A2z2 | d2e^f g2(3fef g2(3fef g2a2 e4 ee3 a8 a2z2 | gg3 gfed f3f ed^c_B A4 A2G2 A3/2G/AB c2d2 e2^f2 | {d}g3g gfed f3f ed^c_B A4 A2G2 ABcd ecdB A2z2 |\n{d}g3g gfed f3f ed^c_B A4 A2G2 ABcd ecdB A2z2 | d3d d^c(3_BAB {c}d3d dcBA B6A2 A3/2G/AB c2d2 e2^f2 | {^f}g4 g=fed ef3 ed^c_B A4 A2G2 ABcd ecdB A2z2 | d3d d^c(3_BAB {c}d3d dcBA B6A2 A3/2G/AB c2d2 e2^f2 |]"},"tk_hicaz_1023":{"cat":"tk:hicaz","label":"Hicaz Sazsemâîsi — Refik Talat Alpman","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Hicaz Sazsemâîsi\nC:Refik Talat Alpman\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=108\nK:C\nA3/2^c/ea ecA4g2 ^fee6 | G2^FE E2(3AGA (3BAGGF FEE4(3FEF | D4 ^F2A4^c2 _BAB2 c2BA | d4 d2(3ded (3^cdc(3_BcB AGd6 |\nf4 fege2dfd2^c.e2 .c4 | d4 d^cec2_BdB2AB2 G4 | A4 ^FAG3/2F/ GA_B3/2A/ B^cdd cBAG | ggfe d2^c_B/c/ decB BAA6 |]"},"tk_hicaz_1021":{"cat":"tk:hicaz","label":"Hicaz Peşrev — Neyzen Salim Bey","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Hicaz Peşrev\nC:Neyzen Salim Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nG6_BA A8 | _B^cBA B2c2 dcBA G2A2 | G2{^c}_BA A4 A2B2 A2G2 | d3^c _B2A2 ABAG ^FGAF |\nG4 ^F2G2 A2_BA G2A2 | _B2^cB A2B2 c2d2 c2d2 | efed ^cdc_B A4 c2d2 | e2^fg =fed2 efed ^c2d2 |]"},"tk_hicaz_822":{"cat":"tk:hicaz","label":"Gerçi Pek Esmer Olur — Ahmet Avni Konuk","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Gerçi Pek Esmer Olur\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 d8 d4 ^c2d2 e2d2 d6z2 | z4 e2g2 f4 e2f2 e2d4f2 e2d2 ^c2_B2 | A4 A8 _B2A2 G6z2 A4 B4 | ^c4 d2g2 f4 e2f2 e2d2 {e}d2c2 d6z2 |\nz4 ^f8 f4 e2f2 g2a2 a2g2 f2e2 | d4 {a}g4 f4 e2f2 e2d4f2 e2d2 ^c2_B2 | A4 A2G2 A4 _B4 ^c8 d2c2 B2A2 | e4 d2^c2 c2_B2 B2A2 G2A2 B2{c}BA A6z2 |]"},"tk_hicaz_534":{"cat":"tk:hicaz","label":"Dağlar Dağlar Viran Dağlar — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Dağlar Dağlar Viran Dağlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=78\nK:C\nee2^f g2a2 | g2f2 e2d2 | ed^cd e^fga | gfed ^c_BBA |\nA3a gfed | ^c3d c_BBA | AA2_B ^c2d2 | e2^f2 g2a2 |\nee2^f g2a2 | g2f2 e2d2 | ed^cd e^fga | gfed ^c_BBA |\nA3a gfed | ^c3d c_BBA | AGA_B ^cdef | ed^cd egfe |]"},"tk_hicaz_654":{"cat":"tk:hicaz","label":"Erkilet Güzeli… — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Erkilet Güzeli…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=78\nK:C\nd3/2^c/de dc_B2 | ^c3d c_BA2 | d3/2^c/de dc_B2 | ^c3d c_BA2 |\nd^cde dc_B2 | ^c3d c_BA2 | e2ed e^cd_B | ^c_BBA A4 |\nd3/2^c/de dc_B2 | ^c3d c_BA2 | d3/2^c/de dc_B2 | ^c3d c_BA2 |\nd^cde dc_B2 | ^c3d c_BA2 | e2ed e^cd_B | ^c_BBA A4 |]"},"tk_hicaz_1214":{"cat":"tk:hicaz","label":"Karanfil Oylum Oylum — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Karanfil Oylum Oylum\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=144\nK:C\nA_B^cd cBBA A4 A2{c}BA G2 | A_B ^cdcB BAA4.A2 .A2.A2 | A_B^cd cBBA A4 A2{c}BA G2 | A_B ^cdcB BAA4AB cde2 |\n^c2d2 e2e2 e4 f3e d2 | e2 f2e2 d2^c4d2 c_BA2 | ^c2d2 e2e2 e4 f3e d2 | e2 f2e2 d2^c4d2 c_BA2 |]"},"tk_hicaz_1447":{"cat":"tk:hicaz","label":"Necibemin İkidir Kürkü — trad.","maqam":["turkish","hicaz",9],"abc":"X:1\nT:Necibemin İkidir Kürkü\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=156\nK:C\ne3d e2f2 gfed ^c2d2 e2 | ^c3_Bc2 d2cB BAA4z2 | e3d e2f2 gfed ^c2d2 e2 | ^c3_Bc2 d2cB BAA4z2 |\nz4 d2d2 fed^c d4 z2 | e2 f2g2 feed {e}d^cd4z2 | gfed ^c2d2 c_BAG A2B2 d2 | ^c3A_B2 d2cB BAA6 |]"},"tk_karcigar_1219":{"cat":"tk:karcigar","label":"Karcığar Peşrev — Tatyos Efendi","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Karcığar Peşrev\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=75\nK:C\nc4 d4 d2 _e ^f e d c2 | d3 c _/B2 c2 d2 _e2 ^f2 g a | ^f2 _e2 d2 c2 f e d4 c2 | c d c _/B B c B A A6 c2 |\n_/B3 A G4 d3 c B2 c2 | A4 _/B2 c2 d2 _e2 d2 g2 | g ^f2 _e f e e d d3 =e d c _/B A | G3 A _/B c d _/e d c B c d4 |]"},"tk_karcigar_410":{"cat":"tk:karcigar","label":"Bir Sadâ-yı Dilnüvâz — Ahmet Avni Konuk","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Bir Sadâ-yı Dilnüvâz\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 d2c2 _/B4 c4 d4 {^f}_e2d2 d4 {=f}d2e2 | d2c2 c8 c2_/B2 BABc B2A2 A6z2 | z4 d2c2 _/B4 c4 d8 d4 _e4 | _e2d2 a2g2 g2^f2 f2e2 edef e2d2 d8 |\nz4 d4 g4 g4 ^f2g2 a2{_b}ag aggf g4 | z4 c4 c2d2 c2_/B2 B2A2 B2A2 A6z2 | z4 _/B2c2 d2_/e2 ^f2g2 a2_b2 a2g2 g3f e2d2 | c4 c2c2 c4 c2_/B2 BABc B2A2 A6z2 |]"},"tk_karcigar_2089":{"cat":"tk:karcigar","label":"Çayıra Serdim Postu — trad.","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Çayıra Serdim Postu\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=288\nK:C\n_/B2c2 d2_e2 d2c2 g2^f2 e2 | d2 c2_/B2 A2B2 c2d6 | _/B2c2 d2_e2 d2c2 e2d2 c2 | c2 _/B2B2 A2AB ABGA Bcdc |\n_/B2c2 d2_e2 d2c2 g2^f2 e2 | d2 c2_/B2 A2B2 c2d6 | _/B2c2 d2_e2 d2c2 e2d2 c2 | c2 _/B2B2 A2A4g4^fa |]"},"tk_karcigar_1267":{"cat":"tk:karcigar","label":"Koyundere Zeybeği — trad.","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Koyundere Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Zeybek, extrait.\nM:9/8\nL:1/16\nQ:1/4=90\nK:C\nc_/BA2B2c2 d2_e2d2e^f edc2dedc B2c2d8 | c_/BA2 B2c2d2_e2 d2e^fedc2 cBA2B2G2 A8 | c_/BA2B2c2 d2_e2d2e^f edc2dedc B2c2d8 | c_/BA2 B2c2d2_e2 d2e^fedc2 cBA2B2G2 A8 |\n^f2gagf_ef edc2dedc _/B2A2BcBA B2c2d8 | ^f2ga gf_efedc2 d2efedc2 c_/BA2B2G2 A8 | ^f2gagf_ef edc2dedc _/B2A2BcBA B2c2d8 | ^f2ga gf_efedc2 d2efedc2 c_/BA2B2G2 A8 |]"},"tk_karcigar_290":{"cat":"tk:karcigar","label":"Benli’yi Aldım Kaçaktan — Dede Efendi","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Benli’yi Aldım Kaçaktan\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=240\nK:C\nd4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g^f gafe | d4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g2 ^f2g2 |\na_/bc'd' c'_bag ^f_edc c2{d}c_/B BA | A4z8g^f gaf_e | d4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g^f gafe |]"},"tk_karcigar_489":{"cat":"tk:karcigar","label":"Bülbül Olsam — trad.","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Bülbül Olsam\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\nA2z4c_/B ABAG A3/2B/cA BG | A2 z2^f_e dc_/BA BGAB cABG | A2z2 ^f_edc _/BABG ABcA BG | A2 z2GA _/Bcd_e dcde ^fdec |\nd2z2 GA_/Bc d_edc B2(3cBA BG | A2 z2GA _/Bcd_e dcde ^fdec | d2z2 GA_/Bc d_edc B2(3cBA BG | A2 z2_ed eced ecde ^fdec |]"},"tk_karcigar_1141":{"cat":"tk:karcigar","label":"İki de Durnam — Dede Efendi","maqam":["turkish","karcigar",9],"abc":"X:1\nT:İki de Durnam\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=114\nK:C\nA_/BcA BGA2 Aed2 cBBA G2 | A_/B cABG A3B GABc d_edc | d_e^fd ecde dc_/BA Bcde dc | _/B2 BABG A3B GABc d_edc |\nd_e^fd ecde dc_/BA Bcde dc | _/B2 BABG A3B GABc d_edc | d_e^fg a_bag fedc _/Bcde dc | _/B2 BABG ABcA BGA2 Aed2 |]"},"tk_karcigar_1995":{"cat":"tk:karcigar","label":"Yine Ey Yosma — Santûrî Ethem Efendi","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Yine Ey Yosma\nC:Santûrî Ethem Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Chanson, extrait.\nM:4/4\nL:1/16\nQ:1/4=81\nK:C\nz4 c2d2 d4 a4 | c'_bag ^f_eed d4 z4 | _e3d c2d2 e3d ^f2ed | dcc_/B d2cB c2BA A4 |\nz4 ^f2g2 g4 a4 | _bag^f f_eed dcc_/B c2a2 | a3g g3^f f3_e e3d | _edcd e^fed d4 z4 |\nz4 c2d2 d4 a4 | ^c'_bag ^fgab g2a2 z4 | _b3a a3g g3^f f3_e | d2d_e g^fed dcc_/B c4 |]"},"tk_karcigar_409":{"cat":"tk:karcigar","label":"Bir Rum Dilbere — Tanburî Mustafa Çavuş","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Bir Rum Dilbere\nC:Tanburî Mustafa Çavuş\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=57\nK:C\nd2z2^f2edd4fed2 | c_/BA3GB2c2d4_e4d2e3da2g^ffeed | ^f4_edd2z2f2=edd4fed2c_/BA3GB2c2 | d4_e4d2e3da2 |\ng^ff_eedf4edd3c | d2_e2^f2g2_bagfedd3c_/B2c2d4gfedc2 | d3cd^f_eddcc_/Bd2c2 | _/B2A3GB2c2d2c2fe |]"},"tk_karcigar_1435":{"cat":"tk:karcigar","label":"Ne Dane — Dellalzâde İsmail Efendi","maqam":["turkish","karcigar",9],"abc":"X:1\nT:Ne Dane\nC:Dellalzâde İsmail Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Ağır semai, extrait.\nM:10/8\nL:1/16\nQ:1/4=108\nK:C\n_e4 ede4de ^fgfe d4 | ^f_eed c2f2 eddc c_/BcB A4 | d2_e2 ^f2ed c2ed c_/Bc4B2 | c2d2 _e2^f2 g2a_/b c'd'c'_b agfe |\nd2c'2 _baag g^ff_e edd4z2 | _e4 ede4de ^fgfe d4 | ^f_eed c2f2 eddc c_/BcB A4 | d2_e2 ^f2ed c2ed c_/Bc4B2 |]"},"tk_segah_2086":{"cat":"tk:segah","label":"Çayda Çıra — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Çayda Çıra\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=240\nK:C\nz4 G2d2 z2d2 z2d6 | _/e4 d2e2 d2{e}d8-d2 | c2d2 _/e4 d2e2 {g}^f2e4d2 | d4 c2c4_/B8-B2 |\n_/B2c2 d2c2 d2c2 d2B4c2 | A4 G2c2 d2_/B4{c}B4z2 | _/B2c2 d2d4c2 d2B4A2 | A4 G2c2 d2_/B2 c2B6 |]"},"tk_segah_1689":{"cat":"tk:segah","label":"Segâh Peşrev — Nâyî Osman Dede","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Segâh Peşrev\nC:Nâyî Osman Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=78\nK:C\n_/B8 c4 d4 | _/B6c2 B4 c2d2 | c4 _/B4 A8 | _/B4 c4 B4 A4 |\n_/B2c2 B4 c2d2 c4 | d12 d2d2 | d4 d4 z4 d4 | _/B8 c4 d4 |]"},"tk_segah_1939":{"cat":"tk:segah","label":"Verse Ol Meh — Ahmet Avni Konuk","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Verse Ol Meh\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Kupe, extrait.\nM:6/4\nL:1/16\nQ:1/4=84\nK:C\nG4 _/B4 B3^A B2c2 B2c2 B2=A2 | G4 G2^A2 _/B3A B2c2 B2A2 B4 | A4 _/B4 c4 B4 c4 d4 | dcd_/e d2c2 _/B12 z4 |\n_/B4 ^f4 f12 z4 | _/e4 ^f4 g2f2 g2e2 d4 {e}d2c2 | _/B8 c4 d4 c4 B4 | ^f4 _/e2d2 d12 z4 |]"},"tk_segah_8":{"cat":"tk:segah","label":"Acem Ülkesinde — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Acem Ülkesinde\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=51\nK:C\nd2d2d2d2 _/ed2_/Bc2B2 | d2d2d2d2 _/ed2_/Bc2B2 | z2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | d2d2d4 _/ed2_/Bc2B2 |\nz2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | z2cd_/e2e2 e4{f}ed{e}d2 | d_/e2f{g}ed{e}d2 de2f{g}ed{e}d2 | {c}d2d2{d}g^f{g}_/ed d2ddc2_/B2 |\nz2dcd3_/B cddBc2B2 | z2dcd3_/B cddBc2B2 | z2cd_/ef{g}ed cdd_/Bc2B2 | z2cd_/ef{g}ed cdd_/Bc2B2 |\nd2d2d2d2 _/ed2_/Bc2B2 | d2d2d2d2 _/ed2_/Bc2B2 | z2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | d2d2d4 _/ed2_/Bc2B2 |]"},"tk_segah_302":{"cat":"tk:segah","label":"Beyaz Giyme Söz Olur — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Beyaz Giyme Söz Olur\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=120\nK:C\nz2ga agg^f f4 g2f_/e d2 | _/e2 ^f2fe dc_/B4g2 f2eg | ^f12 f2f2 f2 | z2 gaag g^ff4g2 f_/ed2 |\nz_/e2^f fedc _/B4 g2fe d2 | ^ff {g}_/eddc c_/BB4Bc d2ed | ^f{g}f_/ed dcc_/B B8-B2 | z2 gaag g^ff4g2 f_/ed2 |]"},"tk_segah_366":{"cat":"tk:segah","label":"Bir Fındığın İçini… — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Bir Fındığın İçini…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\nz4 d2e4e4e4 | e8d2 e4 d4 | z4 d2e4e4e4 | e8d2 e4 d4 |\nz4 g2^f2 g2e4d2 c2 | d4_/B4d2 c4 B2z2 | z4 d2d4d4d4 | d4_/B4d2 c4 B2z2 |]"},"tk_segah_434":{"cat":"tk:segah","label":"Boyda Bosun Yoktur — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Boyda Bosun Yoktur\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=156\nK:C\nz4 _/e2^f2 g4 gag2 fe | d4_/e2 f2f2 e2de d2c2 | _/B4 B2B2 B4 g2^f2 _/e2 | d3_/Bdc cBB8z2 |\nz4 _/B2c2 d4 d4 _/e2 | d4_/e2 f2f2 e2de d2c2 | _/B4 g2g2 g4 gag2 ^f2 | ^f3_/ed2 e2f8-f2 |]"},"tk_segah_2046":{"cat":"tk:segah","label":"Zeytinyağlı Yiyemem — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Zeytinyağlı Yiyemem\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=60\nK:C\nd2g3/2g/ ^f_/edc | _/B2_/e2 e/d/e/^f/ed | d2gg ^f_/edc | _/B2c/B/c/d/ BB/A/B/c/d/_/e/ |\nd2g3/2g/ ^f_/edc | _/B2_/e2 e/d/e/^f/ed | d2gg ^f_/edc | _/B2c/B/c/d/ .B2g/^f/e/g/ |\n^f2ff f2f2 | e^fga {a}g=fed | d2gg ^f_/edc | _/B2_/e2 e/d/e/^f/ed |\nd2gg ^f_/edc | _/B2c/B/c/d/ B2g/^f/e/g/ | ^f2ff f2f2 | e^fga {a}g=fed |]"},"tk_segah_1553":{"cat":"tk:segah","label":"Oy Kemençe Kemençe — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Oy Kemençe Kemençe\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=102\nK:C\n_/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 | _/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 |\n^f2fg g2gf _/e2f2 f2ed | d2d2 gag^f ._/e2.f2 .f2z2 | ^f2fg g2gf _/e2f2 f2ed | d2d2 gag^f ._/e2.f2 .f2z2 |\n^fgg2 gagf _/e2f2 f2ed | .d2.d2 ._/e2ed dcc_/B B4 | _/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 |]"},"tk_segah_1563":{"cat":"tk:segah","label":"Pencereden Taş Gelir — trad.","maqam":["turkish","segah",10.773584905660377],"abc":"X:1\nT:Pencereden Taş Gelir\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:12/8\nL:1/16\nQ:1/4=180\nK:C\nd3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 | d3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 |\nG4 d2d2 d4 d3c d2c2 {d}c2{d}_/B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 | d3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 |]"},"tk_huzzam_1124":{"cat":"tk:huzzam","label":"Hüzzam Sazsemâîsi — Gazi Giray Han","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Hüzzam Sazsemâîsi\nC:Gazi Giray Han\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=69\nK:C\n_/B4_eee2d2d2c2B4c2d4e^fe2d2d2 | c2_/B4cdc4ccc4c2B2d4c2B4 | _/BBB2z2B2A2B4cd | c4ccc2z2c2_/B2d4c2B4BBB2z2B2 |\nA2_/B4c2d4_eee2 | d2d2c2_/B4cdB4 | ^A2G4A4_/B4d2 | c4_/B2^A3Bc2d2d2 |]"},"tk_huzzam_1122":{"cat":"tk:huzzam","label":"Hüzzam Peşrev — Tanburî Büyük Osman Bey","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Hüzzam Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=69\nK:C\nc4 d4 c2_/B2 ^f2_e2 | ^f_ed4_/B2 cdcB c2d_/e | dc_/B^A B2c2 B4 d2_ed | ^fg2f _e2d2 dcc_/B c2d2 |\nc4 d2_e2 d3/2e/^fg a_bag | ag^f4d2 _edef ed^c2 | d6^c2 d_edc d2e2 | d2^f2 _e6ed d2ed |]"},"tk_huzzam_1813":{"cat":"tk:huzzam","label":"Sâzın Al Âguşa — Ahmet Avni Konuk","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Sâzın Al Âguşa\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Kupe, extrait.\nM:6/4\nL:1/16\nQ:1/4=84\nK:C\nd2c2 _/B2c2 d14z2 | _e8 e4 ^f4 e4 d4 | d4 c2_/B2 B2c2 d2_e2 ^f4 e2d2 | d2c2 c2_/B2 B14z2 |\n_/B6^f2 f8 f2_e2 d4 | g6_b2 a2g2 ^f2_e2 f2e2 d4 | d2_e2 ^f2g2 a4 g8 g2f2 | ^f2_e2 {f}e2d2 d14z2 |]"},"tk_huzzam_52":{"cat":"tk:huzzam","label":"Akşam Oldu Yine Bastı Kareler — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Akşam Oldu Yine Bastı Kareler\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=72\nK:C\nz8 z4 ^fgf_e | ^f_ed4_/B2 c2de dcB^A | _/B2^AB c2Bc d2cd _e2de | ^f_ed4_/B2 c2d2 dccB |\n_/B4 BcB^A B4 ^fgf_e | ^f_ed4_/B2 c2de dcB^A | _/B2^AB c2Bc d2cd _e2de | ^f_ed4_/B2 c2de dccB |\n_/B6ag g^ff^e f4 | ^f4 f2f2 f4 f4 | a3g g2g^f f3_e feed | d4 _e2^f2 g8 |]"},"tk_huzzam_80":{"cat":"tk:huzzam","label":"Alıverin Bağlamamı Çalayım — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Alıverin Bağlamamı Çalayım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=81\nK:C\nd3c dcc_/B B4 z2Bc | d3c dcc_/B B4 z2Bc | d3_/e dcc_/B B2g4^fe | d3_e dcc_/B B4 z2Bc |\nd3c dcc_/B B4 z2Bc | d3c dcc_/B B4 z2Bc | d3_/e dcc_/B B2g4^fe | d3_/e dcc_/B B4 ag^f^e |\n^f4 f2f2 f4 f4 | a3g g3^f f3_e feed | d2z2 g2g2 g2^f2 _e2a2 | g2f2 _/e2d2 d2_e2 ^f2ed |]"},"tk_huzzam_99":{"cat":"tk:huzzam","label":"Arabaya Taş Koydum — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Arabaya Taş Koydum\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\ng4 g4 g4 ^f2_e2 d2 | ^f4f4f4_e2 d2c2 | _e2d2 e2g2 ^f2e2 d2c2 _/B2 | _/B2 c2d2 _e2^f2 a2g6 |\ng4 g4 g4 ^f2_e2 d2 | ^f4f4f4_e2 d2c2 | _e2d2 e2g2 ^f2e2 d2c2 _/B2 | _/B18 |]"},"tk_huzzam_114":{"cat":"tk:huzzam","label":"Asker Oldum Piyade — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Asker Oldum Piyade\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=72\nK:C\n^fg2g g2a2 | ^f2f4g2 | _e2{^f}ed f2{g}fe | d2{_e}dc _/B4 |\n_/Bc2c c2{d}cB | _/B^AAG dccB | _/B3/2^A/Bc d_e^fg | ag^fa g4 |\n^fg2g g2a2 | ^f2f4g2 | _e2{^f}ed f2{g}fe | d2{_e}dc _/B4 |\n_/Bc2c c2{d}cB | _/B^AAG dccB | _/B4-Bg^f_e | dc_/B^A B4 |]"},"tk_huzzam_615":{"cat":"tk:huzzam","label":"Düriyemin Güğümleri Kalaylı — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Düriyemin Güğümleri Kalaylı\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=210\nK:C\ng4 g4 g2^f2 a2g2 f2 | ^f4g4_e2 d2f2 e2d2 | g4 g4 ^f2_e2 d2c2 _/B2 | f4f2 _/e2e2 d2d2 c2d2 |\nc2_/B8-B2 d2_e2 ^f2 | g4g4g2 ^f2a2 g2f2 | ^f4 g4 _e2d2 f2e2 d2 | g4g4^f2 _e2d2 c2_/B2 |]"},"tk_huzzam_986":{"cat":"tk:huzzam","label":"Hayatları Değirmi — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Hayatları Değirmi\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=168\nK:C\nz4 ^f2g4g2 f2g2 f2_e2 | ^f2_e2 f2e2 d2e2 d2f2 e2d2 | d4 ^f2g4g2 f2g2 f2_e2 | ^fgfg f2_e2 d2e2 d2f2 e2d2 |\nd4 ^f2gf g2g4g2 f2_e2 | ^fgfg _e2e2 d2d2 c2e6 | _e4 d2e2 d2^f2 gaf2 e2d2 | d4 d_ec2 B2B8-B2 |]"},"tk_huzzam_1966":{"cat":"tk:huzzam","label":"Yanıyor mu Yeşil Köşkün Lambası — trad.","maqam":["turkish","huzzam",10.773584905660377],"abc":"X:1\nT:Yanıyor mu Yeşil Köşkün Lambası\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\n^fg2g g2gf f_ede f4 ed | d2 c_/B^f2 _eddc B^ABc defg | ^fg2g g2gf f_ede f4 ed | d2 c_/B^f2 _eddc B^ABc defg |\nz4 ^f2f2 f4 f4 _ed | d4_e2 ^f2g4a6 | g3^f _e2g2 f2e2 d4 c_/B | _/B4^f2 f2f4f4_ed |]"},"tk_saba_1642":{"cat":"tk:saba","label":"Sabâ Sazsemâîsi — Neyzen Aziz Dede","maqam":["turkish","saba",9],"abc":"X:1\nT:Sabâ Sazsemâîsi\nC:Neyzen Aziz Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=120\nK:C\nc4 _/d2dc2_/BBA/B/ cB/A/A4z2 | c4 G2AG A_/Bc_d c/B/A/B/c4z2 | c_/dc2 d2e4f2 edc4_/Bc | A4 g2fe _dcc_/B BAA4z2 |\nA4 e2f3/2e/ fg_a3/2g/ fef4z2 | efef g2_a2 g2f2 e2_d2 c2_/Bc | A4 G2A_/B GABc ABc_d BcAB | G4 e_ddc2dc_/B BAA4z2 |]"},"tk_saba_1637":{"cat":"tk:saba","label":"Sabâ Peşrev — Tanburî Büyük Osman Bey","maqam":["turkish","saba",9],"abc":"X:1\nT:Sabâ Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=78\nK:C\nc4 _/B2c2 A4 c4 | _/B4 _d4 c3B A4 | A2z2 c2_d2 c2_/B2 A2B2 | c4 _d6e2 d2c2 |\nc4 _/B4 {g}f2g2 f2e2 | e2f2 e2_d2 dcde d2c2 | _/B2_d2 c8 z4 | _d4 c4 d4 e2f2 |]"},"tk_saba_1641":{"cat":"tk:saba","label":"Sabâ Peşrev (Mevlânâ) — Kemânî Hamza","maqam":["turkish","saba",9],"abc":"X:1\nT:Sabâ Peşrev (Mevlânâ)\nC:Kemânî Hamza\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Peşrev, extrait.\nM:2/4\nL:1/16\nQ:1/4=81\nK:C\nG2A2 GAG2 | A2_/B2 ABA2 | _/B2c2 c_dBd | c4 z4 |\nc2_d4(3edc | c4 _/B4 | c_/Bc_d cdcB | c3_/B A4 |\n_/BABc BAB2 | c_/Bc_d cBc2 | e3c _d3_/B | c4 _/B4 |\nc_/Bc_d cdcB | c/_/B/c/_d/cB A4 | _/BABc BAB2 | c_/Bc_d cBc2 |]"},"tk_saba_779":{"cat":"tk:saba","label":"Gayrı Sen de Ol Biraz… — Ahmet Avni Konuk","maqam":["turkish","saba",9],"abc":"X:1\nT:Gayrı Sen de Ol Biraz…\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 A2_/B2 A4 B4 c4 B2_d2 B4 c4 | z4 c2_d2 c4 d4 e2f2 e2g2 gffe f4 | z4 f2f2 f4 f4 e2f2 g2_a2 g2f2 e2_d2 | c4 g2f2 f2.e2 e2_d2 d2c2 _/B2{e}dc c6z2 |\nz4 c2_/d2 c4 d4 e4 d2{g}fe e6z2 | z4 c2_d2 c4 d2e2 d2c2 c2d2 c2_/BA B2c2 | _/B4 A2G2 A4 B4 _d2c2 {d}c2d2 c3B A2d2 | c4 _/B2c2 B4 A4 A2c4BA A6z2 |]"},"tk_saba_527":{"cat":"tk:saba","label":"Daracık Sokakları Duman Bürüdü — trad.","maqam":["turkish","saba",9],"abc":"X:1\nT:Daracık Sokakları Duman Bürüdü\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=204\nK:C\n_/B2B4B2 _d4 c4 B2 | c4_/B2 A2A2 B2c2 B2c2 | _/B2A6 B2A2 B6 | _/B2 B4 B2_d4c4B2 |\nc4 _/B2A2 A2B2 c2B2 c2 | _/B2 A6A4c_d cBAB | c4 c2c2 c4 c4 _d2 | e2 _d2d2 c2c2 d2c4_/B2 |]"},"tk_saba_963":{"cat":"tk:saba","label":"Hangi Bağın Bağbanısan — trad.","maqam":["turkish","saba",9],"abc":"X:1\nT:Hangi Bağın Bağbanısan\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:8/4\nL:1/16\nQ:1/4=162\nK:C\nc_d c_/B cd cB cd cd c{d}c BA | _/B2 c2 c{_d}c BA A8 | z2 c_d e2 {f}ed dc2_/B cB BA | A_/B2c c{_d}c BA A8 |\nc_d c_/B cd cB cd cd c{d}c BA | _/B2 c2 c{_d}c BA A8 | z2 c_d e2 {f}ed dc2_/B cB BA | A_/B2c c{_d}c BA A8 |]"},"tk_saba_1279":{"cat":"tk:saba","label":"Kâr Etmez Âhım — trad.","maqam":["turkish","saba",9],"abc":"X:1\nT:Kâr Etmez Âhım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:6/8\nL:1/16\nQ:1/4=228\nK:C\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6_d6 |\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6^FG A_/Bc_d |\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6_d6 |]"},"tk_saba_916":{"cat":"tk:saba","label":"Gûş Eyle Bülbülleri — Dede Efendi","maqam":["turkish","saba",9],"abc":"X:1\nT:Gûş Eyle Bülbülleri\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:8/4\nL:1/16\nQ:1/4=60\nK:C\nc4 _/B2c2 _d3/2c/de d2c2 c3d c2dB A4 z4 | A2_/B2 G2A2 B2c2 A2B2 c2_d2 c2B2 c3/2B/ce d4 | _d2z2 c2d2 e2f2 g2a2 g2f2 e2d2 c3_/B A2e2 | _d3c _/B2c2 B2c2 d3/2e/dc c4 efg6 z4 |\nf4 g12 _a3g gffe f6f2 | e2f2 g2_a2 _/b3a g3f e3_d d3c c3_/B A4 | A2z2 G2A2 _/B2c2 _dedc c2c=d c3B cBBA A2A2 | A2c4_/BA A2z2 a4 a3g ^fga_/b g2a4z2 |]"},"tk_saba_1367":{"cat":"tk:saba","label":"Mey İçerken — Şevki Bey","maqam":["turkish","saba",9],"abc":"X:1\nT:Mey İçerken\nC:Şevki Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=66\nK:C\nz8-z2A4_/B2 c8 _d3cB4 c2d2 | _d2c4_/B2z2c4d2d2c4B2c3B A4defg | ._a2agfe_d2 c2d4dc c3_/Be2dc B2c4cd cBAB | c3_d ced2z2d4d2d6c2e3d c4_/B4 |\n_d2c2_/B2A2 G2ABA2B2 cdcdc2d2 dcBAB2c2 B4 | z2AG A2c2c_/BBA B2_d2dc2B cBBAA6cdcBAB | c3_dced2 z2d4d2 d6c2 e3dc4 _/B4 | _d2c2 _/B2A2G2AB A2B2cdcd c2d2dcBA B2c2B4 |]"},"tk_saba_269":{"cat":"tk:saba","label":"Beni Aşka Salan Yâre — Tanburî Ali Efendi","maqam":["turkish","saba",9],"abc":"X:1\nT:Beni Aşka Salan Yâre\nC:Tanburî Ali Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=132\nK:C\nc2_d2 c2_/B2 c2d2 c4 B2 | A3GA2 _/B2c_d cBc4z2 | c2_d2 e2f2 g2a2 g2f2 e2 | _d3cd2 e2c2 d2c4_/B2 |\nA3G A2_/B2 c2_d2 e2c2 d2 | c2 _/BAB2 c2cB2AA4z2 | c2_d2 c2_/B2 c2d2 c4 B2 | A3GA2 _/B2c_d cBc4z2 |]"},"tk_kurdi_1287":{"cat":"tk:kurdi","label":"Kürdî Peşrev — Şehzâde Korkut","maqam":["turkish","kurdi",9],"abc":"X:1\nT:Kürdî Peşrev\nC:Şehzâde Korkut\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=132\nK:C\nc4 d4 e8 | A8 e2d2 e4 | e4 d4 d8 | c4 B4 c4 d4 |\ne8 A8 | e2d2 e4 e4 d4 | d8 c4 B4 | c4 d4 e8 |]"},"tk_kurdi_1774":{"cat":"tk:kurdi","label":"Seyr-i Kürdî’yi… — Ahmet Avni Konuk","maqam":["turkish","kurdi",9],"abc":"X:1\nT:Seyr-i Kürdî’yi…\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Kupe, extrait.\nM:8/8\nL:1/16\nQ:1/4=96\nK:C\nd4 e2fe d^cd4z2 | d4 efed ^cBcB A2z2 | g4 g2ga {_b}aggf edc2 | def2 gagf egf4z2 |\nf4 f2ef gaag fed2 | d4 e2fe d^cd4d=c | c4 c2c2 _e2d2 c2_B2 | _B2A2 G2AB {c}BAA4z2 |]"},"tk_kurdi_2071":{"cat":"tk:kurdi","label":"Âşık-ı Dilhasteye Rahmeyle — Ahmet Avni Konuk","maqam":["turkish","kurdi",9],"abc":"X:1\nT:Âşık-ı Dilhasteye Rahmeyle\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Kupe, extrait.\nM:8/8\nL:1/16\nQ:1/4=96\nK:C\ng4 a2a4a2 g2f2 | _b2a2 g2gf fed4z2 | d4 e2f2 {g}fed4z2 | ^c2d2 edd8z2 |\nc4 c2c2 _e2d2 c2_B2 | c_ed2 c2c_B BAG4z2 | G4 A2_B2 d2c2 B4 | _B2A2 G2AB {c}BAA4z2 |]"},"tk_kurdi_1234":{"cat":"tk:kurdi","label":"Karşıyaka’da İzmir’in Gülü — Lavtacı Hristo","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Karşıyaka’da İzmir’in Gülü\nC:Lavtacı Hristo\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=240\nK:C\nf2g4f2 g_b_ag g4 f2 | fg f_eef edde dccd cdc_B | _B_/ABc dcd_/e fef_a gf_ed c2 | _Bc d_edc cBB_A AGG4z2 |\nf2g4f2 g_b_ag g4 f2 | fg f_eef edde dccd cdc_B | _B_/ABc dcd_/e fef_a gf_ed c2 | _Bc d_edc cBB_A AGG4z2 |]"},"tk_kurdi_1300":{"cat":"tk:kurdi","label":"Kürdîlihicazkâr Sazsemâîsi — Tatyos Efendi","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Kürdîlihicazkâr Sazsemâîsi\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=132\nK:C\nG4 g2g_a gf_e3/2d/ efg4z2 | g2_a2 c'2_b3ag3fgf _edec | _B3_e dfe3gf3_ag4fe | _e3c' _b_ag3fed efg4z2 |\n_a2g2 f2_e3dc_B cde4z2 | d2_e2 g2f3ded ecd4z2 | G4 _e2d3cc3/2e/ dcc4z2 | _Bcd_e dcBd cBB_A AGBc defg |]"},"tk_kurdi_1298":{"cat":"tk:kurdi","label":"Kürdîlihicazkâr Peşrev — Tanburî Cemil Bey","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Kürdîlihicazkâr Peşrev\nC:Tanburî Cemil Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nc4-c _b _a g {a}g8 | f2 g2 f2 _e2 f4 g4 | f _e d c f2 g2 f2 c'2 _b2 _a2 | _a2 g4 f2 f2 {g}f _e g2 {a}g f |\n_a2 {_b}a g f2 g2 f4 _e2 f2 | g2 _e2 f2 g2 _a3/2 g/ a _b a g f2 | g3 f _e2 f2 e4 f2 g2 | f2 {g}_e2 d g f e {f}e4 z e d c |]"},"tk_kurdi_836":{"cat":"tk:kurdi","label":"Gidelim Göksu’ya — Lavtacı Hristo","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Gidelim Göksu’ya\nC:Lavtacı Hristo\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\nG3_A _B2c2 d2_/e2 f2e2 f2 | g8gf gaf2 _e2d2 | c2_ba g2a2 f2_e2 gfe2 ed | d6 c2d2 {f}_edd4z2 |\nc3d _e2f2 g2f2 _a2g2 f2 | _e3dd3cc2 {e}dcc4z2 | _B3d c2d2 B2c2 cB_A2 AG | G6 d_edc _B_AG4z2 |]"},"tk_kurdi_1334":{"cat":"tk:kurdi","label":"Mahrum-i Şevkim — Rahmi Bey","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Mahrum-i Şevkim\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=126\nK:C\nf2gg g2g2 g2_ag g4 gf | f3_/ee3dd2 {e}dcc4z2 | _B3c d2_e2 fef_a gfed c2 | _Bc d_edc cBB_A AGG6 |\nf2gg g2g2 g2_ag g4 gf | f3_/ee3dd2 {e}dcc4z2 | _B3c d2_e2 fef_a gfed c2 | _Bc d_edc cBB_A AGG6 |]"},"tk_kurdi_1664":{"cat":"tk:kurdi","label":"Sana Ey Cânımın Cânı Efendim — Rahmi Bey","maqam":["turkish","kurdi",7],"abc":"X:1\nT:Sana Ey Cânımın Cânı Efendim\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=204\nK:C\ng4 _a2g2 f2_e2 d2e4z2 | d2_e2 f2g2 _a2f2 a2g4z2 | g4 c'2_b2 _a2g2 f2_e2 d2c2 | d2_/e2 f2f2 e2_e2 d2d6 |\nc4 d2_/e4f4g4z2 | f2g2 _a2g2 f2_e2 d2c6 | _B2c2 d2_e2 f2d2 c2B2 _A2G2 | G4 _e2d2 c2_B2 _A2G3def |]"},"tk_nihavend_2132":{"cat":"tk:nihavend","label":"Üsküdar’a Gider İken — trad.","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Üsküdar’a Gider İken\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nd_edc _BABc | d_edc _BAG2 | d_edc _BABc | d4 z4 |\nd_edc _BABc | d_edc _BAG2 | Ac_BA AGG^F | G4 z4 |\nG3d d2d2 | _edef d2d2 | c2cc _B2c2 | d_edc _BAG2 |\nG3d d2d2 | _edef d2d2 | c2cc _B2c2 | d_edc _Bcd2 |]"},"tk_nihavend_1490":{"cat":"tk:nihavend","label":"Nihâvent Peşrev — Tanburî Büyük Osman Bey","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Nihâvent Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nc4 d8 (3c2_B2c2 | _B6f2 f_/efg f2_e2 | _edef e2d2 dcde d2c2 | _B2f_e eddc cBBA B2c2 |\n_B4 d2_e2 d4 c2d2 | c2_Bc B2AB A2GA G2^F2 | G2d4c_B AG^F_E D4 | D2G4^F2 GAGF G2A2 |]"},"tk_nihavend_81":{"cat":"tk:nihavend","label":"Aman Avcı Vurma Beni — trad.","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Aman Avcı Vurma Beni\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:6/8\nL:1/16\nQ:1/4=264\nK:C\nd4 _e2d2 c2_B2 | c4 d2c2 _B2A2 | _B4 c2B2 A2G2 | _B2A2 G2A2 G2^F2 |\nG2A2 _B2c2 d4 | d4 _e2d2 c2_B2 | c4 d2c2 _B2A2 | _B4 c2B2 A2G2 |\n_B2A2 G2A2 G2^F2 | G6cd _e^fge | d4 d2d6 | g6g2 ^f2_e2 |]"},"tk_nihavend_347":{"cat":"tk:nihavend","label":"Bir Ataş Ver Cıgaramı Yakayım — trad.","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Bir Ataş Ver Cıgaramı Yakayım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:10/4\nL:1/16\nQ:1/4=54\nK:C\nd2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df {A}_e2d2 A_BG2 dd3 edc2 B/A/Bd2 d3/2c/BA BAG^F G3A BGd2 | d2df {A}_e2d2 A_BG2 dd3 edc2 B/A/Bd2 d3/2c/BA BAG^F G3A BGd2 | ^ff3 g3/2f/_ed d4 f2f2 g3/2f/ed d4 g3/2f/ed g3/2f/ed d3A _BGd2 |\n^ff3 g3/2f/_ed d4 f2f2 g3/2f/ed d4 g3/2f/ed g3/2f/ed d3A _BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 |]"},"tk_nihavend_863":{"cat":"tk:nihavend","label":"Gönlüm Yine Bir Âteş-i Hicrâne… — Şeyh Ethem Efendi","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Gönlüm Yine Bir Âteş-i Hicrâne…\nC:Şeyh Ethem Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=114\nK:C\nG3A _B2c2 d2_e2 ^f2g2 a2 | ^fg a_bag gff_e edd4z2 | g3^f _e2g2 f3e d4 f2 | _e3dc4Bc dBc4z2 |\n_BABc dcd_e f_/ef_a gf_ed cB | A_B c_edc BAAG G^FG4z2 | G3A _B2c2 d2_e2 ^f2g2 a2 | ^fg a_bag gff_e edd4z2 |]"},"tk_nihavend_1702":{"cat":"tk:nihavend","label":"Semâlardan Güneş Hâlâ İnmiyor — Mısırlı Udî İbrahim Efendi","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Semâlardan Güneş Hâlâ İnmiyor\nC:Mısırlı Udî İbrahim Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:4/4\nL:1/16\nQ:1/4=78\nK:C\nd3c _B2c2 d4 z4 | (3_b2a2g2 (3f2_e2d2 c4 z4 | (3_a2g2f2 (3_e2d2c2 _B4 z4 | c3_e d3c _B3d c3B |\nA3c _B3A G3^F G3A | _B3c (3d2c2_e2 d4 z4 | c4 _B4 A4 G4 | ^F4 D4 _B3/2A/GF G4 |\nd4 _B3A G4 d4 | _e3d e2g2 ^f2e2 d2^c2 | d4 _b4 a4 g4 | f3_e e3d d4 z4 |]"},"tk_nihavend_1754":{"cat":"tk:nihavend","label":"Sevdim Seni Ey İşvebâz — Tanburî Cemil Bey","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Sevdim Seni Ey İşvebâz\nC:Tanburî Cemil Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:6/8\nL:1/16\nQ:1/4=174\nK:C\n_B2BA Bcd2 dcdB | A2AG A_Bc2 c=BcA | G2G^F GA_B2 A2G2 | A_BAG ^FGA4z2 |\nc2cB cd_e2 edec | _B2BA Bcd2 dcdB | A2_B2 c2d2 B2A2 | .G2._B2 .d2.G4z2 |\n_B2BA Bcd2 dcdB | A2AG A_Bc2 c=BcA | G2G^F GA_B2 A2G2 | A_BAG ^FGA4z2 |]"},"tk_nihavend_1257":{"cat":"tk:nihavend","label":"Kimseye Etmem Şikâyet — Kemânî Sarkis Efendi","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Kimseye Etmem Şikâyet\nC:Kemânî Sarkis Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=204\nK:C\n_e6e4e2 d2c2 _B2c2 | d8-d2d2 c2_B2 A2G2 | G2^F2 G2A2 _B2c2 d2_e2 d2c2 | d4 _e2d2 c2_B2 c2d6 |\n_e8-e2e2 d2c2 _B2c2 | d4 d2d4d2 c2_B2 A2G2 | A4 _e2d2 c2_B2 A2G4^F2 | G8-G2G2 ^F2G6 |]"},"tk_nihavend_1526":{"cat":"tk:nihavend","label":"Nâr-ı Aşkınla Senin… — Rifat Bey (Sermüezzin, Miralay)","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Nâr-ı Aşkınla Senin…\nC:Rifat Bey (Sermüezzin, Miralay)\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:9/4\nL:1/16\nQ:1/4=66\nK:C\n^f2g4_b2 a3b g3a f3g _e3f d2e2 d2c2 _B2A2 | G3A _B2c2 d2_e2 d2c2 B3A AGG^F G4 d2e^f g4 | ^f2g4_b2 a3b g3a f3g _e3f d2e2 d2c2 _B2A2 | G3A _B2c2 d2_e2 d2c2 B3A AGG^F G8 z4 |\nz8 z2G4d2 c3_B A2c2 B2A2 G2B2 A2G2 | A3G ^F2G2 A2_B2 G2A2 B2c2 B2c2 d2{_e}d^c d8 | z2d_e f2g2 f3e d2f2 e3d c2e2 d3c _B4 c2d2 | c4 d4 d2_ef edc2 d3c _Bcde c2d4c2 f2ed |]"},"tk_nihavend_1683":{"cat":"tk:nihavend","label":"Saçlarına Bağlanalı Ey Peri — Rahmi Bey","maqam":["turkish","nihavend",7],"abc":"X:1\nT:Saçlarına Bağlanalı Ey Peri\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=168\nK:C\n_e8-e2e4A2 _B2c2 | d8-d2d2 c2_B2 A2G2 | _e8-e2e4A2 _B2c2 | d4 _e2d2 c2_B2 c2d4z2 |\nf8-f2g2 f2_e2 d2c2 | _e8-e2d2 c2_B2 A2G2 | A2_B2 c2B2 A2B2 A2G4^F2 | G18z2 |]"},"w_ode_joie":{"cat":"w:major","label":"Ode à la joie (Beethoven)","maqam":["western","major",0],"abc":"X:1\nT:Ode à la joie\nC:L. van Beethoven\nM:4/4\nL:1/4\nQ:1/4=110\nK:C\nE E F G | G F E D | C C D E | E3/2 D/2 D2 |\nE E F G | G F E D | C C D E | D3/2 C/2 C2 |]"},"w_clair_lune":{"cat":"w:major","label":"Au clair de la lune","maqam":["western","major",0],"abc":"X:1\nT:Au clair de la lune\nC:Traditionnel\nM:4/4\nL:1/4\nQ:1/4=100\nK:C\nC C C D | E2 D2 | C E D D | C4 |\nC C C D | E2 D2 | C E D D | C4 |\nD D D D | A,2 A,2 | D C B, A, | G,4 |\nC C C D | E2 D2 | C E D D | C4 |]"},"w_frere_jacques":{"cat":"w:major","label":"Frère Jacques","maqam":["western","major",0],"abc":"X:1\nT:Frère Jacques\nC:Traditionnel\nM:4/4\nL:1/4\nQ:1/4=110\nK:C\nC D E C | C D E C | E F G2 | E F G2 |\nG/A/ G/F/ E C | G/A/ G/F/ E C | C G, C2 | C G, C2 |]"},"w_greensleeves":{"cat":"w:minor","label":"Greensleeves","maqam":["western","minor",7],"abc":"X:1\nT:Greensleeves\nC:Traditionnel (Angleterre, XVIe s.)\nS:(2nd/6)\nQ:1/4=120\nL:1/4\nM:C\nS:Bruce Olson (trillian.mit.edu) via abcnotation.com\n% note: Mineur sur Sol ; le Fa♯ (sensible) apparaît aux cadences.\nK:Gm\nB2dB|cAF2|B2GG|A^FD2|B3/2c/2dB|cAFF|BGA^F|G2G2|\\\nf2fd|cAF2|B3/2B/2GG|AFD2|f2fd|cAFF|BGA^F|GGG2|]"},"w_amazing_grace":{"cat":"w:pent_maj","label":"Amazing Grace","maqam":["western","pent_maj",7],"abc":"X:1\nT:Amazing Grace\nC:Traditionnel (air « New Britain », 1831)\nS:Colin Hume's website,  colinhume.com  - chords can also be printed below the stave.\nQ:1/4=112\nM:3/4\nL:1/4\nS:Colin Hume (colinhume.com) via abcnotation.com\n% note: Gamme pentatonique majeure de Sol : Sol La Si Ré Mi (pas de Do ni de Fa♯).\nK:C\nD |  \"G\"G2B/G/ | \"G7\"B2A | \"C\"G2 E | \"G\"D2 \"D7\"D | \"G\"G2 B/G/ | \"Em\"B2A | \"D\"d3- | d2B |\n\"G\"d2 B/G/ | \"G7\"B2A | \"C\"G2E | \"G\"D2 \"D7\"D | \"Em\"G2B/G/ | \"D7\"B2A | \"G\"G3- | G2 |]"},"w_old_joe":{"cat":"w:mixolydian","label":"Old Joe Clark","maqam":["western","mixolydian",9],"abc":"X:1\nT:Old Joe Clark\nC:Traditionnel (Appalaches, États-Unis)\nO:USA; South\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:4/4\nL:1/8\nQ:1/4=200\n% note: Mode mixolydien sur La : un majeur avec la 7e mineure (Sol naturel).\nK:D\n\"A\"e2 f2 g2 f2|e2 d2 c4|e2 f2 g2 f2|\"E\"e4 e2 z2|\"A\"e2 f2 g2 f2|e2 d2 c4|A2 c2 \"G\"B2 G2|\"A\"A4 A2 z2:|\n|:\"A\"A3 A A4|e2 d2 c4|A3 A A2 A2|\"G\"G4 z4|\"A\"A3 A A4|e2 d2 c4|A2 c2 \"G\"B2 G2|\"A\"A4 A2 z2:|"},"w_scarborough":{"cat":"w:dorian","label":"Scarborough Fair","maqam":["western","dorian",4],"abc":"X:1\nT:Scarborough Fair\nC:Traditionnel (Angleterre)\nO:England\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:3/4\nL:1/8\nQ:1/4=120\n% note: Mode dorien sur Mi : comme le mineur, mais avec la 6te majeure (Do♯).\nK:Edor\n\"Em\"E4E2|B4B2|\"D\"F3GF2|\"Em\"E6-|E2 B2d2|e4d2|\"A\"B2c2A2|\"Em\"B6-|B4e2|\n\"Em\"e4e2|\"G\"d4B2|B2A2G2|\"D\"F2D4-|D6|\"Em\"E4B2|\"D\"A4\"G\"G2|\"D\"F2E2D2|\"Em\"E6-|E6:|"},"w_drunken_sailor":{"cat":"w:dorian","label":"Drunken Sailor","maqam":["western","dorian",4],"abc":"X:1\nT:Drunken Sailor\nC:Traditionnel (chant de marins)\nO:England\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:4/4\nL:1/8\nQ:1/4=160\n% note: Mode dorien sur Mi : le Do♯ (6te majeure) fait toute la couleur.\nK:Em\n\"Em\"B2BB B2BB|B2E2G2B2|\"D\"A2AA A2AA|A2D2F2A2|\"Em\"B2BB B2BB|B2^c2d2e2|\"D\"d2B2 A2F2|\"Em\"E4 E2 z2||\n\"Em\"B4 B3B|B2E2G2B2|\"D\"A4 A3A|A2D2F2A2|\"Em\"B4 B3B|B2^c2d2e2|\"D\"d2B2 A2F2|\"Em\"E4 E2 z2|]"},"ar_ajam_zuruni":{"cat":"ar:ajam","label":"Zuruni kulli sana marra — Sayed Darwish","maqam":["oriental","ajam",7.0],"abc":"X:1\nT:Zuruni kulli sana marra\nC:Sayed Darwish\n% note: Maqam Ajam sur Sol.\nM:4/4\nL:1/8\nQ:1/4=90\nK:G\nz4 z2 z D | G2 B3 A2 G | F2 A3 G2 F | E3 F/G/ AGFE | D2 G2 G2 z D |\nG2 B3 A2 G | F2 A3 G2 F | G/F/E/F/ EF/G/ AGFE | D2 B3 A2 G | G2 D e2 d2 c | B2 A2 G4 |]"},"ar_husseini_salma":{"cat":"ar:husseini","label":"Salma ya salama — Sayed Darwish","maqam":["oriental","husseini",2],"abc":"X:1\nT:Salma ya salama\nC:Sayed Darwish\n% note: Maqam Husseini sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:C\n|: D4 | D2 D2 | C2 D2 | D2 C_/B, | CD C_/B, | CD C_/B, | C2 D2 | D2 G,2 :|\nD4 | D2 D2 | C2 D2 | D2 d2 | d2 d2 | =ed d2 | d2 =ed | d2 c2 | dc c_/B | c_/B _/BA | G2 G2 |\nDd dd | =e2 d2 | z d dd | =ed dc | dc c_/B | c_/B _/BA | _/BA AG | GG D2 | z c d2 |\n_/B2 c2 | A2 _/B2 | G2 d2 | _/B2 c2 | A2 _/B2 | G2 A2 | F2 G2 | _/E2 F_/E | GA _/ED |]"},"ar_hijaz_helwa_di":{"cat":"ar:hijaz","label":"El Helwa Di — Sayed Darwish","maqam":["oriental","hijaz",2.0],"abc":"X:1\nT:El Helwa Di\nC:Sayed Darwish\n% note: Maqam Hijaz sur Ré.\nM:2/4\nL:1/8\nQ:1/4=120\nK:Gm\n|: DG ^FG | A2 BA | G2 AG | ^F2 G^F | E2 ^FE | D2 z2 | DG ^FG | A2 A2 |\nA2 d2 | A2 BA | G^F GA | B4 | B B2 A | B3 A | B2 cB | A2 AG | A2 BA |\nG2 G^F | G2 AG | ^F3 E | ^F2 G^F | E3 D | E2 ^FE | D4 :|"},"ar_huzam_tala_al_badru":{"cat":"ar:huzam","label":"Tala'a al-badru 'alayna — trad.","maqam":["oriental","huzam",3.5],"abc":"X:1\nT:Tala'a al-badru 'alayna\nC:trad. (chant de Médine)\n% note: Maqam Huzam sur Mi demi-bémol.\nM:4/4\nL:1/8\nQ:1/4=120\nK:C\n|: _/E2 F2 G4 | _A3 G F2 AG | GFF_/E _/E4 | _/E2 F2 G4 | _A3 G F2 A2 | G8 |\n_/E2 F2 G4 | _A3 G F2 AG | GFF_/E _/E4 | _/E2 F2 G2 _/E2 | F3 _/E DC F2 | _/E8 :|"},"ar_rast_ya_shadi":{"cat":"ar:rast","label":"Ya Shadi al-Alhan — Sayed Darwish","maqam":["oriental","rast",0],"abc":"X:1\nT:Ya Shadi al-Alhan\nC:Sayed Darwish\n% note: Maqam Rast sur Do.\nM:8/4\nL:1/8\nQ:1/4=120\nK:C\n|: c2 c2 _/B2 A2 G4 A4 | _/Bc A_/B c2 _/B/A/G d2 dc dc c_/B |\nc d/c/ _/BA _/B c/_/B/ A3/2G/ G2 GA _B2 BA | c3/2_B/ AB GG A3/2G/ F2 _AG =BA GF |\n_/E=D _/EF G2 GG C2 F3/2_/E/ D2 _/E3/2D/ | CD _/EF G A/_/B/ c2 z G2 F _/E3/2D/ C2 |\nAF G_/E FD _/E3/2D/ CF F/_/E/D _/E3/2D/ C2 :|"},"ar_ajam_biladi":{"cat":"ar:ajam","label":"Biladi, biladi, biladi — Sayed Darwish","maqam":["oriental","ajam",5.0],"abc":"X:1\nT:Biladi, biladi, biladi\nC:Sayed Darwish\n% note: Maqam Ajam sur Fa.\nM:4/4\nL:1/8\nQ:1/4=100\nK:F\nC/ |: F2 F3/2C/ F2 (3FEF | G3 A F2 AB | c2 A3/2G/ FA GA |[1 F2 E3/2G/ F2 z z/C/ :|[2 F2 E3/2G/ F2 A3/2A/ |\nA2 GF B2 A3/2G/ | G4- G z B3/2B/ | B2 AG c2 B3/2A/ | A3 G F z A3/2A/ | A2 GF B2 A3/2G/ |\nG3 A/B/ c2 c3/2c/ | c2 A3/2G/ FA GA | F2 E3/2G/ F4 |]"},"ar_kurd_aho_da":{"cat":"ar:kurd","label":"Aho da elli sar — Sayed Darwish","maqam":["oriental","kurd",9.0],"abc":"X:1\nT:Aho da elli sar\nC:Sayed Darwish\n% note: Maqam Kurd sur La.\nM:4/4\nL:1/8\nQ:1/4=100\nK:F\n|: A,2 GA G2 A2 | z A2 c BAGF | EDCD E/F/E/D/ E2 | D E2 F G E/F/ G2 | A G2 F E2 CD | E C2 D CB,B,A, :|\nA, A/G/ ^/FG A2 FG |: A2 D/G/G/A/ A2 A2 | A2 Gc BA A2 | z z/A3/2 A G/F3/2 F2 | C2 FF/E/ G2 F2 :|\nz E2 F G3 G | GGFG A2 A2 | cBAG FECD | E2 CD CB,B,A, | A,2 z2 z4 |]"},"ar_kurd_ya_bahjat":{"cat":"ar:kurd","label":"Ya Bahjat el-Rouh — Sayed Darwish","maqam":["oriental","kurd",2],"abc":"X:1\nT:Ya Bahjat el-Rouh\nC:Sayed Darwish\n% note: Maqam Kurd sur Ré.\nM:6/8\nL:1/8\nQ:3/8=60\nK:Gm\nDD EF G z | FF/_/E/ FF/_/E/ F2 | FB B/A/G G z | DE z/D/C B, z | B,C B,A, G, z |\n|: DD EF G z | B,C z/B,/A, G, z :| FF/_/E/ FF/_/E/ F2 | F B2 A G/G3/2 | DD EF G2 | B,C B,A, G,2 |\n|: CC/C/ CC DC | C C/D/ C/_B,/=A,/_B,/ C z :| z C/C/ D_/E F3/2_/E/ | D _/E/F/ D/_/E/ C D2 |\n|: G G/^F/ G G/F/ G/F/E | D E/^F/ D/E/C D2 :| B,C B,A, G,2 |]"},"ar_ajam_telet":{"cat":"ar:ajam","label":"Tal'et ya mahla nurha — Sayed Darwish","maqam":["oriental","ajam",0.0],"abc":"X:1\nT:Tal'et ya mahla nurha\nC:Sayed Darwish\n% note: Maqam Ajam sur Do.\nM:4/4\nL:1/8\nQ:1/4=110\nK:C\nz2 E2 D2 C2 | DEDC CB, C2 | G,2 C2 D2 E2 | D2 CE D4 | C2 CD EFED | D/C/D/E/ DC C2 G,2 | G2 GF E2 ED | D/C/D/E/ DC C4 |\nz2 EF GFEF | GFEF G2 C2 | C2 A2 A2 G2 | F3/2G/ EF G4 | z2 FG AGFE | GFED FE D2 | z2 CD E/D/E/F/ ED | D/C/D/E/ DC C4 |]"},"ar_hijaz_ah_ya_zein":{"cat":"ar:hijaz","label":"Ah ya zein — trad.","maqam":["oriental","hijaz",0],"abc":"X:1\nT:Ah ya zein\nC:trad. (chanson populaire)\n% note: Maqam Hijaz sur Do.\nM:4/4\nL:1/8\nQ:1/4=100\nK:C\nEF | G6 EF | G6 EF | G_A GF GA GF | E6 _AG | F6 EF | G_A GF E_D C2 | GF FE E_D DC | C6 EF |\nG_A GF E_D C2 | GF FE E_D DC | C6 z2 |]"},"ar_nahawand_sidi_mansour":{"cat":"ar:nahawand","label":"Sidi Mansour — trad.","maqam":["oriental","nahawand",2.0],"abc":"X:1\nT:Sidi Mansour\nC:trad. (Tunisie)\n% note: Maqam Nahawand sur Ré.\nM:2/4\nL:1/8\nQ:1/4=110\nK:F\n|: DA AA | A3/2A/ GA | GE EE | E3/2D/ CD :| DD DD | E3/2D/ CD | DD DD | E3/2D/ CD ||\n|: DA AG | F2 CD | DF GA | F2 CD | DF GA | F2 CD :|"},"ar_hijaz_fog_el_nakhal":{"cat":"ar:hijaz","label":"Fog el-nakhal — Othman al-Mawsili","maqam":["oriental","hijaz",2],"abc":"X:1\nT:Fog el-nakhal\nC:Othman al-Mawsili (Irak)\n% note: Maqam Hijaz sur Ré.\nM:4/4\nL:1/8\nQ:1/4=90\nK:Gm\n|: z2 DG G2 G2 | ^FGAG G2 FG | ABAG AG^FE | z ^F z F GFED :|\nAGG^F FEED | E2 C_B, B,2 A,2 | cBB^F FEED | DE^FG cA B2 |\nz BBA AGG^F | z AAG G^FFE | z BB^F FEED | DE^FG cA B2 |]"},"ar_rast_ya_mal_el_sham":{"cat":"ar:rast","label":"Ya mal el-Sham — trad.","maqam":["oriental","rast",0],"abc":"X:1\nT:Ya mal el-Sham\nC:trad. (Alep)\n% note: Maqam Rast sur Do.\nM:4/4\nL:1/8\nQ:1/4=108\nK:C\n|: z cc_/B c3/2_/B/ A2 | _/B2 c2 _/B3/2A/ G2 | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 :|\nz ccc d3 d | d2 dd d3/2c/ _/B/A/G | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 |\nz cc_/B c_/B A2 | _/B2 c2 _/B3/2A/ G2 | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 |]"},"ar_hijaz_qadduka":{"cat":"ar:hijaz","label":"Qadduka al-mayyas — Omar al-Batsh","maqam":["oriental","hijaz",2.0],"abc":"X:1\nT:Qadduka al-mayyas\nC:Omar al-Batsh (muwashshah, Alep)\n% note: Maqam Hijaz sur Ré.\nM:4/4\nL:1/8\nQ:1/4=100\nK:Gm\n|: D z dd d2 dc | c d/_/e/ dc _/B2 cB | A2 A_/B cd c/_/B/A | Bc B/A/G A2 _B3/2A/ |\nGd dd d2 dc | c d/_/e/ dc _/B2 c_/B | A2 A_/B cd c/_/B/A | Bc B/A/G A2 _B3/2A/ |\nG2 GA B2 BA | cBAG ^FGAG | ^F2 FG AG GF | G3 ^F E2 F2 | G4 G2 E2 :| D4 z4 |]"},"ar_husseini_ya_zarif":{"cat":"ar:husseini","label":"Ya zarif el-tool — trad.","maqam":["oriental","husseini",2.0],"abc":"X:1\nT:Ya zarif el-tool\nC:trad. (Palestine)\n% note: Maqam Husseini sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:F\nCD DD | _/E2 FF | _/E_/E D2 | CD DD | _/E2 FF | _/E_/E D2 ||\n|: GG GG | G2 GG | FF _/E2 | CD DD | _/E2 FF | _/E_/E D2 :|"},"ar_bayati_wain_a_ramallah":{"cat":"ar:bayati","label":"Wain a Ramallah — trad.","maqam":["oriental","bayati",2.0],"abc":"X:1\nT:Wain a Ramallah\nC:trad. (Palestine)\n% note: Maqam Bayati sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:F\nF3/2D/ _/EC | D2 D2 | F3/2D/ _/EC | DE FG | GF G_/E | F3/2D/ _/EC | D2 D2 ||\n|: G2 GG | F2 _/E2 | G2 GG | F_/E D2 | B3/2A/ B_/E | AD _/EC | D2 D2 :|"},"ar_ajam_el_katra":{"cat":"ar:ajam","label":"El Katra — Sayed Darwish","maqam":["oriental","ajam",5.0],"abc":"X:1\nT:El Katra\nC:Sayed Darwish\n% note: Maqam Ajam sur Fa.\nM:4/4\nL:1/8\nQ:1/4=110\nK:F\n|: C F2 G A2 FE | D2 A2 A4 | cB BA AG GF | FE DE FG F2 :|\nF F2 F FE ED | D2 CD E2 E2 | E E2 D DC CB, | CB, A,B, C2 C2 | C2 B,C D2 CD |\nE2 DE F2 FA | A A2 G AG GF | BA AG AB cB | F2 C2 F2 z2 |]"},"ar_kurd_mahsobko":{"cat":"ar:kurd","label":"Mahsobko endas — Sayed Darwish","maqam":["oriental","kurd",2.0],"abc":"X:1\nT:Mahsobko endas\nC:Sayed Darwish\n% note: Maqam Kurd sur Ré.\nM:2/4\nL:1/8\nQ:1/4=120\nK:Gm\n|: z C DE | F3/2E/ DE | F3/2E/ DE | F3/2E/ GB | z C DE | F3/2E/ GE | F3/2D/ EC | D A/B/ A/G/F/E/ :|\n|: z G FG | F3/2E/ DE | F3/2E/ DE | FE/F/ G2 | z C DE | F3/2E/ GE | F3/2D/ EC | D4 :|\nd2 A3/2G/ | FG A2 | dd A3/2G/ | FG A2 | d2 A3/2G/ | FG A2 | dd A3/2G/ | FG AB | AG FG | AB Hc2 |\nz C DE | F3/2E/ GE | F3/2D/ EC | D4 |]"},"ar_hijaz_shedd_el_hizam":{"cat":"ar:hijaz","label":"Shedd el-hizam — Sayed Darwish","maqam":["oriental","hijaz",6],"abc":"X:1\nT:Shedd el-hizam\nC:Sayed Darwish\n% note: Maqam Hijaz sur Fa♯.\nM:2/4\nL:1/8\nQ:1/4=110\nK:C\nz ^c ^AG | ^FEFG | ^ABAG | ^F4 | z ^c ^AG | ^FEFG | ^ABAG | ^F4 |\nz B BB | ^AB ^c2 | ^cd ^cB | ^AB ^c2 | z ^c ^AG | ^FEFG |[M:3/4] ^AB ^c3/2A/ B3/2B/ |[M:2/4]\n^FF B^c | d^c B^A | B4 | B4 | z f ^cd | B^A G^F | E4 | E4 | z e d^c | B^A GA | B4 | B4 |\nz f ^cB | B^A G^F | E4 | E4 | E2 ^FF | GG ^AA | BB ^cd | ed ^c^A | B2 ^f2 | de ^cd | B4 |]"},"ar_ajam_tafta_hindi":{"cat":"ar:ajam","label":"Tafta hindi — trad.","maqam":["oriental","ajam",2.0],"abc":"X:1\nT:Tafta hindi\nC:trad. (chanson populaire égyptienne)\n% note: Maqam Ajam sur Ré.\nM:2/4\nL:1/8\nQ:1/4=110\nK:C\n|: dd AA | dd AA | AA Bd | ^cB A2 :| BB c/B/A | z4 | AA/A/ B/A/G | Gc d2 |]"},"ar_huzam_ya_ghusna_naqa":{"cat":"ar:huzam","label":"Ya ghusna naqa — Abu Khalil al-Qabbani","maqam":["oriental","huzam",3.5],"abc":"X:1\nT:Ya ghusna naqa\nC:Abu Khalil al-Qabbani (muwashshah, Damas)\n% note: Maqam Huzam sur Mi demi-bémol.\nM:3/4\nL:1/8\nQ:1/4=90\nK:F\n|: dc c=B B_A | _AG F G2 A | =B2 G2 _AF |[1 _/E _/E/D/ C D _/E3/2 z/ :|[2 _/E=B _Bc =B3/2 z/ |\n=B2 B2 BB | c=B _B=B _B=B | c=B _B=B _B=B | c2 =B_A G2 |\n|: dc c=B B_A | _AG F G2 A | =B2 G2 _AF | _/E _/E/D/ C D _/E3/2 z/ :|"},"ar_husseini_billathi_askara":{"cat":"ar:husseini","label":"Billathi askara — trad.","maqam":["oriental","husseini",2],"abc":"X:1\nT:Billathi askara\nC:trad. (muwashshah)\n% note: Maqam Husseini sur Ré.\nM:6/8\nL:1/8\nQ:1/4=88\nK:C\n|: z2 AA A2 | z AA_/B c2 | AGF AG2 :| |: z2 FG A2 | F2 _/E FGF | _/EDC _/ED2 :|"},"ar_rast_dulab_rast":{"cat":"ar:rast","label":"Dulab Rast — trad.","maqam":["oriental","rast",0],"abc":"X:1\nT:Dulab Rast\nC:trad. (Égypte)\n% note: Maqam Rast sur Do.\nM:4/4\nL:1/8\nQ:1/4=120\nK:C\n|: c2 c2 G2 G2 | _/EF_/ED CGA_/B | c2 c2 G2 G2 | _/EF_/ED C2 D_/E | F3 _/E _/EDDC |[1 C2 z2 z GA_/B :|[2 C2 FF F2 F2 |\n|: C F2 G FG F3/2_/E/ | D _/E2 F _/EF _/E3/2D/ | C D2 F _/EDC_/B, |[1 CD_/EF G_/E F2 :|[2 C2 G,2 C2 D2 |\n_/E2 C2 D2 _/B,2 | C8 |]"},"ar_bayati_dulab_bayati":{"cat":"ar:bayati","label":"Dulab Bayati — trad.","maqam":["oriental","bayati",2],"abc":"X:1\nT:Dulab Bayati\nC:trad. (Égypte)\n% note: Maqam Bayati sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:C\nz A _/Bc |: d2 c2 | d2 _B2 | A2 G2 | z G A_B | c2 =B2 | c2 A2 | G2 F2 | z F GA | _B2 A2 |\n_B2 G2 | F2 _/E2 | z D _/EF | G2 FG | F2 _/EG | F_/E _/ED |[1 DA _Bc :|[2 d2 c_B | AG F_/E |\nD2 _/EF | _/E2 F3/2_/E/ | HD4 |]"},"ar_saba_dulab_saba":{"cat":"ar:saba","label":"Dulab Saba — trad.","maqam":["oriental","saba",2.0],"abc":"X:1\nT:Dulab Saba\nC:trad. (Égypte)\n% note: Maqam Saba sur Ré.\nM:4/4\nL:1/8\nQ:1/4=132\nK:F\nAB | c_d cB AB A_G | F_G F_/E D2 AB | c_d cB AB A_G | F_G F_/E D2 AB | c_d cB AB A_G | F_G F_/E DC D_/E | F_G2 F F_/E _/ED |\n|: D2 _GF GF G2 | F_G2 A GA GF | _/E F2 _G FG F_/E | D _/E2 _G F_/E _/ED :|\nD z C z _G z G z | F3 _/E D_/E/F/ _/ED | D2 _/ED _/E2 F2 | _G2 F_/E F2 _/ED | C4 {_/E}D4 |]"},"ar_rast_tahmila_suznak":{"cat":"ar:rast","label":"Tahmila Suznak (début) — trad.","maqam":["oriental","rast",0],"abc":"X:1\nT:Tahmila Suznak (début)\nC:trad. (anonyme)\n% note: Maqam Rast sur Do.\nM:2/4\nL:1/16\nQ:1/4=70\nK:C\n|: AGA_/B A2G2 | GFGA G2F2 | F_/EFG F2_/E2 | _/EDEF _/E2D2 | DCD_/E D2C2 | C2G,2 C2D2 |\n_/E2FG _/EF_/ED | _/E2FG _/EF_/ED | _/E2F2 GAGF | _/EF_/ED C2G2 | C2G2 F2G2 | A2GF _/ED_/EF |\nG2F_/E DCD_/E | F2_/ED C2G2 | G2FG F2_/E2 | D_/E F3 _/EDC | C4 _/E2F2 | _/E2D2 _/E2F2 :|"},"ar_iraq_melodie_iraq":{"cat":"ar:iraq","label":"Mélodie en Iraq (rythme Rawan shami) — trad.","maqam":["oriental","iraq",10.5],"abc":"X:1\nT:Mélodie en Iraq (rythme Rawan shami)\nC:trad. (Syrie, noté par J. Rouanet, 1922)\n% note: Maqam Iraq sur Si demi-bémol.\nM:none\nL:1/8\nQ:1/4=80\nK:C\n(3C_/B,C D4 (3C_/B,C D4 F2 _/ECD_/E FGF_/E _/EFF_/E D2 (3C_/B,C D4 |\n(3C_/B,C D4 F2 _/EC D_/EDC _/B,2 ||\nG2 G4 (3F_/EF G4 (3F_/EF G4 A2 GF | _/EGF_/E D3 F G4 (3F_/EF G4 (3F_/EF G4 A2 GF | _/EGF_/E D3 F F_/E D2 ||\n(3C_/B,C D4 (3C_/B,C D4 F2 _/ECD_/E FGF_/E _/EFF_/E D2 (3C_/B,C D4 |\n(3C_/B,C D4 F2 _/EC D_/EDC _/B,2 |]"},"an_sika_kadria_sika":{"cat":"an:sika","label":"Kadria sika « Mada nehebek » — trad.","maqam":["andalous","sika",11.0],"abc":"X:1\nT:Kadria sika « Mada nehebek »\nC:trad. (sanâa d'Alger)\n% note: Mode Sika sur Si.\nM:3/4\nL:1/8\nQ:1/4=126\nK:G\nABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 z e |\nfg (3gfe d^c | d^c de f2 | d2 de f2 | ga f(3g/f/e/ f2 | g2 (3gfe d^c | d2 z2 dd |\ng3 e^de | f2 g/f/e/^d/ cd | e2 f/e/^d/c/ BA | B2 cdcd | B2 z2 Bc | ded^c d2 | d2 (3cdc B2- | B6 |]"},"an_sika_el_ked":{"cat":"an:sika","label":"El ked el ladi sabani — trad.","maqam":["andalous","sika",11.0],"abc":"X:1\nT:El ked el ladi sabani\nC:trad. (neklab du mode sika, Alger)\n% note: Mode Sika sur Si.\nM:2/4\nL:1/8\nQ:1/4=110\nK:G\nz2 gg | g2 g2 | f2 e2 | fgfe | d2 e2 | fgfe | d2 e2 | fgfe | d4- | d2 z2 |\nA2 B2 | c2 d2 | e2 c2 | d3 c | B4 | G4 | ABcd | B4- | B2 z2 |\nB2 c2 | d2 B2 | c2 A2 | cdcd | B4 | G4 | ABcA | B4- | B2 z2 |]"},"an_sika_ghouzili":{"cat":"an:sika","label":"Ghouzili sekkour nabet — trad.","maqam":["andalous","sika",11.0],"abc":"X:1\nT:Ghouzili sekkour nabet\nC:trad. (neklab du mode sika, Alger)\n% note: Mode Sika sur Si.\nM:2/4\nL:1/8\nQ:1/4=110\nK:G\nz2 z B | B2 A/B/A/G/ | F3 G | A/B/G/A/ F/G/E/F/ | D2 z G | F/G/E/F/ D/E/C/D/ | FE^DC | B,2 z2 |\nz2 z b | b2 a/b/a/g/ | ff z g | a/b/g/a/ f/g/e/f/ | dd z (3g/a/g/ | f/g/e/f/ ^d/e/c | f/g/e/f/ ^d/e/c/d/ | B4 |]"},"an_zidane_kadria_zidane":{"cat":"an:zidane","label":"Kadria zidane « Nedjma » — trad.","maqam":["andalous","zidane",9.0],"abc":"X:1\nT:Kadria zidane « Nedjma »\nC:trad. (sanâa d'Alger)\n% note: Mode Zidane sur La.\nM:3/4\nL:1/8\nQ:1/4=120\nK:F\nz2 z2 z3/2A/ | B3/2A/ G2 A2 | A2 A2 A3/2A/ | B3/2A/ G2 A2 | A2 A2 A3/2A/ | B3/2A/ G2 A2 |\nA2 A2 E2 | ED^CB,A,G, | A,B,^CD ^C2 | G,2 A,B, ^C2 | D2 E2 F2 | ED^CB,A,G, |\nA,2 z2 ^C2 | ^C2 E2 ^CB, | A,2 A,2 EE | D^CB,A,A,B, | ^C2 DB, G,2 | A,6 |]"},"an_zidane_ya_racha":{"cat":"an:zidane","label":"Ya racha el fitane — trad.","maqam":["andalous","zidane",9.0],"abc":"X:1\nT:Ya racha el fitane\nC:trad. (neklab du mode zidane, Alger)\n% note: Mode Zidane sur La.\nM:2/4\nL:1/8\nQ:1/4=120\nK:F\nB3/2A/ GG | AA/A/ AA | B3/2A/ GG | AA/A/ AA |\nz ^c cd | (e/f/e/f/ e/f/e/f/) | e f2 d | (e/f/e/f/ e/f/e/f/) | e f//e//^c/ d2 | e4- | e2 z2 |\na3 ^f | =b3 c' | =b/a/^g/f/ e^f | (g/a/g/a/ g/a/g/a/) | ^f2 a2 | e2 g^f/g/ | ^f3/2e/ d2 |]"},"an_zidane_ouana_ghadi":{"cat":"an:zidane","label":"Ouana ghadi ellala (zendani) — trad.","maqam":["andalous","zidane",9.0],"abc":"X:1\nT:Ouana ghadi ellala (zendani)\nC:trad. (Alger)\n% note: Mode Zidane sur La.\nM:3/4\nL:1/8\nQ:1/4=144\nK:F\nefde ^c(3d/c/B/ | AABB^cd | (3e/f/e/ d dd z d | (3e/f/e/ d (3^c/d/c/ B cd |\n(3e/f/e/ d (3^c/d/c/ B A2 | ^c/d/e/d/c/B/ A z A | e/e/e/e/ ea ea | ea (3efg (3efg |\nef^gf (3e/f/e/ d | f/g/e/g/ d/e/^c d2 | efde ^c(3d/c/B/ | AABB^cd |\n(3e/f/e/ d d2 z d | (3e/f/e/ d (3^c/d/c/ B cd | (3e/f/e/ d (3^c/d/c/ B AA/B/ | G^F G2 A2 |]"},"an_arak_kadria_arak":{"cat":"an:arak","label":"Kadria aârak « Semra » — trad.","maqam":["andalous","arak",7],"abc":"X:1\nT:Kadria aârak « Semra »\nC:trad. (sanâa d'Alger)\n% note: Mode Arak sur Sol.\nM:3/4\nL:1/8\nQ:1/4=126\nK:C\nz4 z G/A/ | BcBc B(3A/B/A/ | G^F G2 z G/A/ | BcBc B(3A/B/A/ | G^F G2 z G/A/ |\n^FDEF GA/B/ | G2 B2 z2 |\nz c Bc d/c/B/A/ | G^FG F GA | B/A/B/G/ ^F2 GA | B2 cd B/A/G/A/ |\nBd c2 d/c/B/A/ | G^F G2 z2 | GA B2 cd | cB d2 cB | G^F G2 G=F/E/ |\n=F2 GA B/c/d/c/ | (3BAG =F z GA | B2 cd BA | Bc Bc BA | G^F G2 z2 |]"},"an_arak_djatni_bria":{"cat":"an:arak","label":"Djatni bria (zendani) — trad.","maqam":["andalous","arak",9.0],"abc":"X:1\nT:Djatni bria (zendani)\nC:trad. (Alger)\n% note: Mode Arak sur La.\nM:3/4\nL:1/8\nQ:1/4=138\nK:D\nd{e}c {d}B3 B/B/ | Bc {d}B3 A/A/ | BABc ed/e/ | c/d/B {B}A3 A/A/ |\nBB cc de | dd BB {B}A2 | AB GG FF | A A/B/ G/A/F/G/ E2 |\nz E FF GG | A A/A/ AB c/d/c/B/ | A A/A/ AA dd | dc de/d/ cd |\ncd Bc/B/ A3/2A/ | B{c}A Bc ed/e/ | c/d/B/c/ A^G A2 |]"},"an_raml_maya_kadria_remel_maia":{"cat":"an:raml_maya","label":"Kadria remel maïa « Oueqfi » — trad.","maqam":["andalous","raml_maya",11.0],"abc":"X:1\nT:Kadria remel maïa « Oueqfi »\nC:trad. (sanâa d'Alger)\n% note: Mode Raml Maya sur Si.\nM:3/4\nL:1/8\nQ:1/4=126\nK:D\nB2 B2 c3/2B/ | A2 B2 B2 | B2 B2 c3/2B/ | A2 B2 B2 | B2 B2 c3/2B/ | A2 B2 B2 |\nB2 B2 B2 | d2 BABc | d2 ec A2 | Bcdedc | d2 d2 c2 | BcBc B z |\nBcdedc | B3 A d2 | A2 AA A2 | d2 BABc | d2 ec A2 | Bcdedc |\nd3 c c2 | BcBc B z | Bcdedc | B3 A d2 | A2 AA A2 | d2 BABc |\nd2 ec A2 | Bcdedc | d3 c c2 | BcBc B z | Bcdedc | B3 A dc | B2 z2 d2 |\nd2 c4 | Bcde d2 | dced c2 | cBdc B2 | B6 |]"},"an_raml_maya_kadria_remel_maia2":{"cat":"an:raml_maya","label":"Kadria remel maïa « Tmenit » — trad.","maqam":["andalous","raml_maya",9.0],"abc":"X:1\nT:Kadria remel maïa « Tmenit »\nC:trad. (sanâa d'Alger)\n% note: Mode Raml Maya sur La.\nM:3/4\nL:1/8\nQ:1/4=120\nK:G\nz2 z2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ |\ncBAGFG | A2 A2 A3/2A/ | cBAGFG | AGE^DCB, | A,^G,A,B,CB, |\nA,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z E GF | GFED C2 |\nD3 EFG | EDCB,A,^G, | A,3 B,CB, | A,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z2 G,2 |\nC4 D2 | E3 DEG | EDCB,A,^G, | A,3 B,CB, | A,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z2 GF |\nG3/2A/ G2 C2 | D2 B,2 C2 | D4 ED | C3 CDC | B,3 B,CB, | A,6 |]"},"an_raml_maya_entoum_chehoudi":{"cat":"an:raml_maya","label":"Entoum chehoudi (zendani) — trad.","maqam":["andalous","raml_maya",11.0],"abc":"X:1\nT:Entoum chehoudi (zendani)\nC:trad. (Alger)\n% note: Mode Raml Maya sur Si.\nM:4/4\nL:1/8\nQ:1/4=138\nK:D\nefef dede | c/d/B/c/ AA BB cc | e/d/e/c/ d/B/c/A/ A2 AA | A2 (3AAA BB cc |\ndd z c dd z c | defa g/a/f/g/ e/f/d/e/ | {d}=cc c/d/c/B/ cc c z |\nefef dede | cBAA BABc | e/d/e/c/ d/c/B/c/ A2 AA | BBcc de d/e/=c/d/ | BABA =cd c/d/B/c/ | A^GAA B2 z2 |]"},"an_moual_djar_el_haoua":{"cat":"an:moual","label":"Djar el haoua ouah'rek — trad.","maqam":["andalous","moual",0.0],"abc":"X:1\nT:Djar el haoua ouah'rek\nC:trad. (chanson du mode moual, Alger)\n% note: Mode Moual sur Do.\nM:2/4\nL:1/8\nQ:1/4=126\nK:G\nz2 cd | BGAB | c2 cd | BGAB | c2 cd | eg/f/ ed | c2 cd | eg/f/ ed | c2 cc | c2 cc |\nz2 z e | =f2 e2 | de/d/ cd/c/ | B2 de | c2 z2 | z4 |\nz2 z e | =f2 e2 | de/d/ cd/c/ | B2 de | {d}c2 z g | g/f/g/f/ ef | g/a/g/a/ g/a/g/f/ | e2 cf |\ng/a/g/a/ g/a/g/f/ | e2 z g | g/f/e/d/ cc | e/f/e/f/ e/f/e/d/ | e2 a2 | g4 | g2 z2 |\na3 a | g3 e | d3 e | =f z a2 | g2 e2 | dcde | c4 |]"},"an_moual_kadria_dil":{"cat":"an:moual","label":"Kadria dil « Khedek » — trad.","maqam":["andalous","moual",0.0],"abc":"X:1\nT:Kadria dil « Khedek »\nC:trad. (sanâa d'Alger)\n% note: Mode Moual sur Do.\nM:3/4\nL:1/8\nQ:1/4=120\nK:G\nz2 z2 cB/A/ | B2 G2 c2 | c2 c2 cB/A/ | B2 G2 c2 | c2 c2 cB/A/ | B2 G2 c2 |\nc2 A2 G/F/E/D/ | CB,CDED | C2 CD E2 | F2 G2 A2 | G2 EDCB, |\nC2 z2 z2 | D3 EFG | E2 z2 AG | (3GFE FDCB, | CB,CDED |\nC2 CD E2 | F2 G2 A2 | G2 EDCB, | C2 z2 z2 | D3 EFG | E2 A2 AG |\n(3GFE FDCB, | CB,CDED | C2 CD E2 | F2 G2 A2 | G2 EDCB, |\nC2 z2 B,2 | C2 D2 D2- | D2 D2 E2 | F2 G2 A2 | G2 F2 E2 | A2 GFED | C6 |]"},"an_moual_kadria_zendani":{"cat":"an:moual","label":"Kadria zendani — trad.","maqam":["andalous","moual",7.0],"abc":"X:1\nT:Kadria zendani\nC:trad. (Alger)\n% note: Mode Moual sur Sol.\nM:3/8\nL:1/8\nQ:3/8=96\nK:D\nz AB | cde | d3/2B/c/d/ | B3/2B/c/A/ | BAB | cde | d3/2B/c/d/ | B BB | eed | B=cB |\nAGF | GGG | =cBA | GAA | ABd | BBG | ABA | GFE | DEF | G z z |]"},"an_moual_kadria_zendani6":{"cat":"an:moual","label":"Kadria zendani (n°6) — trad.","maqam":["andalous","moual",0.0],"abc":"X:1\nT:Kadria zendani (n°6)\nC:trad. (Alger)\n% note: Mode Moual sur Do.\nM:3/4\nL:1/8\nQ:1/4=138\nK:G\n|: z2 efga | gg/g/ gf g/a/g | ee/e/ ed e/f/g/a/ | gg/g/ gf ag | gagf=fg |\nee/e/ ee g(3a/g/f/ | =fe f(3a/b/a/ g(3a/g/f/ | ee a/g/f/g/ e/f/d/e/ | c2 (3c/B/A/ B B2 | d3/2e/ c2 z2 :|"},"an_mezmoum_ya_lil":{"cat":"an:mezmoum","label":"Ya lil, ya lil (zendani) — trad.","maqam":["andalous","mezmoum",7.0],"abc":"X:1\nT:Ya lil, ya lil (zendani)\nC:trad. (Alger)\n% note: Mode Mezmoum sur Sol.\nM:3/4\nL:1/8\nQ:1/4=138\nK:G\nz2 z2 Gc/c/ | cB (3c/d/c/ B cd | B/c/A/B/ GG A(3B/A/G/ | ABcd c/d/B/c/ |\nAA/A/ AB GG | AA/A/ AB cd | B/c/A/B/ G^F GA | Bc d/e/c/d/ B/c/A/B/ | G^F G2 z2 |]"},"an_djarka_mahma":{"cat":"an:djarka","label":"Mahma lekhter fel moudelel — trad.","maqam":["andalous","djarka",9.0],"abc":"X:1\nT:Mahma lekhter fel moudelel\nC:trad. (neklab du mode djorka, Alger)\n% note: Mode Djarka sur La.\nM:2/4\nL:1/8\nQ:1/4=100\nK:D\nz2 AB | ^GEFG | A2 AB | ^GEFG | A2 AB | ^GEFG | A2 AB |\nEE C2 | ^D2 E2 | EFEC | A,2 E2 | E2 ^D2 |\nEF^GA | ^GF E2 | E2 E2 | ^D2 E2 | E3/2E/ D2 | ^GBAG | ^GAFG | EFED |\nC2 A,2 | E2 ED | DD C2 | A,2 D3/2D/ | F2 E2 | E2 DC | B,CDB, | E2 A,2 |\nE2 A,2 | B,2 C2 | C2 D3/2D/ | F2 E2 | E2 DC | B,CDB, | E2 A,2 |]"},"an_arak_tchenebar_arak1":{"cat":"an:arak","label":"Tchenebar neklabat aârak — n°1 — trad.","maqam":["andalous","arak",9.0],"abc":"X:1\nT:Tchenebar neklabat aârak — n°1\nC:trad. (Alger)\n% note: Mode Arak sur La.\nM:2/2\nL:1/8\nQ:1/2=66\nK:D\nABcA BB cc |: dd z(3e/f/e/ dd z d | AB=cd cBAG | AB=ce dB GG | Bcde ddcc | dded eg ee |\ndd z e =ccdd | BB=cd BcAB | GFGA BB cc | dd z(3e/f/e/ dd z d | AB=cd cBAG | AB=cd BcAB |\nGFGG A A/A/ A2 |[1 BB cc dd ee | ccdd dABc | BdcB A z e2 | dcBA BB cc :|[2 BB cc dd z c | ddcc z ABA | Bd e/d/c/B/ A2 z2 |]"},"an_sika_tchenebar_sika1":{"cat":"an:sika","label":"Tchenebar neklabat sika — n°1 — trad.","maqam":["andalous","sika",4.0],"abc":"X:1\nT:Tchenebar neklabat sika — n°1\nC:trad. (Alger)\n% note: Mode Sika sur Mi.\nM:2/4\nL:1/8\nQ:1/4=120\nK:G\nc3/2c/ dd | e/e/e eg | (3e/f/e/ d cc | dd/d/ de | d/c/B/A/ GG |\nee/f/ dd | ef/g/ ec | c/c/c d/d/d | e=f/f/ fe | =fg e/e/e | d/d/d de |\nd/c/B/A/ GG | e/e/e d/d/d | e/e/e/e/ e/e/e/e/ | c/c/c d/d/d | e=f/f/ fe | =fg e/e/e |\nd/d/d dc | (3d/e/d/ c d3/2e/ | c/c/c cB | (3d/e/d/ c c3/2d/ | B/B/B Bc | (3A/B/A/ G AB/A/ |\nG G/G/ GF | G3/2{A}F/ GG | e/=f/e/f/ d/e/d/e/ | c/d/c/d/ B/c/B/c/ | A/B/A/B/ G/F/G | G4 |]"},"an_raml_maya_remel1":{"cat":"an:raml_maya","label":"Touchiat Remel — n°1 — trad.","maqam":["andalous","raml_maya",9.0],"abc":"X:1\nT:Touchiat Remel — n°1\nC:trad. (nouba gharnata, Alger)\n% note: Mode Raml Maya sur La.\nM:2/4\nL:1/8\nQ:1/4=88\nK:Am\n(A/A/A) AA | (B/A/B) AA | (B/A/B) (c/B/c) | dd/c/ de |\nf (3g/a/g/ fa | gf/e/ d(e/f/ | d/e/c/d/ B/c/A/B/) | (B/A/G) GG |\n(A/A/A) AA | (B/A/B) AA | (B/A/B) (c/B/c) | d/d/d dd |\n(g/a/g/a/ g/f/e) | (f/g/f/g/ f/e/d) | (e/f/e/d/ c/B/c) | dd/d/ dd :|"},"an_raml_maya_remel2":{"cat":"an:raml_maya","label":"Touchiat Remel — n°2 — trad.","maqam":["andalous","raml_maya",4.0],"abc":"X:1\nT:Touchiat Remel — n°2\nC:trad. (nouba gharnata, Alger)\n% note: Mode Raml Maya sur Mi.\nM:2/4\nL:1/8\nQ:1/4=88\nK:G\nd3/2d/ ef | g3/2g/ gg | c3/2c/ ef | g3/2g/ gg | cc (e/d/e/f/ | g)a (g/a/f/g/ |\n(e/f/d/e/) cc | z c (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) | gg fd | ef (ga/b/ |\ng/a/f/g/ e/f/d/e/) | c3/2c/ ef | g3/2g/ gg | c3/2c/ ef | g3/2g/ gg |\ncc (e/d/e/f/ | g)a (g/a/f/g/ | e/f/d/e/) cc | z c (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) |\ng (3g/a/g/ (e/f/g/a/) | gg fd | ef (ga/b/ | g/a/f/g/ e/f/d/e/) | c3/2c/ z/=f/g |]"},"an_moual_mestekhber_moual":{"cat":"an:moual","label":"Mestekhber moual — trad.","maqam":["andalous","moual",0.0],"abc":"X:1\nT:Mestekhber moual\nC:trad. (prélude du mode moual, Alger)\n% note: Mode Moual sur Do.\nM:2/4\nL:1/8\nQ:1/4=120\nK:G\nz2 g3/2a/ | f3/2g/ e3/2f/ | ^d3/2e/ c3/2e/ | ^d3/2d/ e3/2e/ | f3/2g/ e3/2e/ |\na2 gf/e/ | f/d/e/d/ ce/d/ | Hc2 z e/f/ | ga fa/g/ | a2 g2 | c'/b/a/g/ fe |\nfgab | c'bag | fa/g/ a2 | g3 e | fgab | c'2 z a/a/ |\naaga | b2 z g/g/ | ggfg | a2 z f/f/ | ffef | g2 z e/e/ |\neeed | f3/2e/ g3/2f/ | a3/2g/ b3/2a/ | c'3/2b/ a/g/f/e/ | f/d/e/d/ ce/d/ | c4 |]"},"an_sika_touchiat_sika1":{"cat":"an:sika","label":"Touchiat sika — n°1 — trad.","maqam":["andalous","sika",11.0],"abc":"X:1\nT:Touchiat sika — n°1\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Si.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\n|: B/c/B/c/ B/c/A | B/A/B d/e/d/e/ | c/B/c/d/ cB | c/d/c/B/ A(3A/B/A/ |\nG/F/G AA | B^c de/f/ | d/e/c/d/ B/c/A | B/A/G/F/ GG | B/B/B/B/ BA |\nB/A/B c/B/c | d2 e/g/e/f/ | d/e/d/e/ c/d/c/B/ | B/A/G AB |\nc/B/c e/g/e/f/ | ^d/d/e/f/ d/e/c/d/ |[1 B/B/B/B/ B z :|[2 B/B/B/B/ B2 |]"},"an_sika_touchiat_sika2":{"cat":"an:sika","label":"Touchiat sika — n°2 — trad.","maqam":["andalous","sika",11.0],"abc":"X:1\nT:Touchiat sika — n°2\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Si.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\ng/f/e/d/ ef | g/a/f/g/ a/g/a | g/a/g/a/ f/g/f/g/ | egfe |\ndc dc | e/g/e/f/ de/f/ | dc B/B/B/B/ | B2 g/f/e/d/ | ef g/f/g |\na/g/a g/a/g/a/ | f/g/f/g/ eg | fedc | dc e/g/e/f/ | de/f/ dc |]"},"an_sika_touchiat_sika3":{"cat":"an:sika","label":"Touchiat sika — n°3 — trad.","maqam":["andalous","sika",6.0],"abc":"X:1\nT:Touchiat sika — n°3\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Fa♯.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\nB3/2A/ B^c | d d/d/ d z | d/^c/B/A/ B/=c/^c | d d/d/ d z | d/^c/B/A/ B/=c/^c |\nde/f/ d/e/c/d/ | B/c/A/B/ G2 | B/^c/d/e/ dG | B/^c/d/e/ dG | B/^c/d/e/ dd |\nddAA | B/A/B c/B/c | e/g/e/f/ ^de/f/ | ^d/e/c B3/2A/ | B^c dd/d/ | d4 |]"},"an_ghrib_touchiat_ghrib1":{"cat":"an:ghrib","label":"Touchiat ghrib — n°1 — trad.","maqam":["andalous","ghrib",9.0],"abc":"X:1\nT:Touchiat ghrib — n°1\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\nz z c/c/ |: d/d/ e/f/e/f/ | d/e/d/e/ c/B/ | A/A/B/B/^c/c/ | d/d/d c/c/ |\nd/d/ e/f/e/f/ | d/d/B/B/c/c/ | A/A/B/B/G/G/ | A2 z :|"},"an_ghrib_touchiat_ghrib2":{"cat":"an:ghrib","label":"Touchiat ghrib — n°2 — trad.","maqam":["andalous","ghrib",9.0],"abc":"X:1\nT:Touchiat ghrib — n°2\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n{A}G/G/ FG | A A/A/ d | {ed}c e{fe}d | {ed}c{dc}B{cB}A | {BA}G{AG}FG | AB{cB}A |\n{BA}G{AG}F{GF}E | (3F/E/^C/ DD | A/G/ FG | A2 d | {ed}c e{fe}d | {ed}c{dc}B{cB}A |\n{BA}G{AG}FG | AB{cB}A | {BA}G{AG}F{GF}E | (3F/E/^C/ DD | D3 |]"},"an_ghrib_touchiat_ghrib3":{"cat":"an:ghrib","label":"Touchiat ghrib — n°3 — trad.","maqam":["andalous","ghrib",9.0],"abc":"X:1\nT:Touchiat ghrib — n°3\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n|: e/d/c/B/ c | c/B/c d/f/ | d/c/B/A/ B | B/A/B d/d/ | c/B/A d | d/^c/d d | e/d/c/B/ A/B/ |\nG/G/A/A/B/B/ | c/c/c/c/c/c/ | B/B/c/c/d/d/ | d/d/d/d/d/d/ | c/c/B/B/c/c/ | d/d/B/B/c/B/ | A/A/ B//c//B//A// G/G/ |\n[1 A3 | A/A/B/B/^c/c/ | d/d/d/d/ ^c/d/ | dd e/f/ :|[2 A3 |]"},"an_ghrib_touchiat_ghrib4":{"cat":"an:ghrib","label":"Touchiat ghrib — n°4 — trad.","maqam":["andalous","ghrib",4.0],"abc":"X:1\nT:Touchiat ghrib — n°4\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur Mi.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n|: G/F/G/G/A/A/ | B/B/^c/c/B/B/ | d/e/^c d/e/ | ^c/d/B/c/ A/B/ | ^c d/e/ d/d/ |\nB^c d/e/ | d/e/^c e/f/ | d/d/d/d/d/d/ | G/F/G/G/A/A/ | B/B/^c/c/B/B/ | d/e/^c d/e/ |\n^c/d/B/c/ A/d/ | d/^c/d/e/ c | ^c/A/ (3B/A/B/ c/c/ | ^c/d/B/c/ A/A/ | ^c//d//B//c// A z :|"}}}
+{
+    "version": 1,
+    "scores": {
+        "ar_nahawand_web0": {
+            "cat": "ar:nahawand",
+            "label": "Lamma bada yatathanna — muwashshah trad.",
+            "maqam": [
+                "oriental",
+                "nahawand",
+                7
+            ],
+            "abc": "X:1\nT:Lamma bada yatathanna\nC:Muwashshah traditionnel (Andalousie / Levant)\nZ:Tous aux Balkans !\nF:http://www.tousauxbalkans.net/Lamma_bada_yatathanna\nQ:1/8=96\nM:10/8\nL:1/16\nS:Tous aux Balkans ! (tousauxbalkans.net) via abcnotation.com\n% note: Célèbre muwashshah en maqam Nahawand sur Sol, rythme samaï thaqil (10/8). Le Fa♯ lui donne la couleur du mineur harmonique.\nK:Gm\nD2 \\\n|: \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4D2 | \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4AB |\n\"Cm\"c4d2 \"Gm\"B3A \"D\"AGG^F \"Gm\"G4AG | \"D\"^F4GF \"Cm\"E3D EDEF \"D\"D4ED | \"Cm\"C4D2 \"Gm\"B,3A, \"D\"A,G,G,^F, G,4D2 :|\n\"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4D2 | \"Gm\"G4AB \"Cm\"cBBA \"D\"AGG^F \"Gm\"G4B2 |\n\"Bb\"B4B2 B4 B2Ac B4B2 | \"D\"d4c2 dcBA \"Gm\"BAGB \"F\"A4=F2 | \"Gm\"G4A2 \"Bb\"B4 B2Ac B4AB |\n\"Cm\"c4d2 \"Gm\"B3A \"D\"AGG^F \"Gm\"G4AG | \"D\"^F4GF \"Cm\"E3D EDEF \"D\"D4ED | \\\n\"Cm\"C4D2 \"Gm\"B,3A, \"D\"A,G,G,^F, G,6 |]"
+        },
+        "tk_rast_1856": {
+            "cat": "tk:rast",
+            "label": "Sıra Sıra Siniler — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Sıra Sıra Siniler\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nz2GA G2A2 | _/B2c2 d4 | e2fg e2d2 | dedc _/B4 |\nz2cd d2d2 | c2c_/B A4 | AA2G A_/Bcd | c_/B{c}BA G4 |\nz2cd d2d2 | c2c_/B A4 | AA2G A_/Bcd | c_/B{c}BA G4 |\nz2dd g4 | ^ff2e d4 | e2fg e2ed | dedc _/B4 |]"
+        },
+        "tk_rast_1599": {
+            "cat": "tk:rast",
+            "label": "Rast Peşrev — Tatyos Efendi",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Rast Peşrev\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=90\nK:C\nD2 G4 A2 _/B4 c4 | z2 d e d2 c2 _/B3 A G4 | z2 A4 _/B2 G4 A2 B2 | c2 d2 c2 _/B2 c3 e d4 |\nz2 c _/B A2 c2 B3 A G4 | D2 G4 _/B2 A B A G ^F G F E | D2 G2 ^F2 A2 A G G F G4 | z2 _/B2 ^A2 c2 c B B A B4 |]"
+        },
+        "tk_rast_1236": {
+            "cat": "tk:rast",
+            "label": "Kavli de Kaddi Gibi — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Kavli de Kaddi Gibi\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Kupe, extrait.\nM:14/8\nL:1/16\nQ:1/4=102\nK:C\nG^FE2 F2G4A4A2 G2F2 E2FE D4 | E^FE2 F2G4A2 _/B2A2 G2F2 G6z2 | dc_/B2 c2d4d2 g2g2 f2e2 d/c/d/e/dc B^AB2 | _/BcB2 A2Bc BAe2 edd2 dccB B6z2 |\ne2d2 e2ed c_/BA4AB A2B2 c2{e}dc BAG2 | AG^F2 G2A4z4A_/B A2B2 c2Bc d4 | d4 g2g2 f2e2 d2de d2c2 c_/BBA G2z2 | A_BAB G^FAc _/BAAG GFG2 F2AG G4 z4 |]"
+        },
+        "tk_rast_39": {
+            "cat": "tk:rast",
+            "label": "Adana’nın Yolları Taşlık — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Adana’nın Yolları Taşlık\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=72\nK:C\nc2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 | c2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 |\nc2{d}c_/B c2d2 c2B4A2 | A2{_/B}AG A2B2 A2G6 | z4 c2c2 c4 c4 | c2{d}c_/B c2d2 c2B2 B4 |\nc2{d}c_/B c2d2 c2B2 B2A2 | A2G2 A2_/B2 A2G2 G4 | c2{d}c_/B c2d2 c2B2 B2A2 | A2G2 A2_/B2 A2G2 G4 |]"
+        },
+        "tk_rast_82": {
+            "cat": "tk:rast",
+            "label": "Aman Ayşem Kunduranı Tek Bas — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Aman Ayşem Kunduranı Tek Bas\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=84\nK:C\nd2g2^f4 d4e3d e2f2f2e2 d2^c2d6z2 | d2g2 ^f4d4 e3de2f2 f2e2d2^c2 d6z2 | _/B4c4 e4d3B B2A2B2A2 G2^F2d6z2 | _/B4 c4e4 d3cB2A2 B2A2G2^F2 G6z2 |\n_/B4c4 e4d3B B2A2B2A2 G2^F2d6z2 | _/B4 c4e4 d3cB2A2 B2A2G2^F2 G6z2 | d2g2^f4 d4e3d e2f2f2e2 d2^c2d6z2 | d2g2 ^f4d4 e3de2f2 f2e2d2^c2 d6z2 |]"
+        },
+        "tk_rast_690": {
+            "cat": "tk:rast",
+            "label": "Evreşe Yolları — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Evreşe Yolları\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\nc4 c2_/B2 B2A2 A2AB {A}G2 | G6 z2c_/B cdB2 AGG2 | A2_/B2 c2d2 B2c2 A2AB {A}G2 | G16z2 |\nc4 c2_/B2 B2A2 A2AB {A}G2 | G6 z2c_/B cdB2 AGG2 | A2_/B2 c2d2 B2c2 A2AB {A}G2 | G16z2 |]"
+        },
+        "tk_rast_1135": {
+            "cat": "tk:rast",
+            "label": "İbrişim Örmüyorlar — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:İbrişim Örmüyorlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=102\nK:C\nG2A2 G2A2 | G2A2 G2A2 | G2A2 G2A2 | _/B3A AG^FE |\nD2cc c_/BA2 | _/BABc BAG2 | A2A2 dc_/BA | GA_/Bc dcd2 |\nz2cc c_/BA2 | _/BABc BAG2 | A2A2 dc_/BA | G8 |\nz2GG G2A2 | _/B3c BAAG | _/B3A AG^FE | D2GG G2A2 |]"
+        },
+        "tk_rast_1264": {
+            "cat": "tk:rast",
+            "label": "Kordon Zeybeği — trad.",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Kordon Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Zeybek, extrait.\nM:9/4\nL:1/16\nQ:1/4=114\nK:C\nG4 _/B4 d4 c2B2 A2B2 c3e d2c2 B3A G4 | G4 _/B4 d4 c3B A2B2 c3e d2c2 B3A G4 | d2e2 f2e2 d2c2 _/B4 A2B2 c3e d2c2 B3A G4 | d2e2 f2e2 d2c2 _/B4 A2B2 c3e d2c2 B3A G4 |\nA2_/B2 c2B2 c4 c3B A2B2 c3e d2c2 B3A G4 | A2_/B2 c2B2 c4 c3B A2B2 c3e d2c2 B3A G4 | ^F2G2 A2G2 A4 A3G A2_/B2 A2G2 F2E2 D4 z4 | E3D ^C2D2 E2^F2 G3F G2_/B2 A3G A2c2 B3A G4 |]"
+        },
+        "tk_rast_370": {
+            "cat": "tk:rast",
+            "label": "Bir Gönlüme Bir Hâl-i Perişanıma… — Tatyos Efendi",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Bir Gönlüme Bir Hâl-i Perişanıma…\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Chanson, extrait.\nM:6/4\nL:1/16\nQ:1/4=66\nK:C\nG4 _/B4 d4 c3B A6z2 | e3d d3c _/B2c2 dcB^A B8 | D4 G4 _/B4 A3G ^F3E D4 | G3e d2c2 _/B3A A2{G}AG G8 |\nG4 _/B4 d4 c3B A6z2 | e3d d3c _/B2c2 dcB^A B8 | D4 G4 _/B4 A3G ^F3E D4 | G3e d2c2 _/B3A A2{G}AG G8 |]"
+        },
+        "tk_rast_559": {
+            "cat": "tk:rast",
+            "label": "Dil Bir Güzele Meyletti Hele — Dede Efendi",
+            "maqam": [
+                "turkish",
+                "rast",
+                7
+            ],
+            "abc": "X:1\nT:Dil Bir Güzele Meyletti Hele\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam rast (turc). Chanson, extrait.\nM:6/4\nL:1/16\nQ:1/4=66\nK:C\nG4 _/B4 d2e^f agfe d4 z4 | dcec c3_/B BA{c}BA AGAG G6z2 | G4 _/B4 d2e^f agfe d4 z4 | dcec c3_/B BA{c}BA AGAG G6z2 |\nG3A _/B2AG c2BA Bc/d/cB B6d2 | d4 d4 d4 ^cde{^f}e/d/ d6z2 | d3A d4 de^fg agfe d4 z4 | d3A d4 de^fg agfe d8 |]"
+        },
+        "tk_ussak_144": {
+            "cat": "tk:ussak",
+            "label": "Ayva Çiçek Açmış — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Ayva Çiçek Açmış\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=96\nK:C\nGA2f ede2 | _/Bc2d cBA2 | GA2f ede2 | _/Bc2d cBA2 |\n^F2G2 A2_/B2 | c_/Bcd cBBA | A2{c}_/BA G2BA | A2{_/B}AG ^FED2 |\n^F2G2 A2_/B2 | c_/Bcd cBBA | A2{c}_/BA G2BA | A2ed cde2 |\nA3A e2e2 | e2e6 | f3f f2fe | fede d2c2 |]"
+        },
+        "tk_ussak_1197": {
+            "cat": "tk:ussak",
+            "label": "Kalenin Burcu muyam — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Kalenin Burcu muyam\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=90\nK:C\nG2c_/B A2cB A2cB A3G | _/Bcd2 d2d2 c4 B4 | _/Bcd2 d2d2 c2c2 B4 | A2c_/B dB2A A8 |\nG2c_/B A2cB A2cB A3G | _/Bcd2 d2d2 c4 B4 | _/Bcd2 d2d2 c2c2 B4 | A2c_/B dB2A A8 |\nG2c_/B A2cB A2cB A4 | _/Bcd2 d2d2 c4 BAB2 | d2d2 d2d2 c2c2 _/BAB2 | A2c_/B dB2A A4 A4 |]"
+        },
+        "tk_ussak_1912": {
+            "cat": "tk:ussak",
+            "label": "Uşşak Sazsemâîsi — Neyzen Aziz Dede",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Uşşak Sazsemâîsi\nC:Neyzen Aziz Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=112\nK:C\nG2A2 A2A_/B AGAG ^FGA4(3BAB | G4 c2_/B3/2A/ BcB3/2A/ GBA4z2 | G4 d2c3/2_/B/ cdB3/2A/ BcB3/2A/ G4 | A2_/B2 cd(3cBA BcB3/2A/ GBA4z2 |\nA4 f2e3cd2 e2f2 g2fe | d4 c_/BA3Gf3/2e/ ded4z2 | cdef gagf eddf eddc _/BAG2 | c3_/B A2B3/2A/ BcB3/2A/ GBA4z2 |]"
+        },
+        "tk_ussak_1670": {
+            "cat": "tk:ussak",
+            "label": "Sanma Uşşâk’ın Hemân — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Sanma Uşşâk’ın Hemân\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 G2G2 G4 A4 A8 _/B3A B2c2 | _/B3A G2e2 d4 c3B B3A AcBA A6z2 | z4 _/B2c2 B4 c4 d4 {e}d2e2 d2c2 B2A2 | G4 g2g2 g4 f2e2 e3d dfed d6z2 |\nz4 c2d2 c4 d4 e2fg e2d2 d2c4_/BA | _/B4 c2d2 c4 B4 dcde d2c2 B3A G4 | z4 A2_/B2 A4 B4 c4 B2A2 d4 d2e2 | d2c2 c4 c2_/B2 B2A2 A2c4BA A6z2 |]"
+        },
+        "tk_ussak_772": {
+            "cat": "tk:ussak",
+            "label": "Fındıklı Bizim Yolumuz — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Fındıklı Bizim Yolumuz\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\nG4 A2_/B2 c2d2 c4 B2 | d2 d4 d2d2 d2c4_/B2 | c3c c2_/B2 B2A2 A4 z2 | G4A2 _/B2c2 d2c4B2 |\nd2d4d2 d2d2 c4 _/B2 | c3cc2 _/B2B2 A2A4z2 | G2G4c2 c2_/BA B4 z2 | G2 G4 c2c2 _/BAB4d2 |]"
+        },
+        "tk_ussak_1186": {
+            "cat": "tk:ussak",
+            "label": "Kadifeden Kesesi — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Kadifeden Kesesi\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=87\nK:C\ne2fg f2e2 | e2{f}ef e2d2 | d2ef e2d2 | edcd c4 |\nd2ef e2d2 | eddc d4 | edcd c2d2 | dc_/BA B2cd |\nc_/BA2 c2d2 | dedc d4 | edcd c2d2 | dc_/BA B2cd |\nc_/BAG A4 | _/B4 c4 | d2{e}dc _/B2{c}BA | A8 |]"
+        },
+        "tk_ussak_1536": {
+            "cat": "tk:ussak",
+            "label": "Oklavayım Pazıyım — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Oklavayım Pazıyım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:8/8\nL:1/16\nQ:1/4=120\nK:C\nA2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 |\nA2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A16 | A2d2 c2d2 z2c2 _/B2A2 |\nA2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 | A2c2 _/B2c2 z2c2 B2A2 | A2d2 c2d2 z2c2 _/B2A2 |]"
+        },
+        "tk_ussak_1632": {
+            "cat": "tk:ussak",
+            "label": "Sabahtan Kalktım ki — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Sabahtan Kalktım ki\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nA3/2_/B/cB c3/2B/ce | d3/2e/cd _/BcA2 | Ac_/BA A3/2G/^FG | A6z2 |\nA3/2_/B/cB c3/2B/ce | d3/2e/cd _/BcA2 | Ac_/BA A3/2G/^FG | A6z2 |\nz6Ac | c2c2 c2c2 | c2c_/B c2e2 | d3/2e/cd _/BcA2 |\n_/Bc2B cBce | decd _/BcA2 | A_/B3/4c1/4BA G2^FG | A6z2 |]"
+        },
+        "tk_ussak_1671": {
+            "cat": "tk:ussak",
+            "label": "Sarardım Ben Sarardım — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Sarardım Ben Sarardım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nz4 defe | fefg e3d | eddc d2ec | ed2_/B c2dB |\n_/BAA2 d2dc | ed2_/B c2BA | _/B2A2 AdcB | c2_/BA A4 |\nz4 defe | fefg e3d | eddc d2ec | ed2_/B c2dB |\n_/BAA2 d2dc | ed2_/B c2BA | _/B2A2 AdcB | c2_/BA A3d |]"
+        },
+        "tk_ussak_1674": {
+            "cat": "tk:ussak",
+            "label": "Sarı Gülüm Var Benim — trad.",
+            "maqam": [
+                "turkish",
+                "ussak",
+                9
+            ],
+            "abc": "X:1\nT:Sarı Gülüm Var Benim\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam ussak (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\ne2f4e2 eddc d4 z2 | c2 ddd2 d2dc dec2 _/B2A2 | G2A4c2 _/B2A2 BAG2 G^F | G6 GA_B3/2A/ G^FG4z2 |\ne2f4e2 e2d2 c2_/B2 A2 | A2 _/BcBA G2A8z2 | G2A6 A4 g^fe4 | d4e4e{g}f edd4z2 |]"
+        },
+        "tk_huseyni_1106": {
+            "cat": "tk:huseyni",
+            "label": "Hüseynî Sazsemâîsi — Tatyos Efendi",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Hüseynî Sazsemâîsi\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=132\nK:C\nA4 d2e4eg ^fge4c2 | d4 e2c2 dedc _/B2cB cdBc | A4 G2AG A_/Bc2 d2e2 ^f2d2 | e2^f2 agg3ffg fee4z2 |\ne4 a2g2 ^fge=f dec3ede | c3e dec2 dedc _/B2cB cdBc | A4 G2AG A_/Bcd e^/fag =fed2 | c4 _/BAed dccB BAAB cde2 |]"
+        },
+        "tk_huseyni_1103": {
+            "cat": "tk:huseyni",
+            "label": "Hüseynî Peşrev — Lavtacı Andon",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Hüseynî Peşrev\nC:Lavtacı Andon\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=84\nK:C\nA6 g2 e8 | ^f3 e f2 g2 e3 d c2 d2 | c3 _/B c B B A A3 d c2 d2 | e6 e d e4 e2 d2 |\n^f6 g2 f e d2 e2 f2 | g8 g2 ^f4 g2 | ^f2 e4 d2 a2 g4 f2 | ^f2 e g f2 e2 e6 d2 |]"
+        },
+        "tk_huseyni_1581": {
+            "cat": "tk:huseyni",
+            "label": "Pestten Eylerdi Niyâzı — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Pestten Eylerdi Niyâzı\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 A2A2 A4 e4 e3d c2d2 e4 g2^/fe | e4 c2d2 c4 d2e2 d2c2 {d}c2_/B2 c3B A4 | z4 A2A2 A4 g4 g2^f2 e2f2 agfe edd^c | d4 e2^f2 g3f a2g^/f e2e2 e2{=f}ed edcd e4 |\nz4 e2e2 e4 ^f4 g3_b a2g2 g=ffe eddc | d4 c2d2 c4 d4 fefg e2d2 d2c4_/BA | _/B4 A2G2 .A4 B4 c3e d2c2 B3A G2d2 | c4 _/B2c2 B4 A4 A2c4BA A6z2 |]"
+        },
+        "tk_huseyni_4": {
+            "cat": "tk:huseyni",
+            "label": "A Fadimem Hadi Senle Kaçalım — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:A Fadimem Hadi Senle Kaçalım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=198\nK:C\ng2^f2 g2f2 e4 e4 d2 | e2 d2e2 c2d4d4z2 | g2^f2 g2f2 e4 e4 d2 | e2 d2e2 c2d4d4z2 |\nd2c2 d2g2 f2e2 d2c2 _/B2 | c2 d2_/B2 G2A4A4z2 | d2c2 d2g2 f2e2 d2c2 _/B2 | c2 d2_/B2 G2A4A4z2 |]"
+        },
+        "tk_huseyni_47": {
+            "cat": "tk:huseyni",
+            "label": "Akzâdeler Giyer Aman… — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Akzâdeler Giyer Aman…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=204\nK:C\ng4 a4 g2^f2 e4 d2 | d2 edc2 d2c2 _/B2A6 | g4 a4 g2^f2 e4 d2 | d2 edc2 d2c2 d2e6 |\ng3^f g2a2 g2f2 e4 d2 | g3fe2 d2c2 d2c4_/B2 | A2G2 A2_/B2 c2e2 d4 c2 | _/B4c2 A2B2 G2A6 |]"
+        },
+        "tk_huseyni_461": {
+            "cat": "tk:huseyni",
+            "label": "Bursa’nın Ufak Tefek Taşları — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Bursa’nın Ufak Tefek Taşları\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\nd4 c2d2 e2a2 e4 d2 | d4c2 d2e2 a2e4d2 | d4 c2d2 e2a2 e4 d2 | d4c2 d2e2 a2e4d2 |\ne2d2 e2c2 d4 d6 | c2 d2d2 d2d2 e2c4_/B2 | c2d2 d2d2 d2e2 c4 _/B2 | c2 c2c2 _/B2c2 d2B4A2 |]"
+        },
+        "tk_huseyni_552": {
+            "cat": "tk:huseyni",
+            "label": "Dere Geliyor Dere — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Dere Geliyor Dere\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=284\nK:C\nd2e2 e2e2 e4 d2c4 | e2 d2d4c3d_/B2 A4 | A2_/B2 c2d2 d4 B2c4 | _/B2 A2A4A8-A2 |\nd2e2 e2e2 e4 d2c4 | e2 d2d4c3d_/B2 A4 | A2_/B2 c2d2 d4 B2c4 | _/B2 A2A4A8-A2 |]"
+        },
+        "tk_huseyni_980": {
+            "cat": "tk:huseyni",
+            "label": "Havada Bulut Yok — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Havada Bulut Yok\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=180\nK:C\nz4 e2e2 d2d4e2 ced2 | d3c d2d2 c2c2 _/B2d2 Bdc2 | c3_/B c2c2 B2B2 A2c4B2 | _/B2A2 c2B2 A2A4{A}B4A2 |\nA4 A6A4A6 | z4 e2e2 d2d4e2 ced2 | d3c d2d2 c2c2 _/B2d2 Bdc2 | c3_/B c2c2 B2B2 A2c4B2 |]"
+        },
+        "tk_huseyni_1633": {
+            "cat": "tk:huseyni",
+            "label": "Sabahın Seher Vaktinde — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Sabahın Seher Vaktinde\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=54\nK:C\nz2gg g^ff2 fee2 edd2 | e^fgf gff2 fee2 edd2 | z2gg g^ff2 fee2 edd2 | e^fgf gff2 fee2 edd2 |\nz2^fg gff2 feee eddc | z2de ed2d dc2_/B cBBA | z2cd dc2_/B cB2A BAA2 | z2Ac c_/BB2 BA2A A2A2 |\nz2de ed2d dc2_/B cBBA | z2cd dc2_/B cB2A BAA2 | z2Ac c_/BB2 BA2A A2A2 |]"
+        },
+        "tk_huseyni_1976": {
+            "cat": "tk:huseyni",
+            "label": "Yağmur Yağar Taş Üstüne — trad.",
+            "maqam": [
+                "turkish",
+                "huseyni",
+                9
+            ],
+            "abc": "X:1\nT:Yağmur Yağar Taş Üstüne\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huseyni (turc). Türkü, extrait.\nM:7/16\nL:1/16\nQ:1/4=216\nK:C\nc2 d2 e2 e2 e2 e4 | d4 g2 ^f2 g2 e4 | d4 e2 d2 e2 c4 | _/B2 c2 d2 c2 d2 B4 |\nA4 c2 _/B2 c2 B2 A2 | G4 c2 _/B2 d2 B2 A2 | A14 | A14 |\nc2 d2 e2 e2 e2 e4 | d4 g2 ^f2 g2 e4 | d4 e2 d2 e2 c4 | _/B2 c2 d2 c2 d2 B4 |\nA4 c2 _/B2 c2 B2 A2 | G4 c2 _/B2 d2 B2 A2 | A14 | A14 |]"
+        },
+        "tk_hicaz_1340": {
+            "cat": "tk:hicaz",
+            "label": "Mayadağ’dan Kalkan Kazlar — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Mayadağ’dan Kalkan Kazlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:5/8\nL:1/16\nQ:1/4=204\nK:C\nG2A2 A2A4 | _B2 ^c2B4A2 | G2A2 A2A4 | A2 G2^F2 E2D2 |\nG2A2 A2A4 | _B2 ^c2B4A2 | G2A2 A2A4 | A8z2 |\nG2A2 A2A4 | ^c2 d2e4d2 | d4 ^c2_B2 A2 | G2 A2A2 A4 |]"
+        },
+        "tk_hicaz_1173": {
+            "cat": "tk:hicaz",
+            "label": "İzmir Zeybeği — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:İzmir Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Zeybek, extrait.\nM:9/8\nL:1/16\nQ:1/4=108\nK:C\ne2de gfed ^cdc_B ABcd e2 | e2 degf ed^cd c_B.A2 .A2.A2 | e2de gfed ^cdc_B ABcd e2 | e2 degf ed^cd c_B.A2 .A2.A2 |\nG2A_B G2AB ^cdcB ABcd e2 | G2 A_BG2 AB^cd cB.A2 .A2.A2 | G2A_B G2AB ^cdcB ABcd e2 | G2 A_BG2 AB^cd cB.A2 .A2.A2 |]"
+        },
+        "tk_hicaz_968": {
+            "cat": "tk:hicaz",
+            "label": "Harmandalı — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Harmandalı\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Zeybek, extrait.\nM:9/4\nL:1/16\nQ:1/4=57\nK:C\nd2e^f g2(3fef g2(3fef g2a2 e4 ee3 A8 A2z2 | d2e^f g2(3fef g2(3fef g2a2 e4 ee3 a8 a2z2 | gg3 gfed f3f ed^c_B A4 A2G2 A3/2G/AB c2d2 e2^f2 | {d}g3g gfed f3f ed^c_B A4 A2G2 ABcd ecdB A2z2 |\n{d}g3g gfed f3f ed^c_B A4 A2G2 ABcd ecdB A2z2 | d3d d^c(3_BAB {c}d3d dcBA B6A2 A3/2G/AB c2d2 e2^f2 | {^f}g4 g=fed ef3 ed^c_B A4 A2G2 ABcd ecdB A2z2 | d3d d^c(3_BAB {c}d3d dcBA B6A2 A3/2G/AB c2d2 e2^f2 |]"
+        },
+        "tk_hicaz_1023": {
+            "cat": "tk:hicaz",
+            "label": "Hicaz Sazsemâîsi — Refik Talat Alpman",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Hicaz Sazsemâîsi\nC:Refik Talat Alpman\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=108\nK:C\nA3/2^c/ea ecA4g2 ^fee6 | G2^FE E2(3AGA (3BAGGF FEE4(3FEF | D4 ^F2A4^c2 _BAB2 c2BA | d4 d2(3ded (3^cdc(3_BcB AGd6 |\nf4 fege2dfd2^c.e2 .c4 | d4 d^cec2_BdB2AB2 G4 | A4 ^FAG3/2F/ GA_B3/2A/ B^cdd cBAG | ggfe d2^c_B/c/ decB BAA6 |]"
+        },
+        "tk_hicaz_1021": {
+            "cat": "tk:hicaz",
+            "label": "Hicaz Peşrev — Neyzen Salim Bey",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Hicaz Peşrev\nC:Neyzen Salim Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nG6_BA A8 | _B^cBA B2c2 dcBA G2A2 | G2{^c}_BA A4 A2B2 A2G2 | d3^c _B2A2 ABAG ^FGAF |\nG4 ^F2G2 A2_BA G2A2 | _B2^cB A2B2 c2d2 c2d2 | efed ^cdc_B A4 c2d2 | e2^fg =fed2 efed ^c2d2 |]"
+        },
+        "tk_hicaz_822": {
+            "cat": "tk:hicaz",
+            "label": "Gerçi Pek Esmer Olur — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Gerçi Pek Esmer Olur\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 d8 d4 ^c2d2 e2d2 d6z2 | z4 e2g2 f4 e2f2 e2d4f2 e2d2 ^c2_B2 | A4 A8 _B2A2 G6z2 A4 B4 | ^c4 d2g2 f4 e2f2 e2d2 {e}d2c2 d6z2 |\nz4 ^f8 f4 e2f2 g2a2 a2g2 f2e2 | d4 {a}g4 f4 e2f2 e2d4f2 e2d2 ^c2_B2 | A4 A2G2 A4 _B4 ^c8 d2c2 B2A2 | e4 d2^c2 c2_B2 B2A2 G2A2 B2{c}BA A6z2 |]"
+        },
+        "tk_hicaz_534": {
+            "cat": "tk:hicaz",
+            "label": "Dağlar Dağlar Viran Dağlar — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Dağlar Dağlar Viran Dağlar\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=78\nK:C\nee2^f g2a2 | g2f2 e2d2 | ed^cd e^fga | gfed ^c_BBA |\nA3a gfed | ^c3d c_BBA | AA2_B ^c2d2 | e2^f2 g2a2 |\nee2^f g2a2 | g2f2 e2d2 | ed^cd e^fga | gfed ^c_BBA |\nA3a gfed | ^c3d c_BBA | AGA_B ^cdef | ed^cd egfe |]"
+        },
+        "tk_hicaz_654": {
+            "cat": "tk:hicaz",
+            "label": "Erkilet Güzeli… — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Erkilet Güzeli…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=78\nK:C\nd3/2^c/de dc_B2 | ^c3d c_BA2 | d3/2^c/de dc_B2 | ^c3d c_BA2 |\nd^cde dc_B2 | ^c3d c_BA2 | e2ed e^cd_B | ^c_BBA A4 |\nd3/2^c/de dc_B2 | ^c3d c_BA2 | d3/2^c/de dc_B2 | ^c3d c_BA2 |\nd^cde dc_B2 | ^c3d c_BA2 | e2ed e^cd_B | ^c_BBA A4 |]"
+        },
+        "tk_hicaz_1214": {
+            "cat": "tk:hicaz",
+            "label": "Karanfil Oylum Oylum — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Karanfil Oylum Oylum\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=144\nK:C\nA_B^cd cBBA A4 A2{c}BA G2 | A_B ^cdcB BAA4.A2 .A2.A2 | A_B^cd cBBA A4 A2{c}BA G2 | A_B ^cdcB BAA4AB cde2 |\n^c2d2 e2e2 e4 f3e d2 | e2 f2e2 d2^c4d2 c_BA2 | ^c2d2 e2e2 e4 f3e d2 | e2 f2e2 d2^c4d2 c_BA2 |]"
+        },
+        "tk_hicaz_1447": {
+            "cat": "tk:hicaz",
+            "label": "Necibemin İkidir Kürkü — trad.",
+            "maqam": [
+                "turkish",
+                "hicaz",
+                9
+            ],
+            "abc": "X:1\nT:Necibemin İkidir Kürkü\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam hicaz (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=156\nK:C\ne3d e2f2 gfed ^c2d2 e2 | ^c3_Bc2 d2cB BAA4z2 | e3d e2f2 gfed ^c2d2 e2 | ^c3_Bc2 d2cB BAA4z2 |\nz4 d2d2 fed^c d4 z2 | e2 f2g2 feed {e}d^cd4z2 | gfed ^c2d2 c_BAG A2B2 d2 | ^c3A_B2 d2cB BAA6 |]"
+        },
+        "tk_karcigar_1219": {
+            "cat": "tk:karcigar",
+            "label": "Karcığar Peşrev — Tatyos Efendi",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Karcığar Peşrev\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=75\nK:C\nc4 d4 d2 _e ^f e d c2 | d3 c _/B2 c2 d2 _e2 ^f2 g a | ^f2 _e2 d2 c2 f e d4 c2 | c d c _/B B c B A A6 c2 |\n_/B3 A G4 d3 c B2 c2 | A4 _/B2 c2 d2 _e2 d2 g2 | g ^f2 _e f e e d d3 =e d c _/B A | G3 A _/B c d _/e d c B c d4 |]"
+        },
+        "tk_karcigar_410": {
+            "cat": "tk:karcigar",
+            "label": "Bir Sadâ-yı Dilnüvâz — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Bir Sadâ-yı Dilnüvâz\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 d2c2 _/B4 c4 d4 {^f}_e2d2 d4 {=f}d2e2 | d2c2 c8 c2_/B2 BABc B2A2 A6z2 | z4 d2c2 _/B4 c4 d8 d4 _e4 | _e2d2 a2g2 g2^f2 f2e2 edef e2d2 d8 |\nz4 d4 g4 g4 ^f2g2 a2{_b}ag aggf g4 | z4 c4 c2d2 c2_/B2 B2A2 B2A2 A6z2 | z4 _/B2c2 d2_/e2 ^f2g2 a2_b2 a2g2 g3f e2d2 | c4 c2c2 c4 c2_/B2 BABc B2A2 A6z2 |]"
+        },
+        "tk_karcigar_2089": {
+            "cat": "tk:karcigar",
+            "label": "Çayıra Serdim Postu — trad.",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Çayıra Serdim Postu\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=288\nK:C\n_/B2c2 d2_e2 d2c2 g2^f2 e2 | d2 c2_/B2 A2B2 c2d6 | _/B2c2 d2_e2 d2c2 e2d2 c2 | c2 _/B2B2 A2AB ABGA Bcdc |\n_/B2c2 d2_e2 d2c2 g2^f2 e2 | d2 c2_/B2 A2B2 c2d6 | _/B2c2 d2_e2 d2c2 e2d2 c2 | c2 _/B2B2 A2A4g4^fa |]"
+        },
+        "tk_karcigar_1267": {
+            "cat": "tk:karcigar",
+            "label": "Koyundere Zeybeği — trad.",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Koyundere Zeybeği\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Zeybek, extrait.\nM:9/8\nL:1/16\nQ:1/4=90\nK:C\nc_/BA2B2c2 d2_e2d2e^f edc2dedc B2c2d8 | c_/BA2 B2c2d2_e2 d2e^fedc2 cBA2B2G2 A8 | c_/BA2B2c2 d2_e2d2e^f edc2dedc B2c2d8 | c_/BA2 B2c2d2_e2 d2e^fedc2 cBA2B2G2 A8 |\n^f2gagf_ef edc2dedc _/B2A2BcBA B2c2d8 | ^f2ga gf_efedc2 d2efedc2 c_/BA2B2G2 A8 | ^f2gagf_ef edc2dedc _/B2A2BcBA B2c2d8 | ^f2ga gf_efedc2 d2efedc2 c_/BA2B2G2 A8 |]"
+        },
+        "tk_karcigar_290": {
+            "cat": "tk:karcigar",
+            "label": "Benli’yi Aldım Kaçaktan — Dede Efendi",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Benli’yi Aldım Kaçaktan\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=240\nK:C\nd4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g^f gafe | d4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g2 ^f2g2 |\na_/bc'd' c'_bag ^f_edc c2{d}c_/B BA | A4z8g^f gaf_e | d4 z8 g2^f2 _e2 | d3c_ed c_/Bc4g^f gafe |]"
+        },
+        "tk_karcigar_489": {
+            "cat": "tk:karcigar",
+            "label": "Bülbül Olsam — trad.",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Bülbül Olsam\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\nA2z4c_/B ABAG A3/2B/cA BG | A2 z2^f_e dc_/BA BGAB cABG | A2z2 ^f_edc _/BABG ABcA BG | A2 z2GA _/Bcd_e dcde ^fdec |\nd2z2 GA_/Bc d_edc B2(3cBA BG | A2 z2GA _/Bcd_e dcde ^fdec | d2z2 GA_/Bc d_edc B2(3cBA BG | A2 z2_ed eced ecde ^fdec |]"
+        },
+        "tk_karcigar_1141": {
+            "cat": "tk:karcigar",
+            "label": "İki de Durnam — Dede Efendi",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:İki de Durnam\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Köçekçe, extrait.\nM:9/8\nL:1/16\nQ:1/4=114\nK:C\nA_/BcA BGA2 Aed2 cBBA G2 | A_/B cABG A3B GABc d_edc | d_e^fd ecde dc_/BA Bcde dc | _/B2 BABG A3B GABc d_edc |\nd_e^fd ecde dc_/BA Bcde dc | _/B2 BABG A3B GABc d_edc | d_e^fg a_bag fedc _/Bcde dc | _/B2 BABG ABcA BGA2 Aed2 |]"
+        },
+        "tk_karcigar_1995": {
+            "cat": "tk:karcigar",
+            "label": "Yine Ey Yosma — Santûrî Ethem Efendi",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Yine Ey Yosma\nC:Santûrî Ethem Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Chanson, extrait.\nM:4/4\nL:1/16\nQ:1/4=81\nK:C\nz4 c2d2 d4 a4 | c'_bag ^f_eed d4 z4 | _e3d c2d2 e3d ^f2ed | dcc_/B d2cB c2BA A4 |\nz4 ^f2g2 g4 a4 | _bag^f f_eed dcc_/B c2a2 | a3g g3^f f3_e e3d | _edcd e^fed d4 z4 |\nz4 c2d2 d4 a4 | ^c'_bag ^fgab g2a2 z4 | _b3a a3g g3^f f3_e | d2d_e g^fed dcc_/B c4 |]"
+        },
+        "tk_karcigar_409": {
+            "cat": "tk:karcigar",
+            "label": "Bir Rum Dilbere — Tanburî Mustafa Çavuş",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Bir Rum Dilbere\nC:Tanburî Mustafa Çavuş\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=57\nK:C\nd2z2^f2edd4fed2 | c_/BA3GB2c2d4_e4d2e3da2g^ffeed | ^f4_edd2z2f2=edd4fed2c_/BA3GB2c2 | d4_e4d2e3da2 |\ng^ff_eedf4edd3c | d2_e2^f2g2_bagfedd3c_/B2c2d4gfedc2 | d3cd^f_eddcc_/Bd2c2 | _/B2A3GB2c2d2c2fe |]"
+        },
+        "tk_karcigar_1435": {
+            "cat": "tk:karcigar",
+            "label": "Ne Dane — Dellalzâde İsmail Efendi",
+            "maqam": [
+                "turkish",
+                "karcigar",
+                9
+            ],
+            "abc": "X:1\nT:Ne Dane\nC:Dellalzâde İsmail Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam karcigar (turc). Ağır semai, extrait.\nM:10/8\nL:1/16\nQ:1/4=108\nK:C\n_e4 ede4de ^fgfe d4 | ^f_eed c2f2 eddc c_/BcB A4 | d2_e2 ^f2ed c2ed c_/Bc4B2 | c2d2 _e2^f2 g2a_/b c'd'c'_b agfe |\nd2c'2 _baag g^ff_e edd4z2 | _e4 ede4de ^fgfe d4 | ^f_eed c2f2 eddc c_/BcB A4 | d2_e2 ^f2ed c2ed c_/Bc4B2 |]"
+        },
+        "tk_segah_2086": {
+            "cat": "tk:segah",
+            "label": "Çayda Çıra — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Çayda Çıra\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=240\nK:C\nz4 G2d2 z2d2 z2d6 | _/e4 d2e2 d2{e}d8-d2 | c2d2 _/e4 d2e2 {g}^f2e4d2 | d4 c2c4_/B8-B2 |\n_/B2c2 d2c2 d2c2 d2B4c2 | A4 G2c2 d2_/B4{c}B4z2 | _/B2c2 d2d4c2 d2B4A2 | A4 G2c2 d2_/B2 c2B6 |]"
+        },
+        "tk_segah_1689": {
+            "cat": "tk:segah",
+            "label": "Segâh Peşrev — Nâyî Osman Dede",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Segâh Peşrev\nC:Nâyî Osman Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=78\nK:C\n_/B8 c4 d4 | _/B6c2 B4 c2d2 | c4 _/B4 A8 | _/B4 c4 B4 A4 |\n_/B2c2 B4 c2d2 c4 | d12 d2d2 | d4 d4 z4 d4 | _/B8 c4 d4 |]"
+        },
+        "tk_segah_1939": {
+            "cat": "tk:segah",
+            "label": "Verse Ol Meh — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Verse Ol Meh\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Kupe, extrait.\nM:6/4\nL:1/16\nQ:1/4=84\nK:C\nG4 _/B4 B3^A B2c2 B2c2 B2=A2 | G4 G2^A2 _/B3A B2c2 B2A2 B4 | A4 _/B4 c4 B4 c4 d4 | dcd_/e d2c2 _/B12 z4 |\n_/B4 ^f4 f12 z4 | _/e4 ^f4 g2f2 g2e2 d4 {e}d2c2 | _/B8 c4 d4 c4 B4 | ^f4 _/e2d2 d12 z4 |]"
+        },
+        "tk_segah_8": {
+            "cat": "tk:segah",
+            "label": "Acem Ülkesinde — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Acem Ülkesinde\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=51\nK:C\nd2d2d2d2 _/ed2_/Bc2B2 | d2d2d2d2 _/ed2_/Bc2B2 | z2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | d2d2d4 _/ed2_/Bc2B2 |\nz2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | z2cd_/e2e2 e4{f}ed{e}d2 | d_/e2f{g}ed{e}d2 de2f{g}ed{e}d2 | {c}d2d2{d}g^f{g}_/ed d2ddc2_/B2 |\nz2dcd3_/B cddBc2B2 | z2dcd3_/B cddBc2B2 | z2cd_/ef{g}ed cdd_/Bc2B2 | z2cd_/ef{g}ed cdd_/Bc2B2 |\nd2d2d2d2 _/ed2_/Bc2B2 | d2d2d2d2 _/ed2_/Bc2B2 | z2cd_/ef/g/f/e/d c{e}d2_/Bc2B2 | d2d2d4 _/ed2_/Bc2B2 |]"
+        },
+        "tk_segah_302": {
+            "cat": "tk:segah",
+            "label": "Beyaz Giyme Söz Olur — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Beyaz Giyme Söz Olur\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=120\nK:C\nz2ga agg^f f4 g2f_/e d2 | _/e2 ^f2fe dc_/B4g2 f2eg | ^f12 f2f2 f2 | z2 gaag g^ff4g2 f_/ed2 |\nz_/e2^f fedc _/B4 g2fe d2 | ^ff {g}_/eddc c_/BB4Bc d2ed | ^f{g}f_/ed dcc_/B B8-B2 | z2 gaag g^ff4g2 f_/ed2 |]"
+        },
+        "tk_segah_366": {
+            "cat": "tk:segah",
+            "label": "Bir Fındığın İçini… — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Bir Fındığın İçini…\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\nz4 d2e4e4e4 | e8d2 e4 d4 | z4 d2e4e4e4 | e8d2 e4 d4 |\nz4 g2^f2 g2e4d2 c2 | d4_/B4d2 c4 B2z2 | z4 d2d4d4d4 | d4_/B4d2 c4 B2z2 |]"
+        },
+        "tk_segah_434": {
+            "cat": "tk:segah",
+            "label": "Boyda Bosun Yoktur — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Boyda Bosun Yoktur\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=156\nK:C\nz4 _/e2^f2 g4 gag2 fe | d4_/e2 f2f2 e2de d2c2 | _/B4 B2B2 B4 g2^f2 _/e2 | d3_/Bdc cBB8z2 |\nz4 _/B2c2 d4 d4 _/e2 | d4_/e2 f2f2 e2de d2c2 | _/B4 g2g2 g4 gag2 ^f2 | ^f3_/ed2 e2f8-f2 |]"
+        },
+        "tk_segah_2046": {
+            "cat": "tk:segah",
+            "label": "Zeytinyağlı Yiyemem — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Zeytinyağlı Yiyemem\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=60\nK:C\nd2g3/2g/ ^f_/edc | _/B2_/e2 e/d/e/^f/ed | d2gg ^f_/edc | _/B2c/B/c/d/ BB/A/B/c/d/_/e/ |\nd2g3/2g/ ^f_/edc | _/B2_/e2 e/d/e/^f/ed | d2gg ^f_/edc | _/B2c/B/c/d/ .B2g/^f/e/g/ |\n^f2ff f2f2 | e^fga {a}g=fed | d2gg ^f_/edc | _/B2_/e2 e/d/e/^f/ed |\nd2gg ^f_/edc | _/B2c/B/c/d/ B2g/^f/e/g/ | ^f2ff f2f2 | e^fga {a}g=fed |]"
+        },
+        "tk_segah_1553": {
+            "cat": "tk:segah",
+            "label": "Oy Kemençe Kemençe — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Oy Kemençe Kemençe\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=102\nK:C\n_/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 | _/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 |\n^f2fg g2gf _/e2f2 f2ed | d2d2 gag^f ._/e2.f2 .f2z2 | ^f2fg g2gf _/e2f2 f2ed | d2d2 gag^f ._/e2.f2 .f2z2 |\n^fgg2 gagf _/e2f2 f2ed | .d2.d2 ._/e2ed dcc_/B B4 | _/Bcdc d2cB A2_/e2 e2d2 | ._/e2.d2 d2c_/B .^A2.B2 .B4 |]"
+        },
+        "tk_segah_1563": {
+            "cat": "tk:segah",
+            "label": "Pencereden Taş Gelir — trad.",
+            "maqam": [
+                "turkish",
+                "segah",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Pencereden Taş Gelir\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam segah (turc). Türkü, extrait.\nM:12/8\nL:1/16\nQ:1/4=180\nK:C\nd3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 | d3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 |\nG4 d2d2 d4 d3c d2c2 {d}c2{d}_/B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 | d3c d2c2 {d}c_/Bz2 B4 d2c2 {d}c2{d}B2 | d3c d2d_/e dcz2 _/B4 B2B^A B2z2 |]"
+        },
+        "tk_huzzam_1124": {
+            "cat": "tk:huzzam",
+            "label": "Hüzzam Sazsemâîsi — Gazi Giray Han",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Hüzzam Sazsemâîsi\nC:Gazi Giray Han\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=69\nK:C\n_/B4_eee2d2d2c2B4c2d4e^fe2d2d2 | c2_/B4cdc4ccc4c2B2d4c2B4 | _/BBB2z2B2A2B4cd | c4ccc2z2c2_/B2d4c2B4BBB2z2B2 |\nA2_/B4c2d4_eee2 | d2d2c2_/B4cdB4 | ^A2G4A4_/B4d2 | c4_/B2^A3Bc2d2d2 |]"
+        },
+        "tk_huzzam_1122": {
+            "cat": "tk:huzzam",
+            "label": "Hüzzam Peşrev — Tanburî Büyük Osman Bey",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Hüzzam Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=69\nK:C\nc4 d4 c2_/B2 ^f2_e2 | ^f_ed4_/B2 cdcB c2d_/e | dc_/B^A B2c2 B4 d2_ed | ^fg2f _e2d2 dcc_/B c2d2 |\nc4 d2_e2 d3/2e/^fg a_bag | ag^f4d2 _edef ed^c2 | d6^c2 d_edc d2e2 | d2^f2 _e6ed d2ed |]"
+        },
+        "tk_huzzam_1813": {
+            "cat": "tk:huzzam",
+            "label": "Sâzın Al Âguşa — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Sâzın Al Âguşa\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Kupe, extrait.\nM:6/4\nL:1/16\nQ:1/4=84\nK:C\nd2c2 _/B2c2 d14z2 | _e8 e4 ^f4 e4 d4 | d4 c2_/B2 B2c2 d2_e2 ^f4 e2d2 | d2c2 c2_/B2 B14z2 |\n_/B6^f2 f8 f2_e2 d4 | g6_b2 a2g2 ^f2_e2 f2e2 d4 | d2_e2 ^f2g2 a4 g8 g2f2 | ^f2_e2 {f}e2d2 d14z2 |]"
+        },
+        "tk_huzzam_52": {
+            "cat": "tk:huzzam",
+            "label": "Akşam Oldu Yine Bastı Kareler — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Akşam Oldu Yine Bastı Kareler\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=72\nK:C\nz8 z4 ^fgf_e | ^f_ed4_/B2 c2de dcB^A | _/B2^AB c2Bc d2cd _e2de | ^f_ed4_/B2 c2d2 dccB |\n_/B4 BcB^A B4 ^fgf_e | ^f_ed4_/B2 c2de dcB^A | _/B2^AB c2Bc d2cd _e2de | ^f_ed4_/B2 c2de dccB |\n_/B6ag g^ff^e f4 | ^f4 f2f2 f4 f4 | a3g g2g^f f3_e feed | d4 _e2^f2 g8 |]"
+        },
+        "tk_huzzam_80": {
+            "cat": "tk:huzzam",
+            "label": "Alıverin Bağlamamı Çalayım — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Alıverin Bağlamamı Çalayım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:4/4\nL:1/16\nQ:1/4=81\nK:C\nd3c dcc_/B B4 z2Bc | d3c dcc_/B B4 z2Bc | d3_/e dcc_/B B2g4^fe | d3_e dcc_/B B4 z2Bc |\nd3c dcc_/B B4 z2Bc | d3c dcc_/B B4 z2Bc | d3_/e dcc_/B B2g4^fe | d3_/e dcc_/B B4 ag^f^e |\n^f4 f2f2 f4 f4 | a3g g3^f f3_e feed | d2z2 g2g2 g2^f2 _e2a2 | g2f2 _/e2d2 d2_e2 ^f2ed |]"
+        },
+        "tk_huzzam_99": {
+            "cat": "tk:huzzam",
+            "label": "Arabaya Taş Koydum — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Arabaya Taş Koydum\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=216\nK:C\ng4 g4 g4 ^f2_e2 d2 | ^f4f4f4_e2 d2c2 | _e2d2 e2g2 ^f2e2 d2c2 _/B2 | _/B2 c2d2 _e2^f2 a2g6 |\ng4 g4 g4 ^f2_e2 d2 | ^f4f4f4_e2 d2c2 | _e2d2 e2g2 ^f2e2 d2c2 _/B2 | _/B18 |]"
+        },
+        "tk_huzzam_114": {
+            "cat": "tk:huzzam",
+            "label": "Asker Oldum Piyade — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Asker Oldum Piyade\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=72\nK:C\n^fg2g g2a2 | ^f2f4g2 | _e2{^f}ed f2{g}fe | d2{_e}dc _/B4 |\n_/Bc2c c2{d}cB | _/B^AAG dccB | _/B3/2^A/Bc d_e^fg | ag^fa g4 |\n^fg2g g2a2 | ^f2f4g2 | _e2{^f}ed f2{g}fe | d2{_e}dc _/B4 |\n_/Bc2c c2{d}cB | _/B^AAG dccB | _/B4-Bg^f_e | dc_/B^A B4 |]"
+        },
+        "tk_huzzam_615": {
+            "cat": "tk:huzzam",
+            "label": "Düriyemin Güğümleri Kalaylı — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Düriyemin Güğümleri Kalaylı\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=210\nK:C\ng4 g4 g2^f2 a2g2 f2 | ^f4g4_e2 d2f2 e2d2 | g4 g4 ^f2_e2 d2c2 _/B2 | f4f2 _/e2e2 d2d2 c2d2 |\nc2_/B8-B2 d2_e2 ^f2 | g4g4g2 ^f2a2 g2f2 | ^f4 g4 _e2d2 f2e2 d2 | g4g4^f2 _e2d2 c2_/B2 |]"
+        },
+        "tk_huzzam_986": {
+            "cat": "tk:huzzam",
+            "label": "Hayatları Değirmi — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Hayatları Değirmi\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:10/8\nL:1/16\nQ:1/4=168\nK:C\nz4 ^f2g4g2 f2g2 f2_e2 | ^f2_e2 f2e2 d2e2 d2f2 e2d2 | d4 ^f2g4g2 f2g2 f2_e2 | ^fgfg f2_e2 d2e2 d2f2 e2d2 |\nd4 ^f2gf g2g4g2 f2_e2 | ^fgfg _e2e2 d2d2 c2e6 | _e4 d2e2 d2^f2 gaf2 e2d2 | d4 d_ec2 B2B8-B2 |]"
+        },
+        "tk_huzzam_1966": {
+            "cat": "tk:huzzam",
+            "label": "Yanıyor mu Yeşil Köşkün Lambası — trad.",
+            "maqam": [
+                "turkish",
+                "huzzam",
+                10.773584905660377
+            ],
+            "abc": "X:1\nT:Yanıyor mu Yeşil Köşkün Lambası\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam huzzam (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=180\nK:C\n^fg2g g2gf f_ede f4 ed | d2 c_/B^f2 _eddc B^ABc defg | ^fg2g g2gf f_ede f4 ed | d2 c_/B^f2 _eddc B^ABc defg |\nz4 ^f2f2 f4 f4 _ed | d4_e2 ^f2g4a6 | g3^f _e2g2 f2e2 d4 c_/B | _/B4^f2 f2f4f4_ed |]"
+        },
+        "tk_saba_1642": {
+            "cat": "tk:saba",
+            "label": "Sabâ Sazsemâîsi — Neyzen Aziz Dede",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Sabâ Sazsemâîsi\nC:Neyzen Aziz Dede\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=120\nK:C\nc4 _/d2dc2_/BBA/B/ cB/A/A4z2 | c4 G2AG A_/Bc_d c/B/A/B/c4z2 | c_/dc2 d2e4f2 edc4_/Bc | A4 g2fe _dcc_/B BAA4z2 |\nA4 e2f3/2e/ fg_a3/2g/ fef4z2 | efef g2_a2 g2f2 e2_d2 c2_/Bc | A4 G2A_/B GABc ABc_d BcAB | G4 e_ddc2dc_/B BAA4z2 |]"
+        },
+        "tk_saba_1637": {
+            "cat": "tk:saba",
+            "label": "Sabâ Peşrev — Tanburî Büyük Osman Bey",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Sabâ Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=78\nK:C\nc4 _/B2c2 A4 c4 | _/B4 _d4 c3B A4 | A2z2 c2_d2 c2_/B2 A2B2 | c4 _d6e2 d2c2 |\nc4 _/B4 {g}f2g2 f2e2 | e2f2 e2_d2 dcde d2c2 | _/B2_d2 c8 z4 | _d4 c4 d4 e2f2 |]"
+        },
+        "tk_saba_1641": {
+            "cat": "tk:saba",
+            "label": "Sabâ Peşrev (Mevlânâ) — Kemânî Hamza",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Sabâ Peşrev (Mevlânâ)\nC:Kemânî Hamza\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Peşrev, extrait.\nM:2/4\nL:1/16\nQ:1/4=81\nK:C\nG2A2 GAG2 | A2_/B2 ABA2 | _/B2c2 c_dBd | c4 z4 |\nc2_d4(3edc | c4 _/B4 | c_/Bc_d cdcB | c3_/B A4 |\n_/BABc BAB2 | c_/Bc_d cBc2 | e3c _d3_/B | c4 _/B4 |\nc_/Bc_d cdcB | c/_/B/c/_d/cB A4 | _/BABc BAB2 | c_/Bc_d cBc2 |]"
+        },
+        "tk_saba_779": {
+            "cat": "tk:saba",
+            "label": "Gayrı Sen de Ol Biraz… — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Gayrı Sen de Ol Biraz…\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Kupe, extrait.\nM:8/4\nL:1/16\nQ:1/4=57\nK:C\nz4 A2_/B2 A4 B4 c4 B2_d2 B4 c4 | z4 c2_d2 c4 d4 e2f2 e2g2 gffe f4 | z4 f2f2 f4 f4 e2f2 g2_a2 g2f2 e2_d2 | c4 g2f2 f2.e2 e2_d2 d2c2 _/B2{e}dc c6z2 |\nz4 c2_/d2 c4 d4 e4 d2{g}fe e6z2 | z4 c2_d2 c4 d2e2 d2c2 c2d2 c2_/BA B2c2 | _/B4 A2G2 A4 B4 _d2c2 {d}c2d2 c3B A2d2 | c4 _/B2c2 B4 A4 A2c4BA A6z2 |]"
+        },
+        "tk_saba_527": {
+            "cat": "tk:saba",
+            "label": "Daracık Sokakları Duman Bürüdü — trad.",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Daracık Sokakları Duman Bürüdü\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:9/8\nL:1/16\nQ:1/4=204\nK:C\n_/B2B4B2 _d4 c4 B2 | c4_/B2 A2A2 B2c2 B2c2 | _/B2A6 B2A2 B6 | _/B2 B4 B2_d4c4B2 |\nc4 _/B2A2 A2B2 c2B2 c2 | _/B2 A6A4c_d cBAB | c4 c2c2 c4 c4 _d2 | e2 _d2d2 c2c2 d2c4_/B2 |]"
+        },
+        "tk_saba_963": {
+            "cat": "tk:saba",
+            "label": "Hangi Bağın Bağbanısan — trad.",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Hangi Bağın Bağbanısan\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:8/4\nL:1/16\nQ:1/4=162\nK:C\nc_d c_/B cd cB cd cd c{d}c BA | _/B2 c2 c{_d}c BA A8 | z2 c_d e2 {f}ed dc2_/B cB BA | A_/B2c c{_d}c BA A8 |\nc_d c_/B cd cB cd cd c{d}c BA | _/B2 c2 c{_d}c BA A8 | z2 c_d e2 {f}ed dc2_/B cB BA | A_/B2c c{_d}c BA A8 |]"
+        },
+        "tk_saba_1279": {
+            "cat": "tk:saba",
+            "label": "Kâr Etmez Âhım — trad.",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Kâr Etmez Âhım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Türkü, extrait.\nM:6/8\nL:1/16\nQ:1/4=228\nK:C\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6_d6 |\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6^FG A_/Bc_d |\n_d3c d2d2 c2_/B2 | c3_/B c2c2 B2A2 | _/B4 c2c2 B2A2 | A6_d6 |]"
+        },
+        "tk_saba_916": {
+            "cat": "tk:saba",
+            "label": "Gûş Eyle Bülbülleri — Dede Efendi",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Gûş Eyle Bülbülleri\nC:Dede Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:8/4\nL:1/16\nQ:1/4=60\nK:C\nc4 _/B2c2 _d3/2c/de d2c2 c3d c2dB A4 z4 | A2_/B2 G2A2 B2c2 A2B2 c2_d2 c2B2 c3/2B/ce d4 | _d2z2 c2d2 e2f2 g2a2 g2f2 e2d2 c3_/B A2e2 | _d3c _/B2c2 B2c2 d3/2e/dc c4 efg6 z4 |\nf4 g12 _a3g gffe f6f2 | e2f2 g2_a2 _/b3a g3f e3_d d3c c3_/B A4 | A2z2 G2A2 _/B2c2 _dedc c2c=d c3B cBBA A2A2 | A2c4_/BA A2z2 a4 a3g ^fga_/b g2a4z2 |]"
+        },
+        "tk_saba_1367": {
+            "cat": "tk:saba",
+            "label": "Mey İçerken — Şevki Bey",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Mey İçerken\nC:Şevki Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=66\nK:C\nz8-z2A4_/B2 c8 _d3cB4 c2d2 | _d2c4_/B2z2c4d2d2c4B2c3B A4defg | ._a2agfe_d2 c2d4dc c3_/Be2dc B2c4cd cBAB | c3_d ced2z2d4d2d6c2e3d c4_/B4 |\n_d2c2_/B2A2 G2ABA2B2 cdcdc2d2 dcBAB2c2 B4 | z2AG A2c2c_/BBA B2_d2dc2B cBBAA6cdcBAB | c3_dced2 z2d4d2 d6c2 e3dc4 _/B4 | _d2c2 _/B2A2G2AB A2B2cdcd c2d2dcBA B2c2B4 |]"
+        },
+        "tk_saba_269": {
+            "cat": "tk:saba",
+            "label": "Beni Aşka Salan Yâre — Tanburî Ali Efendi",
+            "maqam": [
+                "turkish",
+                "saba",
+                9
+            ],
+            "abc": "X:1\nT:Beni Aşka Salan Yâre\nC:Tanburî Ali Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam saba (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=132\nK:C\nc2_d2 c2_/B2 c2d2 c4 B2 | A3GA2 _/B2c_d cBc4z2 | c2_d2 e2f2 g2a2 g2f2 e2 | _d3cd2 e2c2 d2c4_/B2 |\nA3G A2_/B2 c2_d2 e2c2 d2 | c2 _/BAB2 c2cB2AA4z2 | c2_d2 c2_/B2 c2d2 c4 B2 | A3GA2 _/B2c_d cBc4z2 |]"
+        },
+        "tk_kurdi_1287": {
+            "cat": "tk:kurdi",
+            "label": "Kürdî Peşrev — Şehzâde Korkut",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                9
+            ],
+            "abc": "X:1\nT:Kürdî Peşrev\nC:Şehzâde Korkut\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=132\nK:C\nc4 d4 e8 | A8 e2d2 e4 | e4 d4 d8 | c4 B4 c4 d4 |\ne8 A8 | e2d2 e4 e4 d4 | d8 c4 B4 | c4 d4 e8 |]"
+        },
+        "tk_kurdi_1774": {
+            "cat": "tk:kurdi",
+            "label": "Seyr-i Kürdî’yi… — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                9
+            ],
+            "abc": "X:1\nT:Seyr-i Kürdî’yi…\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Kupe, extrait.\nM:8/8\nL:1/16\nQ:1/4=96\nK:C\nd4 e2fe d^cd4z2 | d4 efed ^cBcB A2z2 | g4 g2ga {_b}aggf edc2 | def2 gagf egf4z2 |\nf4 f2ef gaag fed2 | d4 e2fe d^cd4d=c | c4 c2c2 _e2d2 c2_B2 | _B2A2 G2AB {c}BAA4z2 |]"
+        },
+        "tk_kurdi_2071": {
+            "cat": "tk:kurdi",
+            "label": "Âşık-ı Dilhasteye Rahmeyle — Ahmet Avni Konuk",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                9
+            ],
+            "abc": "X:1\nT:Âşık-ı Dilhasteye Rahmeyle\nC:Ahmet Avni Konuk\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdi (turc). Kupe, extrait.\nM:8/8\nL:1/16\nQ:1/4=96\nK:C\ng4 a2a4a2 g2f2 | _b2a2 g2gf fed4z2 | d4 e2f2 {g}fed4z2 | ^c2d2 edd8z2 |\nc4 c2c2 _e2d2 c2_B2 | c_ed2 c2c_B BAG4z2 | G4 A2_B2 d2c2 B4 | _B2A2 G2AB {c}BAA4z2 |]"
+        },
+        "tk_kurdi_1234": {
+            "cat": "tk:kurdi",
+            "label": "Karşıyaka’da İzmir’in Gülü — Lavtacı Hristo",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Karşıyaka’da İzmir’in Gülü\nC:Lavtacı Hristo\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=240\nK:C\nf2g4f2 g_b_ag g4 f2 | fg f_eef edde dccd cdc_B | _B_/ABc dcd_/e fef_a gf_ed c2 | _Bc d_edc cBB_A AGG4z2 |\nf2g4f2 g_b_ag g4 f2 | fg f_eef edde dccd cdc_B | _B_/ABc dcd_/e fef_a gf_ed c2 | _Bc d_edc cBB_A AGG4z2 |]"
+        },
+        "tk_kurdi_1300": {
+            "cat": "tk:kurdi",
+            "label": "Kürdîlihicazkâr Sazsemâîsi — Tatyos Efendi",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Kürdîlihicazkâr Sazsemâîsi\nC:Tatyos Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Saz semaisi, extrait.\nM:10/8\nL:1/16\nQ:1/4=132\nK:C\nG4 g2g_a gf_e3/2d/ efg4z2 | g2_a2 c'2_b3ag3fgf _edec | _B3_e dfe3gf3_ag4fe | _e3c' _b_ag3fed efg4z2 |\n_a2g2 f2_e3dc_B cde4z2 | d2_e2 g2f3ded ecd4z2 | G4 _e2d3cc3/2e/ dcc4z2 | _Bcd_e dcBd cBB_A AGBc defg |]"
+        },
+        "tk_kurdi_1298": {
+            "cat": "tk:kurdi",
+            "label": "Kürdîlihicazkâr Peşrev — Tanburî Cemil Bey",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Kürdîlihicazkâr Peşrev\nC:Tanburî Cemil Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nc4-c _b _a g {a}g8 | f2 g2 f2 _e2 f4 g4 | f _e d c f2 g2 f2 c'2 _b2 _a2 | _a2 g4 f2 f2 {g}f _e g2 {a}g f |\n_a2 {_b}a g f2 g2 f4 _e2 f2 | g2 _e2 f2 g2 _a3/2 g/ a _b a g f2 | g3 f _e2 f2 e4 f2 g2 | f2 {g}_e2 d g f e {f}e4 z e d c |]"
+        },
+        "tk_kurdi_836": {
+            "cat": "tk:kurdi",
+            "label": "Gidelim Göksu’ya — Lavtacı Hristo",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Gidelim Göksu’ya\nC:Lavtacı Hristo\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=168\nK:C\nG3_A _B2c2 d2_/e2 f2e2 f2 | g8gf gaf2 _e2d2 | c2_ba g2a2 f2_e2 gfe2 ed | d6 c2d2 {f}_edd4z2 |\nc3d _e2f2 g2f2 _a2g2 f2 | _e3dd3cc2 {e}dcc4z2 | _B3d c2d2 B2c2 cB_A2 AG | G6 d_edc _B_AG4z2 |]"
+        },
+        "tk_kurdi_1334": {
+            "cat": "tk:kurdi",
+            "label": "Mahrum-i Şevkim — Rahmi Bey",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Mahrum-i Şevkim\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=126\nK:C\nf2gg g2g2 g2_ag g4 gf | f3_/ee3dd2 {e}dcc4z2 | _B3c d2_e2 fef_a gfed c2 | _Bc d_edc cBB_A AGG6 |\nf2gg g2g2 g2_ag g4 gf | f3_/ee3dd2 {e}dcc4z2 | _B3c d2_e2 fef_a gfed c2 | _Bc d_edc cBB_A AGG6 |]"
+        },
+        "tk_kurdi_1664": {
+            "cat": "tk:kurdi",
+            "label": "Sana Ey Cânımın Cânı Efendim — Rahmi Bey",
+            "maqam": [
+                "turkish",
+                "kurdi",
+                7
+            ],
+            "abc": "X:1\nT:Sana Ey Cânımın Cânı Efendim\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam kurdilihicazkar (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=204\nK:C\ng4 _a2g2 f2_e2 d2e4z2 | d2_e2 f2g2 _a2f2 a2g4z2 | g4 c'2_b2 _a2g2 f2_e2 d2c2 | d2_/e2 f2f2 e2_e2 d2d6 |\nc4 d2_/e4f4g4z2 | f2g2 _a2g2 f2_e2 d2c6 | _B2c2 d2_e2 f2d2 c2B2 _A2G2 | G4 _e2d2 c2_B2 _A2G3def |]"
+        },
+        "tk_nihavend_2132": {
+            "cat": "tk:nihavend",
+            "label": "Üsküdar’a Gider İken — trad.",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Üsküdar’a Gider İken\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:2/4\nL:1/16\nQ:1/4=84\nK:C\nd_edc _BABc | d_edc _BAG2 | d_edc _BABc | d4 z4 |\nd_edc _BABc | d_edc _BAG2 | Ac_BA AGG^F | G4 z4 |\nG3d d2d2 | _edef d2d2 | c2cc _B2c2 | d_edc _BAG2 |\nG3d d2d2 | _edef d2d2 | c2cc _B2c2 | d_edc _Bcd2 |]"
+        },
+        "tk_nihavend_1490": {
+            "cat": "tk:nihavend",
+            "label": "Nihâvent Peşrev — Tanburî Büyük Osman Bey",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Nihâvent Peşrev\nC:Tanburî Büyük Osman Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Peşrev, extrait.\nM:none\nL:1/16\nQ:1/4=72\nK:C\nc4 d8 (3c2_B2c2 | _B6f2 f_/efg f2_e2 | _edef e2d2 dcde d2c2 | _B2f_e eddc cBBA B2c2 |\n_B4 d2_e2 d4 c2d2 | c2_Bc B2AB A2GA G2^F2 | G2d4c_B AG^F_E D4 | D2G4^F2 GAGF G2A2 |]"
+        },
+        "tk_nihavend_81": {
+            "cat": "tk:nihavend",
+            "label": "Aman Avcı Vurma Beni — trad.",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Aman Avcı Vurma Beni\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:6/8\nL:1/16\nQ:1/4=264\nK:C\nd4 _e2d2 c2_B2 | c4 d2c2 _B2A2 | _B4 c2B2 A2G2 | _B2A2 G2A2 G2^F2 |\nG2A2 _B2c2 d4 | d4 _e2d2 c2_B2 | c4 d2c2 _B2A2 | _B4 c2B2 A2G2 |\n_B2A2 G2A2 G2^F2 | G6cd _e^fge | d4 d2d6 | g6g2 ^f2_e2 |]"
+        },
+        "tk_nihavend_347": {
+            "cat": "tk:nihavend",
+            "label": "Bir Ataş Ver Cıgaramı Yakayım — trad.",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Bir Ataş Ver Cıgaramı Yakayım\nC:Traditionnel\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Türkü, extrait.\nM:10/4\nL:1/16\nQ:1/4=54\nK:C\nd2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df {A}_e2d2 A_BG2 dd3 edc2 B/A/Bd2 d3/2c/BA BAG^F G3A BGd2 | d2df {A}_e2d2 A_BG2 dd3 edc2 B/A/Bd2 d3/2c/BA BAG^F G3A BGd2 | ^ff3 g3/2f/_ed d4 f2f2 g3/2f/ed d4 g3/2f/ed g3/2f/ed d3A _BGd2 |\n^ff3 g3/2f/_ed d4 f2f2 g3/2f/ed d4 g3/2f/ed g3/2f/ed d3A _BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 | d2df _e2d2 A_BG2 dd3 e3/2d/c2 BAd2 d3/2c/BA B3/2A/G^F G3A BGd2 |]"
+        },
+        "tk_nihavend_863": {
+            "cat": "tk:nihavend",
+            "label": "Gönlüm Yine Bir Âteş-i Hicrâne… — Şeyh Ethem Efendi",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Gönlüm Yine Bir Âteş-i Hicrâne…\nC:Şeyh Ethem Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:9/8\nL:1/16\nQ:1/4=114\nK:C\nG3A _B2c2 d2_e2 ^f2g2 a2 | ^fg a_bag gff_e edd4z2 | g3^f _e2g2 f3e d4 f2 | _e3dc4Bc dBc4z2 |\n_BABc dcd_e f_/ef_a gf_ed cB | A_B c_edc BAAG G^FG4z2 | G3A _B2c2 d2_e2 ^f2g2 a2 | ^fg a_bag gff_e edd4z2 |]"
+        },
+        "tk_nihavend_1702": {
+            "cat": "tk:nihavend",
+            "label": "Semâlardan Güneş Hâlâ İnmiyor — Mısırlı Udî İbrahim Efendi",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Semâlardan Güneş Hâlâ İnmiyor\nC:Mısırlı Udî İbrahim Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:4/4\nL:1/16\nQ:1/4=78\nK:C\nd3c _B2c2 d4 z4 | (3_b2a2g2 (3f2_e2d2 c4 z4 | (3_a2g2f2 (3_e2d2c2 _B4 z4 | c3_e d3c _B3d c3B |\nA3c _B3A G3^F G3A | _B3c (3d2c2_e2 d4 z4 | c4 _B4 A4 G4 | ^F4 D4 _B3/2A/GF G4 |\nd4 _B3A G4 d4 | _e3d e2g2 ^f2e2 d2^c2 | d4 _b4 a4 g4 | f3_e e3d d4 z4 |]"
+        },
+        "tk_nihavend_1754": {
+            "cat": "tk:nihavend",
+            "label": "Sevdim Seni Ey İşvebâz — Tanburî Cemil Bey",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Sevdim Seni Ey İşvebâz\nC:Tanburî Cemil Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:6/8\nL:1/16\nQ:1/4=174\nK:C\n_B2BA Bcd2 dcdB | A2AG A_Bc2 c=BcA | G2G^F GA_B2 A2G2 | A_BAG ^FGA4z2 |\nc2cB cd_e2 edec | _B2BA Bcd2 dcdB | A2_B2 c2d2 B2A2 | .G2._B2 .d2.G4z2 |\n_B2BA Bcd2 dcdB | A2AG A_Bc2 c=BcA | G2G^F GA_B2 A2G2 | A_BAG ^FGA4z2 |]"
+        },
+        "tk_nihavend_1257": {
+            "cat": "tk:nihavend",
+            "label": "Kimseye Etmem Şikâyet — Kemânî Sarkis Efendi",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Kimseye Etmem Şikâyet\nC:Kemânî Sarkis Efendi\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=204\nK:C\n_e6e4e2 d2c2 _B2c2 | d8-d2d2 c2_B2 A2G2 | G2^F2 G2A2 _B2c2 d2_e2 d2c2 | d4 _e2d2 c2_B2 c2d6 |\n_e8-e2e2 d2c2 _B2c2 | d4 d2d4d2 c2_B2 A2G2 | A4 _e2d2 c2_B2 A2G4^F2 | G8-G2G2 ^F2G6 |]"
+        },
+        "tk_nihavend_1526": {
+            "cat": "tk:nihavend",
+            "label": "Nâr-ı Aşkınla Senin… — Rifat Bey (Sermüezzin, Miralay)",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Nâr-ı Aşkınla Senin…\nC:Rifat Bey (Sermüezzin, Miralay)\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:9/4\nL:1/16\nQ:1/4=66\nK:C\n^f2g4_b2 a3b g3a f3g _e3f d2e2 d2c2 _B2A2 | G3A _B2c2 d2_e2 d2c2 B3A AGG^F G4 d2e^f g4 | ^f2g4_b2 a3b g3a f3g _e3f d2e2 d2c2 _B2A2 | G3A _B2c2 d2_e2 d2c2 B3A AGG^F G8 z4 |\nz8 z2G4d2 c3_B A2c2 B2A2 G2B2 A2G2 | A3G ^F2G2 A2_B2 G2A2 B2c2 B2c2 d2{_e}d^c d8 | z2d_e f2g2 f3e d2f2 e3d c2e2 d3c _B4 c2d2 | c4 d4 d2_ef edc2 d3c _Bcde c2d4c2 f2ed |]"
+        },
+        "tk_nihavend_1683": {
+            "cat": "tk:nihavend",
+            "label": "Saçlarına Bağlanalı Ey Peri — Rahmi Bey",
+            "maqam": [
+                "turkish",
+                "nihavend",
+                7
+            ],
+            "abc": "X:1\nT:Saçlarına Bağlanalı Ey Peri\nC:Rahmi Bey\nS:SymbTr — CompMusic (UPF), CC BY-NC-SA 4.0 ; ABC : S. Shlien\n% note: Makam nihavent (turc). Chanson, extrait.\nM:10/8\nL:1/16\nQ:1/4=168\nK:C\n_e8-e2e4A2 _B2c2 | d8-d2d2 c2_B2 A2G2 | _e8-e2e4A2 _B2c2 | d4 _e2d2 c2_B2 c2d4z2 |\nf8-f2g2 f2_e2 d2c2 | _e8-e2d2 c2_B2 A2G2 | A2_B2 c2B2 A2B2 A2G4^F2 | G18z2 |]"
+        },
+        "w_ode_joie": {
+            "cat": "w:major",
+            "label": "Ode à la joie (Beethoven)",
+            "maqam": [
+                "western",
+                "major",
+                0
+            ],
+            "abc": "X:1\nT:Ode à la joie\nC:L. van Beethoven\nM:4/4\nL:1/4\nQ:1/4=110\nK:C\nE E F G | G F E D | C C D E | E3/2 D/2 D2 |\nE E F G | G F E D | C C D E | D3/2 C/2 C2 |]"
+        },
+        "w_clair_lune": {
+            "cat": "w:major",
+            "label": "Au clair de la lune",
+            "maqam": [
+                "western",
+                "major",
+                0
+            ],
+            "abc": "X:1\nT:Au clair de la lune\nC:Traditionnel\nM:4/4\nL:1/4\nQ:1/4=100\nK:C\nC C C D | E2 D2 | C E D D | C4 |\nC C C D | E2 D2 | C E D D | C4 |\nD D D D | A,2 A,2 | D C B, A, | G,4 |\nC C C D | E2 D2 | C E D D | C4 |]"
+        },
+        "w_frere_jacques": {
+            "cat": "w:major",
+            "label": "Frère Jacques",
+            "maqam": [
+                "western",
+                "major",
+                0
+            ],
+            "abc": "X:1\nT:Frère Jacques\nC:Traditionnel\nM:4/4\nL:1/4\nQ:1/4=110\nK:C\nC D E C | C D E C | E F G2 | E F G2 |\nG/A/ G/F/ E C | G/A/ G/F/ E C | C G, C2 | C G, C2 |]"
+        },
+        "w_greensleeves": {
+            "cat": "w:minor",
+            "label": "Greensleeves",
+            "maqam": [
+                "western",
+                "minor",
+                7
+            ],
+            "abc": "X:1\nT:Greensleeves\nC:Traditionnel (Angleterre, XVIe s.)\nS:(2nd/6)\nQ:1/4=120\nL:1/4\nM:C\nS:Bruce Olson (trillian.mit.edu) via abcnotation.com\n% note: Mineur sur Sol ; le Fa♯ (sensible) apparaît aux cadences.\nK:Gm\nB2dB|cAF2|B2GG|A^FD2|B3/2c/2dB|cAFF|BGA^F|G2G2|\\\nf2fd|cAF2|B3/2B/2GG|AFD2|f2fd|cAFF|BGA^F|GGG2|]"
+        },
+        "w_amazing_grace": {
+            "cat": "w:pent_maj",
+            "label": "Amazing Grace",
+            "maqam": [
+                "western",
+                "pent_maj",
+                7
+            ],
+            "abc": "X:1\nT:Amazing Grace\nC:Traditionnel (air « New Britain », 1831)\nS:Colin Hume's website,  colinhume.com  - chords can also be printed below the stave.\nQ:1/4=112\nM:3/4\nL:1/4\nS:Colin Hume (colinhume.com) via abcnotation.com\n% note: Gamme pentatonique majeure de Sol : Sol La Si Ré Mi (pas de Do ni de Fa♯).\nK:C\nD |  \"G\"G2B/G/ | \"G7\"B2A | \"C\"G2 E | \"G\"D2 \"D7\"D | \"G\"G2 B/G/ | \"Em\"B2A | \"D\"d3- | d2B |\n\"G\"d2 B/G/ | \"G7\"B2A | \"C\"G2E | \"G\"D2 \"D7\"D | \"Em\"G2B/G/ | \"D7\"B2A | \"G\"G3- | G2 |]"
+        },
+        "w_old_joe": {
+            "cat": "w:mixolydian",
+            "label": "Old Joe Clark",
+            "maqam": [
+                "western",
+                "mixolydian",
+                9
+            ],
+            "abc": "X:1\nT:Old Joe Clark\nC:Traditionnel (Appalaches, États-Unis)\nO:USA; South\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:4/4\nL:1/8\nQ:1/4=200\n% note: Mode mixolydien sur La : un majeur avec la 7e mineure (Sol naturel).\nK:D\n\"A\"e2 f2 g2 f2|e2 d2 c4|e2 f2 g2 f2|\"E\"e4 e2 z2|\"A\"e2 f2 g2 f2|e2 d2 c4|A2 c2 \"G\"B2 G2|\"A\"A4 A2 z2:|\n|:\"A\"A3 A A4|e2 d2 c4|A3 A A2 A2|\"G\"G4 z4|\"A\"A3 A A4|e2 d2 c4|A2 c2 \"G\"B2 G2|\"A\"A4 A2 z2:|"
+        },
+        "w_scarborough": {
+            "cat": "w:dorian",
+            "label": "Scarborough Fair",
+            "maqam": [
+                "western",
+                "dorian",
+                4
+            ],
+            "abc": "X:1\nT:Scarborough Fair\nC:Traditionnel (Angleterre)\nO:England\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:3/4\nL:1/8\nQ:1/4=120\n% note: Mode dorien sur Mi : comme le mineur, mais avec la 6te majeure (Do♯).\nK:Edor\n\"Em\"E4E2|B4B2|\"D\"F3GF2|\"Em\"E6-|E2 B2d2|e4d2|\"A\"B2c2A2|\"Em\"B6-|B4e2|\n\"Em\"e4e2|\"G\"d4B2|B2A2G2|\"D\"F2D4-|D6|\"Em\"E4B2|\"D\"A4\"G\"G2|\"D\"F2E2D2|\"Em\"E6-|E6:|"
+        },
+        "w_drunken_sailor": {
+            "cat": "w:dorian",
+            "label": "Drunken Sailor",
+            "maqam": [
+                "western",
+                "dorian",
+                4
+            ],
+            "abc": "X:1\nT:Drunken Sailor\nC:Traditionnel (chant de marins)\nO:England\nZ:Paul Hardy's Session Tunebook 2026 (see pghardy.net). Creative Commons CC BY-NC-SA licenced.\nM:4/4\nL:1/8\nQ:1/4=160\n% note: Mode dorien sur Mi : le Do♯ (6te majeure) fait toute la couleur.\nK:Em\n\"Em\"B2BB B2BB|B2E2G2B2|\"D\"A2AA A2AA|A2D2F2A2|\"Em\"B2BB B2BB|B2^c2d2e2|\"D\"d2B2 A2F2|\"Em\"E4 E2 z2||\n\"Em\"B4 B3B|B2E2G2B2|\"D\"A4 A3A|A2D2F2A2|\"Em\"B4 B3B|B2^c2d2e2|\"D\"d2B2 A2F2|\"Em\"E4 E2 z2|]"
+        },
+        "ar_ajam_zuruni": {
+            "cat": "ar:ajam",
+            "label": "Zuruni kulli sana marra — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "ajam",
+                7.0
+            ],
+            "abc": "X:1\nT:Zuruni kulli sana marra\nC:Sayed Darwish\n% note: Maqam Ajam sur Sol.\nM:4/4\nL:1/8\nQ:1/4=90\nK:G\nz4 z2 z D | G2 B3 A2 G | F2 A3 G2 F | E3 F/G/ AGFE | D2 G2 G2 z D |\nG2 B3 A2 G | F2 A3 G2 F | G/F/E/F/ EF/G/ AGFE | D2 B3 A2 G | G2 D e2 d2 c | B2 A2 G4 |]"
+        },
+        "ar_husseini_salma": {
+            "cat": "ar:husseini",
+            "label": "Salma ya salama — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "husseini",
+                2
+            ],
+            "abc": "X:1\nT:Salma ya salama\nC:Sayed Darwish\n% note: Maqam Husseini sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:C\n|: D4 | D2 D2 | C2 D2 | D2 C_/B, | CD C_/B, | CD C_/B, | C2 D2 | D2 G,2 :|\nD4 | D2 D2 | C2 D2 | D2 d2 | d2 d2 | =ed d2 | d2 =ed | d2 c2 | dc c_/B | c_/B _/BA | G2 G2 |\nDd dd | =e2 d2 | z d dd | =ed dc | dc c_/B | c_/B _/BA | _/BA AG | GG D2 | z c d2 |\n_/B2 c2 | A2 _/B2 | G2 d2 | _/B2 c2 | A2 _/B2 | G2 A2 | F2 G2 | _/E2 F_/E | GA _/ED |]"
+        },
+        "ar_hijaz_helwa_di": {
+            "cat": "ar:hijaz",
+            "label": "El Helwa Di — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "hijaz",
+                2.0
+            ],
+            "abc": "X:1\nT:El Helwa Di\nC:Sayed Darwish\n% note: Maqam Hijaz sur Ré.\nM:2/4\nL:1/8\nQ:1/4=120\nK:Gm\n|: DG ^FG | A2 BA | G2 AG | ^F2 G^F | E2 ^FE | D2 z2 | DG ^FG | A2 A2 |\nA2 d2 | A2 BA | G^F GA | B4 | B B2 A | B3 A | B2 cB | A2 AG | A2 BA |\nG2 G^F | G2 AG | ^F3 E | ^F2 G^F | E3 D | E2 ^FE | D4 :|"
+        },
+        "ar_huzam_tala_al_badru": {
+            "cat": "ar:huzam",
+            "label": "Tala'a al-badru 'alayna — trad.",
+            "maqam": [
+                "oriental",
+                "huzam",
+                3.5
+            ],
+            "abc": "X:1\nT:Tala'a al-badru 'alayna\nC:trad. (chant de Médine)\n% note: Maqam Huzam sur Mi demi-bémol.\nM:4/4\nL:1/8\nQ:1/4=120\nK:C\n|: _/E2 F2 G4 | _A3 G F2 AG | GFF_/E _/E4 | _/E2 F2 G4 | _A3 G F2 A2 | G8 |\n_/E2 F2 G4 | _A3 G F2 AG | GFF_/E _/E4 | _/E2 F2 G2 _/E2 | F3 _/E DC F2 | _/E8 :|"
+        },
+        "ar_rast_ya_shadi": {
+            "cat": "ar:rast",
+            "label": "Ya Shadi al-Alhan — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "rast",
+                0
+            ],
+            "abc": "X:1\nT:Ya Shadi al-Alhan\nC:Sayed Darwish\n% note: Maqam Rast sur Do.\nM:8/4\nL:1/8\nQ:1/4=120\nK:C\n|: c2 c2 _/B2 A2 G4 A4 | _/Bc A_/B c2 _/B/A/G d2 dc dc c_/B |\nc d/c/ _/BA _/B c/_/B/ A3/2G/ G2 GA _B2 BA | c3/2_B/ AB GG A3/2G/ F2 _AG =BA GF |\n_/E=D _/EF G2 GG C2 F3/2_/E/ D2 _/E3/2D/ | CD _/EF G A/_/B/ c2 z G2 F _/E3/2D/ C2 |\nAF G_/E FD _/E3/2D/ CF F/_/E/D _/E3/2D/ C2 :|"
+        },
+        "ar_ajam_biladi": {
+            "cat": "ar:ajam",
+            "label": "Biladi, biladi, biladi — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "ajam",
+                5.0
+            ],
+            "abc": "X:1\nT:Biladi, biladi, biladi\nC:Sayed Darwish\n% note: Maqam Ajam sur Fa.\nM:4/4\nL:1/8\nQ:1/4=100\nK:F\nC/ |: F2 F3/2C/ F2 (3FEF | G3 A F2 AB | c2 A3/2G/ FA GA |[1 F2 E3/2G/ F2 z z/C/ :|[2 F2 E3/2G/ F2 A3/2A/ |\nA2 GF B2 A3/2G/ | G4- G z B3/2B/ | B2 AG c2 B3/2A/ | A3 G F z A3/2A/ | A2 GF B2 A3/2G/ |\nG3 A/B/ c2 c3/2c/ | c2 A3/2G/ FA GA | F2 E3/2G/ F4 |]"
+        },
+        "ar_kurd_aho_da": {
+            "cat": "ar:kurd",
+            "label": "Aho da elli sar — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "kurd",
+                9.0
+            ],
+            "abc": "X:1\nT:Aho da elli sar\nC:Sayed Darwish\n% note: Maqam Kurd sur La.\nM:4/4\nL:1/8\nQ:1/4=100\nK:F\n|: A,2 GA G2 A2 | z A2 c BAGF | EDCD E/F/E/D/ E2 | D E2 F G E/F/ G2 | A G2 F E2 CD | E C2 D CB,B,A, :|\nA, A/G/ ^/FG A2 FG |: A2 D/G/G/A/ A2 A2 | A2 Gc BA A2 | z z/A3/2 A G/F3/2 F2 | C2 FF/E/ G2 F2 :|\nz E2 F G3 G | GGFG A2 A2 | cBAG FECD | E2 CD CB,B,A, | A,2 z2 z4 |]"
+        },
+        "ar_kurd_ya_bahjat": {
+            "cat": "ar:kurd",
+            "label": "Ya Bahjat el-Rouh — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "kurd",
+                2
+            ],
+            "abc": "X:1\nT:Ya Bahjat el-Rouh\nC:Sayed Darwish\n% note: Maqam Kurd sur Ré.\nM:6/8\nL:1/8\nQ:3/8=60\nK:Gm\nDD EF G z | FF/_/E/ FF/_/E/ F2 | FB B/A/G G z | DE z/D/C B, z | B,C B,A, G, z |\n|: DD EF G z | B,C z/B,/A, G, z :| FF/_/E/ FF/_/E/ F2 | F B2 A G/G3/2 | DD EF G2 | B,C B,A, G,2 |\n|: CC/C/ CC DC | C C/D/ C/_B,/=A,/_B,/ C z :| z C/C/ D_/E F3/2_/E/ | D _/E/F/ D/_/E/ C D2 |\n|: G G/^F/ G G/F/ G/F/E | D E/^F/ D/E/C D2 :| B,C B,A, G,2 |]"
+        },
+        "ar_ajam_telet": {
+            "cat": "ar:ajam",
+            "label": "Tal'et ya mahla nurha — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "ajam",
+                0.0
+            ],
+            "abc": "X:1\nT:Tal'et ya mahla nurha\nC:Sayed Darwish\n% note: Maqam Ajam sur Do.\nM:4/4\nL:1/8\nQ:1/4=110\nK:C\nz2 E2 D2 C2 | DEDC CB, C2 | G,2 C2 D2 E2 | D2 CE D4 | C2 CD EFED | D/C/D/E/ DC C2 G,2 | G2 GF E2 ED | D/C/D/E/ DC C4 |\nz2 EF GFEF | GFEF G2 C2 | C2 A2 A2 G2 | F3/2G/ EF G4 | z2 FG AGFE | GFED FE D2 | z2 CD E/D/E/F/ ED | D/C/D/E/ DC C4 |]"
+        },
+        "ar_hijaz_ah_ya_zein": {
+            "cat": "ar:hijaz",
+            "label": "Ah ya zein — trad.",
+            "maqam": [
+                "oriental",
+                "hijaz",
+                0
+            ],
+            "abc": "X:1\nT:Ah ya zein\nC:trad. (chanson populaire)\n% note: Maqam Hijaz sur Do.\nM:4/4\nL:1/8\nQ:1/4=100\nK:C\nEF | G6 EF | G6 EF | G_A GF GA GF | E6 _AG | F6 EF | G_A GF E_D C2 | GF FE E_D DC | C6 EF |\nG_A GF E_D C2 | GF FE E_D DC | C6 z2 |]"
+        },
+        "ar_nahawand_sidi_mansour": {
+            "cat": "ar:nahawand",
+            "label": "Sidi Mansour — trad.",
+            "maqam": [
+                "oriental",
+                "nahawand",
+                2.0
+            ],
+            "abc": "X:1\nT:Sidi Mansour\nC:trad. (Tunisie)\n% note: Maqam Nahawand sur Ré.\nM:2/4\nL:1/8\nQ:1/4=110\nK:F\n|: DA AA | A3/2A/ GA | GE EE | E3/2D/ CD :| DD DD | E3/2D/ CD | DD DD | E3/2D/ CD ||\n|: DA AG | F2 CD | DF GA | F2 CD | DF GA | F2 CD :|"
+        },
+        "ar_hijaz_fog_el_nakhal": {
+            "cat": "ar:hijaz",
+            "label": "Fog el-nakhal — Othman al-Mawsili",
+            "maqam": [
+                "oriental",
+                "hijaz",
+                2
+            ],
+            "abc": "X:1\nT:Fog el-nakhal\nC:Othman al-Mawsili (Irak)\n% note: Maqam Hijaz sur Ré.\nM:4/4\nL:1/8\nQ:1/4=90\nK:Gm\n|: z2 DG G2 G2 | ^FGAG G2 FG | ABAG AG^FE | z ^F z F GFED :|\nAGG^F FEED | E2 C_B, B,2 A,2 | cBB^F FEED | DE^FG cA B2 |\nz BBA AGG^F | z AAG G^FFE | z BB^F FEED | DE^FG cA B2 |]"
+        },
+        "ar_rast_ya_mal_el_sham": {
+            "cat": "ar:rast",
+            "label": "Ya mal el-Sham — trad.",
+            "maqam": [
+                "oriental",
+                "rast",
+                0
+            ],
+            "abc": "X:1\nT:Ya mal el-Sham\nC:trad. (Alep)\n% note: Maqam Rast sur Do.\nM:4/4\nL:1/8\nQ:1/4=108\nK:C\n|: z cc_/B c3/2_/B/ A2 | _/B2 c2 _/B3/2A/ G2 | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 :|\nz ccc d3 d | d2 dd d3/2c/ _/B/A/G | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 |\nz cc_/B c_/B A2 | _/B2 c2 _/B3/2A/ G2 | cAAG GF _/E D/_/E/ | F G/A/ GF _/E3/2D/ C2 |]"
+        },
+        "ar_hijaz_qadduka": {
+            "cat": "ar:hijaz",
+            "label": "Qadduka al-mayyas — Omar al-Batsh",
+            "maqam": [
+                "oriental",
+                "hijaz",
+                2.0
+            ],
+            "abc": "X:1\nT:Qadduka al-mayyas\nC:Omar al-Batsh (muwashshah, Alep)\n% note: Maqam Hijaz sur Ré.\nM:4/4\nL:1/8\nQ:1/4=100\nK:Gm\n|: D z dd d2 dc | c d/_/e/ dc _/B2 cB | A2 A_/B cd c/_/B/A | Bc B/A/G A2 _B3/2A/ |\nGd dd d2 dc | c d/_/e/ dc _/B2 c_/B | A2 A_/B cd c/_/B/A | Bc B/A/G A2 _B3/2A/ |\nG2 GA B2 BA | cBAG ^FGAG | ^F2 FG AG GF | G3 ^F E2 F2 | G4 G2 E2 :| D4 z4 |]"
+        },
+        "ar_husseini_ya_zarif": {
+            "cat": "ar:husseini",
+            "label": "Ya zarif el-tool — trad.",
+            "maqam": [
+                "oriental",
+                "husseini",
+                2.0
+            ],
+            "abc": "X:1\nT:Ya zarif el-tool\nC:trad. (Palestine)\n% note: Maqam Husseini sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:F\nCD DD | _/E2 FF | _/E_/E D2 | CD DD | _/E2 FF | _/E_/E D2 ||\n|: GG GG | G2 GG | FF _/E2 | CD DD | _/E2 FF | _/E_/E D2 :|"
+        },
+        "ar_bayati_wain_a_ramallah": {
+            "cat": "ar:bayati",
+            "label": "Wain a Ramallah — trad.",
+            "maqam": [
+                "oriental",
+                "bayati",
+                2.0
+            ],
+            "abc": "X:1\nT:Wain a Ramallah\nC:trad. (Palestine)\n% note: Maqam Bayati sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:F\nF3/2D/ _/EC | D2 D2 | F3/2D/ _/EC | DE FG | GF G_/E | F3/2D/ _/EC | D2 D2 ||\n|: G2 GG | F2 _/E2 | G2 GG | F_/E D2 | B3/2A/ B_/E | AD _/EC | D2 D2 :|"
+        },
+        "ar_ajam_el_katra": {
+            "cat": "ar:ajam",
+            "label": "El Katra — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "ajam",
+                5.0
+            ],
+            "abc": "X:1\nT:El Katra\nC:Sayed Darwish\n% note: Maqam Ajam sur Fa.\nM:4/4\nL:1/8\nQ:1/4=110\nK:F\n|: C F2 G A2 FE | D2 A2 A4 | cB BA AG GF | FE DE FG F2 :|\nF F2 F FE ED | D2 CD E2 E2 | E E2 D DC CB, | CB, A,B, C2 C2 | C2 B,C D2 CD |\nE2 DE F2 FA | A A2 G AG GF | BA AG AB cB | F2 C2 F2 z2 |]"
+        },
+        "ar_kurd_mahsobko": {
+            "cat": "ar:kurd",
+            "label": "Mahsobko endas — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "kurd",
+                2.0
+            ],
+            "abc": "X:1\nT:Mahsobko endas\nC:Sayed Darwish\n% note: Maqam Kurd sur Ré.\nM:2/4\nL:1/8\nQ:1/4=120\nK:Gm\n|: z C DE | F3/2E/ DE | F3/2E/ DE | F3/2E/ GB | z C DE | F3/2E/ GE | F3/2D/ EC | D A/B/ A/G/F/E/ :|\n|: z G FG | F3/2E/ DE | F3/2E/ DE | FE/F/ G2 | z C DE | F3/2E/ GE | F3/2D/ EC | D4 :|\nd2 A3/2G/ | FG A2 | dd A3/2G/ | FG A2 | d2 A3/2G/ | FG A2 | dd A3/2G/ | FG AB | AG FG | AB Hc2 |\nz C DE | F3/2E/ GE | F3/2D/ EC | D4 |]"
+        },
+        "ar_hijaz_shedd_el_hizam": {
+            "cat": "ar:hijaz",
+            "label": "Shedd el-hizam — Sayed Darwish",
+            "maqam": [
+                "oriental",
+                "hijaz",
+                6
+            ],
+            "abc": "X:1\nT:Shedd el-hizam\nC:Sayed Darwish\n% note: Maqam Hijaz sur Fa♯.\nM:2/4\nL:1/8\nQ:1/4=110\nK:C\nz ^c ^AG | ^FEFG | ^ABAG | ^F4 | z ^c ^AG | ^FEFG | ^ABAG | ^F4 |\nz B BB | ^AB ^c2 | ^cd ^cB | ^AB ^c2 | z ^c ^AG | ^FEFG |[M:3/4] ^AB ^c3/2A/ B3/2B/ |[M:2/4]\n^FF B^c | d^c B^A | B4 | B4 | z f ^cd | B^A G^F | E4 | E4 | z e d^c | B^A GA | B4 | B4 |\nz f ^cB | B^A G^F | E4 | E4 | E2 ^FF | GG ^AA | BB ^cd | ed ^c^A | B2 ^f2 | de ^cd | B4 |]"
+        },
+        "ar_ajam_tafta_hindi": {
+            "cat": "ar:ajam",
+            "label": "Tafta hindi — trad.",
+            "maqam": [
+                "oriental",
+                "ajam",
+                2.0
+            ],
+            "abc": "X:1\nT:Tafta hindi\nC:trad. (chanson populaire égyptienne)\n% note: Maqam Ajam sur Ré.\nM:2/4\nL:1/8\nQ:1/4=110\nK:C\n|: dd AA | dd AA | AA Bd | ^cB A2 :| BB c/B/A | z4 | AA/A/ B/A/G | Gc d2 |]"
+        },
+        "ar_huzam_ya_ghusna_naqa": {
+            "cat": "ar:huzam",
+            "label": "Ya ghusna naqa — Abu Khalil al-Qabbani",
+            "maqam": [
+                "oriental",
+                "huzam",
+                3.5
+            ],
+            "abc": "X:1\nT:Ya ghusna naqa\nC:Abu Khalil al-Qabbani (muwashshah, Damas)\n% note: Maqam Huzam sur Mi demi-bémol.\nM:3/4\nL:1/8\nQ:1/4=90\nK:F\n|: dc c=B B_A | _AG F G2 A | =B2 G2 _AF |[1 _/E _/E/D/ C D _/E3/2 z/ :|[2 _/E=B _Bc =B3/2 z/ |\n=B2 B2 BB | c=B _B=B _B=B | c=B _B=B _B=B | c2 =B_A G2 |\n|: dc c=B B_A | _AG F G2 A | =B2 G2 _AF | _/E _/E/D/ C D _/E3/2 z/ :|"
+        },
+        "ar_husseini_billathi_askara": {
+            "cat": "ar:husseini",
+            "label": "Billathi askara — trad.",
+            "maqam": [
+                "oriental",
+                "husseini",
+                2
+            ],
+            "abc": "X:1\nT:Billathi askara\nC:trad. (muwashshah)\n% note: Maqam Husseini sur Ré.\nM:6/8\nL:1/8\nQ:1/4=88\nK:C\n|: z2 AA A2 | z AA_/B c2 | AGF AG2 :| |: z2 FG A2 | F2 _/E FGF | _/EDC _/ED2 :|"
+        },
+        "ar_rast_dulab_rast": {
+            "cat": "ar:rast",
+            "label": "Dulab Rast — trad.",
+            "maqam": [
+                "oriental",
+                "rast",
+                0
+            ],
+            "abc": "X:1\nT:Dulab Rast\nC:trad. (Égypte)\n% note: Maqam Rast sur Do.\nM:4/4\nL:1/8\nQ:1/4=120\nK:C\n|: c2 c2 G2 G2 | _/EF_/ED CGA_/B | c2 c2 G2 G2 | _/EF_/ED C2 D_/E | F3 _/E _/EDDC |[1 C2 z2 z GA_/B :|[2 C2 FF F2 F2 |\n|: C F2 G FG F3/2_/E/ | D _/E2 F _/EF _/E3/2D/ | C D2 F _/EDC_/B, |[1 CD_/EF G_/E F2 :|[2 C2 G,2 C2 D2 |\n_/E2 C2 D2 _/B,2 | C8 |]"
+        },
+        "ar_bayati_dulab_bayati": {
+            "cat": "ar:bayati",
+            "label": "Dulab Bayati — trad.",
+            "maqam": [
+                "oriental",
+                "bayati",
+                2
+            ],
+            "abc": "X:1\nT:Dulab Bayati\nC:trad. (Égypte)\n% note: Maqam Bayati sur Ré.\nM:2/4\nL:1/8\nQ:1/4=100\nK:C\nz A _/Bc |: d2 c2 | d2 _B2 | A2 G2 | z G A_B | c2 =B2 | c2 A2 | G2 F2 | z F GA | _B2 A2 |\n_B2 G2 | F2 _/E2 | z D _/EF | G2 FG | F2 _/EG | F_/E _/ED |[1 DA _Bc :|[2 d2 c_B | AG F_/E |\nD2 _/EF | _/E2 F3/2_/E/ | HD4 |]"
+        },
+        "ar_saba_dulab_saba": {
+            "cat": "ar:saba",
+            "label": "Dulab Saba — trad.",
+            "maqam": [
+                "oriental",
+                "saba",
+                2.0
+            ],
+            "abc": "X:1\nT:Dulab Saba\nC:trad. (Égypte)\n% note: Maqam Saba sur Ré.\nM:4/4\nL:1/8\nQ:1/4=132\nK:F\nAB | c_d cB AB A_G | F_G F_/E D2 AB | c_d cB AB A_G | F_G F_/E D2 AB | c_d cB AB A_G | F_G F_/E DC D_/E | F_G2 F F_/E _/ED |\n|: D2 _GF GF G2 | F_G2 A GA GF | _/E F2 _G FG F_/E | D _/E2 _G F_/E _/ED :|\nD z C z _G z G z | F3 _/E D_/E/F/ _/ED | D2 _/ED _/E2 F2 | _G2 F_/E F2 _/ED | C4 {_/E}D4 |]"
+        },
+        "ar_rast_tahmila_suznak": {
+            "cat": "ar:rast",
+            "label": "Tahmila Suznak (début) — trad.",
+            "maqam": [
+                "oriental",
+                "rast",
+                0
+            ],
+            "abc": "X:1\nT:Tahmila Suznak (début)\nC:trad. (anonyme)\n% note: Maqam Rast sur Do.\nM:2/4\nL:1/16\nQ:1/4=70\nK:C\n|: AGA_/B A2G2 | GFGA G2F2 | F_/EFG F2_/E2 | _/EDEF _/E2D2 | DCD_/E D2C2 | C2G,2 C2D2 |\n_/E2FG _/EF_/ED | _/E2FG _/EF_/ED | _/E2F2 GAGF | _/EF_/ED C2G2 | C2G2 F2G2 | A2GF _/ED_/EF |\nG2F_/E DCD_/E | F2_/ED C2G2 | G2FG F2_/E2 | D_/E F3 _/EDC | C4 _/E2F2 | _/E2D2 _/E2F2 :|"
+        },
+        "ar_iraq_melodie_iraq": {
+            "cat": "ar:iraq",
+            "label": "Mélodie en Iraq (rythme Rawan shami) — trad.",
+            "maqam": [
+                "oriental",
+                "iraq",
+                10.5
+            ],
+            "abc": "X:1\nT:Mélodie en Iraq (rythme Rawan shami)\nC:trad. (Syrie, noté par J. Rouanet, 1922)\n% note: Maqam Iraq sur Si demi-bémol.\nM:none\nL:1/8\nQ:1/4=80\nK:C\n(3C_/B,C D4 (3C_/B,C D4 F2 _/ECD_/E FGF_/E _/EFF_/E D2 (3C_/B,C D4 |\n(3C_/B,C D4 F2 _/EC D_/EDC _/B,2 ||\nG2 G4 (3F_/EF G4 (3F_/EF G4 A2 GF | _/EGF_/E D3 F G4 (3F_/EF G4 (3F_/EF G4 A2 GF | _/EGF_/E D3 F F_/E D2 ||\n(3C_/B,C D4 (3C_/B,C D4 F2 _/ECD_/E FGF_/E _/EFF_/E D2 (3C_/B,C D4 |\n(3C_/B,C D4 F2 _/EC D_/EDC _/B,2 |]"
+        },
+        "an_sika_kadria_sika": {
+            "cat": "an:sika",
+            "label": "Kadria sika « Mada nehebek » — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                11.0
+            ],
+            "abc": "X:1\nT:Kadria sika « Mada nehebek »\nC:trad. (sanâa d'Alger)\n% note: Mode Sika sur Si.\nM:3/4\nL:1/8\nQ:1/4=126\nK:G\nABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 B2 | ABcB A2 | B2 B2 z e |\nfg (3gfe d^c | d^c de f2 | d2 de f2 | ga f(3g/f/e/ f2 | g2 (3gfe d^c | d2 z2 dd |\ng3 e^de | f2 g/f/e/^d/ cd | e2 f/e/^d/c/ BA | B2 cdcd | B2 z2 Bc | ded^c d2 | d2 (3cdc B2- | B6 |]"
+        },
+        "an_sika_el_ked": {
+            "cat": "an:sika",
+            "label": "El ked el ladi sabani — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                11.0
+            ],
+            "abc": "X:1\nT:El ked el ladi sabani\nC:trad. (neklab du mode sika, Alger)\n% note: Mode Sika sur Si.\nM:2/4\nL:1/8\nQ:1/4=110\nK:G\nz2 gg | g2 g2 | f2 e2 | fgfe | d2 e2 | fgfe | d2 e2 | fgfe | d4- | d2 z2 |\nA2 B2 | c2 d2 | e2 c2 | d3 c | B4 | G4 | ABcd | B4- | B2 z2 |\nB2 c2 | d2 B2 | c2 A2 | cdcd | B4 | G4 | ABcA | B4- | B2 z2 |]"
+        },
+        "an_sika_ghouzili": {
+            "cat": "an:sika",
+            "label": "Ghouzili sekkour nabet — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                11.0
+            ],
+            "abc": "X:1\nT:Ghouzili sekkour nabet\nC:trad. (neklab du mode sika, Alger)\n% note: Mode Sika sur Si.\nM:2/4\nL:1/8\nQ:1/4=110\nK:G\nz2 z B | B2 A/B/A/G/ | F3 G | A/B/G/A/ F/G/E/F/ | D2 z G | F/G/E/F/ D/E/C/D/ | FE^DC | B,2 z2 |\nz2 z b | b2 a/b/a/g/ | ff z g | a/b/g/a/ f/g/e/f/ | dd z (3g/a/g/ | f/g/e/f/ ^d/e/c | f/g/e/f/ ^d/e/c/d/ | B4 |]"
+        },
+        "an_zidane_kadria_zidane": {
+            "cat": "an:zidane",
+            "label": "Kadria zidane « Nedjma » — trad.",
+            "maqam": [
+                "andalous",
+                "zidane",
+                9.0
+            ],
+            "abc": "X:1\nT:Kadria zidane « Nedjma »\nC:trad. (sanâa d'Alger)\n% note: Mode Zidane sur La.\nM:3/4\nL:1/8\nQ:1/4=120\nK:F\nz2 z2 z3/2A/ | B3/2A/ G2 A2 | A2 A2 A3/2A/ | B3/2A/ G2 A2 | A2 A2 A3/2A/ | B3/2A/ G2 A2 |\nA2 A2 E2 | ED^CB,A,G, | A,B,^CD ^C2 | G,2 A,B, ^C2 | D2 E2 F2 | ED^CB,A,G, |\nA,2 z2 ^C2 | ^C2 E2 ^CB, | A,2 A,2 EE | D^CB,A,A,B, | ^C2 DB, G,2 | A,6 |]"
+        },
+        "an_zidane_ya_racha": {
+            "cat": "an:zidane",
+            "label": "Ya racha el fitane — trad.",
+            "maqam": [
+                "andalous",
+                "zidane",
+                9.0
+            ],
+            "abc": "X:1\nT:Ya racha el fitane\nC:trad. (neklab du mode zidane, Alger)\n% note: Mode Zidane sur La.\nM:2/4\nL:1/8\nQ:1/4=120\nK:F\nB3/2A/ GG | AA/A/ AA | B3/2A/ GG | AA/A/ AA |\nz ^c cd | (e/f/e/f/ e/f/e/f/) | e f2 d | (e/f/e/f/ e/f/e/f/) | e f//e//^c/ d2 | e4- | e2 z2 |\na3 ^f | =b3 c' | =b/a/^g/f/ e^f | (g/a/g/a/ g/a/g/a/) | ^f2 a2 | e2 g^f/g/ | ^f3/2e/ d2 |]"
+        },
+        "an_zidane_ouana_ghadi": {
+            "cat": "an:zidane",
+            "label": "Ouana ghadi ellala (zendani) — trad.",
+            "maqam": [
+                "andalous",
+                "zidane",
+                9.0
+            ],
+            "abc": "X:1\nT:Ouana ghadi ellala (zendani)\nC:trad. (Alger)\n% note: Mode Zidane sur La.\nM:3/4\nL:1/8\nQ:1/4=144\nK:F\nefde ^c(3d/c/B/ | AABB^cd | (3e/f/e/ d dd z d | (3e/f/e/ d (3^c/d/c/ B cd |\n(3e/f/e/ d (3^c/d/c/ B A2 | ^c/d/e/d/c/B/ A z A | e/e/e/e/ ea ea | ea (3efg (3efg |\nef^gf (3e/f/e/ d | f/g/e/g/ d/e/^c d2 | efde ^c(3d/c/B/ | AABB^cd |\n(3e/f/e/ d d2 z d | (3e/f/e/ d (3^c/d/c/ B cd | (3e/f/e/ d (3^c/d/c/ B AA/B/ | G^F G2 A2 |]"
+        },
+        "an_arak_kadria_arak": {
+            "cat": "an:arak",
+            "label": "Kadria aârak « Semra » — trad.",
+            "maqam": [
+                "andalous",
+                "arak",
+                7
+            ],
+            "abc": "X:1\nT:Kadria aârak « Semra »\nC:trad. (sanâa d'Alger)\n% note: Mode Arak sur Sol.\nM:3/4\nL:1/8\nQ:1/4=126\nK:C\nz4 z G/A/ | BcBc B(3A/B/A/ | G^F G2 z G/A/ | BcBc B(3A/B/A/ | G^F G2 z G/A/ |\n^FDEF GA/B/ | G2 B2 z2 |\nz c Bc d/c/B/A/ | G^FG F GA | B/A/B/G/ ^F2 GA | B2 cd B/A/G/A/ |\nBd c2 d/c/B/A/ | G^F G2 z2 | GA B2 cd | cB d2 cB | G^F G2 G=F/E/ |\n=F2 GA B/c/d/c/ | (3BAG =F z GA | B2 cd BA | Bc Bc BA | G^F G2 z2 |]"
+        },
+        "an_arak_djatni_bria": {
+            "cat": "an:arak",
+            "label": "Djatni bria (zendani) — trad.",
+            "maqam": [
+                "andalous",
+                "arak",
+                9.0
+            ],
+            "abc": "X:1\nT:Djatni bria (zendani)\nC:trad. (Alger)\n% note: Mode Arak sur La.\nM:3/4\nL:1/8\nQ:1/4=138\nK:D\nd{e}c {d}B3 B/B/ | Bc {d}B3 A/A/ | BABc ed/e/ | c/d/B {B}A3 A/A/ |\nBB cc de | dd BB {B}A2 | AB GG FF | A A/B/ G/A/F/G/ E2 |\nz E FF GG | A A/A/ AB c/d/c/B/ | A A/A/ AA dd | dc de/d/ cd |\ncd Bc/B/ A3/2A/ | B{c}A Bc ed/e/ | c/d/B/c/ A^G A2 |]"
+        },
+        "an_raml_maya_kadria_remel_maia": {
+            "cat": "an:raml_maya",
+            "label": "Kadria remel maïa « Oueqfi » — trad.",
+            "maqam": [
+                "andalous",
+                "raml_maya",
+                11.0
+            ],
+            "abc": "X:1\nT:Kadria remel maïa « Oueqfi »\nC:trad. (sanâa d'Alger)\n% note: Mode Raml Maya sur Si.\nM:3/4\nL:1/8\nQ:1/4=126\nK:D\nB2 B2 c3/2B/ | A2 B2 B2 | B2 B2 c3/2B/ | A2 B2 B2 | B2 B2 c3/2B/ | A2 B2 B2 |\nB2 B2 B2 | d2 BABc | d2 ec A2 | Bcdedc | d2 d2 c2 | BcBc B z |\nBcdedc | B3 A d2 | A2 AA A2 | d2 BABc | d2 ec A2 | Bcdedc |\nd3 c c2 | BcBc B z | Bcdedc | B3 A d2 | A2 AA A2 | d2 BABc |\nd2 ec A2 | Bcdedc | d3 c c2 | BcBc B z | Bcdedc | B3 A dc | B2 z2 d2 |\nd2 c4 | Bcde d2 | dced c2 | cBdc B2 | B6 |]"
+        },
+        "an_raml_maya_kadria_remel_maia2": {
+            "cat": "an:raml_maya",
+            "label": "Kadria remel maïa « Tmenit » — trad.",
+            "maqam": [
+                "andalous",
+                "raml_maya",
+                9.0
+            ],
+            "abc": "X:1\nT:Kadria remel maïa « Tmenit »\nC:trad. (sanâa d'Alger)\n% note: Mode Raml Maya sur La.\nM:3/4\nL:1/8\nQ:1/4=120\nK:G\nz2 z2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ | B2 G2 A2 | A2 A2 A3/2A/ |\ncBAGFG | A2 A2 A3/2A/ | cBAGFG | AGE^DCB, | A,^G,A,B,CB, |\nA,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z E GF | GFED C2 |\nD3 EFG | EDCB,A,^G, | A,3 B,CB, | A,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z2 G,2 |\nC4 D2 | E3 DEG | EDCB,A,^G, | A,3 B,CB, | A,2 z E =F2 | DCDEFG | EDCB,A,^G, | A,2 z2 GF |\nG3/2A/ G2 C2 | D2 B,2 C2 | D4 ED | C3 CDC | B,3 B,CB, | A,6 |]"
+        },
+        "an_raml_maya_entoum_chehoudi": {
+            "cat": "an:raml_maya",
+            "label": "Entoum chehoudi (zendani) — trad.",
+            "maqam": [
+                "andalous",
+                "raml_maya",
+                11.0
+            ],
+            "abc": "X:1\nT:Entoum chehoudi (zendani)\nC:trad. (Alger)\n% note: Mode Raml Maya sur Si.\nM:4/4\nL:1/8\nQ:1/4=138\nK:D\nefef dede | c/d/B/c/ AA BB cc | e/d/e/c/ d/B/c/A/ A2 AA | A2 (3AAA BB cc |\ndd z c dd z c | defa g/a/f/g/ e/f/d/e/ | {d}=cc c/d/c/B/ cc c z |\nefef dede | cBAA BABc | e/d/e/c/ d/c/B/c/ A2 AA | BBcc de d/e/=c/d/ | BABA =cd c/d/B/c/ | A^GAA B2 z2 |]"
+        },
+        "an_moual_djar_el_haoua": {
+            "cat": "an:moual",
+            "label": "Djar el haoua ouah'rek — trad.",
+            "maqam": [
+                "andalous",
+                "moual",
+                0.0
+            ],
+            "abc": "X:1\nT:Djar el haoua ouah'rek\nC:trad. (chanson du mode moual, Alger)\n% note: Mode Moual sur Do.\nM:2/4\nL:1/8\nQ:1/4=126\nK:G\nz2 cd | BGAB | c2 cd | BGAB | c2 cd | eg/f/ ed | c2 cd | eg/f/ ed | c2 cc | c2 cc |\nz2 z e | =f2 e2 | de/d/ cd/c/ | B2 de | c2 z2 | z4 |\nz2 z e | =f2 e2 | de/d/ cd/c/ | B2 de | {d}c2 z g | g/f/g/f/ ef | g/a/g/a/ g/a/g/f/ | e2 cf |\ng/a/g/a/ g/a/g/f/ | e2 z g | g/f/e/d/ cc | e/f/e/f/ e/f/e/d/ | e2 a2 | g4 | g2 z2 |\na3 a | g3 e | d3 e | =f z a2 | g2 e2 | dcde | c4 |]"
+        },
+        "an_moual_kadria_dil": {
+            "cat": "an:moual",
+            "label": "Kadria dil « Khedek » — trad.",
+            "maqam": [
+                "andalous",
+                "moual",
+                0.0
+            ],
+            "abc": "X:1\nT:Kadria dil « Khedek »\nC:trad. (sanâa d'Alger)\n% note: Mode Moual sur Do.\nM:3/4\nL:1/8\nQ:1/4=120\nK:G\nz2 z2 cB/A/ | B2 G2 c2 | c2 c2 cB/A/ | B2 G2 c2 | c2 c2 cB/A/ | B2 G2 c2 |\nc2 A2 G/F/E/D/ | CB,CDED | C2 CD E2 | F2 G2 A2 | G2 EDCB, |\nC2 z2 z2 | D3 EFG | E2 z2 AG | (3GFE FDCB, | CB,CDED |\nC2 CD E2 | F2 G2 A2 | G2 EDCB, | C2 z2 z2 | D3 EFG | E2 A2 AG |\n(3GFE FDCB, | CB,CDED | C2 CD E2 | F2 G2 A2 | G2 EDCB, |\nC2 z2 B,2 | C2 D2 D2- | D2 D2 E2 | F2 G2 A2 | G2 F2 E2 | A2 GFED | C6 |]"
+        },
+        "an_moual_kadria_zendani": {
+            "cat": "an:moual",
+            "label": "Kadria zendani — trad.",
+            "maqam": [
+                "andalous",
+                "moual",
+                7.0
+            ],
+            "abc": "X:1\nT:Kadria zendani\nC:trad. (Alger)\n% note: Mode Moual sur Sol.\nM:3/8\nL:1/8\nQ:3/8=96\nK:D\nz AB | cde | d3/2B/c/d/ | B3/2B/c/A/ | BAB | cde | d3/2B/c/d/ | B BB | eed | B=cB |\nAGF | GGG | =cBA | GAA | ABd | BBG | ABA | GFE | DEF | G z z |]"
+        },
+        "an_moual_kadria_zendani6": {
+            "cat": "an:moual",
+            "label": "Kadria zendani (n°6) — trad.",
+            "maqam": [
+                "andalous",
+                "moual",
+                0.0
+            ],
+            "abc": "X:1\nT:Kadria zendani (n°6)\nC:trad. (Alger)\n% note: Mode Moual sur Do.\nM:3/4\nL:1/8\nQ:1/4=138\nK:G\n|: z2 efga | gg/g/ gf g/a/g | ee/e/ ed e/f/g/a/ | gg/g/ gf ag | gagf=fg |\nee/e/ ee g(3a/g/f/ | =fe f(3a/b/a/ g(3a/g/f/ | ee a/g/f/g/ e/f/d/e/ | c2 (3c/B/A/ B B2 | d3/2e/ c2 z2 :|"
+        },
+        "an_mezmoum_ya_lil": {
+            "cat": "an:mezmoum",
+            "label": "Ya lil, ya lil (zendani) — trad.",
+            "maqam": [
+                "andalous",
+                "mezmoum",
+                7.0
+            ],
+            "abc": "X:1\nT:Ya lil, ya lil (zendani)\nC:trad. (Alger)\n% note: Mode Mezmoum sur Sol.\nM:3/4\nL:1/8\nQ:1/4=138\nK:G\nz2 z2 Gc/c/ | cB (3c/d/c/ B cd | B/c/A/B/ GG A(3B/A/G/ | ABcd c/d/B/c/ |\nAA/A/ AB GG | AA/A/ AB cd | B/c/A/B/ G^F GA | Bc d/e/c/d/ B/c/A/B/ | G^F G2 z2 |]"
+        },
+        "an_djarka_mahma": {
+            "cat": "an:djarka",
+            "label": "Mahma lekhter fel moudelel — trad.",
+            "maqam": [
+                "andalous",
+                "djarka",
+                9.0
+            ],
+            "abc": "X:1\nT:Mahma lekhter fel moudelel\nC:trad. (neklab du mode djorka, Alger)\n% note: Mode Djarka sur La.\nM:2/4\nL:1/8\nQ:1/4=100\nK:D\nz2 AB | ^GEFG | A2 AB | ^GEFG | A2 AB | ^GEFG | A2 AB |\nEE C2 | ^D2 E2 | EFEC | A,2 E2 | E2 ^D2 |\nEF^GA | ^GF E2 | E2 E2 | ^D2 E2 | E3/2E/ D2 | ^GBAG | ^GAFG | EFED |\nC2 A,2 | E2 ED | DD C2 | A,2 D3/2D/ | F2 E2 | E2 DC | B,CDB, | E2 A,2 |\nE2 A,2 | B,2 C2 | C2 D3/2D/ | F2 E2 | E2 DC | B,CDB, | E2 A,2 |]"
+        },
+        "an_arak_tchenebar_arak1": {
+            "cat": "an:arak",
+            "label": "Tchenebar neklabat aârak — n°1 — trad.",
+            "maqam": [
+                "andalous",
+                "arak",
+                9.0
+            ],
+            "abc": "X:1\nT:Tchenebar neklabat aârak — n°1\nC:trad. (Alger)\n% note: Mode Arak sur La.\nM:2/2\nL:1/8\nQ:1/2=66\nK:D\nABcA BB cc |: dd z(3e/f/e/ dd z d | AB=cd cBAG | AB=ce dB GG | Bcde ddcc | dded eg ee |\ndd z e =ccdd | BB=cd BcAB | GFGA BB cc | dd z(3e/f/e/ dd z d | AB=cd cBAG | AB=cd BcAB |\nGFGG A A/A/ A2 |[1 BB cc dd ee | ccdd dABc | BdcB A z e2 | dcBA BB cc :|[2 BB cc dd z c | ddcc z ABA | Bd e/d/c/B/ A2 z2 |]"
+        },
+        "an_sika_tchenebar_sika1": {
+            "cat": "an:sika",
+            "label": "Tchenebar neklabat sika — n°1 — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                4.0
+            ],
+            "abc": "X:1\nT:Tchenebar neklabat sika — n°1\nC:trad. (Alger)\n% note: Mode Sika sur Mi.\nM:2/4\nL:1/8\nQ:1/4=120\nK:G\nc3/2c/ dd | e/e/e eg | (3e/f/e/ d cc | dd/d/ de | d/c/B/A/ GG |\nee/f/ dd | ef/g/ ec | c/c/c d/d/d | e=f/f/ fe | =fg e/e/e | d/d/d de |\nd/c/B/A/ GG | e/e/e d/d/d | e/e/e/e/ e/e/e/e/ | c/c/c d/d/d | e=f/f/ fe | =fg e/e/e |\nd/d/d dc | (3d/e/d/ c d3/2e/ | c/c/c cB | (3d/e/d/ c c3/2d/ | B/B/B Bc | (3A/B/A/ G AB/A/ |\nG G/G/ GF | G3/2{A}F/ GG | e/=f/e/f/ d/e/d/e/ | c/d/c/d/ B/c/B/c/ | A/B/A/B/ G/F/G | G4 |]"
+        },
+        "an_raml_maya_remel1": {
+            "cat": "an:raml_maya",
+            "label": "Touchiat Remel — n°1 — trad.",
+            "maqam": [
+                "andalous",
+                "raml_maya",
+                9.0
+            ],
+            "abc": "X:1\nT:Touchiat Remel — n°1\nC:trad. (nouba gharnata, Alger)\n% note: Mode Raml Maya sur La.\nM:2/4\nL:1/8\nQ:1/4=88\nK:Am\n(A/A/A) AA | (B/A/B) AA | (B/A/B) (c/B/c) | dd/c/ de |\nf (3g/a/g/ fa | gf/e/ d(e/f/ | d/e/c/d/ B/c/A/B/) | (B/A/G) GG |\n(A/A/A) AA | (B/A/B) AA | (B/A/B) (c/B/c) | d/d/d dd |\n(g/a/g/a/ g/f/e) | (f/g/f/g/ f/e/d) | (e/f/e/d/ c/B/c) | dd/d/ dd :|"
+        },
+        "an_raml_maya_remel2": {
+            "cat": "an:raml_maya",
+            "label": "Touchiat Remel — n°2 — trad.",
+            "maqam": [
+                "andalous",
+                "raml_maya",
+                4.0
+            ],
+            "abc": "X:1\nT:Touchiat Remel — n°2\nC:trad. (nouba gharnata, Alger)\n% note: Mode Raml Maya sur Mi.\nM:2/4\nL:1/8\nQ:1/4=88\nK:G\nd3/2d/ ef | g3/2g/ gg | c3/2c/ ef | g3/2g/ gg | cc (e/d/e/f/ | g)a (g/a/f/g/ |\n(e/f/d/e/) cc | z c (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) | gg fd | ef (ga/b/ |\ng/a/f/g/ e/f/d/e/) | c3/2c/ ef | g3/2g/ gg | c3/2c/ ef | g3/2g/ gg |\ncc (e/d/e/f/ | g)a (g/a/f/g/ | e/f/d/e/) cc | z c (e/f/g/a/) | g (3g/a/g/ (e/f/g/a/) |\ng (3g/a/g/ (e/f/g/a/) | gg fd | ef (ga/b/ | g/a/f/g/ e/f/d/e/) | c3/2c/ z/=f/g |]"
+        },
+        "an_moual_mestekhber_moual": {
+            "cat": "an:moual",
+            "label": "Mestekhber moual — trad.",
+            "maqam": [
+                "andalous",
+                "moual",
+                0.0
+            ],
+            "abc": "X:1\nT:Mestekhber moual\nC:trad. (prélude du mode moual, Alger)\n% note: Mode Moual sur Do.\nM:2/4\nL:1/8\nQ:1/4=120\nK:G\nz2 g3/2a/ | f3/2g/ e3/2f/ | ^d3/2e/ c3/2e/ | ^d3/2d/ e3/2e/ | f3/2g/ e3/2e/ |\na2 gf/e/ | f/d/e/d/ ce/d/ | Hc2 z e/f/ | ga fa/g/ | a2 g2 | c'/b/a/g/ fe |\nfgab | c'bag | fa/g/ a2 | g3 e | fgab | c'2 z a/a/ |\naaga | b2 z g/g/ | ggfg | a2 z f/f/ | ffef | g2 z e/e/ |\neeed | f3/2e/ g3/2f/ | a3/2g/ b3/2a/ | c'3/2b/ a/g/f/e/ | f/d/e/d/ ce/d/ | c4 |]"
+        },
+        "an_sika_touchiat_sika1": {
+            "cat": "an:sika",
+            "label": "Touchiat sika — n°1 — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                11.0
+            ],
+            "abc": "X:1\nT:Touchiat sika — n°1\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Si.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\n|: B/c/B/c/ B/c/A | B/A/B d/e/d/e/ | c/B/c/d/ cB | c/d/c/B/ A(3A/B/A/ |\nG/F/G AA | B^c de/f/ | d/e/c/d/ B/c/A | B/A/G/F/ GG | B/B/B/B/ BA |\nB/A/B c/B/c | d2 e/g/e/f/ | d/e/d/e/ c/d/c/B/ | B/A/G AB |\nc/B/c e/g/e/f/ | ^d/d/e/f/ d/e/c/d/ |[1 B/B/B/B/ B z :|[2 B/B/B/B/ B2 |]"
+        },
+        "an_sika_touchiat_sika2": {
+            "cat": "an:sika",
+            "label": "Touchiat sika — n°2 — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                11.0
+            ],
+            "abc": "X:1\nT:Touchiat sika — n°2\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Si.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\ng/f/e/d/ ef | g/a/f/g/ a/g/a | g/a/g/a/ f/g/f/g/ | egfe |\ndc dc | e/g/e/f/ de/f/ | dc B/B/B/B/ | B2 g/f/e/d/ | ef g/f/g |\na/g/a g/a/g/a/ | f/g/f/g/ eg | fedc | dc e/g/e/f/ | de/f/ dc |]"
+        },
+        "an_sika_touchiat_sika3": {
+            "cat": "an:sika",
+            "label": "Touchiat sika — n°3 — trad.",
+            "maqam": [
+                "andalous",
+                "sika",
+                6.0
+            ],
+            "abc": "X:1\nT:Touchiat sika — n°3\nC:trad. (ouverture de la nouba sika, Alger)\n% note: Mode Sika sur Fa♯.\nM:4/8\nL:1/8\nQ:1/8=138\nK:G\nB3/2A/ B^c | d d/d/ d z | d/^c/B/A/ B/=c/^c | d d/d/ d z | d/^c/B/A/ B/=c/^c |\nde/f/ d/e/c/d/ | B/c/A/B/ G2 | B/^c/d/e/ dG | B/^c/d/e/ dG | B/^c/d/e/ dd |\nddAA | B/A/B c/B/c | e/g/e/f/ ^de/f/ | ^d/e/c B3/2A/ | B^c dd/d/ | d4 |]"
+        },
+        "an_ghrib_touchiat_ghrib1": {
+            "cat": "an:ghrib",
+            "label": "Touchiat ghrib — n°1 — trad.",
+            "maqam": [
+                "andalous",
+                "ghrib",
+                9.0
+            ],
+            "abc": "X:1\nT:Touchiat ghrib — n°1\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\nz z c/c/ |: d/d/ e/f/e/f/ | d/e/d/e/ c/B/ | A/A/B/B/^c/c/ | d/d/d c/c/ |\nd/d/ e/f/e/f/ | d/d/B/B/c/c/ | A/A/B/B/G/G/ | A2 z :|"
+        },
+        "an_ghrib_touchiat_ghrib2": {
+            "cat": "an:ghrib",
+            "label": "Touchiat ghrib — n°2 — trad.",
+            "maqam": [
+                "andalous",
+                "ghrib",
+                9.0
+            ],
+            "abc": "X:1\nT:Touchiat ghrib — n°2\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n{A}G/G/ FG | A A/A/ d | {ed}c e{fe}d | {ed}c{dc}B{cB}A | {BA}G{AG}FG | AB{cB}A |\n{BA}G{AG}F{GF}E | (3F/E/^C/ DD | A/G/ FG | A2 d | {ed}c e{fe}d | {ed}c{dc}B{cB}A |\n{BA}G{AG}FG | AB{cB}A | {BA}G{AG}F{GF}E | (3F/E/^C/ DD | D3 |]"
+        },
+        "an_ghrib_touchiat_ghrib3": {
+            "cat": "an:ghrib",
+            "label": "Touchiat ghrib — n°3 — trad.",
+            "maqam": [
+                "andalous",
+                "ghrib",
+                9.0
+            ],
+            "abc": "X:1\nT:Touchiat ghrib — n°3\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur La.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n|: e/d/c/B/ c | c/B/c d/f/ | d/c/B/A/ B | B/A/B d/d/ | c/B/A d | d/^c/d d | e/d/c/B/ A/B/ |\nG/G/A/A/B/B/ | c/c/c/c/c/c/ | B/B/c/c/d/d/ | d/d/d/d/d/d/ | c/c/B/B/c/c/ | d/d/B/B/c/B/ | A/A/ B//c//B//A// G/G/ |\n[1 A3 | A/A/B/B/^c/c/ | d/d/d/d/ ^c/d/ | dd e/f/ :|[2 A3 |]"
+        },
+        "an_ghrib_touchiat_ghrib4": {
+            "cat": "an:ghrib",
+            "label": "Touchiat ghrib — n°4 — trad.",
+            "maqam": [
+                "andalous",
+                "ghrib",
+                4.0
+            ],
+            "abc": "X:1\nT:Touchiat ghrib — n°4\nC:trad. (ouverture de la nouba ghrib, Alger)\n% note: Mode Ghrib sur Mi.\nM:3/8\nL:1/8\nQ:1/8=160\nK:G\n|: G/F/G/G/A/A/ | B/B/^c/c/B/B/ | d/e/^c d/e/ | ^c/d/B/c/ A/B/ | ^c d/e/ d/d/ |\nB^c d/e/ | d/e/^c e/f/ | d/d/d/d/d/d/ | G/F/G/G/A/A/ | B/B/^c/c/B/B/ | d/e/^c d/e/ |\n^c/d/B/c/ A/d/ | d/^c/d/e/ c | ^c/A/ (3B/A/B/ c/c/ | ^c/d/B/c/ A/A/ | ^c//d//B//c// A z :|"
+        },
+		"ar_nahawand_bint_el_shalabiya": {
+            "cat": "ar:nahawand",
+            "label": "Bint el Shalabiya",
+            "maqam": [
+                "oriental",
+                "nahawand",
+                0
+            ],
+            "abc": "X:0\nT:Bint el Shalabiya\nT:Kamtar Zan Shaneh\nT:Böyle gelmiş böyle geçer\nZ:Jack Campin, http://www.campin.me.uk\nF:http://octunes.blogspot.com\nG:Arabic song also sung in Turkey and Iran\nM:2/4\nL:1/16\nQ:1/4=80\nK:CMin\nP:Intro (2nd instrument)\n CD| E2FG A2=Bc|d2=B2  z2ed  |c2=BA  GFED|\n     C2GG C2G2 |C2GG   C2G2  |C2GG   C2 ||\nP:Accompaniment vamp\n   |:C2GG C2G2 |C2GG   C2G2 :|\nP:Tune\n|:GE|C2GG G2G2 |AGFA   G2GE  |C2G2   A2c2|\n    =BAAG F2FA |c2A2   A2G2  |AGFE   GFED|\n     C2DE FEED |DCC=B, CDEF  |G2A2   A2G2|\n     AGFE GFED |C2DE   FEED  |DCC=B, C2 :|\n CD|E6     =B,C|D6        CD  |E6         \n DE|F6      FG |A3G    F2EF  |G3F    E2\n DE|F2E2 D2C2 |G6        FG  |A3G    F2  \n EF|G3F  E2DE |F2E2    D2=B,2|D4         ||\nCDEF|C2GG G2G2 |AGFA   G2GE  |C2G2   A2c2|\n    =BAAG F2FA |c2A2   A2G2  |AGFE   GFED|\n     C2DE FEED |DCC=B, CDEF  |G2A2   A2G2|\n     AGFE GFED |C2DE   FEED  |DCC=B, C2 |]"
+        }
+    }
+}
