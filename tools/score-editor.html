@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Éditeur de partitions</title>
+<script src="https://cdn.jsdelivr.net/npm/abcjs@6.7.1/dist/abcjs-basic-min.js"></script>
+<style>
+:root { --bg:#0c0d11; --panel:#16181f; --line:#2a2d38; --txt:#eeece7; --dim:#9a9aa5; --acc:#e8b24a; --red:#e05555; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--txt); font:14px system-ui, sans-serif; }
+header { display:flex; gap:8px; align-items:center; flex-wrap:wrap; padding:10px 14px; border-bottom:1px solid var(--line); }
+header h1 { font-size:16px; margin:0 12px 0 0; }
+button, select, input, textarea { font:inherit; color:var(--txt); background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:6px 9px; }
+button { cursor:pointer; } button.main { background:var(--acc); color:#111; border-color:var(--acc); font-weight:600; }
+button.danger { color:var(--red); }
+main { display:grid; grid-template-columns:320px 1fr; height:calc(100vh - 54px); }
+#list { overflow:auto; border-right:1px solid var(--line); padding:8px; }
+#list h3 { font-size:12px; color:var(--acc); margin:12px 4px 4px; text-transform:uppercase; }
+#list h4 { font-size:12px; color:var(--dim); margin:8px 4px 2px; }
+#list details { margin:1px 0; } #list details details { margin-left:14px; }
+#list summary { cursor:pointer; padding:4px 6px; border-radius:5px; list-style:none; } #list summary::before { content:'▸ '; color:var(--dim); } #list details[open]>summary::before { content:'▾ '; }
+#list summary:hover { background:var(--panel); } #list .sec>summary { color:var(--acc); } #list .n { color:var(--dim); font-size:12px; }
+#list div.item { margin-left:22px; padding:4px 8px; border-radius:5px; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#list div.item:hover { background:var(--panel); } #list div.item.sel { background:#3a3220; }
+#edit { overflow:auto; padding:14px; display:flex; flex-direction:column; gap:10px; }
+.row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; } .row label { color:var(--dim); }
+textarea { width:100%; min-height:240px; font-family:ui-monospace, Consolas, monospace; font-size:13px; }
+#preview { background:#fff; border-radius:6px; padding:6px; min-height:60px; }
+#warn { color:var(--red); font-size:12px; white-space:pre-wrap; } #status { color:var(--dim); margin-left:auto; }
+@media (max-width:760px) { main { grid-template-columns:1fr; height:auto; } #list { max-height:40vh; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Éditeur de partitions</h1>
+  <button id="open">Ouvrir scores.json…</button>
+  <button id="reload">Recharger ../scores.json</button>
+  <button id="newSection">+ Section</button>
+  <button id="newPiece">+ Morceau</button>
+  <button id="save" class="main">Enregistrer</button>
+  <span id="status"></span>
+</header>
+<main>
+  <nav id="list"></nav>
+  <section id="edit">
+    <div class="row">
+      <label>Section</label><select id="fSection"></select>
+      <label>Catégorie (gamme)</label><select id="fKey"></select>
+      <label>Tonique</label><select id="fRoot"></select>
+    </div>
+    <div class="row">
+      <label>Titre affiché</label><input id="fLabel" style="flex:1;min-width:220px" placeholder="vide = T: — C: de la partition">
+      <label>Identifiant</label><input id="fId" style="width:200px" placeholder="automatique">
+    </div>
+    <textarea id="fAbc" spellcheck="false" placeholder="Colle la partition ABC ici (X:, T:, M:, L:, K: …). Quarts de ton : _/B ^/F"></textarea>
+    <div id="warn"></div>
+    <div class="row">
+      <button id="play">▶ Écouter</button>
+      <button id="apply" class="main">Appliquer au morceau</button>
+      <button id="dup">Dupliquer</button>
+      <button id="del" class="danger">Supprimer</button>
+    </div>
+    <div id="preview"></div>
+  </section>
+</main>
+<script>
+// Gammes connues de l'app (famille -> clé -> nom) : une catégorie doit être une de ces gammes pour que le manche l'affiche
+const SCALES = {"western":{"major":"Majeur (ionien)","minor":"Mineur naturel (éolien)","pent_maj":"Pentatonique majeure","pent_min":"Pentatonique mineure","blues":"Blues","harmonic_min":"Mineur harmonique","mixolydian":"Mixolydien","dorian":"Dorien","phrygian":"Phrygien"},"oriental":{"rast":"Maqam Rast","suznak":"Maqam Suznak","bayati":"Maqam Bayati","husseini":"Maqam Husseini","bayati_shuri":"Maqam Bayati Shuri","hijaz":"Maqam Hijaz","shahnaz":"Maqam Shahnaz","hijazkar":"Maqam Hijazkar","saba":"Maqam Saba","kurd":"Maqam Kurd","ajam":"Maqam Ajam","nahawand":"Maqam Nahawand","nakriz":"Maqam Nakriz","nawa_athar":"Maqam Nawa Athar","sikah":"Maqam Sikah","huzam":"Maqam Huzam","iraq":"Maqam Iraq"},"turkish":{"rast":"Rast","ussak":"Uşşak","huseyni":"Hüseyni","hicaz":"Hicaz","karcigar":"Karcığar","segah":"Segâh","huzzam":"Hüzzam","saba":"Saba","kurdi":"Kürdî","nihavend":"Nihâvend"},"andalous":{"mezmoum":"Mezmoum (majeur)","raml_maya":"Raml Maya (éolien)","zidane":"Zidane (hijaz)","sika":"Sika (phrygien)","moual":"Moual (lydien)","arak":"Arak (mixolydien)","sihli":"Sihli (mineur harmonique)","ghrib":"Ghrib (dorien)","djarka":"Djarka (majeur)"}};
+const BASE_GROUPS = [['ar', 'oriental', 'Maqams arabes'], ['an', 'andalous', 'Andalou (Algérie)'], ['tk', 'turkish', 'Makams turcs'], ['w', 'western', 'Gammes occidentales']];
+const NOTES = ['Do', 'Do♯', 'Ré', 'Mi♭', 'Mi', 'Fa', 'Fa♯', 'Sol', 'La♭', 'La', 'Si♭', 'Si'];
+const ROOTS = []; for (let r = 0; r < 12; r += 0.5) ROOTS.push([r, r % 1 ? NOTES[Math.floor(r)] + ' + ¼ ton' : NOTES[r]]);
+const $ = s => document.querySelector(s);
+const slug = s => s.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+let db = { version: 1, scores: {} }, cur = null, fileHandle = null, dirty = false;
+
+const groups = () => [...BASE_GROUPS, ...(db.groups || []).filter(g => !BASE_GROUPS.some(b => b[0] === g[0]))];
+const status = m => { $('#status').textContent = m; };
+const markDirty = () => { dirty = true; status('Modifié — pense à enregistrer'); };
+window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+function load(data, name) {
+    db = data; db.scores = db.scores || {}; cur = Object.keys(db.scores)[0] || null; dirty = false;
+    status(`Chargé : ${name} (${Object.keys(db.scores).length} morceaux)`);
+    renderList(); showPiece();
+}
+$('#reload').onclick = () => fetch('../scores.json?t=' + Date.now()).then(r => r.json())
+    .then(d => { fileHandle = null; load(d, '../scores.json'); })
+    .catch(() => status("Impossible de lire ../scores.json : utilise « Ouvrir scores.json… »"));
+$('#open').onclick = async () => {
+    if (window.showOpenFilePicker) {
+        try {
+            [fileHandle] = await showOpenFilePicker({ types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }] });
+            const f = await fileHandle.getFile(); load(JSON.parse(await f.text()), f.name);
+        } catch (e) { if (e.name !== 'AbortError') alert(e.message); }
+    } else {
+        const inp = Object.assign(document.createElement('input'), { type: 'file', accept: '.json' });
+        inp.onchange = async () => { const f = inp.files[0]; if (f) load(JSON.parse(await f.text()), f.name); };
+        inp.click();
+    }
+};
+async function writeTo(handle, text) { const w = await handle.createWritable(); await w.write(text); await w.close(); dirty = false; status('Enregistré dans ' + handle.name); }
+$('#save').onclick = async () => {
+    const text = JSON.stringify(db);
+    try {
+        if (fileHandle && fileHandle.createWritable) return await writeTo(fileHandle, text);
+        if (window.showSaveFilePicker) {
+            fileHandle = await showSaveFilePicker({ suggestedName: 'scores.json', types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }] });
+            return await writeTo(fileHandle, text);
+        }
+    } catch (e) { if (e.name === 'AbortError') return; }
+    // Navigateur sans accès aux fichiers : téléchargement
+    const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([text], { type: 'application/json' })), download: 'scores.json' });
+    a.click(); dirty = false; status('Téléchargé : scores.json (remplace celui du dossier Instrument)');
+};
+
+// Arborescence repliable (section > gamme > morceaux), avec recherche
+const openNodes = new Set();
+function renderList() {
+    const nav = $('#list'), q = ($('#search') && $('#search').value || '').trim().toLowerCase();
+    const curCat = cur && db.scores[cur] ? db.scores[cur].cat : '';
+    nav.innerHTML = '<input id="search" placeholder="Rechercher un morceau…" style="width:100%;margin-bottom:6px">';
+    const s = $('#search'); s.value = q; s.oninput = () => { renderList(); const n = $('#search'); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
+    const node = (key, summary, open, parent) => {
+        const d = document.createElement('details'); d.open = open;
+        d.innerHTML = `<summary>${summary}</summary>`;
+        d.ontoggle = () => { d.open ? openNodes.add(key) : openNodes.delete(key); };
+        parent.appendChild(d); return d;
+    };
+    for (const [prefix, genre, label] of groups()) {
+        const keys = Object.keys(SCALES[genre] || {}).map(k => [k, Object.entries(db.scores)
+            .filter(([id, e]) => e.cat === prefix + ':' + k && (!q || (e.label || id).toLowerCase().includes(q)))]).filter(([, it]) => it.length);
+        const total = keys.reduce((n, [, it]) => n + it.length, 0);
+        if (q && !total) continue;
+        const sec = node(prefix, `<b>${label}</b> <span class="n">${total}</span>`, !!q || openNodes.has(prefix) || curCat.startsWith(prefix + ':'), nav);
+        sec.className = 'sec';
+        for (const [k, items] of keys) {
+            const cat = prefix + ':' + k;
+            const g = node(cat, `${SCALES[genre][k]} <span class="n">${items.length}</span>`, !!q || openNodes.has(cat) || curCat === cat, sec);
+            for (const [id, e] of items) {
+                const d = document.createElement('div');
+                d.className = 'item' + (id === cur ? ' sel' : ''); d.textContent = e.label || id; d.title = id;
+                d.onclick = () => { cur = id; renderList(); showPiece(); };
+                g.appendChild(d);
+            }
+        }
+    }
+}
+function fillSections(sel) {
+    $('#fSection').innerHTML = groups().map(([p, , l]) => `<option value="${p}">${l}</option>`).join('');
+    $('#fSection').value = sel;
+}
+function fillKeys(prefix, sel) {
+    const g = groups().find(x => x[0] === prefix), sc = SCALES[g ? g[1] : 'western'];
+    $('#fKey').innerHTML = Object.entries(sc).map(([k, n]) => `<option value="${k}">${n}</option>`).join('');
+    if (sel && sc[sel]) $('#fKey').value = sel;
+}
+$('#fRoot').innerHTML = ROOTS.map(([r, n]) => `<option value="${r}">${n}</option>`).join('');
+$('#fSection').onchange = () => fillKeys($('#fSection').value);
+
+function showPiece() {
+    stopPlay();
+    const e = cur && db.scores[cur];
+    if (!e) { fillSections('ar'); fillKeys('ar'); $('#fLabel').value = $('#fId').value = $('#fAbc').value = ''; preview(); return; }
+    const [prefix, key] = e.cat.split(':');
+    fillSections(prefix); fillKeys(prefix, key);
+    $('#fRoot').value = String((e.maqam && e.maqam[2]) || 0);
+    $('#fLabel').value = e.label || ''; $('#fId').value = cur; $('#fAbc').value = e.abc || '';
+    preview();
+}
+function preview() {
+    const abc = $('#fAbc').value;
+    const tunes = window.ABCJS && abc.trim() ? ABCJS.renderAbc('preview', abc, { responsive: 'resize' }) : [];
+    if (!abc.trim()) $('#preview').innerHTML = '';
+    const w = tunes[0] && tunes[0].warnings;
+    $('#warn').textContent = w && w.length ? '⚠ ' + w.map(x => x.replace(/<[^>]+>/g, '')).join('\n⚠ ') : '';
+}
+// Écoute avec le synthétiseur d'abcjs (sons de piano, pour vérifier les notes et le rythme)
+let synth = null, lastTune = null;
+function stopPlay() { if (synth) { synth.stop(); synth = null; } $('#play').textContent = '▶ Écouter'; }
+$('#play').onclick = async () => {
+    if (synth) return stopPlay();
+    const tunes = ABCJS.renderAbc('preview', $('#fAbc').value, { responsive: 'resize' });
+    if (!tunes[0] || !ABCJS.synth.supportsAudio()) return alert('Rien à jouer.');
+    try {
+        const s = new ABCJS.synth.CreateSynth();
+        await s.init({ visualObj: tunes[0], options: { onEnded: stopPlay } });
+        await s.prime(); synth = s; s.start(); $('#play').textContent = '■ Stop';
+    } catch (e) { alert('Lecture impossible : ' + (e.message || e)); stopPlay(); }
+};
+let pt; $('#fAbc').oninput = () => { clearTimeout(pt); pt = setTimeout(preview, 300); };
+
+$('#apply').onclick = () => {
+    const prefix = $('#fSection').value, key = $('#fKey').value, g = groups().find(x => x[0] === prefix);
+    const abc = $('#fAbc').value.trim();
+    if (!abc) return alert('Colle une partition ABC.');
+    const title = (abc.match(/^T:(.*)$/m) || [])[1], comp = (abc.match(/^C:(.*)$/m) || [])[1];
+    const label = $('#fLabel').value.trim() || [title, comp].filter(Boolean).map(s => s.trim()).join(' — ') || 'Sans titre';
+    let id = $('#fId').value.trim() || `${prefix}_${key}_${slug(label).slice(0, 30)}`;
+    if (id !== cur && db.scores[id]) id += '_' + Date.now().toString(36);
+    if (cur && id !== cur) delete db.scores[cur];
+    db.scores[id] = { cat: `${prefix}:${key}`, label, maqam: [g[1], key, parseFloat($('#fRoot').value)], abc };
+    cur = id; markDirty(); renderList(); showPiece();
+};
+$('#dup').onclick = () => {
+    if (!cur) return;
+    let id = cur + '_copie'; while (db.scores[id]) id += '_';
+    db.scores[id] = JSON.parse(JSON.stringify(db.scores[cur])); db.scores[id].label += ' (copie)';
+    cur = id; markDirty(); renderList(); showPiece();
+};
+$('#del').onclick = () => {
+    if (!cur || !confirm(`Supprimer « ${db.scores[cur].label} » ?`)) return;
+    delete db.scores[cur]; cur = Object.keys(db.scores)[0] || null; markDirty(); renderList(); showPiece();
+};
+$('#newPiece').onclick = () => {
+    const sec = $('#fSection').value, key = $('#fKey').value;
+    cur = null; showPiece(); fillSections(sec); fillKeys(sec, key);
+    $('#fAbc').value = 'X:1\nT:Titre\nC:Compositeur\nM:4/4\nL:1/8\nQ:1/4=100\nK:C\nC2 D2 E2 F2 | G8 |]';
+    preview(); $('#fAbc').focus();
+};
+$('#newSection').onclick = () => {
+    const label = prompt('Nom de la nouvelle section (ex. « Chansons kabyles ») :'); if (!label) return;
+    const genres = Object.keys(SCALES);
+    const genre = prompt('Quelle famille de gammes utilise-t-elle ?\n' + genres.join(', '), 'oriental');
+    if (!genres.includes(genre)) return alert('Famille inconnue.');
+    let prefix = slug(label).replace(/_/g, '').slice(0, 5) || 'sec';
+    while (groups().some(g => g[0] === prefix)) prefix += 'x';
+    (db.groups = db.groups || []).push([prefix, genre, label]);
+    markDirty(); renderList(); cur = null; showPiece(); fillSections(prefix); fillKeys(prefix);
+    status(`Section « ${label} » créée : ajoute-lui un morceau puis enregistre.`);
+};
+$('#reload').click();
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 /* Service worker : rend l'application installable et utilisable hors connexion.
    À chaque nouvelle version, changer VERSION ici ET les ?v= dans index.html. */
-const VERSION = '4.0';
+const VERSION = '4.1';
 const CACHE = 'fretboard-' + VERSION;
 // Bibliothèque externe de partitions (version figée dans l'URL) : cache séparé, gardé entre les versions
 const LIB_CACHE = 'lib-abcjs';

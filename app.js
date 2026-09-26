@@ -283,7 +283,7 @@ const I18N = {
         score_error: 'Partition illisible : vérifiez la notation ABC (en-têtes X:, K: et des notes).',
         score_name: 'Nom de la partition :', score_untitled: 'Sans titre', score_saved: 'Partition enregistrée',
         score_confirm_del: 'Supprimer cette partition ?',
-        sg_maqam: 'Maqams arabes', sg_andalous: 'Andalou (Algérie)', sg_turkish: 'Makams turcs', sg_western: 'Gammes occidentales', sg_user: 'Mes partitions',
+        sg_maqam: 'Maqams arabes', sg_andalous: 'Andalou (Algérie)', abc_advanced: 'Avancé : éditer la bibliothèque (scores.json)', sg_turkish: 'Makams turcs', sg_western: 'Gammes occidentales', sg_user: 'Mes partitions',
         editor_title: 'Partition (notation ABC)', abc_apply: 'Appliquer', abc_save: 'Enregistrer dans mes partitions',
         abc_reset: 'Revenir à l’original', abc_delete: 'Supprimer',
         abc_help: 'C D E F G A B = notes, c d e = octave au-dessus, C, D, = en dessous. ^ dièse, _ bémol, = bécarre, ^/ et _/ = quarts de ton. Un chiffre après la note = durée (A2 = double, A/2 = moitié), z = silence, | = barre de mesure, [CEG] = accord. En-têtes : T: titre, M: mesure, L: durée de base, Q: tempo, K: tonalité.',
@@ -344,7 +344,7 @@ const I18N = {
         score_error: 'Unreadable score: check the ABC notation (X:, K: headers and notes).',
         score_name: 'Score name:', score_untitled: 'Untitled', score_saved: 'Score saved',
         score_confirm_del: 'Delete this score?',
-        sg_maqam: 'Arabic maqams', sg_andalous: 'Andalusian (Algeria)', sg_turkish: 'Turkish makams', sg_western: 'Western scales', sg_user: 'My scores',
+        sg_maqam: 'Arabic maqams', sg_andalous: 'Andalusian (Algeria)', abc_advanced: 'Advanced: edit the library (scores.json)', sg_turkish: 'Turkish makams', sg_western: 'Western scales', sg_user: 'My scores',
         editor_title: 'Score (ABC notation)', abc_apply: 'Apply', abc_save: 'Save to my scores',
         abc_reset: 'Revert to original', abc_delete: 'Delete',
         abc_help: 'C D E F G A B = notes, c d e = octave above, C, D, = below. ^ sharp, _ flat, = natural, ^/ and _/ = quarter tones. A number after a note = length (A2 = double, A/2 = half), z = rest, | = bar line, [CEG] = chord. Headers: T: title, M: meter, L: default length, Q: tempo, K: key.',
@@ -2158,6 +2158,8 @@ class App {
                 .then(r => { if (!r.ok) throw new Error('scores'); return r.json(); })
                 .then(data => {
                     SCORES = data.scores || {};
+                    // Sections ajoutées avec l'éditeur (tools/score-editor.html) : [préfixe, genre, libellé]
+                    (data.groups || []).forEach(g => { if (!SCORE_GROUPS.some(x => x[0] === g[0])) SCORE_GROUPS.push(g); });
                     if (!this.scoreEntry(this.s.scoreId)) this.s.scoreId = this.defaultScoreId();
                     this.renderScoreUI();
                 })
